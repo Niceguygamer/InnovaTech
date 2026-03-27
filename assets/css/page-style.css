@@ -1,0 +1,62 @@
+/*Page Style*/
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --off-white: #f7f6f3;
+      --muted: #8a8a8a;
+      --border: #e5e4e0;
+      --accent: #c8602a;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--white);
+      color: var(--black);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER  */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+    }
+
+    /*InnovaTech Website Name in Nav */
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: -0.3px;
+    }
+
+    /*Nav Layout*/
+
+    nav { display: flex; gap: 36px; }
+    nav a {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    /*Nav Hover Style*/
+    nav a:hover, nav a.active { color: var(--black); }

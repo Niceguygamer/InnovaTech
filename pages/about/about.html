@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovaTech - About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../assets/css/page-style.css">
+  <style>
+
+    /* ABOUT PAGE LAYOUT */
+    .container { /* Text box */
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .page-header { /*About us header*/
+      background: var(--off-white);
+      text-align: center;
+      padding: 80px 48px 60px;
+      border-bottom: 1px solid var(--border);
+      
+    }
+    /*About us header style*/
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .page-header p {
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    /* Section Divider*/
+    section {
+      padding: 60px 0;
+    }
+
+    /*Section title*/
+    .section-title {
+      font-size: 14px;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /*Description block*/
+    .content-block {
+      background: var(--off-white);
+      min-height: 150px;
+      padding: 30px;
+      border: 1px dashed var(--border);
+    }
+
+    /* Two Column Layout */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    /*image placeholder*/
+
+    .image-placeholder{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed var(--border);
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .image-placeholder img {
+        width: 100%;
+        max-width: 200px; 
+        height: 200px;    
+        object-fit: cover; 
+        display: block;
+    }
+
+
+    /* (A) Read articles and meet the author Buttons */
+    .button-row{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 0;
+    }
+
+    /*(A) Button style */
+
+    .btn-outline {
+      border: 1px solid var(--black);
+      padding: 12px 30px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* FOOTER Style */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 48px;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-center {
+        display: flex;
+        gap: 10px;
+    }
+
+    /*Previos and Next button */
+
+    .btn-small {
+        border: 1px solid var(--border);
+        padding: 8px;
+        font-size: 11px;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+    }
+
+    .btn-small:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /*contact info style*/
+    .contact-info { font-size: 13px; color: var(--muted); }
+
+    /*back to the top button */
+    .back-to-top { font-size: 12px; font-weight: 500; color: var(--muted);  border: 1px solid var(--border); padding: 5px 15px;}
+    .back-to-top:hover {background: var(--black); color: var(--white);}
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">InnovaTech</div>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="../authors/authors.html">Authors</a>
+      <a href="../article-home/article-home.html">Articles</a>
+      <a href="../resources/resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>About Us</h1>
+        <p>Tag line</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">About us description</h2>
+        <div class="content-block">
+            </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">What This Site Is About</h2>
+        <div class="grid-2">
+          <div class="content-block">
+            <strong>Description Block</strong>
+          </div>
+          <div class="image-placeholder"> 
+           <img src="image.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--<section> I don't think kailangan pa ito, but if incase we do, i'll just keep it here. if not, then SD please remove it.
+      <div class="container">
+        <h2 class="section-title">Why We Made This</h2>
+        <div class="content-block">
+            </div>
+      </div>
+    </section>-->
+
+    <div class="button-row">
+      <a href="#" class="btn-outline">Read Articles</a>
+      <a href="#" class="btn-outline">Meet the Authors</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contact-info">Contact Info</div>
+    
+    <div class="footer-center">
+        <a href="#" class="btn-small">Previous</a>
+        <a href="#" class="btn-small">Next</a>
+    </div>
+
+    <a href="#" class="back-to-top">Back to Top ↑</a>
+  </footer>
+
+</body>
+</html>

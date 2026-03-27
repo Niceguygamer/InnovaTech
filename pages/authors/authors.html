@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authors — InnovaTech</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #A63D40;
+      --black: #2C2F33;
+      --white: #ffffff;
+      --off-white: #F7F5F2;
+      --muted: #6B7A8F;
+      --border: #e5e4e0;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--white);
+      color: var(--black);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: -0.3px;
+      color: var(--black);
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+    }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active { color: var(--black); }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: var(--off-white);
+      padding: 72px 48px 64px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .page-header p {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* AUTHORS GRID */
+    .authors-section {
+      padding: 56px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .authors-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .author-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .author-card:hover { transform: translateY(-4px); }
+
+    .author-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    .author-name {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 6px;
+      letter-spacing: -0.2px;
+    }
+
+    .author-role {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-info {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .back-to-top {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .back-to-top::before { content: '↑'; font-size: 14px; }
+    .back-to-top:hover { color: var(--black); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">InnovaTech</div>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../about/about.html">About Us</a>
+      <a href="authors.html" class="active">Authors</a>
+      <a href="../article-home/article-home.html">Articles</a>
+      <a href="../resources/resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h1>Meet the Authors</h1>
+      <p>Eight students from tech-related programs sharing their personal experiences and wisdom.</p>
+    </div>
+
+    <!-- AUTHORS GRID -->
+    <section class="authors-section">
+      <div class="section-label">Our Authors</div>
+      <div class="authors-grid">
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Alabab</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Esico</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Libuton</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Obillo</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Agunod</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Albarico</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Leongsun</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Munda</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="contact-info">hello@innovatech.com</div>
+    <a href="#" class="back-to-top">Back to Top</a>
+  </footer>
+
+</body>
+</html>

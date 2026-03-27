@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovaTech - Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../assets/css/page-style.css">
+  <style>
+
+    /* RESOURCES PAGE LAYOUT  */
+    .hero-resources { /*Resource Page Banner*/
+      background: var(--off-white);
+      text-align: center;
+      padding: 80px 48px 60px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-resources h1 { /*Title Style*/
+      font-family: var(--serif);
+      font-size: 48px;
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+
+    .subtitle-label { /*Subtitle style*/
+      font-size: 14px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      display: inline-block;
+      padding: 8px 40px;
+    }
+
+    .subtitle-label:hover { /*subtitle hover style*/
+      background: var(--off-white);
+      border-color: var(--black);
+    }
+
+    /*Section Divider*/
+    .section-container {
+      padding: 60px 48px;
+    }
+
+    /*Row label*/
+    .row-label {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* CATEGORY GRID  */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    /*Category Placeholder*/
+    .category-card {
+      border: 1px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    /*Category Hover Style*/
+    .category-card:hover {
+      background: var(--off-white);
+      border-color: var(--black);
+      transform: translateY(-2px);
+    }
+
+    /*Category Label Style*/
+    .category-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 8px;
+      display: inline-block;
+    }
+
+    /* RESOURCE ITEMS LIST */
+    .resource-list { /*Resources Item list layout*/
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .resource-item {/*Resources Item list style*/
+      border: 1px solid var(--border);
+      padding: 24px 30px;
+      background: var(--white);
+      transition: all 0.2s ease;
+    }
+
+    .resource-item:hover {/*Resources Item list hover*/
+        background: var(--off-white);
+        border-style: solid;
+        border-color: var(--black);
+    }
+
+    .resource-title {/*Resources Item list title*/
+      font-family: var(--serif);
+      font-size: 18px;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .resource-link-desc {/*Resources Item link style*/
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ── FOOTER (KEPT FROM PREVIOUS VERSION) ── */
+   footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 48px;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-center {
+        display: flex;
+        gap: 10px;
+    }
+
+    /*Previos and Next button */
+
+    .btn-small {
+        border: 1px solid var(--border);
+        padding: 8px;
+        font-size: 11px;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+    }
+
+    .btn-small:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /*contact info style*/
+    .contact-info { font-size: 13px; color: var(--muted); }
+
+    /*back to the top button */
+    .back-to-top { font-size: 12px; font-weight: 500; color: var(--muted);  border: 1px solid var(--border); padding: 5px 15px;}
+    .back-to-top:hover {background: var(--black); color: var(--white);}
+
+    @media (max-width: 900px) {
+      .categories-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">InnovaTech</div>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../about/about.html">About Us</a>
+      <a href="../authors/authors.html">Authors</a>
+      <a href="../article-home/article-home.html" >Articles</a>
+      <a href="resources.html" class="active">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-resources">
+      <h1>Resources</h1>
+      <a href="#section"><div class="subtitle-label">Helpful materials for tech college students</div></a>
+    </section>
+
+    <section class="section-container" id="section">
+      <p class="row-label">Resource Categories</p>
+      <div class="categories-grid">
+        <a href="#web" class="category-card">
+          <div class="category-label">Website Links</div>
+        </a>
+        <a href="#article" class="category-card">
+          <div class="category-label">Article Links</div>
+        </a>
+        <a href="#books" class="category-card">
+          <div class="category-label">E-Books / Textbooks</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-container">
+      <p class="row-label">Resource Items List</p>
+      <div class="resource-list">
+        <!--Copy and paste this section for any addition resources, and add the id whether web, article, books -->
+        <a href="#" class="resource-item" id="">
+          <div class="resource-title">Resource Title</div>
+          <div class="resource-link-desc">Description + Links</div>
+        </a>
+        
+        <a href="#" class="resource-item" id="">
+          <div class="resource-title">Resource Title</div>
+          <div class="resource-link-desc">Description + Links</div>
+        </a>
+
+        <a href="#" class="resource-item" id="">
+          <div class="resource-title">Resource Title</div>
+          <div class="resource-link-desc">Description + Links</div>
+        </a>
+        
+        <a href="#" class="resource-item" id="">
+          <div class="resource-title">Resource Title</div>
+          <div class="resource-link-desc">Description + Links</div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact-info">Contact Info</div>
+    <div class="footer-center">
+        <a href="#" class="btn-small">Previous</a>
+        <a href="#" class="btn-small">Next</a>
+    </div>
+    <a href="#" class="back-to-top">Back to Top ↑</a>
+  </footer>
+
+</body>
+</html>

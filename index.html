@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovaTech</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #A63D40;
+      --black: #2C2F33;
+      --white: #ffffff;
+      --off-white: #F7F5F2;
+      --gray: #6B7A8F;
+      --border: #e5e4e0;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--white);
+      color: var(--black);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: -0.3px;
+      color: var(--black);
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+    }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--black);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--off-white);
+      text-align: center;
+      padding: 100px 48px 96px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: var(--black);
+      max-width: 680px;
+      margin: 0 auto 20px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--red);
+    }
+
+    .hero p {
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--gray);
+      max-width: 420px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn:hover {
+      background: var(--red);
+      transform: translateY(-1px);
+    }
+
+    /* ── TWO-COL PREVIEW ── */
+    .two-col-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-preview,
+    .authors-preview {
+      padding: 56px 52px;
+    }
+
+    .about-preview {
+      border-right: 1px solid var(--border);
+    }
+
+    .about-preview h2,
+    .authors-preview h2 {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      margin-bottom: 16px;
+      color: var(--black);
+    }
+
+    .placeholder-content {
+      height: 88px;
+      background: var(--off-white);
+      margin-bottom: 28px;
+      border-radius: 2px;
+      /* Simulated text lines */
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(var(--border) 1px, transparent 1px);
+      background-size: 100% 28px;
+      background-position: 0 14px, 0 42px, 0 70px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--black);
+      color: var(--black);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* ── FEATURED ARTICLES ── */
+    .featured-articles {
+      padding: 56px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .article-card {
+      display: block;
+      cursor: pointer;
+    }
+
+    .card-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--off-white);
+      margin-bottom: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-image-inner {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
+      transition: transform 0.4s ease;
+    }
+
+    .article-card:hover .card-image-inner {
+      transform: scale(1.04);
+    }
+
+    .card-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.35;
+      color: var(--black);
+      margin-bottom: 8px;
+      letter-spacing: -0.2px;
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    /* ── RESOURCES BANNER ── */
+    .resources-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 44px 52px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .resources-banner p {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+
+    .resources-banner p span {
+      font-style: italic;
+      color: #C9A66B;
+    }
+
+    .btn-white {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-white:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-info {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    .back-to-top {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .back-to-top:hover { color: var(--black); }
+
+    .back-to-top::before {
+      content: '↑';
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">InnovaTech</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/about/about.html">About Us</a>
+      <a href="pages/authors/authors.html">Authors</a>
+      <a href="pages/article-home/article-home.html">Articles</a>
+      <a href="pages/resources/resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Words that<br><em>actually</em> matter</h1>
+      <p>A personal space for ideas, stories, and perspectives worth reading.</p>
+      <a href="pages/article-home/article-home.html" class="btn">Explore Articles</a>
+    </section>
+
+    <!-- ABOUT + AUTHORS -->
+    <section class="two-col-preview">
+      <div class="about-preview">
+        <h2>About Us</h2>
+        <div class="placeholder-content"></div>
+        <a href="pages/about/about.html" class="btn-outline">Read More</a>
+      </div>
+      <div class="authors-preview">
+        <h2>Meet the Authors</h2>
+        <div class="placeholder-content"></div>
+        <a href="pages/authors/authors.html" class="btn-outline">View Authors</a>
+      </div>
+    </section>
+
+    <!-- FEATURED ARTICLES -->
+    <section class="featured-articles">
+      <div class="section-label">Featured Articles</div>
+      <div class="articles-grid">
+
+        <article class="article-card">
+          <div class="card-image"><div class="card-image-inner"></div></div>
+          <div class="card-tag">Design</div>
+          <div class="card-title">Article title goes right here in this space</div>
+          <div class="card-meta">Mar 20 · 5 min read</div>
+        </article>
+
+        <article class="article-card">
+          <div class="card-image"><div class="card-image-inner"></div></div>
+          <div class="card-tag">Culture</div>
+          <div class="card-title">Another article title sits in this spot</div>
+          <div class="card-meta">Mar 18 · 4 min read</div>
+        </article>
+
+        <article class="article-card">
+          <div class="card-image"><div class="card-image-inner"></div></div>
+          <div class="card-tag">Tech</div>
+          <div class="card-title">One more great piece worth your time</div>
+          <div class="card-meta">Mar 15 · 6 min read</div>
+        </article>
+
+        <article class="article-card">
+          <div class="card-image"><div class="card-image-inner"></div></div>
+          <div class="card-tag">Life</div>
+          <div class="card-title">The fourth featured post lands right here</div>
+          <div class="card-meta">Mar 12 · 3 min read</div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- RESOURCES BANNER -->
+    <section class="resources-banner">
+      <p>Explore our <span>resource library</span></p>
+      <a href="pages/resources/resources.html" class="btn-white">Visit Resources</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="contact-info">hello@thejournal.com</div>
+    <a href="#" class="back-to-top">Back to Top</a>
+  </footer>
+
+</body>
+</html>

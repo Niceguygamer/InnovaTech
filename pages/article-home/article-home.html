@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovaTech - Articles</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /*About-home style*/
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --off-white: #f7f6f3;
+      --muted: #8a8a8a;
+      --border: #e5e4e0;
+      --accent: #c8602a;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--white);
+      color: var(--black);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+    }
+
+    /*InnovaTech Website name in Nav */
+    .logo {
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: -0.3px;
+    }
+
+    nav { display: flex; gap: 36px; }
+    nav a {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    nav a:hover, nav a.active { color: var(--black); }
+
+    /* ARTICLES PAGE LAYOUT */
+    .hero-articles { /* Article Banner*/
+      background: var(--off-white);
+      text-align: center;
+      padding: 80px 48px 60px;
+      border-bottom: 1px solid var(--border);
+    }
+    /*Banner Style*/
+    .hero-articles h1 {
+      font-family: var(--serif);
+      font-size: 48px;
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+    /*Browse-label button*/
+    .browse-label {
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      border: 1px solid var(--border);
+      display: inline-block;
+      padding: 8px 40px;
+    }
+
+    .browse-label:hover{
+      background: var(--off-white);
+      border-color: var(--black);
+    }
+
+    /*Section divider*/
+    .section-container {
+      padding: 60px 48px;
+    }
+
+    /*Row Label*/
+    .row-label {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 24px;
+      text-transform: capitalize;
+    }
+
+    /* 5-Column Grid for Topics / Article categories */
+    .topics-grid { /*Display / Layout*/
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .topic-card { /*Article placeholder*/
+      border: 1px solid var(--border);
+      padding: 30px 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      background: var(--white);
+    }
+
+    .topic-card:hover {/*Hover effect*/
+      background: var(--off-white);
+      border-style: solid;
+      border-color: var(--black);
+    }
+
+    .topic-title {
+      font-family: var(--serif);
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 10px;
+      display: inline-block;
+      width: 80%;
+    }
+
+    .topic-description {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 48px;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-center {
+        display: flex;
+        gap: 10px;
+    }
+
+    /*contact info style*/
+    .contact-info { font-size: 13px; color: var(--muted); }
+
+    /*back to the top button */
+    .back-to-top { font-size: 12px; font-weight: 500; color: var(--muted);  border: 1px solid var(--border); padding: 5px 15px;}
+    .back-to-top:hover {background: var(--black); color: var(--white);}
+
+    @media (max-width: 1024px) {
+      .topics-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .topics-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">InnovaTech</div>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../about/about.html">About Us</a>
+      <a href="../authors/authors.html" >Authors</a>
+      <a href="article-home.html" class="active">Articles</a>
+      <a href="../resources/resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-articles">
+      <h1>Articles</h1>
+      <a href="#section"><div class="browse-label">Browse all topics</div></a>
+    </section>
+
+    <section class="section-container" id="section">
+      <p class="row-label">Academic & Professional Career</p>
+      <div class="topics-grid">
+        <a href="../articles/topic1/topic1.html" class="topic-card">
+          <div class="topic-title">School loads and Class standing</div>
+          <div class="topic-description">Short description</div>
+        </a>
+        <a href="#" class="topic-card">
+          <div class="topic-title">Career Anxiety</div>
+          <div class="topic-description">Short description</div>
+        </a>
+        <a href="#" class="topic-card">
+          <div class="topic-title">Skills Development</div>
+          <div class="topic-description">Short description</div>
+        </a>
+        <a href="#" class="topic-card">
+          <div class="topic-title">Study Apps</div>
+          <div class="topic-description">Short description</div>
+        </a>
+        <a href="#" class="topic-card">
+          <div class="topic-title">Study Habits</div>
+          <div class="topic-description">Short description</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-container">
+      <p class="row-label">Lifestyle and Self-development</p>
+      <div class="topics-grid">
+        <a href="#" class="topic-card"><div class="topic-title">Interpersonal Relationships</div><div class="topic-description">Short description</div></a>
+        <a href="#" class="topic-card"><div class="topic-title">Self-Identity</div><div class="topic-description">Short description</div></a>
+        <a href="#" class="topic-card"><div class="topic-title">Mental Health and Rest</div><div class="topic-description">Short description</div></a>
+        <a href="#" class="topic-card"><div class="topic-title">Burnout</div><div class="topic-description">Short description</div></a>
+        <a href="#" class="topic-card"><div class="topic-title">Team Collaboration</div><div class="topic-description">Short description</div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact-info">Contact Info</div>
+    <a href="#" class="back-to-top">Back to Top ↑</a>
+  </footer>
+
+</body>
+</html>
+
+     
