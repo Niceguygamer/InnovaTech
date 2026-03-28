@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Title — InnovaTech</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #A63D40;
+      --black: #2C2F33;
+      --white: #ffffff;
+      --off-white: #F7F5F2;
+      --muted: #6B7A8F;
+      --border: #e5e4e0;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--white);
+      color: var(--black);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.1px;
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: -0.3px;
+      color: var(--black);
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+    }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active { color: var(--red); }
+
+    /* ARTICLE HEADER */
+    .article-header {
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 0 64px;
+    }
+
+    .article-header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .article-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+
+    .article-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      color: var(--black);
+      margin-bottom: 20px;
+    }
+
+    .article-meta {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .article-meta .author-name {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    .article-meta .dot {
+      width: 3px;
+      height: 3px;
+      background: var(--muted);
+      border-radius: 50%;
+    }
+
+    /* ARTICLE BODY LAYOUT */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* MAIN CONTENT */
+    .article-content {
+      padding: 56px 52px 56px 48px;
+      border-right: 1px solid var(--border);
+    }
+
+    .article-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
+      margin-bottom: 36px;
+    }
+
+    .article-intro {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .article-body p {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+
+    .article-body h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--black);
+      margin: 40px 0 16px;
+      letter-spacing: -0.3px;
+    }
+
+    /* SIDEBAR */
+    .article-sidebar {
+      padding: 56px 32px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 40px;
+    }
+
+    .sidebar-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* AUTHOR CARD */
+    .author-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      background: var(--off-white);
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+    }
+
+    .author-card-name {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 2px;
+    }
+
+    .author-card-role {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid #2C2F33;
+      color: #2C2F33;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      margin-top: 14px;
+      transition: background 0.2s, color 0.2s;
+      background-color: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: #A63D40;
+      color: #F7F5F2;
+      border-color: #F7F5F2;
+    }
+
+    /* RELATED ARTICLES */
+    .related-article {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    .related-article:first-of-type { padding-top: 0; }
+
+    .related-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 4px;
+    }
+
+    .related-title {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--black);
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+
+    .related-article:hover .related-title { color: var(--red); }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-info {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .contact-info:hover {
+      font-size: 15px;
+      color: #A63D40;
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-nav a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      color: #6B7A8F;
+      border: 1px solid #6B7A8F;
+      transition: all 0.2s;
+      background-color: transparent;
+      border-radius: 4px;
+    }
+
+    .footer-nav a:hover {
+      color: #2C2F33;
+      border-color: #C9A66B;
+      background-color: #C9A66B;
+    }
+
+    .back-to-top {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6B7A8F;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 8px 16px;
+    }
+
+    .back-to-top::before { content: '↑'; font-size: 14px; }
+    .back-to-top:hover { color: #A63D40; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="../../../assets/img/logo_notext.png" alt="Logo">
+      <span>InnovaTech</span>
+    </div>
+    <nav>
+      <a href="../../../../index.html">Home</a>
+      <a href="../../about/about.html">About Us</a>
+      <a href="../../authors/authors.html">Authors</a>
+      <a href="../../article-home/article-home.html" class="active">Articles</a>
+      <a href="#">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ARTICLE HEADER -->
+    <div class="article-header">
+      <div class="article-header-inner">
+        <div class="article-tag">Topic #5</div>
+        <h1>Article Title Goes Right Here in This Space</h1>
+        <div class="article-meta">
+          <span class="author-name">AUTHOR'S NAME</span>
+          <span class="dot"></span>
+          <span>March 20, 2026</span>
+          <span class="dot"></span>
+          <span>5 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARTICLE BODY + SIDEBAR -->
+    <div class="article-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="article-content">
+        <div class="article-image"></div>
+
+        <p class="article-intro">
+          This is the introduction or summary of the article. It gives the reader a quick
+          overview of what the piece is about and why it matters to them as a tech college student.
+        </p>
+
+        <div class="article-body">
+          <p>
+            This is the main body of the article. The author shares their personal experience,
+            insights, and lessons learned. The content is written in a conversational tone that
+            is relatable to fellow students going through similar situations in college.
+          </p>
+          <h2>A Section Heading</h2>
+          <p>
+            More content goes here. Each paragraph digs deeper into the topic, offering
+            practical advice or honest reflections. The writing feels personal because it comes
+            from real student experience, not from a textbook.
+          </p>
+          <p>
+            The article continues here, wrapping up the thought or moving into another angle
+            of the topic. It keeps the reader engaged and leaves them with something to take away.
+          </p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="article-sidebar">
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Related Articles</div>
+
+          <div class="related-article">
+            <div class="related-tag">Topic #2</div>
+            <div class="related-title">Related article title sits in this spot</div>
+          </div>
+
+          <div class="related-article">
+            <div class="related-tag">Topic #4</div>
+            <div class="related-title">Another related topic worth reading</div>
+          </div>
+
+          <div class="related-article">
+            <div class="related-tag">Topic #6</div>
+            <div class="related-title">One more piece the reader might enjoy</div>
+          </div>
+
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Written by</div>
+          <div class="author-card">
+            <div class="author-avatar"></div>
+            <div>
+              <div class="author-card-name">OBILLO, MON ANDREI</div>
+              <div class="author-card-role">BS Computer Science</div>
+            </div>
+          </div>
+          <a href="#" class="btn-outline">View Profile</a>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="contact-info">
+      <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
+    </div>
+    <div class="footer-nav">
+      <a href="../../article-home/article-home.html">&#8592; Back to Articles</a>
+      <a href="page2.html">Next &#8594;</a>
+    </div>
+    <a href="#" class="back-to-top">Back to Top</a>
+  </footer>
+
+</body>
+</html>
