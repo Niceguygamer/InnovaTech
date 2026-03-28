@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Article Title — InnovaTech</title>
+  <title>Study Habits</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --red: #A63D40;
-      --black: #2C2F33;
+      --blue: #5C6F91;
+      --black: #33363A;
       --white: #ffffff;
-      --off-white: #F7F5F2;
+      --off-white: #F3F4F6;
       --muted: #6B7A8F;
       --border: #e5e4e0;
       --serif: 'DM Serif Display', Georgia, serif;
@@ -72,12 +72,12 @@
       font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--blue);
       transition: color 0.2s;
     }
 
     nav a:hover,
-    nav a.active { color: var(--red); }
+    nav a.active { color: var(--black); }
 
     /* ARTICLE HEADER */
     .article-header {
@@ -97,7 +97,7 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--blue);
       margin-bottom: 16px;
     }
 
@@ -246,9 +246,9 @@
     }
 
     .btn-outline:hover {
-      background-color: #A63D40;
-      color: #F7F5F2;
-      border-color: #F7F5F2;
+      background-color: #5C6F91;
+      color: #F3F4F6;
+      border-color: #F3F4F6;
     }
 
     /* RELATED ARTICLES */
@@ -265,7 +265,7 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--blue);
       margin-bottom: 4px;
     }
 
@@ -278,7 +278,7 @@
       transition: color 0.2s;
     }
 
-    .related-article:hover .related-title { color: var(--red); }
+    .related-article:hover .related-title { color: var(--blue); }
 
     /* FOOTER */
     footer {
@@ -292,12 +292,12 @@
 
     .contact-info {
       font-size: 15px;
-      color: var(--muted);
+      color: var(--blue);
     }
 
     .contact-info:hover {
       font-size: 15px;
-      color: #A63D40;
+      color: var(--black);
     }
 
     .footer-nav {
@@ -320,8 +320,8 @@
 
     .footer-nav a:hover {
       color: #2C2F33;
-      border-color: #C9A66B;
-      background-color: #C9A66B;
+      border-color: #D8C9A3;
+      background-color: #D8C9A3;
     }
 
     .back-to-top {
@@ -329,19 +329,47 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #6B7A8F;
+      color: #8C949C;
       transition: color 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       text-decoration: none;
       padding: 8px 16px;
+
+      .tips-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .tips-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--black);
+        line-height: 1.85;
+        display: flex;
+        gap: 12px;
+      }
+
+      .tips-list li:last-child {
+        border-bottom: none;
+      }
+
+      .tips-list li::before {
+        content: '—';
+        color: var(--blue);
+        flex-shrink: 0;
+      }
     }
 
     .back-to-top::before { content: '↑'; font-size: 14px; }
-    .back-to-top:hover { color: #A63D40; }
+    .back-to-top:hover { color: #33363A; }
   </style>
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -355,7 +383,7 @@
       <a href="../../about/about.html">About Us</a>
       <a href="../../authors/authors.html">Authors</a>
       <a href="../../article-home/article-home.html" class="active">Articles</a>
-      <a href="#">Resources</a>
+      <a href="../../resources/resources.html">Resources</a>
     </nav>
   </header>
 
@@ -364,10 +392,10 @@
     <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
-        <div class="article-tag">Topic #10</div>
-        <h1>Article Title Goes Right Here in This Space</h1>
+        <div class="article-tag">Topic # 5</div>
+        <h1>Study habits</h1>
         <div class="article-meta">
-          <span class="author-name">AUTHOR'S NAME</span>
+          <span class="author-name">AGUNOD, IÑIGO JOSE</span>
           <span class="dot"></span>
           <span>March 20, 2026</span>
           <span class="dot"></span>
@@ -384,26 +412,28 @@
         <div class="article-image"></div>
 
         <p class="article-intro">
-          This is the introduction or summary of the article. It gives the reader a quick
-          overview of what the piece is about and why it matters to them as a tech college student.
+          Nobody warns you about the 3 am silence - when your code still won't compile, your energy drink is cold, and your roommate is peacefully asleep. If you are in a tech-related program, you already know that feeling personally. This is the reality check every tech student evetually faces, and the sooner you understand it, the better off you will be.
         </p>
 
         <div class="article-body">
           <p>
-            This is the main body of the article. The author shares their personal experience,
-            insights, and lessons learned. The content is written in a conversational tone that
-            is relatable to fellow students going through similar situations in college.
+            There is an unspoken culture in IT, computer science, and software engineering courses that quietly rewards suffering. Who stayed up latest. Who has the most tabs open. Who skipped lunch to finish a function. Somewhere along the way, exhaustion became a personality trait and grinding became the only accepted strategy. You stop asking whether your approach is actually working and start measruing yourself purely by how destroyed you feel at the end of the day.
           </p>
-          <h2>A Section Heading</h2>
+          <h2>A Wall Nobody Talks About</h2>
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            Most tech students hit a breaking point around second semester. Suddenly you are expected to learn a new programming language, finish a group project, pass a theory exam, and keep your grades up across five subjects — all at the same time. When you fall behind, the first instinct is to blame yourself. To think you are just not cut out for this field. But the more honest truth is that the system was never designed around your actual cognitive limits. The students who make it are not the ones who suffer the most — they are the ones who figured out early that studying smarter is a skill you have to deliberately build.
+            <br><br>
+            The overwork mentality is not a badge of honor. It is a trap. And the first step to getting out of it is simply recognizing that it exists — and deciding you are allowed to approach this differently.
           </p>
-          <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
-          </p>
+
+          <h2>Tips to Remember</h2>
+          <ul class="tips-list">
+            <li>Track one full week of your time honestly — most of it is probably panic, not actual studying.</li>
+            <li>Separate "looking busy" from "actually learning" — your grades will eventually show the difference.</li>
+            <li>Talk to an upperclassman about how they manage the load — most had to unlearn overwork too.</li>
+            <li>Drop one draining low-value task from your week — you will not miss it.</li>
+            <li>Struggling with hard technical material is normal — it does not mean you do not belong here.</li>
+          </ul>
         </div>
       </div>
 
@@ -435,11 +465,11 @@
           <div class="author-card">
             <div class="author-avatar"></div>
             <div>
-              <div class="author-card-name">OBILLO, MON ANDREI</div>
+              <div class="author-card-name">AGUNOD, IÑIGO JOSE</div>
               <div class="author-card-role">BS Computer Science</div>
             </div>
           </div>
-          <a href="#" class="btn-outline">View Profile</a>
+          <a href="../../authors/authors.html" class="btn-outline">View Profile</a>
         </div>
 
       </aside>

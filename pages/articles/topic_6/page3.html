@@ -7,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --red: #A63D40;
-      --black: #2C2F33;
+      --blue: #5C6F91;
+      --black: #33363A;
       --white: #ffffff;
-      --off-white: #F7F5F2;
+      --off-white: #F3F4F6;
       --muted: #6B7A8F;
       --border: #e5e4e0;
       --serif: 'DM Serif Display', Georgia, serif;
@@ -24,7 +24,7 @@
       font-family: var(--sans);
       font-weight: 300;
       background: var(--white);
-      color: var(--black); 
+      color: var(--black);
       font-size: 15px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -56,13 +56,11 @@
       color: var(--black);
     }
 
-    /* pahelp sa logo & logo name, idk how ilalapit onti (anlaki ng gap) */
     .logo img {
       height: 80px;
       width: auto;
       display: block;
     }
-
 
     nav {
       display: flex;
@@ -74,12 +72,12 @@
       font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--blue);
       transition: color 0.2s;
     }
 
     nav a:hover,
-    nav a.active { color: var(--red); }
+    nav a.active { color: var(--black); }
 
     /* ARTICLE HEADER */
     .article-header {
@@ -99,7 +97,7 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--blue);
       margin-bottom: 16px;
     }
 
@@ -248,9 +246,9 @@
     }
 
     .btn-outline:hover {
-      background-color: #A63D40;
-      color: #F7F5F2;
-      border-color: #F7F5F2;
+      background-color: #5C6F91;
+      color: #F3F4F6;
+      border-color: #F3F4F6;
     }
 
     /* RELATED ARTICLES */
@@ -267,7 +265,7 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--blue);
       margin-bottom: 4px;
     }
 
@@ -280,7 +278,7 @@
       transition: color 0.2s;
     }
 
-    .related-article:hover .related-title { color: var(--red); }
+    .related-article:hover .related-title { color: var(--blue); }
 
     /* FOOTER */
     footer {
@@ -294,12 +292,12 @@
 
     .contact-info {
       font-size: 15px;
-      color: var(--muted);
+      color: var(--blue);
     }
 
     .contact-info:hover {
       font-size: 15px;
-      color: #A63D40;
+      color: var(--black);
     }
 
     .footer-nav {
@@ -312,9 +310,9 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      padding: 10px 22px;
       color: #6B7A8F;
       border: 1px solid #6B7A8F;
-      padding: 10px 22px;
       transition: all 0.2s;
       background-color: transparent;
       border-radius: 4px;
@@ -322,8 +320,8 @@
 
     .footer-nav a:hover {
       color: #2C2F33;
-      border-color: #C9A66B;
-      background-color: #C9A66B;
+      border-color: #D8C9A3;
+      background-color: #D8C9A3;
     }
 
     .back-to-top {
@@ -331,7 +329,7 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #6B7A8F;
+      color: #8C949C;
       transition: color 0.2s;
       display: inline-flex;
       align-items: center;
@@ -341,35 +339,33 @@
     }
 
     .back-to-top::before { content: '↑'; font-size: 14px; }
-    .back-to-top:hover { 
-      color: #A63D40; 
-    }
+    .back-to-top:hover { color: #33363A; }
   </style>
 </head>
+
 <body>
 
   <!-- HEADER -->
-<header>
-  <div class="logo">
-    <img src="../../../assets/img/logo_notext.png" alt="Logo">
-    <span>InnovaTech</span>
-  </div>
-
-  <nav>
-    <a href="../../../../index.html">Home</a>
-    <a href="../../about/about.html">About Us</a>
-    <a href="../../authors/authors.html">Authors</a>
-    <a href="../../article-home/article-home.html" class="active">Articles</a>
-    <a href="#">Resources</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">
+      <img src="../../../assets/img/logo_notext.png" alt="Logo">
+      <span>InnovaTech</span>
+    </div>
+    <nav>
+      <a href="../../../index.html">Home</a>
+      <a href="../../about/about.html">About Us</a>
+      <a href="../../authors/authors.html">Authors</a>
+      <a href="../../article-home/article-home.html" class="active">Articles</a>
+      <a href="../../resources/resources.html">Resources</a>
+    </nav>
+  </header>
 
   <main>
 
     <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
-        <div class="article-tag">Topic # 1</div>
+        <div class="article-tag">Topic # 6</div>
         <h1>Interpersonal Relationships</h1>
         <div class="article-meta">
           <span class="author-name">LIBUTON, CYRIL MAE</span>
@@ -458,13 +454,12 @@
     <div class="contact-info">
       <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
     </div>
-
-  <div class="footer-nav">
-    <a href="page2.html">← Prev</a>
-    <a href="page4.html">Next →</a>
-  </div>
-  <a href="#" class="back-to-top">Back to Top</a>
-</footer>
+    <div class="footer-nav">
+      <a href="page2.html">&#8592; Prev</a>
+      <a href="page4.html">Next &#8594;</a>
+    </div>
+    <a href="#" class="back-to-top">Back to Top</a>
+  </footer>
 
 </body>
 </html>

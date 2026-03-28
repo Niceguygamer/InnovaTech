@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Apps</title>
+  <title>Study Habits</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --red: #A63D40;
-      --black: #2C2F33;
+      --blue: #5C6F91;
+      --black: #33363A;
       --white: #ffffff;
-      --off-white: #F7F5F2;
+      --off-white: #F3F4F6;
       --muted: #6B7A8F;
       --border: #e5e4e0;
       --serif: 'DM Serif Display', Georgia, serif;
@@ -72,12 +72,12 @@
       font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--blue);
       transition: color 0.2s;
     }
 
     nav a:hover,
-    nav a.active { color: var(--red); }
+    nav a.active { color: var(--black); }
 
     /* ARTICLE HEADER */
     .article-header {
@@ -97,7 +97,7 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--blue);
       margin-bottom: 16px;
     }
 
@@ -246,9 +246,9 @@
     }
 
     .btn-outline:hover {
-      background-color: #A63D40;
-      color: #F7F5F2;
-      border-color: #F7F5F2;
+      background-color: #5C6F91;
+      color: #F3F4F6;
+      border-color: #F3F4F6;
     }
 
     /* RELATED ARTICLES */
@@ -265,7 +265,7 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--blue);
       margin-bottom: 4px;
     }
 
@@ -278,7 +278,7 @@
       transition: color 0.2s;
     }
 
-    .related-article:hover .related-title { color: var(--red); }
+    .related-article:hover .related-title { color: var(--blue); }
 
     /* FOOTER */
     footer {
@@ -292,12 +292,12 @@
 
     .contact-info {
       font-size: 15px;
-      color: var(--muted);
+      color: var(--blue);
     }
 
     .contact-info:hover {
       font-size: 15px;
-      color: #A63D40;
+      color: var(--black);
     }
 
     .footer-nav {
@@ -320,8 +320,8 @@
 
     .footer-nav a:hover {
       color: #2C2F33;
-      border-color: #C9A66B;
-      background-color: #C9A66B;
+      border-color: #D8C9A3;
+      background-color: #D8C9A3;
     }
 
     .back-to-top {
@@ -329,7 +329,7 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #6B7A8F;
+      color: #8C949C;
       transition: color 0.2s;
       display: inline-flex;
       align-items: center;
@@ -339,9 +339,10 @@
     }
 
     .back-to-top::before { content: '↑'; font-size: 14px; }
-    .back-to-top:hover { color: #A63D40; }
+    .back-to-top:hover { color: #33363A; }
   </style>
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -351,7 +352,7 @@
       <span>InnovaTech</span>
     </div>
     <nav>
-      <a href="../../../index.html">Home</a>
+      <a href="../../../../index.html">Home</a>
       <a href="../../about/about.html">About Us</a>
       <a href="../../authors/authors.html">Authors</a>
       <a href="../../article-home/article-home.html" class="active">Articles</a>
@@ -364,10 +365,10 @@
     <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
-        <div class="article-tag">Topic # 4</div>
-        <h1>Study Apps</h1>
+        <div class="article-tag">Topic # 5</div>
+        <h1>Study habits</h1>
         <div class="article-meta">
-          <span class="author-name">ALAB-AB, CHARLIZE</span>
+          <span class="author-name">AGUNOD, IÑIGO JOSE</span>
           <span class="dot"></span>
           <span>March 20, 2026</span>
           <span class="dot"></span>
@@ -435,7 +436,7 @@
           <div class="author-card">
             <div class="author-avatar"></div>
             <div>
-              <div class="author-card-name">ALAB-AB, CHARLIZE</div>
+              <div class="author-card-name">AGUNOD, IÑIGO JOSE</div>
               <div class="author-card-role">BS Computer Science</div>
             </div>
           </div>
@@ -455,7 +456,10 @@
     </div>
     <div class="footer-nav">
       <a href="page8.html">&#8592; Prev</a>
-      <a href="page10.html">Next &#8594;</a>
+      <a href="page10.html">Next →</a>
+
+      <!-- (don't delete) <a href="page1.html">&#8592; Prev</a> -->
+      <!-- (don't delete) <a href="#">Next Article →</a> -->
     </div>
     <a href="#" class="back-to-top">Back to Top</a>
   </footer>
