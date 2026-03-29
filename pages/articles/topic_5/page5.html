@@ -340,6 +340,33 @@
 
     .back-to-top::before { content: '↑'; font-size: 14px; }
     .back-to-top:hover { color: #33363A; }
+
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tips-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.85;
+      display: flex;
+      gap: 12px;
+    }
+
+    .tips-list li:last-child {
+      border-bottom: none;
+    }
+
+    .tips-list li::before {
+      content: '—';
+      color: var(--blue);
+      flex-shrink: 0;
+    }
   </style>
 </head>
 
@@ -366,7 +393,7 @@
     <div class="article-header">
       <div class="article-header-inner">
         <div class="article-tag">Topic # 5</div>
-        <h1>Study habits</h1>
+        <h1>Group Projects Will Not Kill You(If you Do This)</h1>
         <div class="article-meta">
           <span class="author-name">AGUNOD, IÑIGO JOSE</span>
           <span class="dot"></span>
@@ -385,26 +412,29 @@
         <div class="article-image"></div>
 
         <p class="article-intro">
-          This is the introduction or summary of the article. It gives the reader a quick
-          overview of what the piece is about and why it matters to them as a tech college student.
+          Every tech student has the story. One groupmate disappeared after the first meeting. Another only showed up for the presentation. The rest rebuilt the entire system at 2am the night before submission. It is so universal it has become a dark comedy in tech courses. But underneath the jokes is real lost sleep, real grade damage, and real frustration caused by people you had no choice but to depend on.
         </p>
 
         <div class="article-body">
           <p>
-            This is the main body of the article. The author shares their personal experience,
-            insights, and lessons learned. The content is written in a conversational tone that
-            is relatable to fellow students going through similar situations in college.
+            Tech group work is uniquely complicated because the tasks are deeply interdependent. If the person handling the database does not communicate clearly with the person building the front end, the whole system breaks. Unlike a group essay where each person can write their section independently, a software project requires constant integration, communication, and mutual understanding of the whole. Most students are never taught how to actually coordinate this kind of work, so they default to either micromanaging everything or disappearing entirely.
           </p>
-          <h2>A Section Heading</h2>
+          <h2>What Actually Makes Groups Work</h2>
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            The groups that function well share a few consistent habits. They lock in one communication channel and one project tool in the very first meeting. They assign tasks with clear owners and personal deadlines set before the real deadline. They hold brief check-ins every few days — not full meetings, just quick progress visibility. And critically, they surface problems early instead of hoping they resolve on their own, because in a system where components depend on each other, a hidden problem always becomes a very visible crisis.
           </p>
           <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
+            Surviving group work in a tech program is a learnable skill, not a matter of luck in being assigned good teammates. The students who build systems for collaboration early are the ones who eventually stop dreading group projects entirely.
           </p>
+
+          <h2>Tips to Remember</h2>
+          <ul class="tips-list">
+            <li>In your first meeting, lock in one communication channel and one project tool immediately</li>
+            <li>Assign every task a clear owner, a clear output, and a personal deadline three days before the actual one</li>
+            <li>Do a quick check-in every few days — ten minutes, not a full meeting</li>
+            <li>Address non-contributing groupmates early and directly — absorbing their work silently only builds resentment</li>
+            <li>Build your focus window gradually — if 20 minutes is your limit right now, that is fine, grow it over weeks</li>
+          </ul>
         </div>
       </div>
 
