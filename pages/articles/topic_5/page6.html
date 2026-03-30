@@ -340,6 +340,33 @@
 
     .back-to-top::before { content: '↑'; font-size: 14px; }
     .back-to-top:hover { color: #33363A; }
+
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tips-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.85;
+      display: flex;
+      gap: 12px;
+    }
+
+    .tips-list li:last-child {
+      border-bottom: none;
+    }
+
+    .tips-list li::before {
+      content: '—';
+      color: var(--blue);
+      flex-shrink: 0;
+    }
   </style>
 </head>
 
@@ -392,16 +419,22 @@
           <p>
             In tech programs, procrastination has a specific flavor. It is not usually about the task being boring — it is about not knowing where to start. Not knowing if your approach is even correct. Not knowing how long it will take. And underneath all of that, a quiet fear of opening the file and discovering that you cannot actually do it. Avoidance feels safer than finding that out. So the tab stays minimized, the deadline gets closer, and the anxiety quietly compounds.
           </p>
-          <h2>A Section Heading</h2>
+          <h2>The Compiler Mindset</h2>
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            The fix is not motivation — it is lowering the bar for starting so dramatically that your brain cannot justify avoiding it. Think about it the way a compiler processes code. It does not evaluate whether the code is good before it runs. It just processes. Your first move on any assignment should work the same way: open the file, write comments describing what you think needs to happen, write anything even if it is wrong. Bad first attempts are how every good program begins, and starting badly is still infinitely better than not starting at all.
           </p>
           <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
+            Procrastination in a tech program is almost always a response to uncertainty, not a character flaw. The fix is not finding the motivation to do it perfectly — it is lowering the bar for starting so low that beginning becomes the easiest option available.
           </p>
+
+          <h2>Tips to Remember</h2>
+          <ul class="tips-list">
+            <li>When stuck, open the file and write comments explaining what you think the solution needs to do — that counts as starting</li>
+            <li>Set a 10-minute timer and commit only to that — you are allowed to stop after, but you rarely will</li>
+            <li>Break the task into the smallest possible first step — not "finish the program," just "write the function signature"</li>
+            <li>Remove escape routes before you sit down — blockers on, phone away, only relevant tabs open</li>
+            <li>Talk the problem through with a classmate before starting — explaining what you do not understand out loud usually generates the clarity to begin</li>
+          </ul>
         </div>
       </div>
 
