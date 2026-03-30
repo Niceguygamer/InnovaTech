@@ -340,6 +340,33 @@
 
     .back-to-top::before { content: '↑'; font-size: 14px; }
     .back-to-top:hover { color: #33363A; }
+
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tips-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.85;
+      display: flex;
+      gap: 12px;
+    }
+
+    .tips-list li:last-child {
+      border-bottom: none;
+    }
+
+    .tips-list li::before {
+      content: '—';
+      color: var(--blue);
+      flex-shrink: 0;
+    }
   </style>
 </head>
 
@@ -366,7 +393,7 @@
     <div class="article-header">
       <div class="article-header-inner">
         <div class="article-tag">Topic # 5</div>
-        <h1>Study habits</h1>
+        <h1>The Mental Load of Always Feeling Behind</h1>
         <div class="article-meta">
           <span class="author-name">AGUNOD, IÑIGO JOSE</span>
           <span class="dot"></span>
@@ -385,26 +412,29 @@
         <div class="article-image"></div>
 
         <p class="article-intro">
-          This is the introduction or summary of the article. It gives the reader a quick
-          overview of what the piece is about and why it matters to them as a tech college student.
+          There is a specific anxiety that lives in tech programs and does not have a clean name. It is the feeling of being perpetually behind — not on one thing, but on everything, always, in a way that never fully resolves. You finish one project and two more appear. You finally understand one concept and realize there are three more you never properly grasped. You open LinkedIn and feel a quiet dread settle in your chest. If this sounds familiar, you are not alone — and more importantly, you are not weak for feeling it.
         </p>
 
         <div class="article-body">
           <p>
-            This is the main body of the article. The author shares their personal experience,
-            insights, and lessons learned. The content is written in a conversational tone that
-            is relatable to fellow students going through similar situations in college.
+            Most students just accept this feeling as a permanent feature of their life in a tech program. That is exactly the point where it becomes dangerous. There is a real difference between normal academic stress — which rises before a deadline and falls after — and burnout, which is chronic. Burnout does not go away after one good night of sleep or a weekend off. It builds quietly over months, usually because the culture rewards pushing through. Students learn to perform wellness while running completely on empty, and by the time it becomes impossible to ignore, it has often been building for an entire semester.
           </p>
-          <h2>A Section Heading</h2>
+          <h2>Recovery Is Not a Weekend Off</h2>
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            Genuine recovery is a weekly recalibration — identifying what actually restores your energy and treating those things as scheduled non-negotiables, not rewards you earn after finishing everything. Physical movement, time spent fully offline, creative work unrelated to your program, meaningful time with people you care about. These are not treats. They are maintenance. Because in tech, the work never fully ends. If you wait until everything is done to rest, you will never rest — and eventually, you will not be able to work either.
           </p>
           <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
+            The pressure in a tech program is real and it is not going away. But there is a significant difference between managing that pressure sustainably and being slowly crushed by it. Learning to recognize that difference — in yourself and in the people around you — is one of the most important things you can do for your long-term success in this field.
           </p>
+
+          <h2>Tips to Remember</h2>
+          <ul class="tips-list">
+            <li>Learn your own early burnout signs — irritability, numbness, a sudden drop in work quality — and catch it before it compounds</li>
+            <li>Schedule at least one fully offline hour per day and protect it the same way you protect a class schedule</li>
+            <li>Talk to someone when the weight becomes unmanageable — a friend, a counselor, a professor you trust — silence makes it worse</li>
+            <li>Compare yourself to your own progress over time, not to the highlight reels of people on LinkedIn</li>
+            <li>Asking for an extension or taking a lighter week is not failure — it is judgment, and doing it early is always better than collapsing later</li>
+          </ul>
         </div>
       </div>
 
