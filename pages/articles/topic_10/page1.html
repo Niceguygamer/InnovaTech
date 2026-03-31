@@ -195,19 +195,19 @@
       letter-spacing: -0.3px;
     }
 
-    ol, .list li{
-      font-size: 15px;
-      font-weight: 300;
-      color: var(--black);
-      line-height: 1;
+    .list {
+      padding-left: 30px; 
       margin-bottom: 24px;
-      margin-left: 10px;
     }
 
+    .list li {
+      font-size: 15px;       
+      font-weight: 400;      
+      color: var(--black);
+      line-height: 1.6;      
+      margin-bottom: 12px;  
+    }
     
-
-
-
     /* SIDEBAR */
     .article-sidebar {
       padding: 56px 32px;
@@ -237,14 +237,17 @@
     }
 
     .author-avatar {
-      width: 48px;
-      height: 48px;
-      background: var(--off-white);
-      border-radius: 50%;
-      flex-shrink: 0;
-      border: 1px solid var(--border);
+      flex-shrink: 0; 
     }
 
+    .author-avatar img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%; 
+      border: 1px solid var(--border);
+      object-fit: cover;
+      display: block;
+    }
     .author-card-name {
       font-family: var(--serif);
       font-size: 16px;
