@@ -147,11 +147,29 @@
       border-right: 1px solid var(--border);
     }
 
-    .article-image {
+    .article-image img {
       width: 100%;
-      aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
-      margin-bottom: 36px;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      
+    }
+
+    .article-image figcaption{
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      padding: 8px 0;
+      font-style: italic;
+      
+    }
+
+    .article-image figcaption a{
+      color: var(--blue);
+    }
+
+    .article-image figcaption a:hover{
+      color: var(--black);
     }
 
     .article-intro {
