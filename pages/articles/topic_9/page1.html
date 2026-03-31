@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Burnout</title>
+  <title>You Are Not Lazy, You Are Running on Empty — Topic 9</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -32,7 +32,6 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -56,16 +55,9 @@
       color: var(--black);
     }
 
-    .logo img {
-      height: 80px;
-      width: auto;
-      display: block;
-    }
+    .logo img { height: 80px; width: auto; display: block; }
 
-    nav {
-      display: flex;
-      gap: 36px;
-    }
+    nav { display: flex; gap: 36px; }
 
     nav a {
       font-size: 13px;
@@ -76,10 +68,8 @@
       transition: color 0.2s;
     }
 
-    nav a:hover,
-    nav a.active { color: var(--black); }
+    nav a:hover, nav a.active { color: var(--black); }
 
-    /* ARTICLE HEADER */
     .article-header {
       background: var(--off-white);
       border-bottom: 1px solid var(--border);
@@ -119,10 +109,7 @@
       gap: 16px;
     }
 
-    .article-meta .author-name {
-      color: var(--black);
-      font-weight: 500;
-    }
+    .article-meta .author-name { color: var(--black); font-weight: 500; }
 
     .article-meta .dot {
       width: 3px;
@@ -131,7 +118,6 @@
       border-radius: 50%;
     }
 
-    /* ARTICLE BODY LAYOUT */
     .article-layout {
       display: grid;
       grid-template-columns: 1fr 280px;
@@ -141,7 +127,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* MAIN CONTENT */
     .article-content {
       padding: 56px 52px 56px 48px;
       border-right: 1px solid var(--border);
@@ -150,9 +135,27 @@
     .article-image {
       width: 100%;
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
       margin-bottom: 36px;
+      overflow: hidden;
     }
+
+    .article-image figure { margin: 0; width: 100%; height: 100%; }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-image figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .article-image figcaption a { color: var(--blue); text-decoration: underline; }
 
     .article-intro {
       font-size: 18px;
@@ -181,14 +184,9 @@
       letter-spacing: -0.3px;
     }
 
-    /* SIDEBAR */
-    .article-sidebar {
-      padding: 56px 32px;
-    }
+    .article-sidebar { padding: 56px 32px; }
 
-    .sidebar-section {
-      margin-bottom: 40px;
-    }
+    .sidebar-section { margin-bottom: 40px; }
 
     .sidebar-label {
       font-size: 11px;
@@ -201,7 +199,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* AUTHOR CARD */
     .author-card {
       display: flex;
       align-items: center;
@@ -212,10 +209,17 @@
     .author-avatar {
       width: 48px;
       height: 48px;
-      background: var(--off-white);
       border-radius: 50%;
       flex-shrink: 0;
       border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .author-card-name {
@@ -226,10 +230,7 @@
       margin-bottom: 2px;
     }
 
-    .author-card-role {
-      font-size: 12px;
-      color: var(--muted);
-    }
+    .author-card-role { font-size: 12px; color: var(--muted); }
 
     .btn-outline {
       display: inline-block;
@@ -251,7 +252,6 @@
       border-color: #F3F4F6;
     }
 
-    /* RELATED ARTICLES */
     .related-article {
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
@@ -280,7 +280,6 @@
 
     .related-article:hover .related-title { color: var(--blue); }
 
-    /* FOOTER */
     footer {
       display: flex;
       justify-content: space-between;
@@ -290,20 +289,10 @@
       border-top: 1px solid var(--border);
     }
 
-    .contact-info {
-      font-size: 15px;
-      color: var(--blue);
-    }
+    .contact-info { font-size: 15px; color: var(--blue); }
+    .contact-info:hover { color: var(--black); }
 
-    .contact-info:hover {
-      font-size: 15px;
-      color: var(--black);
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 12px;
-    }
+    .footer-nav { display: flex; gap: 12px; }
 
     .footer-nav a {
       font-size: 12px;
@@ -345,7 +334,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="logo">
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
@@ -362,71 +350,112 @@
 
   <main>
 
-    <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
         <div class="article-tag">Topic # 9</div>
-        <h1>Burnout</h1>
+        <h1>You Are Not Lazy, You Are Running on Empty</h1>
         <div class="article-meta">
           <span class="author-name">LEONGSUN, EUWIN</span>
           <span class="dot"></span>
-          <span>March 20, 2026</span>
+          <span>March 31, 2026</span>
           <span class="dot"></span>
           <span>5 min read</span>
         </div>
       </div>
     </div>
 
-    <!-- ARTICLE BODY + SIDEBAR -->
     <div class="article-layout">
 
-      <!-- MAIN CONTENT -->
       <div class="article-content">
-        <div class="article-image"></div>
+
+        <div class="article-image">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1541199249251-f713e6145474?w=800&q=80" alt="Person sitting exhausted at a desk">
+            <figcaption>
+              Source: <a href="https://unsplash.com/photos/man-sitting-on-chair-covering-his-eyes-oqStl2L5oxI" target="_blank">Unsplash — Nik Shuliahin</a>
+            </figcaption>
+          </figure>
+        </div>
 
         <p class="article-intro">
-          This is the introduction or summary of the article. It gives the reader a quick
-          overview of what the piece is about and why it matters to them as a tech college student.
+          There is a specific kind of tired that sleep does not fix. You wake up already exhausted. You sit down
+          to work and nothing comes out. You used to care about this stuff and now you just cannot make yourself.
+          That is not laziness. That is burnout.
         </p>
 
         <div class="article-body">
+
           <p>
-            This is the main body of the article. The author shares their personal experience,
-            insights, and lessons learned. The content is written in a conversational tone that
-            is relatable to fellow students going through similar situations in college.
+            I know what burnout feels like because I have been in it. Not the mild "I need a break" version.
+            The kind where you open your project and just stare at it for twenty minutes without touching anything.
+            The kind where you used to get excited about building something and now the thought of it just makes
+            you tired.
           </p>
-          <h2>A Section Heading</h2>
+
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            A lot of students in tech programs hit this at some point and blame themselves for it. They think
+            they are not working hard enough, or they are not cut out for this, or everyone else is handling it
+            fine and there is something wrong with them. Usually none of that is true.
           </p>
+
+          <h2>Burnout Is Not the Same as Being Tired</h2>
+
           <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
+            Being tired means you need rest. You sleep, you recover, you come back. Burnout is different.
+            It builds up over a long time from sustained pressure, and it does not go away after one good night
+            of sleep or a weekend off. It is your mind and body telling you that something about the way you
+            have been operating is not sustainable.
           </p>
+
+          <p>
+            The signs are not always obvious at first. You start taking longer to do things that used to come
+            easily. You lose interest in stuff you actually liked doing. Small problems feel enormous. You get
+            irritable over nothing. Your output drops even when you are putting in the same amount of time,
+            sometimes more.
+          </p>
+
+          <p>
+            In a tech program, these signs are easy to dismiss because the workload is always heavy. You tell
+            yourself you are just having a rough week. Then it becomes a rough month. By the time you realize
+            what is actually happening, you are already deep in it.
+          </p>
+
+          <h2>Why It Matters to Name It Correctly</h2>
+
+          <p>
+            If you think you are lazy, you push harder. That makes burnout worse. If you think you are just
+            tired, you try to sleep it off and nothing changes. But if you recognize that you are burnt out,
+            you can actually do something useful about it.
+          </p>
+
+          <p>
+            The rest of this series is about understanding where burnout comes from in tech programs specifically,
+            what it looks like when it is affecting your work, and what you can actually do to recover and
+            build something more sustainable. Not to avoid hard work. Just to make sure the hard work does
+            not end up breaking you.
+          </p>
+
         </div>
       </div>
 
-      <!-- SIDEBAR -->
       <aside class="article-sidebar">
 
         <div class="sidebar-section">
           <div class="sidebar-label">Related Articles</div>
 
           <div class="related-article">
-            <div class="related-tag">Topic #2</div>
-            <div class="related-title">Related article title sits in this spot</div>
+            <div class="related-tag">Topic #3</div>
+            <div class="related-title">Competence: Skills Development</div>
           </div>
 
           <div class="related-article">
-            <div class="related-tag">Topic #4</div>
-            <div class="related-title">Another related topic worth reading</div>
+            <div class="related-tag">Topic #5</div>
+            <div class="related-title">Study Habits</div>
           </div>
 
           <div class="related-article">
-            <div class="related-tag">Topic #6</div>
-            <div class="related-title">One more piece the reader might enjoy</div>
+            <div class="related-tag">Topic #8</div>
+            <div class="related-title">Mental Health and Rest</div>
           </div>
 
         </div>
@@ -434,7 +463,7 @@
         <div class="sidebar-section">
           <div class="sidebar-label">Written by</div>
           <div class="author-card">
-            <div class="author-avatar"></div>
+            <div class="author-avatar"><img src="../../../assets/img/authors/leongsun/Facebook PFP.png" alt="LEONGSUN, EUWIN"></div>
             <div>
               <div class="author-card-name">LEONGSUN, EUWIN</div>
               <div class="author-card-role">BS Computer Science</div>
@@ -449,7 +478,6 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="contact-info">
       <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
