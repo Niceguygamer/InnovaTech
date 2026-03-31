@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interpersonal Relationships</title>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --blue: #5C6F91;
@@ -17,8 +19,15 @@
       --sans: 'DM Sans', sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--sans);
@@ -30,9 +39,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -77,9 +88,10 @@
     }
 
     nav a:hover,
-    nav a.active { color: var(--black); }
+    nav a.active {
+      color: var(--black);
+    }
 
-    /* ARTICLE HEADER */
     .article-header {
       background: var(--off-white);
       border-bottom: 1px solid var(--border);
@@ -131,7 +143,6 @@
       border-radius: 50%;
     }
 
-    /* ARTICLE BODY LAYOUT */
     .article-layout {
       display: grid;
       grid-template-columns: 1fr 280px;
@@ -141,7 +152,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* MAIN CONTENT */
     .article-content {
       padding: 56px 52px 56px 48px;
       border-right: 1px solid var(--border);
@@ -149,9 +159,30 @@
 
     .article-image {
       width: 100%;
-      aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
-      margin-bottom: 36px;
+      max-width: 800px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .article-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .article-image figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      padding: 12px 0;
+      font-style: italic;
+      display: block;
+    }
+
+    .article-image figcaption a:hover {
+      color: blue;
     }
 
     .article-intro {
@@ -162,17 +193,11 @@
       margin-bottom: 32px;
       padding-bottom: 32px;
       border-bottom: 1px solid var(--border);
+      text-align: justify;
+      text-justify: inter-word;
     }
 
-    .article-body p {
-      font-size: 15px;
-      font-weight: 300;
-      color: var(--black);
-      line-height: 1.85;
-      margin-bottom: 24px;
-    }
-
-    .article-body h2 {
+    .article-content h2 {
       font-family: var(--serif);
       font-size: 26px;
       font-weight: 400;
@@ -181,7 +206,16 @@
       letter-spacing: -0.3px;
     }
 
-    /* SIDEBAR */
+    .article-body p {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.85;
+      margin-bottom: 24px;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
     .article-sidebar {
       padding: 56px 32px;
     }
@@ -201,7 +235,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* AUTHOR CARD */
     .author-card {
       display: flex;
       align-items: center;
@@ -251,14 +284,15 @@
       border-color: #F3F4F6;
     }
 
-    /* RELATED ARTICLES */
     .related-article {
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
       cursor: pointer;
     }
 
-    .related-article:first-of-type { padding-top: 0; }
+    .related-article:first-of-type {
+      padding-top: 0;
+    }
 
     .related-tag {
       font-size: 10px;
@@ -278,9 +312,10 @@
       transition: color 0.2s;
     }
 
-    .related-article:hover .related-title { color: var(--blue); }
+    .related-article:hover .related-title {
+      color: var(--blue);
+    }
 
-    /* FOOTER */
     footer {
       display: flex;
       justify-content: space-between;
@@ -296,7 +331,6 @@
     }
 
     .contact-info:hover {
-      font-size: 15px;
       color: var(--black);
     }
 
@@ -338,8 +372,14 @@
       padding: 8px 16px;
     }
 
-    .back-to-top::before { content: '↑'; font-size: 14px; }
-    .back-to-top:hover { color: #33363A; }
+    .back-to-top::before {
+      content: '↑';
+      font-size: 14px;
+    }
+
+    .back-to-top:hover {
+      color: #33363A;
+    }
   </style>
 </head>
 
