@@ -147,11 +147,28 @@
       border-right: 1px solid var(--border);
     }
 
-    .article-image {
+    .article-image img {
       width: 100%;
-      aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
-      margin-bottom: 36px;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-image figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      padding: 8px 0;
+      font-style: italic;
+    }
+
+    .article-image figcaption a {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    .article-image figcaption a:hover {
+      color: var(--black);
     }
 
     .article-intro {
@@ -384,7 +401,12 @@
 
       <!-- MAIN CONTENT -->
       <div class="article-content">
-        <div class="article-image"></div>
+        <div class="article-image">
+          <figure>
+            <img src="../../../assets/img/topic 8/munda-page2.jpg">
+            <figcaption>
+              Source: <a href="https://www.powerofpositivity.com/sleep-quality-versus-quantity-study/">
+        </div>
 
         <p class="article-intro">
           <i>“A good laugh and a long sleep are the two best cures for anything.”</i> - Irish Proverb
