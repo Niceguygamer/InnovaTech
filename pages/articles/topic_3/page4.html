@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills Development</title>
+  <title>The Skills Nobody Puts on the Syllabus — Topic 3</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -32,7 +32,6 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -56,16 +55,9 @@
       color: var(--black);
     }
 
-    .logo img {
-      height: 80px;
-      width: auto;
-      display: block;
-    }
+    .logo img { height: 80px; width: auto; display: block; }
 
-    nav {
-      display: flex;
-      gap: 36px;
-    }
+    nav { display: flex; gap: 36px; }
 
     nav a {
       font-size: 13px;
@@ -76,10 +68,8 @@
       transition: color 0.2s;
     }
 
-    nav a:hover,
-    nav a.active { color: var(--black); }
+    nav a:hover, nav a.active { color: var(--black); }
 
-    /* ARTICLE HEADER */
     .article-header {
       background: var(--off-white);
       border-bottom: 1px solid var(--border);
@@ -119,10 +109,7 @@
       gap: 16px;
     }
 
-    .article-meta .author-name {
-      color: var(--black);
-      font-weight: 500;
-    }
+    .article-meta .author-name { color: var(--black); font-weight: 500; }
 
     .article-meta .dot {
       width: 3px;
@@ -131,7 +118,6 @@
       border-radius: 50%;
     }
 
-    /* ARTICLE BODY LAYOUT */
     .article-layout {
       display: grid;
       grid-template-columns: 1fr 280px;
@@ -141,7 +127,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* MAIN CONTENT */
     .article-content {
       padding: 56px 52px 56px 48px;
       border-right: 1px solid var(--border);
@@ -150,9 +135,27 @@
     .article-image {
       width: 100%;
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
       margin-bottom: 36px;
+      overflow: hidden;
     }
+
+    .article-image figure { margin: 0; width: 100%; height: 100%; }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-image figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .article-image figcaption a { color: var(--blue); text-decoration: underline; }
 
     .article-intro {
       font-size: 18px;
@@ -181,14 +184,9 @@
       letter-spacing: -0.3px;
     }
 
-    /* SIDEBAR */
-    .article-sidebar {
-      padding: 56px 32px;
-    }
+    .article-sidebar { padding: 56px 32px; }
 
-    .sidebar-section {
-      margin-bottom: 40px;
-    }
+    .sidebar-section { margin-bottom: 40px; }
 
     .sidebar-label {
       font-size: 11px;
@@ -201,7 +199,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* AUTHOR CARD */
     .author-card {
       display: flex;
       align-items: center;
@@ -226,10 +223,7 @@
       margin-bottom: 2px;
     }
 
-    .author-card-role {
-      font-size: 12px;
-      color: var(--muted);
-    }
+    .author-card-role { font-size: 12px; color: var(--muted); }
 
     .btn-outline {
       display: inline-block;
@@ -251,11 +245,11 @@
       border-color: #F3F4F6;
     }
 
-    /* RELATED ARTICLES */
     .related-article {
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
       cursor: pointer;
+      display: block;
     }
 
     .related-article:first-of-type { padding-top: 0; }
@@ -280,7 +274,6 @@
 
     .related-article:hover .related-title { color: var(--blue); }
 
-    /* FOOTER */
     footer {
       display: flex;
       justify-content: space-between;
@@ -290,20 +283,10 @@
       border-top: 1px solid var(--border);
     }
 
-    .contact-info {
-      font-size: 15px;
-      color: var(--blue);
-    }
+    .contact-info { font-size: 15px; color: var(--blue); }
+    .contact-info:hover { color: var(--black); }
 
-    .contact-info:hover {
-      font-size: 15px;
-      color: var(--black);
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 12px;
-    }
+    .footer-nav { display: flex; gap: 12px; }
 
     .footer-nav a {
       font-size: 12px;
@@ -345,7 +328,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="logo">
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
@@ -362,11 +344,10 @@
 
   <main>
 
-    <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
         <div class="article-tag">Topic # 3</div>
-        <h1>Skills Development</h1>
+        <h1>The Skills Nobody Puts on the Syllabus</h1>
         <div class="article-meta">
           <span class="author-name">LEONGSUN, EUWIN</span>
           <span class="dot"></span>
@@ -377,57 +358,116 @@
       </div>
     </div>
 
-    <!-- ARTICLE BODY + SIDEBAR -->
     <div class="article-layout">
 
-      <!-- MAIN CONTENT -->
       <div class="article-content">
-        <div class="article-image"></div>
+
+        <div class="article-image">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team of developers collaborating on a project">
+            <figcaption>
+              Source: <a href="https://unsplash.com/photos/people-sitting-on-chair-in-front-of-table-with-laptop-computers-bzqU01v-G54" target="_blank">Unsplash — Marvin Meyer</a>
+            </figcaption>
+          </figure>
+        </div>
 
         <p class="article-intro">
-          This is the introduction or summary of the article. It gives the reader a quick
-          overview of what the piece is about and why it matters to them as a tech college student.
+          Everyone in tech talks about learning frameworks, languages, and tools. Almost nobody talks about the
+          skills that make you actually useful to the people around you. I had to figure most of that out on my own,
+          usually after already making the mistake.
         </p>
 
         <div class="article-body">
+
           <p>
-            This is the main body of the article. The author shares their personal experience,
-            insights, and lessons learned. The content is written in a conversational tone that
-            is relatable to fellow students going through similar situations in college.
+            Technical skills will get you in the door. But the stuff that makes you good to work with, that makes
+            people want you on their team, is a different category entirely. And most of it never shows up in a
+            course outline.
           </p>
-          <h2>A Section Heading</h2>
+
+          <h2>Communication and Documentation</h2>
+
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            Being able to explain what your code does is a real skill. Not in a formal way, just clearly.
+            If someone else opens your project and cannot figure out what is going on, that is a problem.
+            If you push something to a group project and your teammates have no idea how to use it, that is a problem.
           </p>
+
           <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
+            Writing a basic README, leaving a comment where the logic is not obvious, naming your variables
+            in a way that makes sense. These things take almost no extra time but they change how useful your
+            work is to everyone around you, including your future self when you come back to the code months later.
           </p>
+
+          <p>
+            I learned this the hard way on Prior. Early on I wrote code that made complete sense to me in the
+            moment and zero sense to me six months later. I wasted a lot of time re-figuring out things I had
+            already figured out. Good documentation is not just for other people. It is for you.
+          </p>
+
+          <h2>Working With Other People's Code</h2>
+
+          <p>
+            Most of what you will do in a real job involves code that already exists. Code written by someone
+            else, in a style that might not match yours, solving a problem you did not frame. Reading and
+            understanding code you did not write is a completely different skill from writing code from scratch.
+          </p>
+
+          <p>
+            Group projects in college are actually pretty good practice for this, even if they feel like a
+            headache. Learning to understand someone else's logic, build on top of it without breaking it,
+            and communicate about it clearly is exactly what working in a team looks like.
+          </p>
+
+          <p>
+            Asking for help properly is also part of this. Knowing how to describe a problem clearly enough
+            that someone can actually help you is a skill. "It does not work" is not a useful description.
+            "This function returns undefined when I pass in an empty array and I expected it to return zero"
+            is something someone can actually respond to.
+          </p>
+
+          <h2>The Debugging Mindset</h2>
+
+          <p>
+            Debugging is not just a technical skill, it is a mental one. When something breaks, the instinct
+            for a lot of people is to panic or get frustrated and start changing random things hoping something
+            sticks. That approach wastes a lot of time and usually makes things worse.
+          </p>
+
+          <p>
+            The better approach is to slow down. Read the error message. Actually read it. Most of the time it
+            is telling you exactly what went wrong and where. Then narrow it down. Isolate the problem. Figure
+            out the smallest possible thing you can check to get closer to the answer.
+          </p>
+
+          <p>
+            This is a mindset you build over time through a lot of debugging. Nobody is born with it.
+            But once you have it, it makes you significantly more effective at everything in tech.
+            Problems stop feeling like walls and start feeling like puzzles.
+          </p>
+
         </div>
       </div>
 
-      <!-- SIDEBAR -->
       <aside class="article-sidebar">
 
         <div class="sidebar-section">
           <div class="sidebar-label">Related Articles</div>
 
-          <div class="related-article">
+          <a href="../topic_2/page1.html" class="related-article">
             <div class="related-tag">Topic #2</div>
-            <div class="related-title">Related article title sits in this spot</div>
-          </div>
+            <div class="related-title">Career Anxiety</div>
+          </a>
 
-          <div class="related-article">
-            <div class="related-tag">Topic #4</div>
-            <div class="related-title">Another related topic worth reading</div>
-          </div>
+          <a href="../topic_5/page1.html" class="related-article">
+            <div class="related-tag">Topic #5</div>
+            <div class="related-title">Study Habits</div>
+          </a>
 
-          <div class="related-article">
-            <div class="related-tag">Topic #6</div>
-            <div class="related-title">One more piece the reader might enjoy</div>
-          </div>
+          <a href="../topic_9/page1.html" class="related-article">
+            <div class="related-tag">Topic #9</div>
+            <div class="related-title">Burnout</div>
+          </a>
 
         </div>
 
@@ -449,7 +489,6 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="contact-info">
       <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills Development</title>
+  <title>The Side Project That Taught Me More Than Any Class — Topic 3</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -32,7 +32,6 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -56,16 +55,9 @@
       color: var(--black);
     }
 
-    .logo img {
-      height: 80px;
-      width: auto;
-      display: block;
-    }
+    .logo img { height: 80px; width: auto; display: block; }
 
-    nav {
-      display: flex;
-      gap: 36px;
-    }
+    nav { display: flex; gap: 36px; }
 
     nav a {
       font-size: 13px;
@@ -76,10 +68,8 @@
       transition: color 0.2s;
     }
 
-    nav a:hover,
-    nav a.active { color: var(--black); }
+    nav a:hover, nav a.active { color: var(--black); }
 
-    /* ARTICLE HEADER */
     .article-header {
       background: var(--off-white);
       border-bottom: 1px solid var(--border);
@@ -119,10 +109,7 @@
       gap: 16px;
     }
 
-    .article-meta .author-name {
-      color: var(--black);
-      font-weight: 500;
-    }
+    .article-meta .author-name { color: var(--black); font-weight: 500; }
 
     .article-meta .dot {
       width: 3px;
@@ -131,7 +118,6 @@
       border-radius: 50%;
     }
 
-    /* ARTICLE BODY LAYOUT */
     .article-layout {
       display: grid;
       grid-template-columns: 1fr 280px;
@@ -141,7 +127,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* MAIN CONTENT */
     .article-content {
       padding: 56px 52px 56px 48px;
       border-right: 1px solid var(--border);
@@ -150,9 +135,27 @@
     .article-image {
       width: 100%;
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
       margin-bottom: 36px;
+      overflow: hidden;
     }
+
+    .article-image figure { margin: 0; width: 100%; height: 100%; }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-image figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .article-image figcaption a { color: var(--blue); text-decoration: underline; }
 
     .article-intro {
       font-size: 18px;
@@ -181,14 +184,9 @@
       letter-spacing: -0.3px;
     }
 
-    /* SIDEBAR */
-    .article-sidebar {
-      padding: 56px 32px;
-    }
+    .article-sidebar { padding: 56px 32px; }
 
-    .sidebar-section {
-      margin-bottom: 40px;
-    }
+    .sidebar-section { margin-bottom: 40px; }
 
     .sidebar-label {
       font-size: 11px;
@@ -201,7 +199,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* AUTHOR CARD */
     .author-card {
       display: flex;
       align-items: center;
@@ -226,10 +223,7 @@
       margin-bottom: 2px;
     }
 
-    .author-card-role {
-      font-size: 12px;
-      color: var(--muted);
-    }
+    .author-card-role { font-size: 12px; color: var(--muted); }
 
     .btn-outline {
       display: inline-block;
@@ -251,11 +245,11 @@
       border-color: #F3F4F6;
     }
 
-    /* RELATED ARTICLES */
     .related-article {
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
       cursor: pointer;
+      display: block;
     }
 
     .related-article:first-of-type { padding-top: 0; }
@@ -280,7 +274,6 @@
 
     .related-article:hover .related-title { color: var(--blue); }
 
-    /* FOOTER */
     footer {
       display: flex;
       justify-content: space-between;
@@ -290,20 +283,10 @@
       border-top: 1px solid var(--border);
     }
 
-    .contact-info {
-      font-size: 15px;
-      color: var(--blue);
-    }
+    .contact-info { font-size: 15px; color: var(--blue); }
+    .contact-info:hover { color: var(--black); }
 
-    .contact-info:hover {
-      font-size: 15px;
-      color: var(--black);
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 12px;
-    }
+    .footer-nav { display: flex; gap: 12px; }
 
     .footer-nav a {
       font-size: 12px;
@@ -345,7 +328,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="logo">
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
@@ -362,11 +344,10 @@
 
   <main>
 
-    <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
         <div class="article-tag">Topic # 3</div>
-        <h1>Skills Development</h1>
+        <h1>The Side Project That Taught Me More Than Any Class</h1>
         <div class="article-meta">
           <span class="author-name">LEONGSUN, EUWIN</span>
           <span class="dot"></span>
@@ -377,57 +358,110 @@
       </div>
     </div>
 
-    <!-- ARTICLE BODY + SIDEBAR -->
     <div class="article-layout">
 
-      <!-- MAIN CONTENT -->
       <div class="article-content">
-        <div class="article-image"></div>
+
+        <div class="article-image">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Developer working on a personal project">
+            <figcaption>
+              Source: <a href="https://unsplash.com/photos/person-using-laptop-computer-s9CC2SKySJM" target="_blank">Unsplash — Avel Chuklanov</a>
+            </figcaption>
+          </figure>
+        </div>
 
         <p class="article-intro">
-          This is the introduction or summary of the article. It gives the reader a quick
-          overview of what the piece is about and why it matters to them as a tech college student.
+          During senior high school I started building a personal project mostly out of curiosity. I had no roadmap,
+          no mentor, and honestly no idea what I was doing half the time. That project ended up teaching me more
+          about real development than any single subject I took in college.
         </p>
 
         <div class="article-body">
+
           <p>
-            This is the main body of the article. The author shares their personal experience,
-            insights, and lessons learned. The content is written in a conversational tone that
-            is relatable to fellow students going through similar situations in college.
+            The project was called Prior. The idea started simple enough: I wanted to build something I could
+            actually use. Over time it grew into a full platform with multiple services connected together.
+            A social network, cloud storage, an AI chatbot, a messaging system. I was figuring it out as I went,
+            one broken feature at a time.
           </p>
-          <h2>A Section Heading</h2>
+
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            I am not sharing this to talk about the project. I am sharing it because the process of building it
+            was genuinely the most effective learning I have done. Not because it was always fun. Because it was
+            real. The problems were real. The bugs were real. The frustration of something not working for hours
+            and then finally clicking was real.
           </p>
+
+          <h2>Why Building Something Beats Just Studying</h2>
+
           <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
+            When you are working through a textbook or a tutorial, there is always a safety net. The answer is
+            somewhere nearby. The example works because someone designed it to work. Real projects do not give
+            you that. When something breaks and you have no idea why, you have to actually figure it out.
           </p>
+
+          <p>
+            That pressure is exactly what forces you to learn. You cannot move forward until you understand the
+            problem. You cannot skip the chapter. You read the documentation, look for similar issues, try things,
+            and eventually something either works or teaches you why it does not. That cycle is where real skill
+            development happens.
+          </p>
+
+          <p>
+            Every time I got stuck building Prior and worked through it, I understood that concept on a level
+            no lecture could replicate. Databases, authentication, routing, APIs, deployment, error handling.
+            I learned all of it because I needed to, not because it was on the syllabus.
+          </p>
+
+          <h2>How to Start When You Do Not Feel Ready</h2>
+
+          <p>
+            The most common reason people put off building their own project is that they feel like they are
+            not ready yet. They want to finish one more course, get a bit better at the language, understand
+            a few more concepts first. I had the same feeling when I started. I still have it sometimes.
+          </p>
+
+          <p>
+            That feeling does not go away. There will always be something you do not know yet. Waiting until
+            you feel ready is just another way of not starting. The readiness comes from doing the work, not
+            from preparing to do it.
+          </p>
+
+          <p>
+            Start with something small. Something you would actually want to use yourself. It does not have
+            to be impressive or original. A simple tool that solves a small problem you have. The goal is not
+            to build something perfect. The goal is to run into problems you do not know how to solve yet and
+            work through them.
+          </p>
+
+          <p>
+            You will Google everything. That is fine. Looking things up is not cheating, it is just how
+            development works. What matters is that you understand what you find and can apply it.
+          </p>
+
         </div>
       </div>
 
-      <!-- SIDEBAR -->
       <aside class="article-sidebar">
 
         <div class="sidebar-section">
           <div class="sidebar-label">Related Articles</div>
 
-          <div class="related-article">
+          <a href="../topic_2/page1.html" class="related-article">
             <div class="related-tag">Topic #2</div>
-            <div class="related-title">Related article title sits in this spot</div>
-          </div>
+            <div class="related-title">Career Anxiety</div>
+          </a>
 
-          <div class="related-article">
-            <div class="related-tag">Topic #4</div>
-            <div class="related-title">Another related topic worth reading</div>
-          </div>
+          <a href="../topic_5/page1.html" class="related-article">
+            <div class="related-tag">Topic #5</div>
+            <div class="related-title">Study Habits</div>
+          </a>
 
-          <div class="related-article">
-            <div class="related-tag">Topic #6</div>
-            <div class="related-title">One more piece the reader might enjoy</div>
-          </div>
+          <a href="../topic_9/page1.html" class="related-article">
+            <div class="related-tag">Topic #9</div>
+            <div class="related-title">Burnout</div>
+          </a>
 
         </div>
 
@@ -449,14 +483,13 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="contact-info">
       <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
     </div>
     <div class="footer-nav">
-      <a href="page3.html">&#8592; Prev</a>
-      <a href="page5.html">Next &#8594;</a>
+      <a href="page2.html">&#8592; Prev</a>
+      <a href="page4.html">Next &#8594;</a>
     </div>
     <a href="#" class="back-to-top">Back to Top</a>
   </footer>

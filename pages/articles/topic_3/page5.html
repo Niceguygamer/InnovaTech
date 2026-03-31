@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills Development</title>
+  <title>Building Competence Without Destroying Yourself — Topic 3</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -32,7 +32,6 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -56,16 +55,9 @@
       color: var(--black);
     }
 
-    .logo img {
-      height: 80px;
-      width: auto;
-      display: block;
-    }
+    .logo img { height: 80px; width: auto; display: block; }
 
-    nav {
-      display: flex;
-      gap: 36px;
-    }
+    nav { display: flex; gap: 36px; }
 
     nav a {
       font-size: 13px;
@@ -76,10 +68,8 @@
       transition: color 0.2s;
     }
 
-    nav a:hover,
-    nav a.active { color: var(--black); }
+    nav a:hover, nav a.active { color: var(--black); }
 
-    /* ARTICLE HEADER */
     .article-header {
       background: var(--off-white);
       border-bottom: 1px solid var(--border);
@@ -119,10 +109,7 @@
       gap: 16px;
     }
 
-    .article-meta .author-name {
-      color: var(--black);
-      font-weight: 500;
-    }
+    .article-meta .author-name { color: var(--black); font-weight: 500; }
 
     .article-meta .dot {
       width: 3px;
@@ -131,7 +118,6 @@
       border-radius: 50%;
     }
 
-    /* ARTICLE BODY LAYOUT */
     .article-layout {
       display: grid;
       grid-template-columns: 1fr 280px;
@@ -141,7 +127,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* MAIN CONTENT */
     .article-content {
       padding: 56px 52px 56px 48px;
       border-right: 1px solid var(--border);
@@ -150,9 +135,27 @@
     .article-image {
       width: 100%;
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
       margin-bottom: 36px;
+      overflow: hidden;
     }
+
+    .article-image figure { margin: 0; width: 100%; height: 100%; }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-image figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .article-image figcaption a { color: var(--blue); text-decoration: underline; }
 
     .article-intro {
       font-size: 18px;
@@ -181,14 +184,33 @@
       letter-spacing: -0.3px;
     }
 
-    /* SIDEBAR */
-    .article-sidebar {
-      padding: 56px 32px;
+    /* TIPS LIST */
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
     }
 
-    .sidebar-section {
-      margin-bottom: 40px;
+    .tips-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.85;
+      display: flex;
+      gap: 14px;
     }
+
+    .tips-list li::before {
+      content: '—';
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .article-sidebar { padding: 56px 32px; }
+
+    .sidebar-section { margin-bottom: 40px; }
 
     .sidebar-label {
       font-size: 11px;
@@ -201,7 +223,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* AUTHOR CARD */
     .author-card {
       display: flex;
       align-items: center;
@@ -226,10 +247,7 @@
       margin-bottom: 2px;
     }
 
-    .author-card-role {
-      font-size: 12px;
-      color: var(--muted);
-    }
+    .author-card-role { font-size: 12px; color: var(--muted); }
 
     .btn-outline {
       display: inline-block;
@@ -251,11 +269,11 @@
       border-color: #F3F4F6;
     }
 
-    /* RELATED ARTICLES */
     .related-article {
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
       cursor: pointer;
+      display: block;
     }
 
     .related-article:first-of-type { padding-top: 0; }
@@ -280,7 +298,6 @@
 
     .related-article:hover .related-title { color: var(--blue); }
 
-    /* FOOTER */
     footer {
       display: flex;
       justify-content: space-between;
@@ -290,20 +307,10 @@
       border-top: 1px solid var(--border);
     }
 
-    .contact-info {
-      font-size: 15px;
-      color: var(--blue);
-    }
+    .contact-info { font-size: 15px; color: var(--blue); }
+    .contact-info:hover { color: var(--black); }
 
-    .contact-info:hover {
-      font-size: 15px;
-      color: var(--black);
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 12px;
-    }
+    .footer-nav { display: flex; gap: 12px; }
 
     .footer-nav a {
       font-size: 12px;
@@ -345,7 +352,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="logo">
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
@@ -362,11 +368,10 @@
 
   <main>
 
-    <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
         <div class="article-tag">Topic # 3</div>
-        <h1>Skills Development</h1>
+        <h1>Building Competence Without Destroying Yourself</h1>
         <div class="article-meta">
           <span class="author-name">LEONGSUN, EUWIN</span>
           <span class="dot"></span>
@@ -377,57 +382,133 @@
       </div>
     </div>
 
-    <!-- ARTICLE BODY + SIDEBAR -->
     <div class="article-layout">
 
-      <!-- MAIN CONTENT -->
       <div class="article-content">
-        <div class="article-image"></div>
+
+        <div class="article-image">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80" alt="Developer at their desk, focused and working">
+            <figcaption>
+              Source: <a href="https://unsplash.com/photos/man-in-blue-dress-shirt-sitting-on-rolling-chair-inside-room-with-monitors-npxXWgQ33ZQ" target="_blank">Unsplash — Fotis Fotopoulos</a>
+            </figcaption>
+          </figure>
+        </div>
 
         <p class="article-intro">
-          This is the introduction or summary of the article. It gives the reader a quick
-          overview of what the piece is about and why it matters to them as a tech college student.
+          Skills development sounds great until you are trying to fit it around homework, group projects, org
+          commitments, and the rest of your life. This last part is about making it sustainable, because the
+          goal is not to grind yourself into the ground. The goal is to actually improve over time.
         </p>
 
         <div class="article-body">
+
           <p>
-            This is the main body of the article. The author shares their personal experience,
-            insights, and lessons learned. The content is written in a conversational tone that
-            is relatable to fellow students going through similar situations in college.
+            After all the advice in the previous pages about building projects and learning tools and developing
+            soft skills, it is easy to feel like you need to start doing all of it immediately. That pressure is
+            real, and if you are not careful it leads straight to burnout without any actual progress to show for it.
           </p>
-          <h2>A Section Heading</h2>
+
+          <h2>Consistency Beats Grinding</h2>
+
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            The students who improve the most are not always the ones who work the hardest in a single sitting.
+            They are the ones who show up regularly. Thirty minutes of focused practice every day will do more
+            for your skills over a semester than one twelve-hour session every few weeks.
           </p>
+
           <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
+            This is not motivational advice. It is just how learning works. Skills are built through repetition
+            and gradual exposure. Your brain needs time to consolidate what it learns. Spacing it out over
+            consistent sessions is more effective than cramming everything into one exhausting block.
           </p>
+
+          <p>
+            It also helps to attach your practice to something that already exists in your routine. After a
+            specific class, before dinner, during a commute. A small consistent habit is easier to maintain
+            than a big ambitious one that only happens when you feel motivated.
+          </p>
+
+          <h2>Do Not Try to Learn Everything at Once</h2>
+
+          <p>
+            One of the most common mistakes is trying to work on too many skills at the same time. You start
+            learning a new framework, pick up a new language, try to get into system design, and practice
+            algorithms all at once. Three weeks later you have made shallow progress on all of them and feel
+            like you are getting nowhere.
+          </p>
+
+          <p>
+            Pick one direction. Work on it until you have something real to show for it, then move to the next
+            thing. Finishing one small project is worth more than starting five. The completed thing teaches
+            you more, it gives you something concrete to point to, and it builds the habit of actually seeing
+            things through.
+          </p>
+
+          <p>
+            Let the work guide what you learn next. If you are building something and you hit a problem that
+            requires understanding databases better, go learn that. That context makes the learning stick in
+            a way that studying it in isolation does not.
+          </p>
+
+          <h2>How to Know You Are Growing</h2>
+
+          <p>
+            Progress in skill development is slow and hard to see in the moment. One of the most discouraging
+            things about this path is that you can work for weeks and feel like you are still at the same level.
+            That feeling is almost always wrong.
+          </p>
+
+          <p>
+            A simple way to check: go back to code you wrote six months ago. If it makes you cringe a little,
+            if you can see obvious ways to improve it, that is growth. You did not notice it happening but it
+            happened. Another way is to try a problem you could not solve before. If it is easier now, you improved.
+          </p>
+
+          <h2>Where to Start From Here</h2>
+
+          <ul class="tips-list">
+            <li>Pick one skill to focus on and commit to it for at least a month before moving on.</li>
+            <li>Build one small project from start to finish, even if it is ugly and basic.</li>
+            <li>Learn Git if you have not already. Use it on everything, even solo projects.</li>
+            <li>Read the error messages. All of them. Before Googling, read the whole thing.</li>
+            <li>Write at least a short README for anything you build. Future you will appreciate it.</li>
+            <li>Practice explaining your code out loud, even just to yourself. If you cannot explain it, you do not fully understand it yet.</li>
+            <li>Find one person to occasionally show your work to. Feedback accelerates growth faster than working alone.</li>
+          </ul>
+
+          <p>
+            Competence is not something you arrive at. It is just the accumulated result of showing up and
+            doing the work over and over again, even when progress feels invisible. The students who end up
+            good at this are not necessarily the most talented ones. They are the ones who kept going.
+          </p>
+
+          <p>
+            You are already in a tech-related program. That is the hard part. Everything else is just practice.
+          </p>
+
         </div>
       </div>
 
-      <!-- SIDEBAR -->
       <aside class="article-sidebar">
 
         <div class="sidebar-section">
           <div class="sidebar-label">Related Articles</div>
 
-          <div class="related-article">
+          <a href="../topic_2/page1.html" class="related-article">
             <div class="related-tag">Topic #2</div>
-            <div class="related-title">Related article title sits in this spot</div>
-          </div>
+            <div class="related-title">Career Anxiety</div>
+          </a>
 
-          <div class="related-article">
-            <div class="related-tag">Topic #4</div>
-            <div class="related-title">Another related topic worth reading</div>
-          </div>
+          <a href="../topic_5/page1.html" class="related-article">
+            <div class="related-tag">Topic #5</div>
+            <div class="related-title">Study Habits</div>
+          </a>
 
-          <div class="related-article">
-            <div class="related-tag">Topic #6</div>
-            <div class="related-title">One more piece the reader might enjoy</div>
-          </div>
+          <a href="../topic_9/page1.html" class="related-article">
+            <div class="related-tag">Topic #9</div>
+            <div class="related-title">Burnout</div>
+          </a>
 
         </div>
 
@@ -449,17 +530,13 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="contact-info">
       <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
     </div>
     <div class="footer-nav">
       <a href="page4.html">&#8592; Prev</a>
-      <a href="../topic_4/page1.html">Next Article →</a>
-
-      <!-- (don't delete) <a href="page1.html">&#8592; Prev</a> -->
-      <!-- (don't delete) <a href="#">Next Article →</a> -->
+      <a href="../../article-home/article-home.html">Back to Articles &#8594;</a>
     </div>
     <a href="#" class="back-to-top">Back to Top</a>
   </footer>
