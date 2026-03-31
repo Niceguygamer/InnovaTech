@@ -240,11 +240,18 @@
     .author-avatar {
       width: 48px;
       height: 48px;
-      background: var(--off-white);
       border-radius: 50%;
       flex-shrink: 0;
       border: 1px solid var(--border);
     }
+
+    .author-avatar img{
+      width: 100%;
+      object-fit: cover;    
+      display: block;
+    }
+
+    
 
     .author-card-name {
       font-family: var(--serif);
@@ -475,7 +482,9 @@
         <div class="sidebar-section">
           <div class="sidebar-label">Written by</div>
           <div class="author-card">
-            <div class="author-avatar"></div>
+            <div class="author-avatar">
+              <img src="../../../assets/authors/alb/talking.jpg" alt="Communication">
+            </div>
             <div>
               <div class="author-card-name">ALBARICO, IZYLLE ANNE</div>
               <div class="author-card-role">BS Computer Science</div>
