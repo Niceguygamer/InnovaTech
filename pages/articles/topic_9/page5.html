@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Burnout</title>
+  <title>Building a Life That Does Not Break You — Topic 9</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -32,7 +32,6 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -56,16 +55,8 @@
       color: var(--black);
     }
 
-    .logo img {
-      height: 80px;
-      width: auto;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      gap: 36px;
-    }
+    .logo img { height: 80px; width: auto; display: block; }
+    nav { display: flex; gap: 36px; }
 
     nav a {
       font-size: 13px;
@@ -76,10 +67,8 @@
       transition: color 0.2s;
     }
 
-    nav a:hover,
-    nav a.active { color: var(--black); }
+    nav a:hover, nav a.active { color: var(--black); }
 
-    /* ARTICLE HEADER */
     .article-header {
       background: var(--off-white);
       border-bottom: 1px solid var(--border);
@@ -119,10 +108,7 @@
       gap: 16px;
     }
 
-    .article-meta .author-name {
-      color: var(--black);
-      font-weight: 500;
-    }
+    .article-meta .author-name { color: var(--black); font-weight: 500; }
 
     .article-meta .dot {
       width: 3px;
@@ -131,7 +117,6 @@
       border-radius: 50%;
     }
 
-    /* ARTICLE BODY LAYOUT */
     .article-layout {
       display: grid;
       grid-template-columns: 1fr 280px;
@@ -141,7 +126,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* MAIN CONTENT */
     .article-content {
       padding: 56px 52px 56px 48px;
       border-right: 1px solid var(--border);
@@ -150,9 +134,27 @@
     .article-image {
       width: 100%;
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
       margin-bottom: 36px;
+      overflow: hidden;
     }
+
+    .article-image figure { margin: 0; width: 100%; height: 100%; }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-image figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .article-image figcaption a { color: var(--blue); text-decoration: underline; }
 
     .article-intro {
       font-size: 18px;
@@ -181,14 +183,31 @@
       letter-spacing: -0.3px;
     }
 
-    /* SIDEBAR */
-    .article-sidebar {
-      padding: 56px 32px;
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
     }
 
-    .sidebar-section {
-      margin-bottom: 40px;
+    .tips-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.85;
+      display: flex;
+      gap: 14px;
     }
+
+    .tips-list li::before {
+      content: '—';
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .article-sidebar { padding: 56px 32px; }
+    .sidebar-section { margin-bottom: 40px; }
 
     .sidebar-label {
       font-size: 11px;
@@ -201,7 +220,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* AUTHOR CARD */
     .author-card {
       display: flex;
       align-items: center;
@@ -212,10 +230,17 @@
     .author-avatar {
       width: 48px;
       height: 48px;
-      background: var(--off-white);
       border-radius: 50%;
       flex-shrink: 0;
       border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .author-card-name {
@@ -226,10 +251,7 @@
       margin-bottom: 2px;
     }
 
-    .author-card-role {
-      font-size: 12px;
-      color: var(--muted);
-    }
+    .author-card-role { font-size: 12px; color: var(--muted); }
 
     .btn-outline {
       display: inline-block;
@@ -251,7 +273,6 @@
       border-color: #F3F4F6;
     }
 
-    /* RELATED ARTICLES */
     .related-article {
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
@@ -280,7 +301,6 @@
 
     .related-article:hover .related-title { color: var(--blue); }
 
-    /* FOOTER */
     footer {
       display: flex;
       justify-content: space-between;
@@ -290,20 +310,9 @@
       border-top: 1px solid var(--border);
     }
 
-    .contact-info {
-      font-size: 15px;
-      color: var(--blue);
-    }
-
-    .contact-info:hover {
-      font-size: 15px;
-      color: var(--black);
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 12px;
-    }
+    .contact-info { font-size: 15px; color: var(--blue); }
+    .contact-info:hover { color: var(--black); }
+    .footer-nav { display: flex; gap: 12px; }
 
     .footer-nav a {
       font-size: 12px;
@@ -345,7 +354,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="logo">
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
@@ -362,71 +370,137 @@
 
   <main>
 
-    <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
         <div class="article-tag">Topic # 9</div>
-        <h1>Burnout</h1>
+        <h1>Building a Life That Does Not Break You</h1>
         <div class="article-meta">
           <span class="author-name">LEONGSUN, EUWIN</span>
           <span class="dot"></span>
-          <span>March 20, 2026</span>
+          <span>March 31, 2026</span>
           <span class="dot"></span>
           <span>5 min read</span>
         </div>
       </div>
     </div>
 
-    <!-- ARTICLE BODY + SIDEBAR -->
     <div class="article-layout">
 
-      <!-- MAIN CONTENT -->
       <div class="article-content">
-        <div class="article-image"></div>
+
+        <div class="article-image">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=80" alt="Person writing in a notebook with a calm, organized workspace">
+            <figcaption>
+              Source: <a href="https://unsplash.com/photos/person-writing-on-white-paper-hpjSkU2UYSU" target="_blank">Unsplash — Thought Catalog</a>
+            </figcaption>
+          </figure>
+        </div>
 
         <p class="article-intro">
-          This is the introduction or summary of the article. It gives the reader a quick
-          overview of what the piece is about and why it matters to them as a tech college student.
+          Recovering from burnout is one thing. Not burning out again is another. The habits that protect you
+          long term are not dramatic. They are small, consistent, and easy to skip when things get busy.
+          That is exactly why they matter.
         </p>
 
         <div class="article-body">
+
           <p>
-            This is the main body of the article. The author shares their personal experience,
-            insights, and lessons learned. The content is written in a conversational tone that
-            is relatable to fellow students going through similar situations in college.
+            The goal here is not to become someone who never feels pressure or stress. That is not realistic
+            in a tech program and honestly probably not even desirable. Some pressure is useful. The goal is
+            to build a baseline that is stable enough that hard stretches do not take you all the way down.
           </p>
-          <h2>A Section Heading</h2>
+
+          <h2>Know What Your Warning Signs Are</h2>
+
           <p>
-            More content goes here. Each paragraph digs deeper into the topic, offering
-            practical advice or honest reflections. The writing feels personal because it comes
-            from real student experience, not from a textbook.
+            Burnout does not arrive all at once. It builds up over weeks, and there are usually early signs
+            that are easy to dismiss if you are not paying attention. For me it was losing interest in the
+            project, getting irritated over small things, and procrastinating on things I normally enjoyed.
           </p>
+
           <p>
-            The article continues here, wrapping up the thought or moving into another angle
-            of the topic. It keeps the reader engaged and leaves them with something to take away.
+            Your signs might be different. Maybe it is your sleep pattern shifting. Maybe it is canceling
+            plans consistently. Maybe it is the quality of your work starting to drop without a clear reason.
+            Whatever they are, the earlier you catch them the easier it is to course-correct before it
+            becomes a full burnout situation.
           </p>
+
+          <h2>Build in Rest Before You Need It</h2>
+
+          <p>
+            Most people treat rest as a reward for finishing everything. The problem is that in a tech program
+            there is always something left to finish. If you wait until everything is done to rest, you will
+            never rest. Rest has to be scheduled the same way you schedule work, not as a bonus but as a requirement.
+          </p>
+
+          <p>
+            That does not mean large blocks of free time every week. Even small consistent things work.
+            A walk. A meal with no screen in front of you. Time with people you actually like being around.
+            These are not luxuries. They are part of what keeps you functional over the long term.
+          </p>
+
+          <h2>Be Honest About What You Can Actually Handle</h2>
+
+          <p>
+            One of the patterns that leads to burnout is consistently overpromising to yourself. You plan
+            more than you can realistically do, fall short, feel bad about it, and then try to compensate
+            by planning even more. It becomes a cycle.
+          </p>
+
+          <p>
+            Getting better at estimating what you can actually do in a day or a week, and then planning
+            around that instead of around an ideal version of yourself, makes a real difference. Finishing
+            what you planned feels completely different from finishing less than you planned, even if the
+            actual output is the same.
+          </p>
+
+          <h2>Things Worth Keeping in Mind</h2>
+
+          <ul class="tips-list">
+            <li>Notice the early signs. Irritability, loss of interest, and quality drops usually show up before the crash does.</li>
+            <li>Schedule rest the same way you schedule work. Do not wait until everything is done.</li>
+            <li>Protect at least one thing each week that has nothing to do with school or projects.</li>
+            <li>Sleep is not optional. It is the foundation everything else runs on.</li>
+            <li>Talking about it helps more than most people expect. Find at least one person you can be honest with.</li>
+            <li>Saying no to something is also a decision. It has value. You do not have to justify it every time.</li>
+            <li>You are allowed to do less during the hard weeks. That is not giving up. That is management.</li>
+          </ul>
+
+          <p>
+            Burnout is not inevitable in a tech program. It is common, but common is not the same as
+            unavoidable. The students who make it through without completely falling apart are not the
+            ones who never struggled. They are the ones who paid attention to themselves, asked for help
+            when they needed it, and built routines that gave them something to come back to when things
+            got hard.
+          </p>
+
+          <p>
+            You can do the same. It just takes being honest about what is actually happening before it
+            gets to the point where you have no choice.
+          </p>
+
         </div>
       </div>
 
-      <!-- SIDEBAR -->
       <aside class="article-sidebar">
 
         <div class="sidebar-section">
           <div class="sidebar-label">Related Articles</div>
 
           <div class="related-article">
-            <div class="related-tag">Topic #2</div>
-            <div class="related-title">Related article title sits in this spot</div>
+            <div class="related-tag">Topic #3</div>
+            <div class="related-title">Competence: Skills Development</div>
           </div>
 
           <div class="related-article">
-            <div class="related-tag">Topic #4</div>
-            <div class="related-title">Another related topic worth reading</div>
+            <div class="related-tag">Topic #5</div>
+            <div class="related-title">Study Habits</div>
           </div>
 
           <div class="related-article">
-            <div class="related-tag">Topic #6</div>
-            <div class="related-title">One more piece the reader might enjoy</div>
+            <div class="related-tag">Topic #8</div>
+            <div class="related-title">Mental Health and Rest</div>
           </div>
 
         </div>
@@ -434,7 +508,7 @@
         <div class="sidebar-section">
           <div class="sidebar-label">Written by</div>
           <div class="author-card">
-            <div class="author-avatar"></div>
+            <div class="author-avatar"><img src="../../../assets/img/authors/leongsun/Facebook PFP.png" alt="LEONGSUN, EUWIN"></div>
             <div>
               <div class="author-card-name">LEONGSUN, EUWIN</div>
               <div class="author-card-role">BS Computer Science</div>
@@ -449,17 +523,13 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="contact-info">
       <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
     </div>
     <div class="footer-nav">
       <a href="page4.html">&#8592; Prev</a>
-      <a href="../ttopic_10/page1.html">Next Article →</a>
-
-      <!-- (don't delete) <a href="page1.html">&#8592; Prev</a> -->
-      <!-- (don't delete) <a href="#">Next Article →</a> -->
+      <a href="../../article-home/article-home.html">Back to Articles &#8594;</a>
     </div>
     <a href="#" class="back-to-top">Back to Top</a>
   </footer>
