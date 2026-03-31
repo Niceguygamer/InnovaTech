@@ -142,15 +142,12 @@
     }
 
     /* MAIN CONTENT */
-    .article-content {
-      padding: 56px 52px 56px 48px;
-      border-right: 1px solid var(--border);
-    }
 
-    .article-image {
+    .article-image img {
       width: 100%;
-      aspect-ratio: 16/9;
-      margin-bottom: 36px;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .article-image figcaption {
@@ -167,6 +164,11 @@
 
     .article-image figcaption a:hover {
       color: var(--black);
+    } 
+    
+    .article-content {
+      padding: 56px 52px 56px 48px;
+      border-right: 1px solid var(--border);
     }
 
     .article-intro {
@@ -425,8 +427,11 @@
       <!-- MAIN CONTENT -->
       <div class="article-content">
         <div class="article-image">
-          <figcaption>
-              Figure 1: <a href="https://unmistakablecreative.com/your-brain-is-not-a-hard-drive/">unmistakablecreative.com — Your Brain Is Not a Hard Drive</a>
+          <figure>
+            <img src="../../../assets/img/topic 5/routine.png">
+            <figcaption>
+              Figure 1: <a href="https://hubstaff.com/blog/daily-routines-and-habits-for-productivity/">unmistakablecreative.com — Your Brain Is Not a Hard Drive</a>
+              <!--havent updated the caption-->
             </figcaption>
           </figure>
         </div>
