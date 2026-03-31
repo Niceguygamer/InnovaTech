@@ -146,7 +146,6 @@
     .article-layout {
       display: grid;
       grid-template-columns: 1fr 280px;
-      gap: 0;
       max-width: 1100px;
       margin: 0 auto;
       border-bottom: 1px solid var(--border);
@@ -178,7 +177,6 @@
       text-align: center;
       padding: 12px 0;
       font-style: italic;
-      display: block;
     }
 
     .article-image figcaption a:hover {
@@ -191,7 +189,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0, 0, 0, 0.8);
       display: none;
       align-items: center;
       justify-content: center;
@@ -210,33 +208,23 @@
 
     .article-intro {
       font-size: 18px;
-      font-weight: 300;
-      color: var(--black);
       line-height: 1.7;
       margin-bottom: 32px;
       padding-bottom: 32px;
       border-bottom: 1px solid var(--border);
       text-align: justify;
-      text-justify: inter-word;
     }
 
     .article-content h2 {
       font-family: var(--serif);
       font-size: 26px;
-      font-weight: 400;
-      color: var(--black);
       margin: 40px 0 16px;
-      letter-spacing: -0.3px;
     }
 
     .article-body p {
-      font-size: 15px;
-      font-weight: 300;
-      color: var(--black);
-      line-height: 1.85;
       margin-bottom: 24px;
+      line-height: 1.85;
       text-align: justify;
-      text-justify: inter-word;
     }
 
     .article-sidebar {
@@ -249,62 +237,11 @@
 
     .sidebar-label {
       font-size: 11px;
-      font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--muted);
       margin-bottom: 20px;
       padding-bottom: 12px;
       border-bottom: 1px solid var(--border);
-    }
-
-    .author-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 8px;
-    }
-
-    .author-avatar {
-      width: 48px;
-      height: 48px;
-      background: var(--off-white);
-      border-radius: 50%;
-      flex-shrink: 0;
-      border: 1px solid var(--border);
-    }
-
-    .author-card-name {
-      font-family: var(--serif);
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--black);
-      margin-bottom: 2px;
-    }
-
-    .author-card-role {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .btn-outline {
-      display: inline-block;
-      border: 1px solid #2C2F33;
-      color: #2C2F33;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 8px 18px;
-      margin-top: 14px;
-      transition: background 0.2s, color 0.2s;
-      background-color: transparent;
-    }
-
-    .btn-outline:hover {
-      background-color: #5C6F91;
-      color: #F3F4F6;
-      border-color: #F3F4F6;
     }
 
     .related-article {
@@ -313,95 +250,12 @@
       cursor: pointer;
     }
 
-    .related-article:first-of-type {
-      padding-top: 0;
-    }
-
-    .related-tag {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 4px;
-    }
-
-    .related-title {
-      font-family: var(--serif);
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--black);
-      line-height: 1.4;
-      transition: color 0.2s;
-    }
-
-    .related-article:hover .related-title {
-      color: var(--blue);
-    }
-
     footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 48px;
-      background: var(--white);
       border-top: 1px solid var(--border);
-    }
-
-    .contact-info {
-      font-size: 15px;
-      color: var(--blue);
-    }
-
-    .contact-info:hover {
-      color: var(--black);
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 12px;
-    }
-
-    .footer-nav a {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 10px 22px;
-      color: #6B7A8F;
-      border: 1px solid #6B7A8F;
-      transition: all 0.2s;
-      background-color: transparent;
-      border-radius: 4px;
-    }
-
-    .footer-nav a:hover {
-      color: #2C2F33;
-      border-color: #D8C9A3;
-      background-color: #D8C9A3;
-    }
-
-    .back-to-top {
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #8C949C;
-      transition: color 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      padding: 8px 16px;
-    }
-
-    .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
-
-    .back-to-top:hover {
-      color: #33363A;
     }
   </style>
 </head>
@@ -414,6 +268,7 @@
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
       <span>InnovaTech</span>
     </div>
+
     <nav>
       <a href="../../../index.html">Home</a>
       <a href="../../about/about.html">About Us</a>
@@ -430,6 +285,7 @@
       <div class="article-header-inner">
         <div class="article-tag">Topic # 6</div>
         <h1>Working Together, Achieving More</h1>
+
         <div class="article-meta">
           <span class="author-name">LIBUTON, CYRIL MAE</span>
           <span class="dot"></span>
@@ -443,77 +299,79 @@
     <!-- ARTICLE BODY + SIDEBAR -->
     <div class="article-layout">
 
-  <!-- MAIN CONTENT -->
-  <div class="article-content">
+      <!-- MAIN CONTENT -->
+      <div class="article-content">
 
-    <h2>Handling Differences Positively</h2>
+        <h2>Handling Differences Positively</h2>
 
-    <p class="article-intro">
-      <i>“Seek first to understand, then to be understood.”</i> — Stephen Covey
-    </p>
+        <p class="article-intro">
+          <i>“Seek first to understand, then to be understood.”</i> — Stephen Covey
+        </p>
 
-    <div class="article-image">
-      <figure>
-        <a href="#img1">
-          <img src="../../../assets/img/topic 6/disagreement.jpg" alt="Resolving">
-        </a>
+          <div class="article-image">
+            <figure>
+              <a href="#img1">
+                <img src="../../../assets/img/topic 6/disagreement.jpg" alt="Resolving">
+              </a>
+              <figcaption>
+                Fig.1 A group resolving a disagreement. Created by
+                <a href="https://www.tssg.ca/constructive-conflict-resolution-in-the-workplace/">TSSG</a>.
+              </figcaption>
+            </figure>
+          </div>
 
-        <figcaption>
-          Fig.1 A group resolving a disagreement. Created by
-          <a href="https://www.tssg.ca/constructive-conflict-resolution-in-the-workplace/">&nbsp;TSSG.</a>
-        </figcaption>
-      </figure>
-    </div>
+          <div id="img1" class="lightbox">
+            <a href="#!">
+              <img src="../../../assets/img/topic 6/disagreement.jpg" alt="Resolving">
+            </a>
+          </div>
 
-    <div id="img1" class="lightbox">
-      <a href="#!">
-        <img src="../../../assets/img/topic 6/disagreement.jpg" alt="Resolving">
-      </a>
-    </div>
+          <div class="article-body">
 
-    <div class="article-body">
+          <p>
+            Working with others inevitably leads to conflicts...
+          </p>
 
-      <p>
-        Working with others inevitably leads to conflicts, particularly when there are differences in viewpoints, ideas, or methods. Disagreements may arise in college during projects, group debates, or even informal conversations.
-      </p>
-      
-      <p>
-        Although it might seem simpler to avoid disagreement, doing so frequently results in more serious issues. Over time, unresolved problems can strain relationships, impair teamwork, and cause friction.
-      </p>
+          <p>
+            Although it might seem simpler to avoid disagreement...
+          </p>
 
-      <div class="article-image">
-        <figure>
-          <a href="#img2">
-            <img src="../../../assets/img/topic 6/classroom.jpeg" alt="Discussion">
+        <div class="article-image">
+          <figure>
+            <a href="#img1">
+              <img src="../../../assets/img/topic 6/disagreement.jpg" alt="Resolving">
+            </a>
+            <figcaption>
+              Fig.1 A group resolving a disagreement. Created by
+              <a href="https://www.tssg.ca/constructive-conflict-resolution-in-the-workplace/">TSSG</a>.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div id="img1" class="lightbox">
+          <a href="#!">
+            <img src="../../../assets/img/topic 6/disagreement.jpg" alt="Resolving">
           </a>
+        </div>
 
-          <figcaption>
-            Fig.2 Students having a calm discussion.
-          </figcaption>
-        </figure>
+        <div class="article-body">
+
+          <p>
+            Maintaining composure and paying close attention...
+          </p>
+
+          <p>
+            Respect, open communication...
+          </p>
+
+          <p>
+            When handled properly, conflicts can actually strengthen relationships.
+          </p>
+
+        </div>
       </div>
 
-      <div id="img2" class="lightbox">
-        <a href="#!">
-          <img src="../../../assets/img/topic 6/classroom.jpeg" alt="Discussion">
-        </a>
-      </div>
-
-      <p>
-        Maintaining composure and paying close attention were crucial in conflict situations. I discovered that it's better to concentrate on comprehending the other person's viewpoint before responding emotionally.
-      </p>
-
-      <p>
-        Respect, open communication, and a desire to identify points of agreement are all necessary for conflict resolution. Finding a solution that works for all parties involved is more important than winning an argument.
-      </p>
-
-      <p>
-        When handled properly, conflicts can actually strengthen relationships. It provides opportunities to learn, grow, and improve how you interact with others.
-      </p>
-
-    </div>
-  </div>
-      
+      <!-- SIDEBAR -->
       <aside class="article-sidebar">
 
         <div class="sidebar-section">
@@ -524,33 +382,11 @@
             <div class="related-title">Related article title sits in this spot</div>
           </div>
 
-          <div class="related-article">
-            <div class="related-tag">Topic #4</div>
-            <div class="related-title">Another related topic worth reading</div>
-          </div>
-
-          <div class="related-article">
-            <div class="related-tag">Topic #6</div>
-            <div class="related-title">One more piece the reader might enjoy</div>
-          </div>
-
-        </div>
-
-        <div class="sidebar-section">
-          <div class="sidebar-label">Written by</div>
-          <div class="author-card">
-            <div class="author-avatar"></div>
-            <div>
-              <div class="author-card-name">LIBUTON, CYRIL MAE</div>
-              <div class="author-card-role">BS Computer Science</div>
-            </div>
-          </div>
-          <a href="../../authors/authors-home.html" class="btn-outline">View Profile</a>
         </div>
 
       </aside>
 
-</div>
+    </div>
 
   </main>
 
@@ -559,10 +395,12 @@
     <div class="contact-info">
       <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
     </div>
+
     <div class="footer-nav">
       <a href="page2.html">&#8592; Prev</a>
       <a href="page4.html">Next &#8594;</a>
     </div>
+
     <a href="#" class="back-to-top">Back to Top</a>
   </footer>
 
