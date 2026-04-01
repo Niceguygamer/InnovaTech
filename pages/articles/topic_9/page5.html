@@ -155,6 +155,29 @@
 
     .article-image figcaption a { color: var(--blue); text-decoration: underline; }
 
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 6px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
     .article-intro {
       font-size: 18px;
       font-weight: 300;
@@ -389,9 +412,17 @@
 
         <div class="article-image">
           <figure>
-            <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=80" alt="Person writing in a notebook with a calm, organized workspace">
+            <a href="#img1">
+              <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=80" alt="Person writing in a notebook with a calm, organized workspace">
+            </a>
             <figcaption>Figure 1: Building Sustainable Habits By Unsplash</figcaption>
           </figure>
+        </div>
+
+        <div id="img1" class="lightbox">
+          <a href="#!">
+            <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=80" alt="Person writing in a notebook with a calm, organized workspace">
+          </a>
         </div>
 
         <p class="article-intro">
