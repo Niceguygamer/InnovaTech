@@ -8,12 +8,15 @@
   <style>
     /*About-home style*/
     :root {
+      --blue: #5C6F91;
       --black: #111111;
       --white: #ffffff;
       --off-white: #f7f6f3;
       --muted: #8a8a8a;
       --border: #e5e4e0;
       --accent: #c8602a;
+      --gray: #8C949C;
+      --khaki: #D8C9A3;
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'DM Sans', sans-serif;
     }
@@ -49,21 +52,35 @@
 
     /*InnovaTech Website name in Nav */
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.1px;
       font-family: var(--serif);
       font-size: 22px;
       letter-spacing: -0.3px;
+      color: var(--black);
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
     }
 
     nav { display: flex; gap: 36px; }
     nav a {
       font-size: 13px;
-      font-weight: 400;
+      font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--blue);
       transition: color 0.2s;
     }
-    nav a:hover, nav a.active { color: var(--black); }
+    nav a:hover,
+    nav a.active {
+      color: var(--black);
+      text-shadow: 0.06px 0 0
+    }
 
     /* ARTICLES PAGE LAYOUT */
     .hero-articles { /* Article Banner*/
@@ -148,24 +165,35 @@
     /* FOOTER */
     footer {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       padding: 30px 48px;
       background: var(--off-white);
       border-top: 1px solid var(--border);
     }
 
-    .footer-center {
-        display: flex;
-        gap: 10px;
+    /*back to the top button */
+    .back-to-top {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      transition: color 0.2s;
     }
 
-    /*contact info style*/
-    .contact-info { font-size: 13px; color: var(--muted); }
+    .back-to-top::before {
+      content: '↑';
+      font-size: 14px;
+    }
 
-    /*back to the top button */
-    .back-to-top { font-size: 12px; font-weight: 500; color: var(--muted);  border: 1px solid var(--border); padding: 5px 15px;}
-    .back-to-top:hover {background: var(--black); color: var(--white);}
+    .back-to-top:hover {
+      color: var(--black);
+    }
 
     @media (max-width: 1024px) {
       .topics-grid { grid-template-columns: repeat(3, 1fr); }
@@ -178,7 +206,10 @@
 <body>
 
   <header>
-    <div class="logo">InnovaTech</div>
+    <div class="logo">
+      <img src="../../assets/img/logo_notext.png" alt="Logo">
+      <span>InnovaTech</span>
+    </div>
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../about/about.html">About Us</a>
@@ -251,8 +282,7 @@
   </main>
 
   <footer>
-    <div class="contact-info">Contact Info</div>
-    <a href="#" class="back-to-top">Back to Top ↑</a>
+    <a href="#" class="back-to-top">Back to Top</a>
   </footer>
 
 </body>
