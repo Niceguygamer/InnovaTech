@@ -25,8 +25,8 @@
       font-weight: 300;
       background: var(--white);
       color: var(--black);
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -43,7 +43,6 @@
       justify-content: space-between;
       padding: 0 48px;
       height: 64px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .logo {
@@ -69,16 +68,7 @@
       transition: color 0.2s;
     }
 
-    nav a:hover {
-      color: var(--black);
-      border-radius: 4px;
-    }
-    
-    nav a.active { 
-      color: var(--black); 
-      border-bottom: 2px solid #5C6F91;
-      padding-bottom: 4px;
-    }
+    nav a:hover, nav a.active { color: var(--black); }
 
     .profile-header {
       background: var(--off-white);
@@ -110,13 +100,8 @@
       display: block;
     }
 
-    .profile-avatar:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px #D8C9A3;
-    }
-
     .profile-meta-tag {
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -126,18 +111,15 @@
 
     .profile-name {
       font-family: var(--serif);
-      font-size: clamp(32px, 4vw, 46px);
+      font-size: clamp(28px, 4vw, 42px);
       font-weight: 400;
       letter-spacing: -0.4px;
       color: var(--black);
       margin-bottom: 8px;
-      border-bottom: 3px solid #D8C9A3;
-      display: inline-block;
-      padding-bottom: 6px;
     }
 
     .profile-role {
-      font-size: 15px;
+      font-size: 13px;
       color: var(--muted);
     }
 
@@ -148,33 +130,27 @@
     }
 
     .profile-bio {
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 300;
       color: var(--black);
-      line-height: 1.9;
+      line-height: 1.85;
       margin-bottom: 56px;
       padding-bottom: 48px;
       border-bottom: 1px solid var(--border);
-      background: var(--off-white);
-      padding: 32px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 6px rgba (0,0,0,0.5);
-      text-align: justify;
     }
 
     .profile-bio p { margin-bottom: 20px; }
     .profile-bio p:last-child { margin-bottom: 0; }
 
     .section-label {
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 28px;
       padding-bottom: 12px;
-      border-bottom: 2px solid var(--beige);
+      border-bottom: 1px solid var(--border);
     }
 
     .articles-list { list-style: none; }
@@ -185,10 +161,6 @@
       display: flex;
       align-items: baseline;
       gap: 16px;
-    }
-
-    .article-list li:hover {
-      background: var(--off-white);
     }
 
     .article-topic {
@@ -202,10 +174,10 @@
 
     .article-link {
       font-family: var(--serif);
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       color: var(--black);
-      transition: color 0.2s ease;
+      transition: color 0.2s;
     }
 
     .articles-list li:hover .article-link { color: var(--blue); }
@@ -253,10 +225,9 @@
     }
 
     .back-link:hover {
-      color: var(--white);
-      border-color: #5C6F91;
-      background-color: #5C6F91;
-      box-shadow: 0 2px 6px rgba(92,111,145,0.3);
+      color: #2C2F33;
+      border-color: #D8C9A3;
+      background-color: #D8C9A3;
     }
   </style>
 </head>

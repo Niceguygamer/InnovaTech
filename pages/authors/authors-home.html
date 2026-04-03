@@ -45,20 +45,14 @@
       justify-content: space-between;
       padding: 0 48px;
       height: 64px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.1px;
       font-family: var(--serif);
       font-size: 22px;
       letter-spacing: -0.3px;
       color: var(--black);
     }
-
-    .logo img { height: 80px; width: auto; display: block; }
 
     nav {
       display: flex;
@@ -74,16 +68,8 @@
       transition: color 0.2s;
     }
 
-    nav a:hover {
-      color: var(--black);
-      border-radius: 4px;
-    }
-    
-    nav a.active { 
-      color: var(--black); 
-      border-bottom: 2px solid #5C6F91;
-      padding-bottom: 4px;
-    }
+    nav a:hover,
+    nav a.active { color: var(--black); }
 
     /* PAGE HEADER */
     .page-header {
@@ -100,9 +86,6 @@
       letter-spacing: -0.5px;
       color: var(--black);
       margin-bottom: 16px;
-      border-bottom: 3px solid #D8C9A3;
-      display: inline-block;
-      padding-bottom: 8px;
     }
 
     .page-header p {
@@ -151,53 +134,32 @@
       align-items: center;
       text-align: center;
       cursor: pointer;
-      background: var(--off-white);
-      padding: 20px;
-      border-radius: 8px;
-      transition: transform 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s;
     }
 
-    .author-card:hover { 
-      background: #ffffff;
-      transform: translateY(-6px); }
+    .author-card:hover { transform: translateY(-4px); }
 
     .author-avatar {
-      width: 110px;
-      height: 110px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      overflow: hidden;
-      flex-shrink: 0;
       background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
       border: 1px solid var(--border);
       margin-bottom: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .author-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .author-card:hover .author-avatar{
-      transform: scale(1.05);
-      box-shadow: 0 0 12px rgba(92,111,145,0.4);
     }
 
     .author-name {
       font-family: var(--serif);
-      font-size: 20px;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 400;
       color: var(--black);
       margin-bottom: 6px;
       letter-spacing: -0.2px;
     }
 
     .author-role {
-      font-size: 14px;
-      color: #8C949C;
+      font-size: 12px;
+      color: var(--muted);
       letter-spacing: 0.04em;
     }
 
@@ -230,7 +192,6 @@
 
     .back-to-top::before { content: '↑'; font-size: 14px; }
     .back-to-top:hover { color: var(--black); }
-
   </style>
 </head>
 <body>
@@ -260,69 +221,53 @@
       <div class="section-label">Our Authors</div>
       <div class="authors-grid">
 
-        <a href="agunod.html" class="author-card">
-          <div class="author-avatar">
-            <img src="../../assets/img/authors/Agunod/AGUNOD.png" alt="Iñigo Jose Agunod">
-          </div>
-          <div class="author-name">Agunod</div>
-          <div class="author-role">BS Computer Science</div>
-        </a>
-
-        <a href="alabab.html" class="author-card">
-          <div class="author-avatar">
-            <img src="" alt="Charlize Jane Alabab">
-          </div>
+        <div class="author-card">
+          <div class="author-avatar"></div>
           <div class="author-name">Alabab</div>
           <div class="author-role">BS Computer Science</div>
-        </a>
+        </div>
 
-        <a href="albarico.html" class="author-card">
-          <div class="author-avatar">
-            <img src="../../assets/img/authors/albarico/id.jpg" alt="Izylle Anne Albarico">
-          </div>
-          <div class="author-name">Albarico</div>
-          <div class="author-role">BS Computer Science</div>
-        </a>
-
-        <a href="esico.html" class="author-card">
-          <div class="author-avatar">
-            <img src="" alt="Bryan Esico">
-          </div>
+        <div class="author-card">
+          <div class="author-avatar"></div>
           <div class="author-name">Esico</div>
           <div class="author-role">BS Computer Science</div>
-        </a>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Libuton</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Obillo</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Agunod</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar"></div>
+          <div class="author-name">Albarico</div>
+          <div class="author-role">BS Computer Science</div>
+        </div>
 
         <a href="leongsun.html" class="author-card">
-          <div class="author-avatar">
-            <img src="../../assets/img/authors/leongsun/Facebook PFP.png" alt="Euwin Johnmiel Leongsun">
-          </div>
+          <div class="author-avatar"></div>
           <div class="author-name">Leongsun</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
-        <a href="libuton.html" class="author-card">
-          <div class="author-avatar">
-            <img src="" alt="Cyril Mae Libuton">
-          </div>
-          <div class="author-name">Libuton</div>
-          <div class="author-role">BS Computer Science</div>
-        </a>
-
-        <a href="munda.html" class="author-card">
-          <div class="author-avatar">
-            <img src="../../assets/img/authors/munda/munda-image.jpg" alt="Sofia Adelaide Munda">
-          </div>
+        <div class="author-card">
+          <div class="author-avatar"></div>
           <div class="author-name">Munda</div>
           <div class="author-role">BS Computer Science</div>
-        </a>
-
-        <a href="obillo.html" class="author-card">
-          <div class="author-avatar">
-            <img src="" alt="Mon Andrei Obillo">
-          </div>
-          <div class="author-name">Obillo</div>
-          <div class="author-role">BS Computer Science</div>
-        </a>
+        </div>
 
       </div>
     </section>
