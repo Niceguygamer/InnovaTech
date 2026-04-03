@@ -275,6 +275,14 @@
       border-radius: 50%;
       flex-shrink: 0;
       border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .author-card-name {
@@ -463,7 +471,7 @@
 
         <p class="article-intro">
           "Work smarter, not harder." This has been a common phrase I've heard throughout my life. However, to me, that's no longer the case. During my first year studying my program, I came to learn that it is essential to study as efficiently as possible, not just put in several hours and hope for results. <br><br>
-         What changed everything wasn't studying longer hours, it was discovering the right study apps and learning how to use them effectively.
+          What changed everything wasn't studying longer hours, it was discovering the right study apps and learning how to use them effectively.
         </p>
 
         <div class="article-body">
@@ -517,7 +525,9 @@
         <div class="sidebar-section">
           <div class="sidebar-label">Written by</div>
           <div class="author-card">
-            <div class="author-avatar"></div>
+            <div class="author-avatar">
+              <img src="../../../assets/img/authors/Alab-ab/ALAB-AB.jpg" alt="ALAB-AB, CHARLIZE">
+            </div>
             <div>
               <div class="author-card-name">ALAB-AB, CHARLIZE</div>
               <div class="author-card-role">BS Computer Science</div>
