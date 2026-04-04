@@ -329,8 +329,25 @@
       display: flex;
       gap: 28px;
       justify-content: center;
-      flex: 1; /* take remaining space to center properly */
+      flex: 1;
     }
+
+    .social-icons a {
+      color: var(--black);
+      font-size: 1.4rem;
+    }
+
+    .social-icons a:hover {
+      color: var(--blue);
+    }
+
+
+    .back-to-top-container {
+      padding: 0 52px;
+      margin: 24px 0;
+      text-align: center;
+    }
+
 
     .back-to-top {
       font-size: 12px;
@@ -338,7 +355,7 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--gray);
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
       transition: color 0.2s;
@@ -430,6 +447,10 @@
 
       </div>
     </section>
+    
+    <div class="back-to-top-container">
+      <a href="#" class="back-to-top">Back to Top</a>
+    </div>
 
     <!-- RESOURCES BANNER -->
     <section class="resources-banner">
@@ -447,7 +468,7 @@
       <a href="instagram.com/innovatech.integ"><i class="fa-brands fa-instagram"></i></a>
       <a href="mailto:innovatech.integ@gmail.com"><i class="fa-regular fa-envelope"></i></a>
     </div>
-    <a href="#" class="back-to-top">Back to Top</a>
+
   </footer>
 
 </body>
