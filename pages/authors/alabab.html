@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euwin Leongsun — InnovaTech</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #5C6F91;
+      --black: #33363A;
+      --white: #ffffff;
+      --off-white: #F3F4F6;
+      --muted: #6B7A8F;
+      --border: #e5e4e0;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--white);
+      color: var(--black);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.1px;
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: -0.3px;
+      color: var(--black);
+    }
+
+    .logo img { height: 80px; width: auto; display: block; }
+
+    nav { display: flex; gap: 36px; }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--blue);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--black);
+      border-radius: 4px;
+    }
+    
+    nav a.active { 
+      color: var(--black); 
+      border-bottom: 2px solid #5C6F91;
+      padding-bottom: 4px;
+    }
+
+    .profile-header {
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 48px;
+    }
+
+    .profile-header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .profile-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .profile-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-avatar:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #D8C9A3;
+    }
+
+    .profile-meta-tag {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .profile-name {
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 400;
+      letter-spacing: -0.4px;
+      color: var(--black);
+      margin-bottom: 8px;
+      border-bottom: 3px solid #D8C9A3;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .profile-role {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .profile-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 48px;
+    }
+
+    .profile-bio {
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.9;
+      margin-bottom: 56px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      background: var(--off-white);
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 6px rgba (0,0,0,0.5);
+      text-align: justify;
+    }
+
+    .profile-bio p { margin-bottom: 20px; }
+    .profile-bio p:last-child { margin-bottom: 0; }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--beige);
+    }
+
+    .articles-list { list-style: none; }
+
+    .articles-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .article-list li:hover {
+      background: var(--off-white);
+    }
+
+    .article-topic {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .article-link {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--black);
+      transition: color 0.2s ease;
+    }
+
+    .articles-list li:hover .article-link { color: var(--blue); }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      margin-top: 56px;
+    }
+
+    .contact-info { font-size: 15px; color: var(--blue); }
+    .contact-info:hover { color: var(--black); }
+
+    .back-to-top {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8C949C;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 8px 16px;
+    }
+
+    .back-to-top::before { content: '↑'; font-size: 14px; }
+    .back-to-top:hover { color: var(--black); }
+
+    .back-link {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6B7A8F;
+      border: 1px solid #6B7A8F;
+      padding: 10px 22px;
+      transition: all 0.2s;
+      border-radius: 4px;
+    }
+
+    .back-link:hover {
+      color: var(--white);
+      border-color: #5C6F91;
+      background-color: #5C6F91;
+      box-shadow: 0 2px 6px rgba(92,111,145,0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="../../assets/img/logo_notext.png" alt="Logo">
+      <span>InnovaTech</span>
+    </div>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../about/about.html">About Us</a>
+      <a href="authors-home.html" class="active">Authors</a>
+      <a href="../article-home/article-home.html">Articles</a>
+      <a href="../resources/resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="profile-header">
+      <div class="profile-header-inner">
+        <div class="profile-avatar">
+          <img src="../../assets/img/authors/Alab-ab/ALAB-AB.jpg" alt="Charlize Jane Alabab">
+        </div>
+        <div>
+          <div class="profile-meta-tag">Author</div>
+          <div class="profile-name">Charlize Jane A. Alabab</div>
+          <div class="profile-role">BS Computer Science</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-body">
+
+      <div class="profile-bio">
+        <p>
+          I am a BS Computer Science student who has been building things since senior high. It started
+          with wanting to make something real, something I could actually use and share with other people,
+          not just assignments that get submitted and forgotten.
+        </p>
+        <p>
+          That drive led me to Prior, a platform I built and have been developing since. It is a full-stack
+          project that covers a social network, AI services, media tools, real-time chat, and more.
+          Building Prior taught me more about software than any single course, mostly because it forced
+          me to figure things out, break things, and fix them.
+        </p>
+        <p>
+          For InnovaTech, I wrote about two things I know firsthand: competence and burnout. Both shaped
+          how I work and how I think about surviving a tech program without losing the part of you that
+          actually enjoys building things.
+        </p>
+      </div>
+
+      <div class="section-label">Articles</div>
+
+      <ul class="articles-list">
+
+        <li>
+          <span class="article-topic">Topic 3</span>
+          <a href="../articles/topic_3/page1.html" class="article-link">You Are Not Behind, You Are Just Getting Started</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 3</span>
+          <a href="../articles/topic_3/page2.html" class="article-link">What Competence Actually Looks Like Early On</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 3</span>
+          <a href="../articles/topic_3/page3.html" class="article-link">Building Real Things Before You Feel Ready</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 3</span>
+          <a href="../articles/topic_3/page4.html" class="article-link">The Gap Between Knowing and Doing</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 3</span>
+          <a href="../articles/topic_3/page5.html" class="article-link">Skills That Compound Over Time</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 9</span>
+          <a href="../articles/topic_9/page1.html" class="article-link">You Are Not Lazy, You Are Running on Empty</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 9</span>
+          <a href="../articles/topic_9/page2.html" class="article-link">How Tech Programs Push You to the Edge</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 9</span>
+          <a href="../articles/topic_9/page3.html" class="article-link">What Burnout Did to My Work</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 9</span>
+          <a href="../articles/topic_9/page4.html" class="article-link">Getting Out Without Falling Further Behind</a>
+        </li>
+
+        <li>
+          <span class="article-topic">Topic 9</span>
+          <a href="../articles/topic_9/page5.html" class="article-link">Building a Life That Does Not Break You</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="contact-info">
+      <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
+    </div>
+    <a href="authors-home.html" class="back-link">&#8592; All Authors</a>
+    <a href="#" class="back-to-top">Back to Top</a>
+  </footer>
+
+</body>
+</html>
