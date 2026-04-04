@@ -55,10 +55,19 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.1px;
       font-family: var(--serif);
       font-size: 22px;
       letter-spacing: -0.3px;
       color: var(--black);
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
     }
 
     nav {
@@ -270,7 +279,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 44px 52px;
-      background: var(--black);
+      background: var(--blue);
       border-bottom: 1px solid var(--border);
     }
 
@@ -284,13 +293,13 @@
 
     .resources-banner p span {
       font-style: italic;
-      color: #C9A66B;
+      color: var(--khaki);
     }
 
     .btn-white {
       display: inline-block;
       background: var(--white);
-      color: var(--khaki);
+      color: var(--black);
       font-size: 13px;
       font-weight: 500;
       letter-spacing: 0.08em;
@@ -301,7 +310,7 @@
     }
 
     .btn-white:hover {
-      background: var(--red);
+      background: var(--khaki);
       color: var(--white);
     }
 
@@ -344,7 +353,11 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo">InnovaTech</div>
+    <div class="logo">
+      <img src="assets/img/logo_notext.png" alt="Logo">
+      <span>InnovaTech</span>
+    </div>
+
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="pages/about/about.html">About Us</a>
