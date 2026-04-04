@@ -8,6 +8,27 @@
    <link rel="stylesheet" href="../../assets/css/page-style.css">
   <style>
 
+    nav a {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--blue);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--black);
+      border-radius: 4px;
+    }
+    
+    nav a.active { 
+      color: var(--black); 
+      border-bottom: 2px solid #5C6F91;
+      padding-bottom: 4px;
+    }
+
+
     /* RESOURCES PAGE LAYOUT  */
     .hero-resources { /*Resource Page Banner*/
       background: var(--off-white);
