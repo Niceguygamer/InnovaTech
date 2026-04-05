@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,11 +20,25 @@
       --sans: 'DM Sans', sans-serif;
     }
 
+    
+
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
+
+
+    ol {
+      padding-left: 24px;
+    }
+
+    li {
+      padding-left: 8px;
+    }
+
+
 
     html {
       scroll-behavior: smooth;
@@ -188,6 +202,10 @@
       color: var(--blue);
     }
 
+    strong {
+      font-weight: bold;
+    }
+
     .lightbox {
       position: fixed;
       top: 0;
@@ -275,6 +293,14 @@
       border-radius: 50%;
       flex-shrink: 0;
       border: 1px solid var(--border);
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
     }
 
     .author-card-name {
@@ -460,7 +486,7 @@
         </div>
 
         <p class="article-intro">
-          In relation to my previous blog, I am here to give you a bit of a glimpse into some specializations I have found during my own research into finding the right one for me, in hopes that it can help you navigate your own path. I decided not to add the salary grade to prevent you from choosing something based solely on income, as I’ve said before, you need to actually love what you do.
+          In relation to my previous blog, I am here to give you a bit of a glimpse into some specializations I have found during my own research into finding the right one for me, in hopes that it can help you navigate your own path. I decided not to add the salary grade to prevent you from choosing something based solely on income, as I've said before, you need to actually love what you do.
         </p>
 
         <div class="article-body">
@@ -484,7 +510,7 @@
           <p><strong>Workload:</strong> Moderate to heavy. Full-time roles: 40–50+ hours per week. Coursework can require significant time for coding, analyzing datasets, and learning new algorithms.</p>
 
           <h2>Artificial Intelligence & Machine Learning</h2>
-          <p>AI/ML focuses on building algorithms and models that allow machines to “learn” and make predictions or decisions.</p>
+          <p>AI/ML focuses on building algorithms and models that allow machines to "learn" and make predictions or decisions.</p>
           <p><strong>Pros:</strong> Cutting-edge field with high demand and lucrative salaries. Opportunities for research and innovation. Skills applicable to multiple industries.</p>
           <p><strong>Cons:</strong> Steep learning curve in mathematics, statistics, and programming. Projects often require large computational resources. Continuous learning is mandatory due to rapid field evolution.</p>
           <p><strong>Workload:</strong> Heavy. Expect 40–50+ hours per week in full-time roles, plus additional time for research and model training. Student projects often require significant independent study.</p>
@@ -517,7 +543,7 @@
           <p>Game Development focuses on designing, programming, and testing interactive games for PC, consoles, or mobile, often involving graphics, physics, and storytelling.</p>
           <p><strong>Pros:</strong> Highly creative and fun for those passionate about gaming. Opportunities in indie studios or major game companies. Combines programming with art, design, and storytelling.</p>
           <p><strong>Cons:</strong> Highly competitive industry. Long hours, especially near project deadlines ("crunch time"). Can involve repetitive debugging and optimization tasks.</p>
-          <p><strong>Workload:</strong> Moderate to very heavy. Full-time roles can exceed 50+ hours per week during crunch periods. Student projects can require 10–30+ hours per week depending on the complexity of the game.</p>
+          <p><strong>Workload:</strong> Moderate to very heavy. Full-time roles can exceed 50+ hours per week during crunch periods. Student projects can require 10"30+ hours per week depending on the complexity of the game.</p>
 
           <h2>IT Support / Systems Administration</h2>
           <p>IT Support and System Administration focus on maintaining, troubleshooting, and optimizing computer systems and networks within an organization.</p>
@@ -526,7 +552,7 @@
           <p><strong>Workload:</strong> Moderate. Full-time: typically 40 hours per week, sometimes with after-hours support. Students may spend extra hours setting up labs or practicing network configurations.</p>
 
           <h2>Closing Thoughts</h2>
-          <p>In choosing, you must always consider testing yourself in these specializations, as recommended in previous blogs. You can always seek for more help and guidance with those in the tech industry, or research more about it online. And finally, despite me saying that choosing a specialization is such a big deal, your first choice might not always be your last. In the end, you can always shift and change your mind, and what matters most is that you’re happy with what you do.</p>
+          <p>In choosing, you must always consider testing yourself in these specializations, as recommended in previous blogs. You can always seek for more help and guidance with those in the tech industry, or research more about it online. And finally, despite me saying that choosing a specialization is such a big deal, your first choice might not always be your last. In the end, you can always shift and change your mind, and what matters most is that you're happy with what you do.</p>
 
           <h2>References</h2>
           <p>
@@ -539,9 +565,9 @@
           <ol start="1">
             <li>Research and understand the different specializations available.</li>
             <li>Consider testing yourself in different specializations before choosing.</li>
-            <li>Don’t choose based solely on salary; passion matters more.</li>
+            <li>Don't choose based solely on salary; passion matters more.</li>
             <li>Seek guidance from industry professionals when exploring paths.</li>
-            <li>Understand that it’s okay to change your mind later.</li>
+            <li>Understand that it's okay to change your mind later.</li>
           </ol>
 
         </div>
@@ -553,19 +579,31 @@
         <div class="sidebar-section">
           <div class="sidebar-label">Related Articles</div>
 
+          
+
+          
+
+          
+
           <div class="related-article">
-            <div class="related-tag">Topic #2</div>
-            <div class="related-title">Related article title sits in this spot</div>
+            <a href="../topic_4/page9.html">
+              <div class="related-tag">Topic #4</div>
+              <div class="related-title">Expanding Knowledge with Learning and Resources Apps</div>
+            </a>
           </div>
 
           <div class="related-article">
-            <div class="related-tag">Topic #4</div>
-            <div class="related-title">Another related topic worth reading</div>
+            <a href="page5.html">
+              <div class="related-tag">Topic #2</div>
+              <div class="related-title">The Dread of the Final Choice</div>
+            </a>
           </div>
 
           <div class="related-article">
-            <div class="related-tag">Topic #6</div>
-            <div class="related-title">One more piece the reader might enjoy</div>
+            <a href="page2.html">
+              <div class="related-tag">Topic #2</div>
+              <div class="related-title">Wait, Is This All There Is?</div>
+            </a>
           </div>
 
         </div>
@@ -573,7 +611,9 @@
         <div class="sidebar-section">
           <div class="sidebar-label">Written by</div>
           <div class="author-card">
-            <div class="author-avatar"></div>
+            <div class="author-avatar">
+              <img src="../../../assets/img/authors/obillo/obillo-img.jpg" alt="Obillo's Avatar">
+            </div>
             <div>
               <div class="author-card-name">OBILLO, MON ANDREI</div>
               <div class="author-card-role">BS Computer Science</div>
@@ -594,11 +634,12 @@
       <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
     </div>
     <div class="footer-nav">
-      <a href="page5.html">← Prev</a>
-      <a href="page7.html">Next →</a>
+      <a href="page5.html">&#8592; Prev</a>
+      <a href="page7.html">Next &#8594;</a>
     </div>
     <a href="#" class="back-to-top">Back to Top</a>
   </footer>
 
 </body>
 </html>
+
