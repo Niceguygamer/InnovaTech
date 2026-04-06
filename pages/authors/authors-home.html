@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Authors — InnovaTech</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     :root {
+      --blue: #5C6F91;
+      --black: #33363A;
       --red: #A63D40;
-      --black: #2C2F33;
       --white: #ffffff;
       --off-white: #F7F5F2;
       --muted: #6B7A8F;
@@ -16,7 +19,6 @@
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'DM Sans', sans-serif;
     }
-
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -33,7 +35,7 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* HEADER */
+    /* HEADER + NAV */
     header {
       position: sticky;
       top: 0;
@@ -64,7 +66,10 @@
       display: block; 
     }
 
-    nav { display: flex; gap: 36px; }
+    nav {
+      display: flex;
+      gap: 36px;
+    }
 
     nav a {
       font-size: 13px;
@@ -75,15 +80,9 @@
       transition: color 0.2s;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
       color: var(--black);
-      border-radius: 4px;
-    }
-    
-    nav a.active { 
-      color: var(--black); 
-      border-bottom: 2px solid #5C6F91;
-      padding-bottom: 4px;
     }
 
     /* PAGE HEADER */
@@ -160,7 +159,8 @@
 
     .author-card:hover { 
       background: #ffffff;
-      transform: translateY(-6px); }
+      transform: translateY(-6px); 
+    }
 
     .author-avatar {
       width: 110px;
@@ -239,7 +239,7 @@
   <!-- HEADER -->
   <header>
     <div class="logo">
-      <img src="../../assets/img/logo_notext.png" alt="Logo">
+      <img src="../../assets/img/logo_notext.png" alt="">
       <span>InnovaTech</span>
     </div>
     <nav>
