@@ -4,30 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InnovaTech</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --blue: #5C6F91;
       --black: #33363A;
       --white: #ffffff;
       --off-white: #F3F4F6;
-      --muted: #6B7A8F; to
+      --muted: #6B7A8F;
       --border: #e5e4e0;
       --khaki: #D8C9A3;
       --gray: #8C949C;
       --dark_gray: #2C2F33;
-      --border: #e5e4e0;
-      
       --red: #A63D40;
 
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'DM Sans', sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--sans);
@@ -39,7 +47,10 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     /* ── HEADER ── */
     header {
@@ -92,7 +103,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: var(--blue);
+      background: var(--off-white);
       text-align: center;
       padding: 100px 48px 96px;
       border-bottom: 1px solid var(--border);
@@ -105,7 +116,7 @@
       font-weight: 400;
       line-height: 1.1;
       letter-spacing: -1px;
-      color: var(--white);
+      color: var(--black);
       max-width: 680px;
       margin: 0 auto 20px;
     }
@@ -113,7 +124,7 @@
     .hero p {
       font-size: 17px;
       font-weight: 300;
-      color: var(--white);
+      color: var(--black);
       max-width: 420px;
       margin: 0 auto 36px;
       line-height: 1.7;
@@ -121,9 +132,9 @@
 
     .btn {
       display: inline-block;
-      background: var(--white);
-      color:(--white);
-      border: 1px solid var(--black);
+      background: var(--blue);
+      color: var(--white);
+      border: 1px solid var(--blue);
       font-family: var(--sans);
       font-size: 13px;
       font-weight: 500;
@@ -166,18 +177,13 @@
       color: var(--black);
     }
 
-    .placeholder-content {
-      height: 88px;
-      background: var(--off-white);
-      margin-bottom: 28px;
-      border-radius: 2px;
-      /* Simulated text lines */
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(var(--border) 1px, transparent 1px);
-      background-size: 100% 28px;
-      background-position: 0 14px, 0 42px, 0 70px;
+    .about-preview p,
+    .authors-preview p {
+      font-size: 14px;
+      color: var(--black);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      text-align: justify;
     }
 
     .btn-outline {
@@ -205,7 +211,7 @@
     }
 
     .section-label {
-      font-size: 11px;
+      font-size: 15px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -230,17 +236,40 @@
     }
 
     .article-card {
+      border-radius: 8px;
       display: block;
       cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      padding: 12px;
+
+      border: 1px solid var(--border);
+      background: var(--white);          
+    }
+
+    .card-content {
+      padding: 0 8px;
+    }
+
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      border-color: var(--blue);
     }
 
     .card-image {
       width: 100%;
       aspect-ratio: 4/3;
-      background: var(--off-white);
-      margin-bottom: 16px;
       overflow: hidden;
-      position: relative;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
     }
 
     .card-image-inner {
@@ -322,36 +351,34 @@
     /* ── FOOTER ── */
     footer {
       display: flex;
-      justify-content: space-between; /* left + center/right spacing */
+      justify-content: space-between;
       align-items: center;
       padding: 24px 48px;
-      background: var(--white);
       border-top: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .contact-text {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--black);
     }
 
     .social-icons {
       display: flex;
-      gap: 28px;
+      gap: 24px;
       justify-content: center;
       flex: 1;
     }
 
     .social-icons a {
+      font-size: 18px;
       color: var(--black);
-      font-size: 1.4rem;
     }
 
     .social-icons a:hover {
       color: var(--blue);
     }
-
-
-    .back-to-top-container {
-      padding: 0 52px;
-      margin: 24px 0;
-      text-align: right;
-    }
-
 
     .back-to-top {
       font-size: 12px;
@@ -375,8 +402,8 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <!-- HEADER -->
   <header>
     <div class="logo">
@@ -385,16 +412,15 @@
     </div>
 
     <nav>
-      <a href="index.html" class="active">Home</a>
+      <a href="#" class="active">Home</a>
       <a href="pages/about/about.html">About Us</a>
-      <a href="pages/authors/authors.html">Authors</a>
+      <a href="pages/authors/authors-home.html">Authors</a>
       <a href="pages/article-home/article-home.html">Articles</a>
       <a href="pages/resources/resources.html">Resources</a>
     </nav>
   </header>
 
   <main>
-
     <!-- HERO -->
     <section class="hero">
       <h1>The Complete Survival Guide to Thriving in Tech-Related College Programs</h1>
@@ -405,13 +431,22 @@
     <!-- ABOUT + AUTHORS -->
     <section class="two-col-preview" id="about-authors">
       <div class="about-preview">
-        <h2>About Us</h2>
-        <div class="placeholder-content"></div>
+        <h2>About The Website</h2>
+        <p>
+          InnovaTech is a platform built by students designed to assist tech students during their college journey. 
+          Through shared experiences, lessons, and practical advice, we aim to make challenges more manageableand 
+          help you grow in your chosen field.
+        </p>
         <a href="pages/about/about.html" class="btn-outline">Read More</a>
       </div>
+
       <div class="authors-preview">
         <h2>Meet the Authors</h2>
-        <div class="placeholder-content"></div>
+        <p>
+          Our writers are fellow tech students who provide genuine stories, insights, and guidance 
+          drawn from their personal experiences. Every article is crafted to assist others in learning, developing, 
+          and thriving because we believe that the most effective advice comes from shared experience.
+        </p>
         <a href="pages/authors/authors.html" class="btn-outline">View Authors</a>
       </div>
     </section>
@@ -419,61 +454,92 @@
     <!-- FEATURED ARTICLES -->
     <section class="featured-articles">
       <div class="section-label">Featured Articles</div>
+
       <div class="articles-grid">
-
+        <!-- interaction -->
         <a href="pages/articles/topic_6/page1.html" class="article-card">
-          <div class="card-image"><div class="card-image-inner"></div></div>
-          <div class="card-tag">Interaction</div>
-          <div class="card-title">Relationships That Matter</div>
-          <div class="card-meta">Mar 20 · 5 min read</div>
+          <div class="card-image">
+            <img src="assets/img/topic 6/walking.jpg" alt="Article image">
+          </div>
+
+          <div class="card-content">
+            <div class="card-tag">Interaction</div>
+            <div class="card-title">Relationships That Matter</div>
+            <div class="card-meta">Mar 20 · 5 min read</div>
+          </div>
         </a>
 
+        <!-- Career -->
         <a href="pages/articles/topic_2/page1.html" class="article-card">
-          <div class="card-image"><div class="card-image-inner"></div></div>
-          <div class="card-tag">Career</div>
-          <div class="card-title">Suddenly, I’m Halfway There</div>
-          <div class="card-meta">Mar 18 · 4 min read</div>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Article image">
+          </div>
+
+          <div class="card-content">
+            <div class="card-tag">Career</div>
+            <div class="card-title">Suddenly, I’m Halfway There</div>
+            <div class="card-meta">Mar 18 · 4 min read</div>
+          </div>
         </a>
 
+        <!-- Academic -->
         <a href="pages/articles/topic_5/page1.html" class="article-card">
-          <div class="card-image"><div class="card-image-inner"></div></div>
-          <div class="card-tag">Academic</div>
-          <div class="card-title">You Signed Up For This (But Nobody Warned You)</div>
-          <div class="card-meta">Mar 15 · 6 min read</div>
+          <div class="card-image">
+            <img src="assets/img/topic 5/coding-at-night.jpg" alt="Article image">
+          </div>
+
+          <div class="card-content">
+            <div class="card-tag">Academic</div>
+            <div class="card-title">You Signed Up For This (But Nobody Warned You)</div>
+            <div class="card-meta">Mar 15 · 6 min read</div>
+          </div>
         </a>
 
+        <!-- Self-Care -->
         <a href="pages/articles/topic_8/page1.html" class="article-card">
-          <div class="card-image"><div class="card-image-inner"></div></div>
-          <div class="card-tag">Self-Care</div>
-          <div class="card-title">The Foundation of Rest – Why It Matters</div>
-          <div class="card-meta">Mar 12 · 3 min read</div>
-        </a>
+          <div class="card-image">
+            <img src="assets/img/topic 8/munda-page1.jpg" alt="Article image">
+          </div>
 
+          <div class="card-content">
+            <div class="card-tag">Self-Care</div>
+            <div class="card-title">The Foundation of Rest – Why It Matters</div>
+            <div class="card-meta">Mar 12 · 3 min read</div>
+          </div>
+        </a>
       </div>
     </section>
-    
-    <div class="back-to-top-container">
-      <a href="#" class="back-to-top">Back to Top</a>
-    </div>
 
     <!-- RESOURCES BANNER -->
     <section class="resources-banner">
       <p>Explore our <span>resource library</span></p>
       <a href="pages/resources/resources.html" class="btn-white">Visit Resources</a>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
+<!-- FOOTER -->
   <footer>
+    <div class="contact-text">Contact Us</div>
+
     <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=61577461889890"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://x.com/InnovaTechG1"><i class="fa-brands fa-twitter"></i></a>
-      <a href="instagram.com/innovatech.integ"><i class="fa-brands fa-instagram"></i></a>
-      <a href="mailto:innovatech.integ@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61577461889890">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="https://x.com/InnovaTechG1">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+
+      <a href="instagram.com/innovatech.integ">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="mailto:innovatech.integ@gmail.com">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
     </div>
 
+    <a href="#" class="back-to-top">Back to Top</a>
   </footer>
-
 </body>
 </html>

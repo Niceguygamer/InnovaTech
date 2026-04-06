@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mental Health and Rest</title>
+  <title>Rest and Resilience - Building Mental Strength</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -13,12 +13,22 @@
       --off-white: #F3F4F6;
       --muted: #6B7A8F;
       --border: #e5e4e0;
+      --khaki: #D8C9A3;
+      --gray: #8C949C;
+      --dark_gray: #2C2F33;
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'DM Sans', sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--sans);
@@ -30,9 +40,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -82,11 +94,11 @@
       text-shadow: 0.06px 0 0
     }
 
-    /* ARTICLE HEADER */
     .article-header {
-      background: var(--off-white);
+      background: var(--blue);
       border-bottom: 1px solid var(--border);
       padding: 72px 0 64px;
+      box-shadow: inset 0 -1px 0 var(--border);
     }
 
     .article-header-inner {
@@ -100,7 +112,8 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--blue);
+      color: var(--white);
+      opacity: 0.8;
       margin-bottom: 16px;
     }
 
@@ -110,63 +123,69 @@
       font-weight: 400;
       line-height: 1.15;
       letter-spacing: -0.5px;
-      color: var(--black);
+      color: var(--white);
       margin-bottom: 20px;
     }
 
     .article-meta {
       font-size: 13px;
-      color: var(--muted);
+      color: var(--white);
+      opacity: 0.7;
       display: flex;
       align-items: center;
       gap: 16px;
     }
 
     .article-meta .author-name {
-      color: var(--black);
+      color: var(--white);
       font-weight: 500;
     }
 
     .article-meta .dot {
       width: 3px;
       height: 3px;
-      background: var(--muted);
+      background: var(--white);
       border-radius: 50%;
     }
 
-    /* ARTICLE BODY LAYOUT */
     .article-layout {
       display: grid;
       grid-template-columns: 1fr 280px;
-      gap: 0;
       max-width: 1100px;
       margin: 0 auto;
       border-bottom: 1px solid var(--border);
     }
 
-    /* MAIN CONTENT */
     .article-content {
       padding: 56px 52px 56px 48px;
       border-right: 1px solid var(--border);
     }
 
+    .article-image {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 36px;
+      display: block;
+    }
+
     .article-image img {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       display: block;
+      border-radius: 4px;
     }
 
     .article-image figcaption {
       font-size: 12px;
       color: var(--muted);
       text-align: center;
-      padding: 8px 0;
+      padding: 12px 0;
       font-style: italic;
     }
 
     .article-image figcaption a:hover {
-      color: var(--black);
+      color: var(--blue);
     }
 
     .lightbox {
@@ -183,9 +202,11 @@
     }
 
     .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 70%;
+      max-height: 70%;
       border-radius: 6px;
+      display: block;
+      margin: auto;
     }
 
     .lightbox:target {
@@ -201,6 +222,25 @@
       padding-bottom: 32px;
       border-bottom: 1px solid var(--border);
       text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .article-content h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--black);
+      margin: 40px 0 16px;
+      letter-spacing: -0.3px;
+    }
+
+    ol.list li {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.4;
+      margin-bottom: 24px;
+      margin-left: 25px;
     }
 
     .article-body p {
@@ -210,18 +250,9 @@
       line-height: 1.85;
       margin-bottom: 24px;
       text-align: justify;
+      text-justify: inter-word;
     }
 
-    .article-body h2 {
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 400;
-      color: var(--black);
-      margin: 40px 0 16px;
-      letter-spacing: -0.3px;
-    }
-
-    /* SIDEBAR */
     .article-sidebar {
       padding: 56px 32px;
     }
@@ -241,7 +272,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* AUTHOR CARD */
     .author-card {
       display: flex;
       align-items: center;
@@ -269,9 +299,7 @@
     .author-card-name {
       font-family: var(--serif);
       font-size: 16px;
-      font-weight: 400;
       color: var(--black);
-      margin-bottom: 2px;
     }
 
     .author-card-role {
@@ -281,32 +309,33 @@
 
     .btn-outline {
       display: inline-block;
-      border: 1px solid #2C2F33;
-      color: #2C2F33;
+      border: 1px solid var(--dark_gray);
+      color: var(--dark_gray);
       font-size: 13px;
       font-weight: 500;
       letter-spacing: 1px;
       text-transform: uppercase;
       padding: 8px 18px;
       margin-top: 14px;
-      transition: background 0.2s, color 0.2s;
+      transition: all 0.2s;
       background-color: transparent;
     }
 
     .btn-outline:hover {
-      background-color: #5C6F91;
-      color: #F3F4F6;
-      border-color: #F3F4F6;
+      background-color: var(--blue);
+      color: var(--white);
+      border-color: var(--white);
     }
 
-    /* RELATED ARTICLES */
     .related-article {
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
       cursor: pointer;
     }
 
-    .related-article:first-of-type { padding-top: 0; }
+    .related-article:first-of-type {
+      padding-top: 0;
+    }
 
     .related-tag {
       font-size: 10px;
@@ -314,21 +343,22 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--blue);
+      margin-top: 5px;
       margin-bottom: 4px;
     }
 
     .related-title {
       font-family: var(--serif);
       font-size: 14px;
-      font-weight: 400;
       color: var(--black);
       line-height: 1.4;
       transition: color 0.2s;
     }
 
-    .related-article:hover .related-title { color: var(--blue); }
+    .related-article:hover .related-title {
+      color: var(--blue);
+    }
 
-    /* FOOTER */
     footer {
       display: flex;
       justify-content: space-between;
@@ -344,7 +374,6 @@
     }
 
     .contact-info:hover {
-      font-size: 15px;
       color: var(--black);
     }
 
@@ -359,17 +388,17 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       padding: 10px 22px;
-      color: #6B7A8F;
-      border: 1px solid #6B7A8F;
-      transition: all 0.2s;
+      color: var(--muted);
+      border: 1px solid var(--muted);
       background-color: transparent;
       border-radius: 4px;
+      transition: all 0.2s;
     }
 
     .footer-nav a:hover {
-      color: #2C2F33;
-      border-color: #D8C9A3;
-      background-color: #D8C9A3;
+      color: var(--black);
+      border-color: var(--khaki);
+      background-color: var(--khaki);
     }
 
     .back-to-top {
@@ -377,17 +406,22 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #8C949C;
-      transition: color 0.2s;
+      color: var(--gray);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      text-decoration: none;
       padding: 8px 16px;
+      transition: color 0.2s;
     }
 
-    .back-to-top::before { content: '↑'; font-size: 14px; }
-    .back-to-top:hover { color: #33363A; }
+    .back-to-top::before {
+      content: '↑';
+      font-size: 14px;
+    }
+
+    .back-to-top:hover {
+      color: var(--black);
+    }
   </style>
 </head>
 
@@ -413,7 +447,7 @@
     <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
-        <div class="article-tag">Topic # 8</div>
+        <div class="article-tag">Topic # 10</div>
         <h1>Rest and Resilience – Building Mental Strength</h1>
         <div class="article-meta">
           <span class="author-name">MUNDA, SOFIA ADELAIDE</span>
