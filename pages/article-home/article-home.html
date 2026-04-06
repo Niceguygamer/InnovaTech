@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InnovaTech - Articles</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-    /*About-home style*/
+    /* Root Colors and Fonts */
     :root {
       --blue: #5C6F91;
-      --black: #111111;
+      --black: #33363A;
       --white: #ffffff;
-      --off-white: #f7f6f3;
-      --muted: #8a8a8a;
+      --off-white: #F7F5F2;
+      --muted: #6B7A8F;
       --border: #e5e4e0;
       --accent: #c8602a;
       --gray: #8C949C;
@@ -48,9 +50,9 @@
       justify-content: space-between;
       padding: 0 48px;
       height: 64px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    /*InnovaTech Website name in Nav */
     .logo {
       display: flex;
       align-items: center;
@@ -61,42 +63,45 @@
       color: var(--black);
     }
 
-    .logo img {
-      height: 80px;
-      width: auto;
-      display: block;
+    .logo img { 
+      height: 80px; 
+      width: auto; 
+      display: block; 
     }
 
-    nav { display: flex; gap: 36px; }
+    nav {
+      display: flex;
+      gap: 36px;
+    }
+
     nav a {
       font-size: 13px;
-      font-weight: 500;
+      font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--blue);
       transition: color 0.2s;
     }
-    nav a:hover,
-    nav a.active {
-      color: var(--black);
-      text-shadow: 0.06px 0 0
-    }
 
-    /* ARTICLES PAGE LAYOUT */
-    .hero-articles { /* Article Banner*/
+    nav a:hover,
+    nav a.active { color: var(--black); }
+
+    /* HERO SECTION */
+    .hero-articles {
       background: var(--off-white);
       text-align: center;
       padding: 80px 48px 60px;
       border-bottom: 1px solid var(--border);
     }
-    /*Banner Style*/
+
     .hero-articles h1 {
       font-family: var(--serif);
-      font-size: 48px;
+      font-size: clamp(36px, 5vw, 48px);
       margin-bottom: 12px;
       font-weight: 400;
+      color: var(--black);
     }
-    /*Browse-label button*/
+
     .browse-label {
       font-size: 14px;
       color: var(--muted);
@@ -104,19 +109,17 @@
       border: 1px solid var(--border);
       display: inline-block;
       padding: 8px 40px;
+      transition: all 0.2s ease;
     }
 
-    .browse-label:hover{
+    .browse-label:hover {
       background: var(--off-white);
       border-color: var(--black);
     }
 
-    /*Section divider*/
-    .section-container {
-      padding: 60px 48px;
-    }
+    /* SECTION CONTAINER */
+    .section-container { padding: 60px 48px; }
 
-    /*Row Label*/
     .row-label {
       font-size: 12px;
       font-style: italic;
@@ -125,14 +128,13 @@
       text-transform: capitalize;
     }
 
-    /* 5-Column Grid for Topics / Article categories */
-    .topics-grid { /*Display / Layout*/
+    .topics-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
     }
 
-    .topic-card { /*Article placeholder*/
+    .topic-card {
       border: 1px solid var(--border);
       padding: 30px 15px;
       text-align: center;
@@ -140,9 +142,8 @@
       background: var(--white);
     }
 
-    .topic-card:hover {/*Hover effect*/
+    .topic-card:hover {
       background: var(--off-white);
-      border-style: solid;
       border-color: var(--black);
     }
 
@@ -154,6 +155,7 @@
       padding-bottom: 10px;
       display: inline-block;
       width: 80%;
+      color: var(--black);
     }
 
     .topic-description {
@@ -172,7 +174,6 @@
       border-top: 1px solid var(--border);
     }
 
-    /*back to the top button */
     .back-to-top {
       font-size: 14px;
       font-weight: 500;
@@ -191,16 +192,11 @@
       font-size: 14px;
     }
 
-    .back-to-top:hover {
-      color: var(--black);
-    }
+    .back-to-top:hover { color: var(--black); }
 
-    @media (max-width: 1024px) {
-      .topics-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .topics-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 1024px) { .topics-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) { .topics-grid { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 <body>
@@ -213,7 +209,7 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../about/about.html">About Us</a>
-      <a href="../authors/authors-home.html" >Authors</a>
+      <a href="../authors/authors-home.html">Authors</a>
       <a href="article-home.html" class="active">Articles</a>
       <a href="../resources/resources.html">Resources</a>
     </nav>
@@ -251,8 +247,6 @@
       </div>
     </section>
 
-
-
     <section class="section-container">
       <p class="row-label">Lifestyle and Self-development</p>
       <div class="topics-grid">
@@ -277,7 +271,6 @@
           <div class="topic-description">Working effectively with others to achieve shared academic and professional goals.</div>
         </a>
       </div>
-
     </section>
   </main>
 
@@ -287,5 +280,3 @@
 
 </body>
 </html>
-
-     
