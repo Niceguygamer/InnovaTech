@@ -86,6 +86,31 @@
     nav a.active {
       color: var(--black);
     }
+    
+    /* ONE SECTION */
+    .one-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 52px;
+      text-align: justify;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .one-section h2 {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .one-section p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      text-align: justify;
+      margin: 0;
+      padding: 0 16px;
+    }
 
     /* HERO */
     .hero {
@@ -143,15 +168,12 @@
       text-align: justify;
     }
 
-    /* RESPONSIVE */
-    @media screen and (max-width: 768px) {
-      .two-col-preview {
-        grid-template-columns: 1fr;
-      }
-      .about-preview {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-      }
+    /* IMAGE PLACEHOLDER */
+    .authors-preview img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px;
     }
 
     /* BUTTONS BELOW CONTENT */
@@ -254,28 +276,27 @@
     <p>For Tech Students, By Tech Students</p>
   </section>
 
+  <!-- WHO WE ARE -->
   <section class="one-section">
-    
+    <h2>Who We Are</h2>
+    <p>
+      InnovaTech is composed of eight passionate Computer Science students with a single mission: to simplify the tech journey for fellow students. Established in 2026, the team was formed with the shared goal of helping others navigate the challenges of pursuing technology-related degrees. By sharing what they have learned through their own academic endeavors, the team aims to make tech courses more manageable for those in similar fields. <br><br>
+
+      Our objective is to transform these experiences into useful guidance that can assist others in more skillfully navigating the difficulties of college. By concentrating on actual circumstances like relationships, employment problems, and academic pressure, we hope to provide advice that is understandable, practical, and simple to implement.
+    </p>
   </section>
 
   <!-- TWO-COLUMN CONTENT -->
   <section class="two-col-preview">
     <div class="about-preview">
-      <h2>Who We Are</h2>
+      <h2>What This Site Is About</h2>
       <p>
-        InnovaTech is a student-driven platform created to support tech students 
-        as they navigate the challenges of college life. We share real experiences, 
-        practical advice, and insights that make learning more manageable and meaningful.
+        Through the sharing of real-life experiences, lessons learned, and ideas from other students, this website provides a helpful resource for students enrolled in tech-related programs. It offers relatable scenarios and typical difficulties, like relationships, career concerns, and academic pressure, while transforming these experiences into practical guidance that can make college life simpler to handle. The platform is intended for tech students, particularly first-years and those who want to develop intellectually and personally. Readers who like to reflect on their own experiences and benefit from others' travels are also welcome.
       </p>
     </div>
 
     <div class="authors-preview">
-      <h2>What This Site Is About</h2>
-      <p>
-        This site is designed to help students grow academically, professionally, 
-        and personally. From coding struggles to career decisions, we provide 
-        relatable content that reflects the real journey of being in a tech field.
-      </p>
+      <img src="../../assets/img/group-pic.png" alt="group pic">
     </div>
   </section>
 
