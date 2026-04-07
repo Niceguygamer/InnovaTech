@@ -4,27 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InnovaTech - Articles</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* Root Colors and Fonts */
     :root {
       --blue: #5C6F91;
       --black: #33363A;
       --white: #ffffff;
-      --off-white: #F7F5F2;
+      --off-white: #F3F4F6;
       --muted: #6B7A8F;
       --border: #e5e4e0;
-      --accent: #c8602a;
-      --gray: #8C949C;
       --khaki: #D8C9A3;
+      --gray: #8C949C;
+      --dark_gray: #2C2F33;
+      --red: #A63D40;
+
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'DM Sans', sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--sans);
@@ -36,9 +46,12 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    /* HEADER */
+    /* ── HEADER ── */
     header {
       position: sticky;
       top: 0;
@@ -50,7 +63,6 @@
       justify-content: space-between;
       padding: 0 48px;
       height: 64px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .logo {
@@ -63,10 +75,10 @@
       color: var(--black);
     }
 
-    .logo img { 
-      height: 80px; 
-      width: auto; 
-      display: block; 
+    .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
     }
 
     nav {
@@ -84,7 +96,9 @@
     }
 
     nav a:hover,
-    nav a.active { color: var(--black); }
+    nav a.active {
+      color: var(--black);
+    }
 
     /* HERO SECTION */
     .hero-articles {
