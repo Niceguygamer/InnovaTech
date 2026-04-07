@@ -11,31 +11,35 @@
     :root {
       --blue: #5C6F91;
       --black: #33363A;
-      --red: #A63D40;
       --white: #ffffff;
-      --off-white: #F7F5F2;
+      --off-white: #F3F4F6;
       --muted: #6B7A8F;
       --border: #e5e4e0;
+      --khaki: #D8C9A3;
+      --gray: #8C949C;
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'DM Sans', sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: var(--sans);
-      font-weight: 300;
       background: var(--white);
       color: var(--black);
-      font-size: 15px;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    /* HEADER + NAV */
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -47,7 +51,6 @@
       justify-content: space-between;
       padding: 0 48px;
       height: 64px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .logo {
@@ -60,10 +63,9 @@
       color: var(--black);
     }
 
-    .logo img { 
-      height: 80px; 
-      width: auto; 
-      display: block; 
+    .logo img {
+      height: 80px;
+      width: auto;
     }
 
     nav {
@@ -85,33 +87,26 @@
       color: var(--black);
     }
 
-    /* PAGE HEADER */
-    .page-header {
+    /* HERO */
+    .hero {
       background: var(--off-white);
-      padding: 72px 48px 64px;
-      border-bottom: 1px solid var(--border);
       text-align: center;
+      padding: 100px 48px 80px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .page-header h1 {
+    .hero h1 {
       font-family: var(--serif);
-      font-size: clamp(36px, 5vw, 56px);
-      font-weight: 400;
-      letter-spacing: -0.5px;
-      color: var(--black);
-      margin-bottom: 16px;
-      border-bottom: 3px solid #D8C9A3;
-      display: inline-block;
-      padding-bottom: 8px;
+      font-size: clamp(40px, 5vw, 64px);
+      font-style: italic;
+      margin-bottom: 2px;
+      color: var(--blue);
+      line-height: 1;
     }
 
-    .page-header p {
+    .hero p {
       font-size: 16px;
-      font-weight: 300;
-      color: var(--muted);
-      max-width: 480px;
-      margin: 0 auto;
-      line-height: 1.7;
+      color: var(--blue);
     }
 
     /* AUTHORS GRID */
@@ -121,11 +116,11 @@
     }
 
     .section-label {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--blue);
       margin-bottom: 36px;
       display: flex;
       align-items: center;
@@ -136,7 +131,7 @@
       content: '';
       flex: 1;
       height: 1px;
-      background: var(--border);
+      background: var(--blue);
     }
 
     .authors-grid {
@@ -253,11 +248,11 @@
 
   <main>
 
-    <!-- PAGE HEADER -->
-    <div class="page-header">
+    <!-- HERO -->
+    <section class="hero">
       <h1>Meet the Authors</h1>
-      <p>Eight students from tech-related programs sharing their personal experiences and wisdom.</p>
-    </div>
+      <p>Meet the people behind InnovaTech, guiding fellow students through tech life.</p>
+    </section>
 
     <!-- AUTHORS GRID -->
     <section class="authors-section">
@@ -268,7 +263,7 @@
           <div class="author-avatar">
             <img src="../../assets/img/authors/Agunod/AGUNOD.png" alt="Iñigo Jose Agunod">
           </div>
-          <div class="author-name">Agunod</div>
+          <div class="author-name">Agunod, Iñigo</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
@@ -276,7 +271,7 @@
           <div class="author-avatar">
             <img src="../../assets/img/authors/Alab-ab/ALAB-AB.jpg" alt="Charlize Jane Alabab">
           </div>
-          <div class="author-name">Alab&#45;ab</div>
+          <div class="author-name">Alab&#45;ab, Charlize</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
@@ -284,7 +279,7 @@
           <div class="author-avatar">
             <img src="../../assets/img/authors/albarico/id.jpg" alt="Izylle Anne Albarico">
           </div>
-          <div class="author-name">Albarico</div>
+          <div class="author-name">Albarico, Izylle</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
@@ -292,7 +287,7 @@
           <div class="author-avatar">
             <img src="../../assets/img/authors/Esico/DSC_0211.JPG" alt="Bryan Esico">
           </div>
-          <div class="author-name">Esico</div>
+          <div class="author-name">Esico, Bryan</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
@@ -300,7 +295,7 @@
           <div class="author-avatar">
             <img src="../../assets/img/authors/leongsun/Facebook PFP.png" alt="Euwin Johnmiel Leongsun">
           </div>
-          <div class="author-name">Leongsun</div>
+          <div class="author-name">Leongsun, Euwin</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
@@ -308,7 +303,7 @@
           <div class="author-avatar">
             <img src="../../assets/img/authors/Libuton/libuton.jpg" alt="Cyril Mae Libuton">
           </div>
-          <div class="author-name">Libuton</div>
+          <div class="author-name">Libuton, Cyril</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
@@ -316,7 +311,7 @@
           <div class="author-avatar">
             <img src="../../assets/img/authors/munda/munda-image.jpg" alt="Sofia Adelaide Munda">
           </div>
-          <div class="author-name">Munda</div>
+          <div class="author-name">Munda, Sofia</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
@@ -324,7 +319,7 @@
           <div class="author-avatar">
             <img src="../../assets/img/authors/obillo/obillo-img.jpg" alt="Obillo's Avatar">
           </div>
-          <div class="author-name">Obillo</div>
+          <div class="author-name">Obillo, Mon</div>
           <div class="author-role">BS Computer Science</div>
         </a>
 
