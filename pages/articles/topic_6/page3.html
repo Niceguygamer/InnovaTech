@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Working Together, Achieving More</title>
+<!--for back-to-top-->
+  <link rel="stylesheet" href ="../../../assets/css/back-to-top.css">
 
   <!-- for icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/apple-touch-icon.png">
@@ -446,27 +448,6 @@
       display: flex;
       align-items: center;
     }
-
-    .back-to-top {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-
-    .back-to-top:hover {
-      color: var(--blue);
-    }
-
-    .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
   </style>
 </head>
 
@@ -668,7 +649,7 @@
     </div>
 
   </main>
-
+<button id="backToTop" title="Back to Top">↑</button>
   <!-- FOOTER -->
   <footer>
     <!-- Left: Contact + Icons -->
@@ -697,9 +678,9 @@
 
     <!-- Right: Back to Top -->
     <div class="footer-right">
-      <a href="#" class="back-to-top">Back to Top</a>
     </div>
   </footer>
+<script src="../../../assets/js/back-to-top.js"></script>
 
 </body>
 </html>
