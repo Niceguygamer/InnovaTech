@@ -1,14 +1,24 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-    --primary: #9ce2d4;
-    --bg: #1a1a2e;
-    --text: #e0e0e0;
+/* BACK TO TOP */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #066fe7;
+    color: white;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: background 0.3s, transform 0.2s;
 }
 
-body {
-    font-family: system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+#backToTop:hover {
+    background: #004080;
+    transform: translateY(-4px);
 }
