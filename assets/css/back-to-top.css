@@ -19,7 +19,6 @@
 }
 
 #backToTop:hover {
-    color: var(--offw);
     background:  var(--khaki);
     transform: translateY(-4px);
 }
