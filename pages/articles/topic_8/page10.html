@@ -438,28 +438,6 @@
       display: flex;
       align-items: center;
     }
-
-    .back-to-top {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-
-    .back-to-top:hover {
-      color: var(--blue);
-    }
-
-    .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
-
     .copyright {
       width: 100%;
       text-align: center;
@@ -622,7 +600,7 @@
     </div>
 
   </main>
-
+  <button id="backToTop" title="Back to Top">↑</button>
   <!-- FOOTER -->
   <footer>
     <!-- Left: Contact + Icons -->
@@ -651,11 +629,11 @@
 
     <!-- Right: Back to Top -->
     <div class="footer-right">
-      <a href="#" class="back-to-top">Back to Top</a>
     </div>
   </footer>
 
   <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
+  <script src="../../../assets/js/back-to-top.js"></script>
 
 </body>
 </html>
