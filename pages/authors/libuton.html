@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyril Libuton — InnovaTech</title>
+
+  <!-- for icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <title>Euwin Leongsun — InnovaTech</title>
+
+  <!-- for font -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- for footer -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     :root {
       --blue: #5C6F91;
@@ -214,37 +222,47 @@
 
     .articles-list li:hover .article-link { color: var(--blue); }
 
+    /* FOOTER */
     footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 48px;
-      background: var(--white);
+      padding: 16px 48px;
       border-top: 1px solid var(--border);
-      margin-top: 56px;
+      background: var(--white);
+      flex-wrap: wrap;
+      position: relative;
     }
 
-    .contact-info { font-size: 15px; color: var(--blue); }
-    .contact-info:hover { color: var(--black); }
-
-    .back-to-top {
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #8C949C;
-      transition: color 0.2s;
-      display: inline-flex;
+    .footer-left {
+      display: flex;
       align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      padding: 8px 16px;
+      gap: 16px;
     }
 
-    .back-to-top::before { content: '↑'; font-size: 14px; }
-    .back-to-top:hover { color: var(--black); }
+    .contact-text {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--black);
+    }
 
-    .back-link {
+    .footer-left a {
+      font-size: 18px;
+      color: var(--black);
+      transition: color 0.2s;
+    }
+
+    .footer-left a:hover {
+      color: var(--blue);
+    }
+
+    .footer-nav{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .footer-nav a {
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.08em;
@@ -256,11 +274,42 @@
       border-radius: 4px;
     }
 
-    .back-link:hover {
+    .footer-nav a:hover {
       color: var(--white);
       border-color: #5C6F91;
       background-color: #5C6F91;
       box-shadow: 0 2px 6px rgba(92,111,145,0.3);
+    }
+
+    .footer-right .back-to-top {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--black);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .footer-right .back-to-top:hover {
+      color: var(--blue);
+    }
+
+    .footer-right .back-to-top::before {
+      content: '↑';
+      font-size: 14px;
+    }
+
+    .copyright {
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      color: var(--black);
+      background: var(--off-white);
+      padding: 6px 0;
+      margin-top: 0;
     }
   </style>
 </head>
@@ -373,13 +422,38 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="contact-info">
-      <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
+    <!-- Left: Contact + Icons -->
+    <div class="footer-left">
+      <span class="contact-text">Contact Us</span>
+
+      <a href="https://www.facebook.com/profile.php?id=61577461889890">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://x.com/InnovaTechG1">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/innovatech.integ">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="mailto:innovatech.integ@gmail.com">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
     </div>
-    <a href="authors-home.html" class="back-link">&#8592; All Authors</a>
-    <a href="#" class="back-to-top">Back to Top</a>
+
+    <!-- Center: Navigation -->
+    <div class="footer-nav">
+      <a href="../authors/authors-home.html">← Back to Authors</a>
+    </div>
+
+    <!-- Right: Back to Top -->
+    <div class="footer-right">
+      <a href="#" class="back-to-top">Back to Top</a>
+    </div>
   </footer>
+
+  <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
 
 </body>
 </html>
