@@ -382,11 +382,11 @@
 
     .footer-left {
       display: flex;
-      gap: 16px; /* increase this value to create more space between each logo */
+      gap: 16px;
     }
 
     .footer-left a{
-      font-size: 22px;
+      font-size: 18px;
     }
 
     .contact-text {
@@ -409,6 +409,30 @@
 
     .social-icons a:hover {
       color: var(--blue);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-nav a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      color: var(--muted);
+      border: 1px solid var(--muted);
+      background-color: transparent;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    .footer-nav a:hover {
+      color: var(--black);
+      border-color: var(--khaki);
+      background-color: var(--khaki);
     }
 
     .back-to-top {
@@ -640,9 +664,9 @@
     </div>
 
     <!-- Center: Back/Next buttons -->
-    <div class="footer-center">
-      <a href="../../article-home/article-home.html" class="btn-footer">Back to Articles</a>
-      <a href="next-article.html" class="btn-footer">Next</a>
+    <div class="footer-nav">
+      <a href="../../article-home/article-home.html">← Back to Articles</a>
+      <a href="page2.html">Next →</a>
     </div>
 
     <!-- Right: Back to Top -->
