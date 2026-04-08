@@ -57,14 +57,14 @@
 
 
     /* RESOURCES PAGE LAYOUT  */
-    .hero {
+    .hero-resources {
       background: var(--off-white);
       text-align: center;
       padding: 100px 48px 80px;
       border-bottom: 1px solid var(--border);
     }
 
-    .hero h1 {
+    .hero-resources h1 {
       font-family: var(--serif);
       font-size: clamp(40px, 5vw, 64px);
       font-style: italic;
@@ -73,7 +73,7 @@
       line-height: 1;
     }
 
-    .hero p {
+    .hero-resources p {
       font-size: 16px;
       color: var(--blue);
     }
@@ -197,67 +197,54 @@
 
    footer {
       display: flex;
-      justify-content: space-between; /* left + center/right spacing */
+      justify-content: space-between;
       align-items: center;
       padding: 24px 48px;
-      background: var(--white);
       border-top: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .contact-text {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--black);
     }
 
     .social-icons {
       display: flex;
-      gap: 28px;
-      justify-content: left;
+      gap: 24px;
+      justify-content: center;
       flex: 1;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .social-icons p {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--black);
-      line-height: 1;
     }
 
     .social-icons a {
+      font-size: 18px;
       color: var(--black);
-      font-size: 1.6rem;
-      transition: transform 0.2s, color 0.2s;
     }
 
     .social-icons a:hover {
       color: var(--blue);
-      transform: scale(1.2);
     }
 
     .back-to-top {
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--blue);
-      background: var(--off-white);
-      transition: all 0.3s ease;
+      color: var(--black);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 4px;
-      border: 1px solid var(--blue);
+      transition: color 0.2s;
     }
 
-    .back-to-top::before { 
-      content: '↑'; 
-      font-size: 14px; 
+    .back-to-top:hover {
+      color: var(--blue);
     }
 
-    .back-to-top:hover { 
-      color: var(--white);
-      background: var(--blue);
-      transform: translateY(-2px);
+    .back-to-top::before {
+      content: '↑';
+      font-size: 14px;
     }
 
     @media (max-width: 900px) {
@@ -441,18 +428,26 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="social-icons">
-      <p class="row-label">Contact Us Here</p>
-      <a href="https://www.facebook.com/profile.php?id=61577461889890"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://x.com/InnovaTechG1"><i class="fa-brands fa-twitter"></i></a>
-      <a href="instagram.com/innovatech.integ"><i class="fa-brands fa-instagram"></i></a>
-      <a href="mailto:innovatech.integ@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-    </div>
+    <div class="contact-text">Contact Us</div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61577461889890">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
 
-    <div class="back-to-top-container">
-      <a href="#" class="back-to-top">Back to Top</a>
-    </div>
+        <a href="https://x.com/InnovaTechG1">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
 
+        <a href="instagram.com/innovatech.integ">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="mailto:innovatech.integ@gmail.com">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+      
+    <a href="#" class="back-to-top">Back to Top</a>
   </footer>
 
 </body>
