@@ -275,24 +275,6 @@
          display: flex;
          align-items: center;
          }
-         .back-to-top {
-         font-size: 12px;
-         font-weight: 500;
-         letter-spacing: 0.08em;
-         text-transform: uppercase;
-         color: var(--black);
-         display: inline-flex;
-         align-items: center;
-         gap: 6px;
-         transition: color 0.2s;
-         }
-         .back-to-top:hover {
-         color: var(--blue);
-         }
-         .back-to-top::before {
-         content: '↑';
-         font-size: 14px;
-         }
           
       </style>
    </head>
@@ -470,6 +452,7 @@
             </div>
          </section>
       </main>
+      <button id="backToTop" title="Back to Top">↑</button>
       <div class="footer-nav">
          <a href="../../index.html">← Back to Home Page</a>
       </div>
@@ -500,8 +483,8 @@
 
          <!-- RIGHT -->
          <div class="footer-right">
-            <a href="#" class="back-to-top">Back to Top</a>
          </div>
       </footer>
+      <script src="../../../assets/js/back-to-top.js"></script>
    </body>
 </html>
