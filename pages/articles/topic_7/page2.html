@@ -390,37 +390,31 @@
       background: var(--white);
     }
 
+    /* LEFT SIDE */
     .footer-left {
       display: flex;
+      align-items: center;
       gap: 16px;
-    }
-
-    .footer-left a{
-      font-size: 18px;
     }
 
     .contact-text {
       font-weight: 500;
       font-size: 14px;
       color: var(--black);
+      margin-right: 8px;
     }
 
-    .social-icons {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex: 1;
-    }
-    
-    .social-icons a {
+    .footer-left a {
       font-size: 18px;
       color: var(--black);
+      transition: color 0.2s;
     }
 
-    .social-icons a:hover {
+    .footer-left a:hover {
       color: var(--blue);
     }
 
+    /* CENTER */
     .footer-nav {
       display: flex;
       gap: 12px;
@@ -443,6 +437,12 @@
       color: var(--black);
       border-color: var(--khaki);
       background-color: var(--khaki);
+    }
+
+    /* RIGHT */
+    .footer-right {
+      display: flex;
+      align-items: center;
     }
 
     .back-to-top {
