@@ -6,7 +6,7 @@
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background: #066fe7;
+    background: var(--blue);
     color: white;
     border: none;
     font-size: 22px;
@@ -19,6 +19,6 @@
 }
 
 #backToTop:hover {
-    background: #004080;
+    background: var(--khaki);
     transform: translateY(-4px);
 }
