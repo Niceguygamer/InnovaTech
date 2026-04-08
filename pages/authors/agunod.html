@@ -227,53 +227,51 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 48px;
-      border-top: 1px solid var(--border);
+      padding: 20px 48px;
       background: var(--white);
+      border-top: 1px solid var(--border);
+      margin-top: 56px;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
 
     .contact-text {
       font-weight: 500;
       font-size: 14px;
       color: var(--black);
+      margin-right: 8px;
     }
 
-    .social-icons {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex: 1;
-    }
-
-    .social-icons a {
+    .footer-left a {
       font-size: 18px;
       color: var(--black);
+      transition: color 0.2s;
     }
 
-    .social-icons a:hover {
+    .footer-left a:hover {
       color: var(--blue);
     }
 
     .back-to-top {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--black);
+      color: #8C949C;
+      transition: color 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: color 0.2s;
+      text-decoration: none;
+      padding: 8px 16px;
     }
 
-    .back-to-top:hover {
-      color: var(--blue);
-    }
-
-    .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
+    .back-to-top::before { content: '↑'; font-size: 14px; }
+    .back-to-top:hover { color: var(--black); }
 
     .back-link {
       font-size: 12px;
@@ -292,16 +290,6 @@
       border-color: #5C6F91;
       background-color: #5C6F91;
       box-shadow: 0 2px 6px rgba(92,111,145,0.3);
-    }
-
-    .copyright {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 13px;
-      color: var(--black);
-      background: var(--off-white);
-      padding: 6px 0;
-      width: 100%;
     }
   </style>
 </head>
@@ -419,7 +407,7 @@
   </main>
 
   <footer>
-    <div class="contact-text">Contact Us</div>
+    <div class="footer-left">Contact Us</div>
 
       <div class="social-icons">
         <a href="https://www.facebook.com/profile.php?id=61577461889890">
