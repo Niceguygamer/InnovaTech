@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Understanding Self-Identity</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -370,68 +370,66 @@
       color: var(--blue);
     }
 
+    /* ── FOOTER ── */
     footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 48px;
-      background: var(--white);
+      padding: 24px 48px;
       border-top: 1px solid var(--border);
+      background: var(--white);
     }
 
-    .contact-info {
-      font-size: 15px;
-      color: var(--blue);
+    .footer-left {
+      display: flex;
+      gap: 16px; /* increase this value to create more space between each logo */
     }
 
-    .contact-info:hover {
+    .footer-left a{
+      font-size: 22px;
+    }
+
+    .contact-text {
+      font-weight: 500;
+      font-size: 14px;
       color: var(--black);
     }
 
-    .footer-nav {
+    .social-icons {
       display: flex;
-      gap: 12px;
+      gap: 24px;
+      justify-content: center;
+      flex: 1;
+    }
+    
+    .social-icons a {
+      font-size: 18px;
+      color: var(--black);
     }
 
-    .footer-nav a {
+    .social-icons a:hover {
+      color: var(--blue);
+    }
+
+    .back-to-top {
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 10px 22px;
-      color: var(--muted);
-      border: 1px solid var(--muted);
-      background-color: transparent;
-      border-radius: 4px;
-      transition: all 0.2s;
-    }
-
-    .footer-nav a:hover {
       color: var(--black);
-      border-color: var(--khaki);
-      background-color: var(--khaki);
-    }
-
-    .back-to-top {
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gray);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 8px 16px;
       transition: color 0.2s;
+    }
+
+    .back-to-top:hover {
+      color: var(--blue);
     }
 
     .back-to-top::before {
       content: '↑';
       font-size: 14px;
-    }
-
-    .back-to-top:hover {
-      color: var(--black);
     }
   </style>
 </head>
@@ -625,14 +623,32 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="contact-info">
-      <a href="mailto:innovatech.integ@gmail.com">innovatech.integ@gmail.com</a>
+    <!-- Left: Social logos -->
+    <div class="footer-left">
+      <a href="https://www.facebook.com/profile.php?id=61577461889890">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://x.com/InnovaTechG1">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/innovatech.integ">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="mailto:innovatech.integ@gmail.com">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
     </div>
-    <div class="footer-nav">
-      <a href="../../article-home/article-home.html">&#8592; Back to Articles</a>
-      <a href="page2.html">Next →</a>
+
+    <!-- Center: Back/Next buttons -->
+    <div class="footer-center">
+      <a href="../../article-home/article-home.html" class="btn-footer">Back to Articles</a>
+      <a href="next-article.html" class="btn-footer">Next</a>
     </div>
-    <a href="#" class="back-to-top">Back to Top</a>
+
+    <!-- Right: Back to Top -->
+    <div class="footer-right">
+      <a href="#" class="back-to-top">Back to Top</a>
+    </div>
   </footer>
 
 </body>
