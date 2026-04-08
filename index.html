@@ -1,564 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnovaTech</title>
-
-  <!-- for icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-
-  <!-- for font -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- for footer -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      --blue: #5C6F91;
-      --black: #33363A;
-      --white: #ffffff;
-      --off-white: #F3F4F6;
-      --muted: #6B7A8F;
-      --border: #e5e4e0;
-      --khaki: #D8C9A3;
-      --gray: #8C949C;
-      --dark_gray: #2C2F33;
-      --red: #A63D40;
-
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'DM Sans', sans-serif;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--sans);
-      font-weight: 300;
-      background: var(--white);
-      color: var(--black);
-      font-size: 15px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ── HEADER ── */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 64px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.1px;
-      font-family: var(--serif);
-      font-size: 22px;
-      letter-spacing: -0.3px;
-      color: var(--black);
-    }
-
-    .logo img {
-      height: 80px;
-      width: auto;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      gap: 36px;
-    }
-
-    nav a {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--blue);
-      transition: color 0.2s;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--black);
-    }
-
-    /* ── HERO ── */
-    .hero {
-      background: var(--off-white);
-      text-align: center;
-      padding: 100px 48px 96px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(42px, 6vw, 72px);
-      font-style: italic;
-      font-weight: 400;
-      line-height: 1.1;
-      letter-spacing: -1px;
-      color: var(--black);
-      max-width: 680px;
-      margin: 0 auto 20px;
-    }
-
-    .hero p {
-      font-size: 17px;
-      font-weight: 300;
-      color: var(--black);
-      max-width: 420px;
-      margin: 0 auto 36px;
-      line-height: 1.7;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--blue);
-      color: var(--white);
-      border: 1px solid var(--blue);
-      font-family: var(--sans);
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 14px 32px;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    .btn:hover {
-      background: var(--off-white);
-      color: var(--blue);
-      border: 1px solid var(--blue);
-      transform: translateY(-1px);
-    }
-
-    /* ── TWO-COL PREVIEW ── */
-    .two-col-preview {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .about-preview,
-    .authors-preview {
-      padding: 56px 52px;
-    }
-
-    .about-preview {
-      border-right: 1px solid var(--border);
-    }
-
-    .about-preview h2,
-    .authors-preview h2 {
-      font-family: var(--serif);
-      font-size: 28px;
-      font-weight: 400;
-      letter-spacing: -0.3px;
-      margin-bottom: 16px;
-      color: var(--black);
-    }
-
-    .about-preview p,
-    .authors-preview p {
-      font-size: 14px;
-      color: var(--black);
-      line-height: 1.7;
-      margin-bottom: 24px;
-      text-align: justify;
-    }
-
-    .btn-outline {
-      display: inline-block;
-      border: 1px solid var(--blue);
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 10px 24px;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .btn-outline:hover {
-      background: var(--khaki);
-      color: var(--white);
-      border: 1px solid var(--khaki);
-    }
-
-    /* ── FEATURED ARTICLES ── */
-    .featured-articles {
-      padding: 56px 48px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-label {
-      font-size: 15px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .article-card {
-      border-radius: 8px;
-      display: block;
-      cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      padding: 12px;
-
-      border: 1px solid var(--border);
-      background: var(--white);          
-    }
-
-    .card-content {
-      padding: 0 8px;
-    }
-
-    .article-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-      border-color: var(--blue);
-    }
-
-    .card-image {
-      width: 100%;
-      aspect-ratio: 4/3;
-      overflow: hidden;
-      margin-bottom: 16px;
-      border: 1px solid var(--border);
-    }
-
-    .card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .card-image-inner {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
-      transition: transform 0.4s ease;
-    }
-
-    .article-card:hover .card-image-inner {
-      transform: scale(1.04);
-    }
-
-    .card-tag {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 6px;
-    }
-
-    .card-title {
-      font-family: var(--serif);
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 1.35;
-      color: var(--black);
-      margin-bottom: 8px;
-      letter-spacing: -0.2px;
-    }
-
-    .card-meta {
-      font-size: 12px;
-      color: var(--gray);
-    }
-
-    /* ── RESOURCES BANNER ── */
-    .resources-banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 44px 52px;
-      background: var(--blue);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .resources-banner p {
-      font-family: var(--serif);
-      font-size: 28px;
-      font-weight: 400;
-      color: var(--white);
-      letter-spacing: -0.3px;
-    }
-
-    .resources-banner p span {
-      font-style: italic;
-      color: var(--khaki);
-    }
-
-    .btn-white {
-      display: inline-block;
-      background: var(--white);
-      color: var(--black);
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 14px 32px;
-      transition: background 0.2s, color 0.2s;
-      white-space: nowrap;
-    }
-
-    .btn-white:hover {
-      background: var(--khaki);
-      color: var(--white);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 48px;
-      border-top: 1px solid var(--border);
-      background: var(--white);
-    }
-
-    .contact-text {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex: 1;
-    }
-
-    .social-icons a {
-      font-size: 18px;
-      color: var(--black);
-    }
-
-    .social-icons a:hover {
-      color: var(--blue);
-    }
-
-    .back-to-top {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-
-    .back-to-top:hover {
-      color: var(--blue);
-    }
-
-    .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
-
-    .copyright {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 13px;
-      color: var(--black);
-      background: var(--off-white);
-      padding: 6px 0;
-      width: 100%;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <img src="assets/img/logo_notext.png" alt="Logo">
-      <span>InnovaTech</span>
-    </div>
-
-    <nav>
-      <a href="#" class="active">Home</a>
-      <a href="pages/about/about.html">About Us</a>
-      <a href="pages/authors/authors-home.html">Authors</a>
-      <a href="pages/article-home/article-home.html">Articles</a>
-      <a href="pages/resources/resources.html">Resources</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <h1>The Complete Survival Guide to Thriving in Tech-Related College Programs</h1>
-      <p>For Tech Students, By Tech Students</p>
-      <a href="#about-authors" class="btn">More</a>
-    </section>
-
-    <!-- ABOUT + AUTHORS -->
-    <section class="two-col-preview" id="about-authors">
-      <div class="about-preview">
-        <h2>About The Website</h2>
-        <p>
-          Our website, “The Complete Survival Guide to Thriving in Tech-Related College Programs”, aims to serve as a helpful guide for students studying in tech-related fields through insightful blogs of personal experiences enriched with wisdom and lessons from the authors. The topics, ranging from interpretational relationships to career anxiety, are situations that students commonly face in their college life. Our website is not just a collection of blogs; it's an archive of stories told by fellow students themselves that are turned into helpful guides to make your life easier and survive the hells of College.
-
-        </p>
-      </div>
-
-      <div class="authors-preview">
-        <h2>Meet the Authors</h2>
-        <p>
-          Our writers are fellow tech students who provide genuine stories, insights, and guidance 
-          drawn from their personal experiences. Every article is crafted to assist others in learning, developing, 
-          and thriving because we believe that the most effective advice comes from shared experience. To learn more about our authors, click <i><b>Read More</b></i>.
-        </p>
-        <a href="pages/authors/authors-home.html" class="btn-outline">Read More</a>
-      </div>
-    </section>
-
-    <!-- FEATURED ARTICLES -->
-    <section class="featured-articles">
-      <div class="section-label">Featured Articles  </div>
-
-      <div class="articles-grid">
-        <!-- interaction -->
-        <a href="pages/articles/topic_6/page1.html" class="article-card">
-          <div class="card-image">
-            <img src="assets/img/topic 6/walking.jpg" alt="Article image">
-          </div>
-
-          <div class="card-content">
-            <div class="card-tag">Interaction</div>
-            <div class="card-title">Relationships That Matter</div>
-            <div class="card-meta">Mar 20 · 5 min read</div>
-          </div>
-        </a>
-
-        <!-- Career -->
-        <a href="pages/articles/topic_2/page1.html" class="article-card">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Article image">
-          </div>
-
-          <div class="card-content">
-            <div class="card-tag">Career</div>
-            <div class="card-title">Suddenly, I’m Halfway There</div>
-            <div class="card-meta">Mar 18 · 4 min read</div>
-          </div>
-        </a>
-
-        <!-- Academic -->
-        <a href="pages/articles/topic_5/page1.html" class="article-card">
-          <div class="card-image">
-            <img src="assets/img/topic 5/coding-at-night.jpg" alt="Article image">
-          </div>
-
-          <div class="card-content">
-            <div class="card-tag">Academic</div>
-            <div class="card-title">You Signed Up For This (But Nobody Warned You)</div>
-            <div class="card-meta">Mar 15 · 6 min read</div>
-          </div>
-        </a>
-
-        <!-- Self-Care -->
-        <a href="pages/articles/topic_8/page1.html" class="article-card">
-          <div class="card-image">
-            <img src="assets/img/topic 8/munda-page1.jpg" alt="Article image">
-          </div>
-
-          <div class="card-content">
-            <div class="card-tag">Self-Care</div>
-            <div class="card-title">The Foundation of Rest – Why It Matters</div>
-            <div class="card-meta">Mar 12 · 3 min read</div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- RESOURCES BANNER -->
-    <section class="resources-banner">
-      <p>Explore our <span>resource library</span></p>
-      <a href="pages/resources/resources.html" class="btn-white">Visit Resources</a>
-    </section>
-  </main>
-
-<!-- FOOTER -->
-  <footer>
-    <div class="contact-text">Contact Us</div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61577461889890">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-
-        <a href="https://x.com/InnovaTechG1">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-
-        <a href="instagram.com/innovatech.integ">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="mailto:innovatech.integ@gmail.com">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
-      </div>
-      
-    <a href="#" class="back-to-top">Back to Top</a>
-  </footer>
-
-  <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>InnovaTech</title>
+      <!-- for icon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+      <link rel="manifest" href="site.webmanifest">
+      <!-- for font -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      <!-- for footer -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <style>
+         :root {
+         --blue: #5C6F91;
+         --black: #33363A;
+         --white: #ffffff;
+         --off-white: #F3F4F6;
+         --muted: #6B7A8F;
+         --border: #e5e4e0;
+         --khaki: #D8C9A3;
+         --gray: #8C949C;
+         --dark_gray: #2C2F33;
+         --red: #A63D40;
+         --serif: 'DM Serif Display', Georgia, serif;
+         --sans: 'DM Sans', sans-serif;
+         }
+         *,
+         *::before,
+         *::after {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         }
+         html {
+         scroll-behavior: smooth;
+         }
+         body {
+         font-family: var(--sans);
+         font-weight: 300;
+         background: var(--white);
+         color: var(--black);
+         font-size: 15px;
+         line-height: 1.6;
+         -webkit-font-smoothing: antialiased;
+         }
+         a {
+         text-decoration: none;
+         color: inherit;
+         }
+         /* ── HEADER ── */
+         header {
+         position: sticky;
+         top: 0;
+         z-index: 100;
+         background: var(--white);
+         border-bottom: 1px solid var(--border);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 48px;
+         height: 64px;
+         }
+         .logo {
+         display: flex;
+         align-items: center;
+         gap: 0.1px;
+         font-family: var(--serif);
+         font-size: 22px;
+         letter-spacing: -0.3px;
+         color: var(--black);
+         }
+         .logo img {
+         height: 80px;
+         width: auto;
+         display: block;
+         }
+         nav {
+         display: flex;
+         gap: 36px;
+         }
+         nav a {
+         font-size: 13px;
+         font-weight: 700;
+         letter-spacing: 0.06em;
+         text-transform: uppercase;
+         color: var(--blue);
+         transition: color 0.2s;
+         }
+         nav a:hover,
+         nav a.active {
+         color: var(--black);
+         }
+         /* ── HERO ── */
+         .hero {
+         background: var(--off-white);
+         text-align: center;
+         padding: 100px 48px 96px;
+         border-bottom: 1px solid var(--border);
+         }
+         .hero h1 {
+         font-family: var(--serif);
+         font-size: clamp(42px, 6vw, 72px);
+         font-style: italic;
+         font-weight: 400;
+         line-height: 1.1;
+         letter-spacing: -1px;
+         color: var(--black);
+         max-width: 680px;
+         margin: 0 auto 20px;
+         }
+         .hero p {
+         font-size: 17px;
+         font-weight: 300;
+         color: var(--black);
+         max-width: 420px;
+         margin: 0 auto 36px;
+         line-height: 1.7;
+         }
+         .btn {
+         display: inline-block;
+         background: var(--blue);
+         color: var(--white);
+         border: 1px solid var(--blue);
+         font-family: var(--sans);
+         font-size: 13px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         padding: 14px 32px;
+         transition: background 0.2s, transform 0.15s;
+         }
+         .btn:hover {
+         background: var(--off-white);
+         color: var(--blue);
+         border: 1px solid var(--blue);
+         transform: translateY(-1px);
+         }
+         /* ── TWO-COL PREVIEW ── */
+         .two-col-preview {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         border-bottom: 1px solid var(--border);
+         }
+         .about-preview,
+         .authors-preview {
+         padding: 56px 52px;
+         }
+         .about-preview {
+         border-right: 1px solid var(--border);
+         }
+         .about-preview h2,
+         .authors-preview h2 {
+         font-family: var(--serif);
+         font-size: 28px;
+         font-weight: 400;
+         letter-spacing: -0.3px;
+         margin-bottom: 16px;
+         color: var(--black);
+         }
+         .about-preview p,
+         .authors-preview p {
+         font-size: 14px;
+         color: var(--black);
+         line-height: 1.7;
+         margin-bottom: 24px;
+         text-align: justify;
+         }
+         .btn-outline {
+         display: inline-block;
+         border: 1px solid var(--blue);
+         color: var(--blue);
+         font-size: 13px;
+         font-weight: 500;
+         letter-spacing: 0.06em;
+         text-transform: uppercase;
+         padding: 10px 24px;
+         transition: background 0.2s, color 0.2s;
+         }
+         .btn-outline:hover {
+         background: var(--khaki);
+         color: var(--white);
+         border: 1px solid var(--khaki);
+         }
+         /* ── FEATURED ARTICLES ── */
+         .featured-articles {
+         padding: 56px 48px;
+         border-bottom: 1px solid var(--border);
+         }
+         .section-label {
+         font-size: 15px;
+         font-weight: 500;
+         letter-spacing: 0.14em;
+         text-transform: uppercase;
+         color: var(--blue);
+         margin-bottom: 28px;
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         }
+         .section-label::after {
+         content: '';
+         flex: 1;
+         height: 1px;
+         background: var(--border);
+         }
+         .articles-grid {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 24px;
+         }
+         .article-card {
+         border-radius: 8px;
+         display: block;
+         cursor: pointer;
+         transition: transform 0.25s ease, box-shadow 0.25s ease;
+         padding: 12px;
+         border: 1px solid var(--border);
+         background: var(--white);          
+         }
+         .card-content {
+         padding: 0 8px;
+         }
+         .article-card:hover {
+         transform: translateY(-6px);
+         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+         border-color: var(--blue);
+         }
+         .card-image {
+         width: 100%;
+         aspect-ratio: 4/3;
+         overflow: hidden;
+         margin-bottom: 16px;
+         border: 1px solid var(--border);
+         }
+         .card-image img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         display: block;
+         transition: transform 0.4s ease;
+         }
+         .card-image-inner {
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
+         transition: transform 0.4s ease;
+         }
+         .article-card:hover .card-image-inner {
+         transform: scale(1.04);
+         }
+         .card-tag {
+         font-size: 10px;
+         font-weight: 500;
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+         color: var(--blue);
+         margin-bottom: 6px;
+         }
+         .card-title {
+         font-family: var(--serif);
+         font-size: 17px;
+         font-weight: 400;
+         line-height: 1.35;
+         color: var(--black);
+         margin-bottom: 8px;
+         letter-spacing: -0.2px;
+         }
+         .card-meta {
+         font-size: 12px;
+         color: var(--gray);
+         }
+         /* ── RESOURCES BANNER ── */
+         .resources-banner {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 44px 52px;
+         background: var(--blue);
+         border-bottom: 1px solid var(--border);
+         }
+         .resources-banner p {
+         font-family: var(--serif);
+         font-size: 28px;
+         font-weight: 400;
+         color: var(--white);
+         letter-spacing: -0.3px;
+         }
+         .resources-banner p span {
+         font-style: italic;
+         color: var(--khaki);
+         }
+         .btn-white {
+         display: inline-block;
+         background: var(--white);
+         color: var(--black);
+         font-size: 13px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         padding: 14px 32px;
+         transition: background 0.2s, color 0.2s;
+         white-space: nowrap;
+         }
+         .btn-white:hover {
+         background: var(--khaki);
+         color: var(--white);
+         }
+         /* FOOTER */
+         footer {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 24px 48px;
+         border-top: 1px solid var(--border);
+         background: var(--white);
+         }
+         /* LEFT */
+         .footer-left {
+         display: flex;
+         align-items: center;
+         gap: 16px;
+         }
+         .contact-text {
+         font-weight: 500;
+         font-size: 14px;
+         color: var(--black);
+         }
+         .footer-left a {
+         font-size: 18px;
+         color: var(--black);
+         transition: color 0.2s;
+         }
+         .footer-left a:hover {
+         color: var(--blue);
+         }
+         /* CENTER */
+         .footer-center {
+         font-size: 13px;
+         color: var(--black);
+         text-align: center;
+         }
+         /* RIGHT */
+         .footer-right {
+         display: flex;
+         align-items: center;
+         }
+         .back-to-top {
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--black);
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         transition: color 0.2s;
+         }
+         .back-to-top:hover {
+         color: var(--blue);
+         }
+         .back-to-top::before {
+         content: '↑';
+         font-size: 14px;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- HEADER -->
+      <header>
+         <div class="logo">
+            <img src="assets/img/logo_notext.png" alt="Logo">
+            <span>InnovaTech</span>
+         </div>
+         <nav>
+            <a href="#" class="active">Home</a>
+            <a href="pages/about/about.html">About Us</a>
+            <a href="pages/authors/authors-home.html">Authors</a>
+            <a href="pages/article-home/article-home.html">Articles</a>
+            <a href="pages/resources/resources.html">Resources</a>
+         </nav>
+      </header>
+      <main>
+         <!-- HERO -->
+         <section class="hero">
+            <h1>The Complete Survival Guide to Thriving in Tech-Related College Programs</h1>
+            <p>For Tech Students, By Tech Students</p>
+            <a href="#about-authors" class="btn">More</a>
+         </section>
+         <!-- ABOUT + AUTHORS -->
+         <section class="two-col-preview" id="about-authors">
+            <div class="about-preview">
+               <h2>About The Website</h2>
+               <p>
+                  Our website, “The Complete Survival Guide to Thriving in Tech-Related College Programs”, aims to serve as a helpful guide for students studying in tech-related fields through insightful blogs of personal experiences enriched with wisdom and lessons from the authors. The topics, ranging from interpretational relationships to career anxiety, are situations that students commonly face in their college life. Our website is not just a collection of blogs; it's an archive of stories told by fellow students themselves that are turned into helpful guides to make your life easier and survive the hells of College.
+               </p>
+            </div>
+            <div class="authors-preview">
+               <h2>Meet the Authors</h2>
+               <p>
+                  Our writers are fellow tech students who provide genuine stories, insights, and guidance 
+                  drawn from their personal experiences. Every article is crafted to assist others in learning, developing, 
+                  and thriving because we believe that the most effective advice comes from shared experience. To learn more about our authors, click <i><b>Read More</b></i>.
+               </p>
+               <a href="pages/authors/authors-home.html" class="btn-outline">Read More</a>
+            </div>
+         </section>
+         <!-- FEATURED ARTICLES -->
+         <section class="featured-articles">
+            <div class="section-label">Featured Articles  </div>
+            <div class="articles-grid">
+               <!-- interaction -->
+               <a href="pages/articles/topic_6/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="assets/img/topic 6/walking.jpg" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-tag">Interaction</div>
+                     <div class="card-title">Relationships That Matter</div>
+                     <div class="card-meta">Mar 20 · 5 min read</div>
+                  </div>
+               </a>
+               <!-- Career -->
+               <a href="pages/articles/topic_2/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-tag">Career</div>
+                     <div class="card-title">Suddenly, I’m Halfway There</div>
+                     <div class="card-meta">Mar 18 · 4 min read</div>
+                  </div>
+               </a>
+               <!-- Academic -->
+               <a href="pages/articles/topic_5/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="assets/img/topic 5/coding-at-night.jpg" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-tag">Academic</div>
+                     <div class="card-title">You Signed Up For This (But Nobody Warned You)</div>
+                     <div class="card-meta">Mar 15 · 6 min read</div>
+                  </div>
+               </a>
+               <!-- Self-Care -->
+               <a href="pages/articles/topic_8/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="assets/img/topic 8/munda-page1.jpg" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-tag">Self-Care</div>
+                     <div class="card-title">The Foundation of Rest – Why It Matters</div>
+                     <div class="card-meta">Mar 12 · 3 min read</div>
+                  </div>
+               </a>
+            </div>
+         </section>
+         <!-- RESOURCES BANNER -->
+         <section class="resources-banner">
+            <p>Explore our <span>resource library</span></p>
+            <a href="pages/resources/resources.html" class="btn-white">Visit Resources</a>
+         </section>
+      </main>
+      <!-- FOOTER -->
+      <footer>
+         <!-- LEFT -->
+         <div class="footer-left">
+            <span class="contact-text">Contact Us</span>
+            <a href="https://www.facebook.com/profile.php?id=61577461889890">
+            <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/InnovaTechG1">
+            <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com/innovatech.integ">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:innovatech.integ@gmail.com">
+            <i class="fa-regular fa-envelope"></i>
+            </a>
+         </div>
+         <!-- CENTER -->
+         <div class="footer-center">
+            © 2026 InnovaTech. All rights reserved.
+         </div>
+         <!-- RIGHT -->
+         <div class="footer-right">
+            <a href="#" class="back-to-top">Back to Top</a>
+         </div>
+      </footer>
+   </body>
 </html>
