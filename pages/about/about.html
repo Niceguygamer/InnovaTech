@@ -1,368 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnovaTech - About Us</title>
-
-  <!-- for icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <!-- for font -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- for footer -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    :root {
-      --blue: #5C6F91;
-      --black: #33363A;
-      --white: #ffffff;
-      --off-white: #F3F4F6;
-      --muted: #6B7A8F;
-      --border: #e5e4e0;
-      --khaki: #D8C9A3;
-      --gray: #8C949C;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'DM Sans', sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--sans);
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 64px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.1px;
-      font-family: var(--serif);
-      font-size: 22px;
-      letter-spacing: -0.3px;
-      color: var(--black);
-    }
-
-    .logo img {
-      height: 80px;
-      width: auto;
-    }
-
-    nav {
-      display: flex;
-      gap: 36px;
-    }
-
-    nav a {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--blue);
-      transition: color 0.2s;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--black);
-    }
-
-    /* HERO */
-    .hero {
-      background: var(--off-white);
-      text-align: center;
-      padding: 100px 48px 80px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(40px, 5vw, 64px);
-      font-style: italic;
-      margin-bottom: 2px;
-      color: var(--black);
-      line-height: 1;
-    }
-
-    .hero p {
-      font-size: 16px;
-      color: var(--black);
-    }
-    
-    /* ONE SECTION */
-    .one-section {
-      max-width: 900px;    
-      margin: 40px auto;        
-      padding: 56px 52px;    
-      text-align: justify;
-      border-bottom: 1px solid var(--border);
-
-      background-color: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .one-section h2 {
-      font-family: var(--serif);
-      font-size: 28px;
-      color: var(--black);
-      margin-bottom: 16px;
-    }
-
-    .one-section p {
-      font-size: 14px;
-      color: var(--black);
-      line-height: 1.7;
-      text-align: justify;
-      margin: 0;
-      padding: 0 16px;
-    }
-
-    /* TWO-COLUMN CONTENT */
-    .two-col-preview {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-bottom: 1px solid var(--white);
-    }
-
-    .about-preview,
-    .authors-preview {
-      padding: 56px 52px;
-    }
-
-    .about-preview {
-      border-right: 1px solid var(--white);
-    }
-
-    .about-preview h2,
-    .authors-preview h2 {
-      font-family: var(--serif);
-      font-size: 28px;
-      font-weight: 400;
-      letter-spacing: -0.3px;
-      margin-bottom: 16px;
-      color: var(--black);
-    }
-
-    .about-preview p,
-    .authors-preview p {
-      font-size: 14px;
-      color: var(--black);
-      line-height: 1.7;
-      text-align: justify;
-    }
-
-    /* IMAGE PLACEHOLDER */
-    .authors-preview img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-
-    /* BUTTONS BELOW CONTENT */
-    .button-row {
-      text-align: center;
-      margin: 60px 0;
-    }
-
-    .button-row .btn-outline {
-      display: inline-block;
-      border: 1px solid var(--blue);
-      color: var(--blue);
-      padding: 12px 28px;
-      margin: 0 10px;
-      text-transform: uppercase;
-      font-size: 13px;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .button-row .btn-outline:hover {
-      background: var(--khaki);
-      color: var(--white);
-      border-color: var(--khaki);
-    }
-
-    /* FOOTER */
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 48px;
-      border-top: 1px solid var(--border);
-      background: var(--white);
-    }
-
-    .contact-text {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex: 1;
-    }
-
-    .social-icons a {
-      font-size: 18px;
-      color: var(--black);
-    }
-
-    .social-icons a:hover {
-      color: var(--blue);
-    }
-
-    .back-to-top {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-
-    .back-to-top:hover {
-      color: var(--blue);
-    }
-
-    .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
-
-    .copyright {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 13px;
-      color: var(--black);
-      background: var(--off-white);
-      padding: 6px 0;
-      width: 100%;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <img src="../../assets/img/logo_notext.png" alt="">
-      <span>InnovaTech</span>
-    </div>
-    <nav>
-      <a href="../../index.html">Home</a>
-      <a href="#" class="active">About Us</a>
-      <a href="../authors/authors-home.html">Authors</a>
-      <a href="../article-home/article-home.html">Articles</a>
-      <a href="../resources/resources.html">Resources</a>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1>About InnovaTech</h1>
-    <p>InnovaTech. For Tech students, by Tech students.</p>
-  </section>
-
-  <!-- WHO WE ARE -->
-  <section class="one-section">
-    <h2>Who We Are</h2>
-    <p>
-      InnovaTech is composed of eight passionate Computer Science students with a single mission: to simplify the tech journey for fellow students. Established in 2026, the team was formed with the shared goal of helping others navigate the challenges of pursuing technology-related degrees. By sharing what they have learned through their own academic endeavors, the team aims to make tech courses more manageable for those in similar fields. <br><br>
-
-      Our objective is to transform these experiences into useful guidance that can assist others in more skillfully navigating the difficulties of college. By concentrating on actual circumstances like relationships, employment problems, and academic pressure, we hope to provide advice that is understandable, practical, and simple to implement.
-    </p>
-  </section>
-
-  <!-- TWO-COLUMN CONTENT -->
-  <section class="two-col-preview">
-    <div class="about-preview">
-      <h2>What This Site Is About</h2>
-      <p>
-        Through the sharing of real-life experiences, lessons learned, and ideas from other students, this website provides a helpful resource for students enrolled in tech-related programs. It offers relatable scenarios and typical difficulties, like relationships, career concerns, and academic pressure, while transforming these experiences into practical guidance that can make college life simpler to handle. The platform is intended for tech students, particularly first-years and those who want to develop intellectually and personally. Readers who like to reflect on their own experiences and benefit from others' travels are also welcome.<br><br>
-
-        InnovaTech seeks to establish a safe environment where students may share knowledge with one another by fusing personal tales with useful guidance. The platform offers advice and insights that support students' academic and personal development, whether they are managing homework, taking on a difficult project, or adjusting to college life.
-      </p>
-    </div>
-
-    <div class="authors-preview">
-      <img src="../../assets/img/group-pic.png" alt="group pic">
-    </div>
-  </section>
-  
-    <!-- WHY WE MADE THIS -->
-  <section class="one-section">
-    <h2>Why We Made This</h2>
-    <p>
-      We founded InnovaTech after seeing how difficult tech-related courses can be, particularly for first-year college students. Many of us had similar challenges such as, balancing schoolwork, comprehending difficult ideas, handling personal obligations, and determining how to pursue a career in technology. In order to assist students avoid needless frustration and develop confidence in their educational journey, we set out to create a resource that transforms such difficulties into useful advice.<br><br>
-      
-      Our objective is to offer a platform where students can discover practical guidance, peer teaching, and insights that make tech education more approachable. We want to create a welcoming community where students may improve intellectually and personally while pursuing their IT goals, learn from one another, and feel understood by sharing our experiences and solutions.
-    </p>
-  </section>
-
-  <!-- BUTTONS -->
-  <div class="button-row">
-    <a href="../article-home/article-home.html" class="btn-outline">Read Articles</a>
-    <a href="../authors/authors-home.html" class="btn-outline">Meet the Authors</a>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="contact-text">Contact Us</div>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=61577461889890">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://x.com/InnovaTechG1">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a href="instagram.com/innovatech.integ">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="mailto:innovatech.integ@gmail.com">
-        <i class="fa-regular fa-envelope"></i>
-      </a>
-    </div>
-    <a href="#" class="back-to-top">Back to Top</a>
-  </footer>
-
-  <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>InnovaTech - About Us</title>
+      <!-- for icon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <!-- for font -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      <!-- for footer -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <style>
+         :root {
+         --blue: #5C6F91;
+         --black: #33363A;
+         --white: #ffffff;
+         --off-white: #F3F4F6;
+         --muted: #6B7A8F;
+         --border: #e5e4e0;
+         --khaki: #D8C9A3;
+         --gray: #8C949C;
+         --serif: 'DM Serif Display', Georgia, serif;
+         --sans: 'DM Sans', sans-serif;
+         }
+         * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         }
+         body {
+         font-family: var(--sans);
+         background: var(--white);
+         color: var(--black);
+         line-height: 1.6;
+         }
+         a {
+         text-decoration: none;
+         color: inherit;
+         }
+         /* HEADER */
+         header {
+         position: sticky;
+         top: 0;
+         z-index: 100;
+         background: var(--white);
+         border-bottom: 1px solid var(--border);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 48px;
+         height: 64px;
+         }
+         .logo {
+         display: flex;
+         align-items: center;
+         gap: 0.1px;
+         font-family: var(--serif);
+         font-size: 22px;
+         letter-spacing: -0.3px;
+         color: var(--black);
+         }
+         .logo img {
+         height: 80px;
+         width: auto;
+         }
+         nav {
+         display: flex;
+         gap: 36px;
+         }
+         nav a {
+         font-size: 13px;
+         font-weight: 700;
+         letter-spacing: 0.06em;
+         text-transform: uppercase;
+         color: var(--blue);
+         transition: color 0.2s;
+         }
+         nav a:hover,
+         nav a.active {
+         color: var(--black);
+         }
+         /* HERO */
+         .hero {
+         background: var(--off-white);
+         text-align: center;
+         padding: 100px 48px 80px;
+         border-bottom: 1px solid var(--border);
+         }
+         .hero h1 {
+         font-family: var(--serif);
+         font-size: clamp(40px, 5vw, 64px);
+         font-style: italic;
+         margin-bottom: 2px;
+         color: var(--black);
+         line-height: 1;
+         }
+         .hero p {
+         font-size: 16px;
+         color: var(--black);
+         }
+         /* ONE SECTION */
+         .one-section {
+         max-width: 900px;    
+         margin: 40px auto;        
+         padding: 56px 52px;    
+         text-align: justify;
+         border-bottom: 1px solid var(--border);
+         background-color: var(--white);
+         border-radius: 16px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+         }
+         .one-section h2 {
+         font-family: var(--serif);
+         font-size: 28px;
+         color: var(--black);
+         margin-bottom: 16px;
+         }
+         .one-section p {
+         font-size: 14px;
+         color: var(--black);
+         line-height: 1.7;
+         text-align: justify;
+         margin: 0;
+         padding: 0 16px;
+         }
+         /* TWO-COLUMN CONTENT */
+         .two-col-preview {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         border-bottom: 1px solid var(--white);
+         }
+         .about-preview,
+         .authors-preview {
+         padding: 56px 52px;
+         }
+         .about-preview {
+         border-right: 1px solid var(--white);
+         }
+         .about-preview h2,
+         .authors-preview h2 {
+         font-family: var(--serif);
+         font-size: 28px;
+         font-weight: 400;
+         letter-spacing: -0.3px;
+         margin-bottom: 16px;
+         color: var(--black);
+         }
+         .about-preview p,
+         .authors-preview p {
+         font-size: 14px;
+         color: var(--black);
+         line-height: 1.7;
+         text-align: justify;
+         }
+         /* IMAGE PLACEHOLDER */
+         .authors-preview img {
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+         border-radius: 4px;
+         }
+         /* BUTTONS BELOW CONTENT */
+         .button-row {
+         text-align: center;
+         margin: 60px 0;
+         }
+         .button-row .btn-outline {
+         display: inline-block;
+         border: 1px solid var(--blue);
+         color: var(--blue);
+         padding: 12px 28px;
+         margin: 0 10px;
+         text-transform: uppercase;
+         font-size: 13px;
+         transition: background 0.2s, color 0.2s;
+         }
+         .button-row .btn-outline:hover {
+         background: var(--khaki);
+         color: var(--white);
+         border-color: var(--khaki);
+         }
+         /* FOOTER */
+         footer {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 24px 48px;
+         border-top: 1px solid var(--border);
+         background: var(--white);
+         }
+         /* LEFT */
+         .footer-left {
+         display: flex;
+         align-items: center;
+         gap: 16px;
+         }
+         .contact-text {
+         font-weight: 500;
+         font-size: 14px;
+         color: var(--black);
+         }
+         .footer-left a {
+         font-size: 18px;
+         color: var(--black);
+         transition: color 0.2s;
+         }
+         .footer-left a:hover {
+         color: var(--blue);
+         }
+         /* CENTER */
+         .footer-center {
+         font-size: 13px;
+         color: var(--black);
+         text-align: center;
+         }
+         /* RIGHT */
+         .footer-right {
+         display: flex;
+         align-items: center;
+         }
+         .back-to-top {
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--black);
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         transition: color 0.2s;
+         }
+         .back-to-top:hover {
+         color: var(--blue);
+         }
+         .back-to-top::before {
+         content: '↑';
+         font-size: 14px;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- HEADER -->
+      <header>
+         <div class="logo">
+            <img src="../../assets/img/logo_notext.png" alt="">
+            <span>InnovaTech</span>
+         </div>
+         <nav>
+            <a href="../../index.html">Home</a>
+            <a href="#" class="active">About Us</a>
+            <a href="../authors/authors-home.html">Authors</a>
+            <a href="../article-home/article-home.html">Articles</a>
+            <a href="../resources/resources.html">Resources</a>
+         </nav>
+      </header>
+      <!-- HERO -->
+      <section class="hero">
+         <h1>About InnovaTech</h1>
+         <p>InnovaTech. For Tech students, by Tech students.</p>
+      </section>
+      <!-- WHO WE ARE -->
+      <section class="one-section">
+         <h2>Who We Are</h2>
+         <p>
+            InnovaTech is composed of eight passionate Computer Science students with a single mission: to simplify the tech journey for fellow students. Established in 2026, the team was formed with the shared goal of helping others navigate the challenges of pursuing technology-related degrees. By sharing what they have learned through their own academic endeavors, the team aims to make tech courses more manageable for those in similar fields. <br><br>
+            Our objective is to transform these experiences into useful guidance that can assist others in more skillfully navigating the difficulties of college. By concentrating on actual circumstances like relationships, employment problems, and academic pressure, we hope to provide advice that is understandable, practical, and simple to implement.
+         </p>
+      </section>
+      <!-- TWO-COLUMN CONTENT -->
+      <section class="two-col-preview">
+         <div class="about-preview">
+            <h2>What This Site Is About</h2>
+            <p>
+               Through the sharing of real-life experiences, lessons learned, and ideas from other students, this website provides a helpful resource for students enrolled in tech-related programs. It offers relatable scenarios and typical difficulties, like relationships, career concerns, and academic pressure, while transforming these experiences into practical guidance that can make college life simpler to handle. The platform is intended for tech students, particularly first-years and those who want to develop intellectually and personally. Readers who like to reflect on their own experiences and benefit from others' travels are also welcome.<br><br>
+               InnovaTech seeks to establish a safe environment where students may share knowledge with one another by fusing personal tales with useful guidance. The platform offers advice and insights that support students' academic and personal development, whether they are managing homework, taking on a difficult project, or adjusting to college life.
+            </p>
+         </div>
+         <div class="authors-preview">
+            <img src="../../assets/img/group-pic.png" alt="group pic">
+         </div>
+      </section>
+      <!-- WHY WE MADE THIS -->
+      <section class="one-section">
+         <h2>Why We Made This</h2>
+         <p>
+            We founded InnovaTech after seeing how difficult tech-related courses can be, particularly for first-year college students. Many of us had similar challenges such as, balancing schoolwork, comprehending difficult ideas, handling personal obligations, and determining how to pursue a career in technology. In order to assist students avoid needless frustration and develop confidence in their educational journey, we set out to create a resource that transforms such difficulties into useful advice.<br><br>
+            Our objective is to offer a platform where students can discover practical guidance, peer teaching, and insights that make tech education more approachable. We want to create a welcoming community where students may improve intellectually and personally while pursuing their IT goals, learn from one another, and feel understood by sharing our experiences and solutions.
+         </p>
+      </section>
+      <!-- BUTTONS -->
+      <div class="button-row">
+         <a href="../article-home/article-home.html" class="btn-outline">Read Articles</a>
+         <a href="../authors/authors-home.html" class="btn-outline">Meet the Authors</a>
+      </div>
+      <!-- FOOTER -->
+      <footer>
+         <!-- LEFT -->
+         <div class="footer-left">
+            <span class="contact-text">Contact Us</span>
+            <a href="https://www.facebook.com/profile.php?id=61577461889890">
+            <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/InnovaTechG1">
+            <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com/innovatech.integ">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:innovatech.integ@gmail.com">
+            <i class="fa-regular fa-envelope"></i>
+            </a>
+         </div>
+         <!-- CENTER -->
+         <div class="footer-center">
+            © 2026 InnovaTech. All rights reserved.
+         </div>
+         <!-- RIGHT -->
+         <div class="footer-right">
+            <a href="#" class="back-to-top">Back to Top</a>
+         </div>
+      </footer>
+   </body>
 </html>
