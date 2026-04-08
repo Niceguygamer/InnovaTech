@@ -360,41 +360,24 @@
       color: var(--blue);
     }
 
-    /* ── FOOTER ── */
     footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 48px;
-      border-top: 1px solid var(--border);
+      padding: 20px 48px;
       background: var(--white);
+      border-top: 1px solid var(--border);
     }
 
-    /* LEFT SIDE */
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contact-text {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-      margin-right: 8px;
-    }
-
-    .footer-left a {
-      font-size: 18px;
-      color: var(--black);
-      transition: color 0.2s;
-    }
-
-    .footer-left a:hover {
+    .contact-info {
+      font-size: 15px;
       color: var(--blue);
     }
 
-    /* CENTER */
+    .contact-info:hover {
+      color: var(--black);
+    }
+
     .footer-nav {
       display: flex;
       gap: 12px;
@@ -419,31 +402,26 @@
       background-color: var(--khaki);
     }
 
-    /* RIGHT */
-    .footer-right {
-      display: flex;
-      align-items: center;
-    }
-
     .back-to-top {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--black);
+      color: var(--gray);
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      padding: 8px 16px;
       transition: color 0.2s;
-    }
-
-    .back-to-top:hover {
-      color: var(--blue);
     }
 
     .back-to-top::before {
       content: '↑';
       font-size: 14px;
+    }
+
+    .back-to-top:hover {
+      color: var(--black);
     }
 
     .tips-list {
@@ -471,6 +449,16 @@
       content: '—';
       color: var(--blue);
       flex-shrink: 0;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(—black);
+      background: var(—off-white);
+      padding: 6px 0;
+      width: 100%;
     }
   </style>
 </head>
@@ -616,5 +604,6 @@
     <a href="#" class="back-to-top">Back to Top</a>
   </footer>
 
+  <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
 </body>
 </html>

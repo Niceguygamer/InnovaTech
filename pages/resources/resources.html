@@ -4,11 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InnovaTech - Resources</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../../assets/css/page-style.css">
-  <style>
+  
+  <!-- for icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
+  <!-- for font -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- for footer -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
     :root {
       --blue: #5C6F91;
       --black: #33363A;
@@ -195,14 +204,14 @@
       text-decoration: underline;
     }
 
-   footer {
+   /* FOOTER */
+    footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 24px 48px;
       border-top: 1px solid var(--border);
       background: var(--white);
-      flex-wrap: wrap;
     }
 
     .contact-text {
@@ -248,10 +257,14 @@
       font-size: 14px;
     }
 
-    footer .copyright {
-      flex: 1 100%;
+    .copyright {
       text-align: center;
-      margin-top: 12px;
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--black);
+      background: var(--off-white);
+      padding: 6px 0;
+      width: 100%;
     }
 
     /*@media (max-width: 900px) {
