@@ -1,463 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Izylle Albarico — InnovaTech</title>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Izylle Albarico — InnovaTech</title>
+      
+      <!-- for icon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
 
-  <!-- for icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+      <!--for font -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!--for font -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      <!-- for footer -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- for footer -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --blue: #5C6F91;
-      --black: #33363A;
-      --white: #ffffff;
-      --off-white: #F3F4F6;
-      --muted: #6B7A8F;
-      --border: #e5e4e0;
-      --khaki: #D8C9A3;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'DM Sans', sans-serif;
-    }
+      <style>
+         :root {
+         --blue: #5C6F91;
+         --black: #33363A;
+         --white: #ffffff;
+         --off-white: #F3F4F6;
+         --muted: #6B7A8F;
+         --border: #e5e4e0;
+         --khaki: #D8C9A3;
+         --serif: 'DM Serif Display', Georgia, serif;
+         --sans: 'DM Sans', sans-serif;
+         }
+         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+         html { scroll-behavior: smooth; }
+         body {
+         font-family: var(--sans);
+         font-weight: 300;
+         background: var(--white);
+         color: var(--black);
+         font-size: 16px;
+         line-height: 1.7;
+         -webkit-font-smoothing: antialiased;
+         }
+         a { text-decoration: none; color: inherit; }
+         header {
+         position: sticky;
+         top: 0;
+         z-index: 100;
+         background: var(--white);
+         border-bottom: 1px solid var(--border);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 48px;
+         height: 64px;
+         box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+         }
+         .logo {
+         display: flex;
+         align-items: center;
+         gap: 0.1px;
+         font-family: var(--serif);
+         font-size: 22px;
+         letter-spacing: -0.3px;
+         color: var(--black);
+         }
+         .logo img { height: 80px; width: auto; display: block; }
+         nav { display: flex; gap: 36px; }
+         nav a {
+         font-size: 13px;
+         font-weight: 700;
+         letter-spacing: 0.06em;
+         text-transform: uppercase;
+         color: var(--blue);
+         transition: color 0.2s;
+         }
+         nav a:hover {
+         color: var(--black);
+         border-radius: 4px;
+         }
+         nav a.active { 
+         color: var(--black); 
+         border-bottom: 2px solid #5C6F91;
+         padding-bottom: 4px;
+         }
+         .profile-header {
+         background: var(--off-white);
+         border-bottom: 1px solid var(--border);
+         padding: 64px 48px;
+         }
+         .profile-header-inner {
+         max-width: 760px;
+         margin: 0 auto;
+         display: flex;
+         align-items: center;
+         gap: 40px;
+         }
+         .profile-avatar {
+         width: 110px;
+         height: 110px;
+         border-radius: 50%;
+         border: 1px solid var(--border);
+         overflow: hidden;
+         flex-shrink: 0;
+         }
+         .profile-avatar img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         display: block;
+         }
+         .profile-avatar:hover {
+         transform: scale(1.05);
+         box-shadow: 0 0 12px #D8C9A3;
+         }
+         .profile-meta-tag {
+         font-size: 13px;
+         font-weight: 500;
+         letter-spacing: 0.14em;
+         text-transform: uppercase;
+         color: var(--blue);
+         margin-bottom: 10px;
+         }
+         .profile-name {
+         font-family: var(--serif);
+         font-size: clamp(32px, 4vw, 46px);
+         font-weight: 400;
+         letter-spacing: -0.4px;
+         color: var(--black);
+         margin-bottom: 8px;
+         border-bottom: 3px solid #D8C9A3;
+         display: inline-block;
+         padding-bottom: 6px;
+         }
+         .profile-role {
+         font-size: 15px;
+         color: var(--muted);
+         }
+         .profile-body {
+         max-width: 760px;
+         margin: 0 auto;
+         padding: 56px 48px;
+         }
+         .profile-bio {
+         font-size: 17px;
+         font-weight: 300;
+         color: var(--black);
+         line-height: 1.9;
+         margin-bottom: 56px;
+         padding-bottom: 48px;
+         border-bottom: 1px solid var(--border);
+         background: var(--off-white);
+         padding: 32px;
+         border-radius: 8px;
+         border: 1px solid var(--border);
+         box-shadow: 0 2px 6px rgba (0,0,0,0.5);
+         text-align: justify;
+         }
+         .profile-bio p { margin-bottom: 20px; }
+         .profile-bio p:last-child { margin-bottom: 0; }
+         .section-label {
+         font-size: 13px;
+         font-weight: 500;
+         letter-spacing: 0.14em;
+         text-transform: uppercase;
+         color: var(--muted);
+         margin-bottom: 28px;
+         padding-bottom: 12px;
+         border-bottom: 2px solid var(--beige);
+         }
+         .articles-list { list-style: none; }
+         .articles-list li {
+         padding: 16px 0;
+         border-bottom: 1px solid var(--border);
+         display: flex;
+         align-items: baseline;
+         gap: 16px;
+         }
+         .article-list li:hover {
+         background: var(--off-white);
+         }
+         .article-topic {
+         font-size: 10px;
+         font-weight: 500;
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+         color: var(--blue);
+         flex-shrink: 0;
+         }
+         .article-link {
+         font-family: var(--serif);
+         font-size: 18px;
+         font-weight: 400;
+         color: var(--black);
+         transition: color 0.2s ease;
+         }
+         .articles-list li:hover .article-link { color: var(--blue); }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+         /* FOOTER NAV */
+         .footer-nav {
+         display: flex;
+         justify-content: center;
+         padding: 16px 0;
+         background: var(--white);
+         border-top: 1px solid var(--white);
+         }
+         .footer-nav a {
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--blue);
+         border: 1px solid var(--blue);
+         padding: 10px 22px;
+         border-radius: 4px;
+         transition: all 0.2s;
+         }
+         .footer-nav a:hover {
+         color: var(--white);
+         border-color: var(--khaki);
+         background-color: var(--khaki);
+         box-shadow: 0 2px 6px rgba(92,111,145,0.3);
+         }
 
-    body {
-      font-family: var(--sans);
-      font-weight: 300;
-      background: var(--white);
-      color: var(--black);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
+         /* FOOTER */
+         footer {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px 48px;
+         border-top: 1px solid var(--border);
+         background: var(--white);
+         }
 
-    a { text-decoration: none; color: inherit; }
+         /* LEFT */
+         .footer-left {
+         display: flex;
+         align-items: center;
+         gap: 16px;
+         }
+         .contact-text {
+         font-weight: 500;
+         font-size: 14px;
+         color: var(--black);
+         }
+         .footer-left a {
+         font-size: 18px;
+         color: var(--black);
+         transition: color 0.2s;
+         }
+         .footer-left a:hover {
+         color: var(--blue);
+         }
+         /* CENTER */
+         .footer-center {
+         font-size: 13px;
+         color: var(--black);
+         text-align: center;
+         }
+         /* RIGHT */
+         .footer-right {
+         display: flex;
+         align-items: center;
+         }
+         .back-to-top {
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--black);
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         transition: color 0.2s;
+         }
+         .back-to-top:hover {
+         color: var(--blue);
+         }
+         .back-to-top::before {
+         content: '↑';
+         font-size: 14px;
+         }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 64px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div class="logo">
+            <img src="../../assets/img/logo_notext.png" alt="Logo">
+            <span>InnovaTech</span>
+         </div>
+         <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../about/about.html">About Us</a>
+            <a href="authors-home.html" class="active">Authors</a>
+            <a href="../article-home/article-home.html">Articles</a>
+            <a href="../resources/resources.html">Resources</a>
+         </nav>
+      </header>
+      <main>
+         <div class="profile-header">
+            <div class="profile-header-inner">
+               <div class="profile-avatar">
+                  <img src="../../assets/img/authors/albarico/id.jpg" alt="Izylle Anne Albarico">
+               </div>
+               <div>
+                  <div class="profile-meta-tag">Author</div>
+                  <div class="profile-name">Izylle Anne V. Albarico</div>
+                  <div class="profile-role">BS Computer Science</div>
+               </div>
+            </div>
+         </div>
+         <div class="profile-body">
+            <div class="profile-bio">
+               <p>
+                  I am a BS Computer Science student with a strong background in leadership, having led multiple projects since my freshman year. My experience spans serving as a committee member under the Education and Research Committee of the University of the East Student Council, a CCSS Research and Development team member under the Project Management Unit, and a class representative during my first year of college.
+               </p>
+               <p>
+                  I define my leadership style as transformative, anchored in discipline, accountability, and a clear vision to create projects that are both meaningful and impactful. I challenge my team to reach their highest potential, fostering an environment where standards are not only met but elevated, and where excellence becomes the baseline.
+               </p>
+               <p>
+                  For InnovaTech, I explored team collaboration through my lived experiences as a leader. I reflected on the challenges I encountered, the complexities of leading diverse teams, and the lessons that shaped my growth. Each piece is written with honesty and intention, often rooted in real messages I shared with my team. One piece diverges, offering a quote that serves as a grounding principle, something to return to when navigating difficult moments in leadership.
+               </p>
+               <p>
+                  My goal is not only to share experiences, but to provide perspective insights that can guide others in building teams, leading with purpose, and becoming more effective, grounded, and empowering leaders.
+               </p>
+            </div>
+            <div class="section-label">Articles</div>
+            <ul class="articles-list">
+               <li>
+                  <span class="article-topic">Topic 1</span>
+                  <a href="../articles/topic_10/page1.html" class="article-link">Prefer Noise than Silence: Ways to build and foster Open Communication</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 2</span>
+                  <a href="../articles/topic_10/page2.html" class="article-link">I hear you: The Art of Active Listening</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 3</span>
+                  <a href="../articles/topic_10/page3.html" class="article-link"> I won’t suffocate you: Building Trust & Giving Autonomy </a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 4</span>
+                  <a href="../articles/topic_10/page4.html" class="article-link">Tell me your ideas, I’ll make it happen: Promoting Collaboration & Brainstorming</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 5</span>
+                  <a href="../articles/topic_10/page5.html" class="article-link"> Let me make this clear: Setting expectations and goals</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 6</span>
+                  <a href="../articles/topic_10/page6.html" class="article-link"> Leadership is journey, not a marathon</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 7</span>
+                  <a href="../articles/topic_10/page7.html" class="article-link">Below the belt: Learning how to distinguish constructive criticism from attacks</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 8</span>
+                  <a href="../articles/topic_10/page8.html" class="article-link">That’s not okay: Uphold Boundaries, Don’t Tolerate Disrespect</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 9</span>
+                  <a href="../articles/topic_10/page9.html" class="article-link"> Let’s Talk: Learn how to be comfortable with tension or disharmony</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 10</span>
+                  <a href="../articles/topic_10/page10.html" class="article-link"> I Believe In You: Choose alignment with work ethic & vision, Not Competence </a>
+               </li>
+            </ul>
+         </div>
+         </div>
+      </main>
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.1px;
-      font-family: var(--serif);
-      font-size: 22px;
-      letter-spacing: -0.3px;
-      color: var(--black);
-    }
-
-    .logo img { height: 80px; width: auto; display: block; }
-
-    nav { display: flex; gap: 36px; }
-
-    nav a {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--blue);
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--black);
-      border-radius: 4px;
-    }
-    
-    nav a.active { 
-      color: var(--black); 
-      border-bottom: 2px solid #5C6F91;
-      padding-bottom: 4px;
-    }
-
-    .profile-header {
-      background: var(--off-white);
-      border-bottom: 1px solid var(--border);
-      padding: 64px 48px;
-    }
-
-    .profile-header-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .profile-avatar {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .profile-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .profile-avatar:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px #D8C9A3;
-    }
-
-    .profile-meta-tag {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 10px;
-    }
-
-    .profile-name {
-      font-family: var(--serif);
-      font-size: clamp(32px, 4vw, 46px);
-      font-weight: 400;
-      letter-spacing: -0.4px;
-      color: var(--black);
-      margin-bottom: 8px;
-      border-bottom: 3px solid #D8C9A3;
-      display: inline-block;
-      padding-bottom: 6px;
-    }
-
-    .profile-role {
-      font-size: 15px;
-      color: var(--muted);
-    }
-
-    .profile-body {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 56px 48px;
-    }
-
-    .profile-bio {
-      font-size: 17px;
-      font-weight: 300;
-      color: var(--black);
-      line-height: 1.9;
-      margin-bottom: 56px;
-      padding-bottom: 48px;
-      border-bottom: 1px solid var(--border);
-      background: var(--off-white);
-      padding: 32px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 6px rgba (0,0,0,0.5);
-      text-align: justify;
-    }
-
-    .profile-bio p { margin-bottom: 20px; }
-    .profile-bio p:last-child { margin-bottom: 0; }
-
-    .section-label {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 28px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--beige);
-    }
-
-    .articles-list { list-style: none; }
-
-    .articles-list li {
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-    }
-
-    .article-list li:hover {
-      background: var(--off-white);
-    }
-
-    .article-topic {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue);
-      flex-shrink: 0;
-    }
-
-    .article-link {
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--black);
-      transition: color 0.2s ease;
-    }
-
-    .articles-list li:hover .article-link { color: var(--blue); }
-
-    /* FOOTER */
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 48px;
-      border-top: 1px solid var(--border);
-      background: var(--white);
-      flex-wrap: wrap;
-      position: relative;
-    }
-
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contact-text {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-    }
-
-    .footer-left a {
-      font-size: 18px;
-      color: var(--black);
-      transition: color 0.2s;
-    }
-
-    .footer-left a:hover {
-      color: var(--blue);
-    }
-
-    .footer-nav{
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .footer-nav a {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #6B7A8F;
-      border: 1px solid #6B7A8F;
-      padding: 10px 22px;
-      transition: all 0.2s;
-      border-radius: 4px;
-    }
-
-    .footer-nav a:hover {
-      color: var(--white);
-      border-color: var(--khaki);
-      background-color: var(--khaki);
-      box-shadow: 0 2px 6px rgba(92,111,145,0.3);
-    }
-
-    .footer-right .back-to-top {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-
-    .footer-right .back-to-top:hover {
-      color: var(--blue);
-    }
-
-    .footer-right .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
-
-    .copyright {
-      width: 100%;
-      text-align: center;
-      font-size: 13px;
-      color: var(--black);
-      background: var(--off-white);
-      padding: 6px 0;
-      margin-top: 0;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <div class="logo">
-      <img src="../../assets/img/logo_notext.png" alt="Logo">
-      <span>InnovaTech</span>
-    </div>
-    <nav>
-      <a href="../../index.html">Home</a>
-      <a href="../about/about.html">About Us</a>
-      <a href="authors-home.html" class="active">Authors</a>
-      <a href="../article-home/article-home.html">Articles</a>
-      <a href="../resources/resources.html">Resources</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <div class="profile-header">
-      <div class="profile-header-inner">
-        <div class="profile-avatar">
-          <img src="../../assets/img/authors/albarico/id.jpg" alt="Izylle Anne Albarico">
-        </div>
-        <div>
-          <div class="profile-meta-tag">Author</div>
-          <div class="profile-name">Izylle Anne V. Albarico</div>
-          <div class="profile-role">BS Computer Science</div>
-        </div>
+      <!-- FOOTER NAV -->
+      <div class="footer-nav">
+         <a href="../authors/authors-home.html">← Back to Authors</a>
       </div>
-    </div>
 
-    <div class="profile-body">
+      <!-- FOOTER -->
+      <footer>
+         <!-- LEFT -->
+         <div class="footer-left">
+            <span class="contact-text">Contact Us</span>
+            <a href="https://www.facebook.com/profile.php?id=61577461889890">
+            <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/InnovaTechG1">
+            <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com/innovatech.integ">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:innovatech.integ@gmail.com">
+            <i class="fa-regular fa-envelope"></i>
+            </a>
+         </div>
 
-      <div class="profile-bio">
-        <p>
-         I am a BS Computer Science student with a strong background in leadership, having led multiple projects since my freshman year. My experience spans serving as a committee member under the Education and Research Committee of the University of the East Student Council, a CCSS Research and Development team member under the Project Management Unit, and a class representative during my first year of college.
-        </p>
-        <p>
-          I define my leadership style as transformative, anchored in discipline, accountability, and a clear vision to create projects that are both meaningful and impactful. I challenge my team to reach their highest potential, fostering an environment where standards are not only met but elevated, and where excellence becomes the baseline.
-        </p>
-        <p>
-         For InnovaTech, I explored team collaboration through my lived experiences as a leader. I reflected on the challenges I encountered, the complexities of leading diverse teams, and the lessons that shaped my growth. Each piece is written with honesty and intention, often rooted in real messages I shared with my team. One piece diverges, offering a quote that serves as a grounding principle, something to return to when navigating difficult moments in leadership.
-        </p>
-        <p>
-          My goal is not only to share experiences, but to provide perspective insights that can guide others in building teams, leading with purpose, and becoming more effective, grounded, and empowering leaders.
-      </p>
-      </div>
+         <!-- CENTER -->
+         <div class="footer-center">
+            © 2026 InnovaTech. All rights reserved.
+         </div>
 
-
-      <div class="section-label">Articles</div>
-
-      <ul class="articles-list">
-
-        <li>
-          <span class="article-topic">Topic 1</span>
-          <a href="../articles/topic_10/page1.html" class="article-link">Prefer Noise than Silence: Ways to build and foster Open Communication</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 2</span>
-          <a href="../articles/topic_10/page2.html" class="article-link">I hear you: The Art of Active Listening</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 3</span>
-          <a href="../articles/topic_10/page3.html" class="article-link"> I won’t suffocate you: Building Trust & Giving Autonomy </a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 4</span>
-          <a href="../articles/topic_10/page4.html" class="article-link">Tell me your ideas, I’ll make it happen: Promoting Collaboration & Brainstorming</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 5</span>
-          <a href="../articles/topic_10/page5.html" class="article-link"> Let me make this clear: Setting expectations and goals</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 6</span>
-          <a href="../articles/topic_10/page6.html" class="article-link"> Leadership is journey, not a marathon</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 7</span>
-          <a href="../articles/topic_10/page7.html" class="article-link">Below the belt: Learning how to distinguish constructive criticism from attacks</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 8</span>
-          <a href="../articles/topic_10/page8.html" class="article-link">That’s not okay: Uphold Boundaries, Don’t Tolerate Disrespect</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 9</span>
-          <a href="../articles/topic_10/page9.html" class="article-link"> Let’s Talk: Learn how to be comfortable with tension or disharmony</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 10</span>
-          <a href="../articles/topic_10/page10.html" class="article-link"> I Believe In You: Choose alignment with work ethic & vision, Not Competence </a>
-        </li>
-
-      </ul>
-
-    </div>
-    </div>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <!-- Left: Contact + Icons -->
-    <div class="footer-left">
-      <span class="contact-text">Contact Us</span>
-
-      <a href="https://www.facebook.com/profile.php?id=61577461889890">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://x.com/InnovaTechG1">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com/innovatech.integ">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="mailto:innovatech.integ@gmail.com">
-        <i class="fa-regular fa-envelope"></i>
-      </a>
-    </div>
-
-    <!-- Center: Navigation -->
-    <div class="footer-nav">
-      <a href="../authors/authors-home.html">← Back to Authors</a>
-    </div>
-
-    <!-- Right: Back to Top -->
-    <div class="footer-right">
-      <a href="#" class="back-to-top">Back to Top</a>
-    </div>
-  </footer>
-
-  <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
-
-</body>
+         <!-- RIGHT -->
+         <div class="footer-right">
+            <a href="#" class="back-to-top">Back to Top</a>
+         </div>
+      </footer>
+   </body>
 </html>

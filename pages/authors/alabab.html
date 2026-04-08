@@ -1,458 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charlize Alab&#45;ab — InnovaTech</title>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Charlize Alab&#45;ab — InnovaTech</title>
 
-  <!-- for icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+      <!-- for icon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
 
-  <!-- for font -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      <!-- for font -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- for footer -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      <!-- for footer -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      
+      <style>
+         :root {
+         --blue: #5C6F91;
+         --black: #33363A;
+         --white: #ffffff;
+         --off-white: #F3F4F6;
+         --muted: #6B7A8F;
+         --border: #e5e4e0;
+         --khaki: #D8C9A3;
+         --serif: 'DM Serif Display', Georgia, serif;
+         --sans: 'DM Sans', sans-serif;
+         }
+         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+         html { scroll-behavior: smooth; }
+         body {
+         font-family: var(--sans);
+         font-weight: 300;
+         background: var(--white);
+         color: var(--black);
+         font-size: 16px;
+         line-height: 1.7;
+         -webkit-font-smoothing: antialiased;
+         }
+         a { text-decoration: none; color: inherit; }
+         header {
+         position: sticky;
+         top: 0;
+         z-index: 100;
+         background: var(--white);
+         border-bottom: 1px solid var(--border);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 48px;
+         height: 64px;
+         box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+         }
+         .logo {
+         display: flex;
+         align-items: center;
+         gap: 0.1px;
+         font-family: var(--serif);
+         font-size: 22px;
+         letter-spacing: -0.3px;
+         color: var(--black);
+         }
+         .logo img { height: 80px; width: auto; display: block; }
+         nav { display: flex; gap: 36px; }
+         nav a {
+         font-size: 13px;
+         font-weight: 700;
+         letter-spacing: 0.06em;
+         text-transform: uppercase;
+         color: var(--blue);
+         transition: color 0.2s;
+         }
+         nav a:hover {
+         color: var(--black);
+         border-radius: 4px;
+         }
+         nav a.active { 
+         color: var(--black); 
+         border-bottom: 2px solid #5C6F91;
+         padding-bottom: 4px;
+         }
+         .profile-header {
+         background: var(--off-white);
+         border-bottom: 1px solid var(--border);
+         padding: 64px 48px;
+         }
+         .profile-header-inner {
+         max-width: 760px;
+         margin: 0 auto;
+         display: flex;
+         align-items: center;
+         gap: 40px;
+         }
+         .profile-avatar {
+         width: 110px;
+         height: 110px;
+         border-radius: 50%;
+         border: 1px solid var(--border);
+         overflow: hidden;
+         flex-shrink: 0;
+         }
+         .profile-avatar img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         display: block;
+         }
+         .profile-avatar:hover {
+         transform: scale(1.05);
+         box-shadow: 0 0 12px #D8C9A3;
+         }
+         .profile-meta-tag {
+         font-size: 13px;
+         font-weight: 500;
+         letter-spacing: 0.14em;
+         text-transform: uppercase;
+         color: var(--blue);
+         margin-bottom: 10px;
+         }
+         .profile-name {
+         font-family: var(--serif);
+         font-size: clamp(32px, 4vw, 46px);
+         font-weight: 400;
+         letter-spacing: -0.4px;
+         color: var(--black);
+         margin-bottom: 8px;
+         border-bottom: 3px solid #D8C9A3;
+         display: inline-block;
+         padding-bottom: 6px;
+         }
+         .profile-role {
+         font-size: 15px;
+         color: var(--muted);
+         }
+         .profile-body {
+         max-width: 760px;
+         margin: 0 auto;
+         padding: 56px 48px;
+         }
+         .profile-bio {
+         font-size: 17px;
+         font-weight: 300;
+         color: var(--black);
+         line-height: 1.9;
+         margin-bottom: 56px;
+         padding-bottom: 48px;
+         border-bottom: 1px solid var(--border);
+         background: var(--off-white);
+         padding: 32px;
+         border-radius: 8px;
+         border: 1px solid var(--border);
+         box-shadow: 0 2px 6px rgba (0,0,0,0.5);
+         text-align: justify;
+         }
+         .profile-bio p { margin-bottom: 20px; }
+         .profile-bio p:last-child { margin-bottom: 0; }
+         .section-label {
+         font-size: 13px;
+         font-weight: 500;
+         letter-spacing: 0.14em;
+         text-transform: uppercase;
+         color: var(--muted);
+         margin-bottom: 28px;
+         padding-bottom: 12px;
+         border-bottom: 2px solid var(--beige);
+         }
+         .articles-list { list-style: none; }
+         .articles-list li {
+         padding: 16px 0;
+         border-bottom: 1px solid var(--border);
+         display: flex;
+         align-items: baseline;
+         gap: 16px;
+         }
+         .article-list li:hover {
+         background: var(--off-white);
+         }
+         .article-topic {
+         font-size: 10px;
+         font-weight: 500;
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+         color: var(--blue);
+         flex-shrink: 0;
+         }
+         .article-link {
+         font-family: var(--serif);
+         font-size: 18px;
+         font-weight: 400;
+         color: var(--black);
+         transition: color 0.2s ease;
+         }
+         .articles-list li:hover .article-link { color: var(--blue); }
 
-  <style>
-    :root {
-      --blue: #5C6F91;
-      --black: #33363A;
-      --white: #ffffff;
-      --off-white: #F3F4F6;
-      --muted: #6B7A8F;
-      --border: #e5e4e0;
-      --khaki: #D8C9A3;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'DM Sans', sans-serif;
-    }
+         /* FOOTER NAV */
+         .footer-nav {
+         display: flex;
+         justify-content: center;
+         padding: 16px 0;
+         background: var(--white);
+         border-top: 1px solid var(--white);
+         }
+         .footer-nav a {
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--blue);
+         border: 1px solid var(--blue);
+         padding: 10px 22px;
+         border-radius: 4px;
+         transition: all 0.2s;
+         }
+         .footer-nav a:hover {
+         color: var(--white);
+         border-color: var(--khaki);
+         background-color: var(--khaki);
+         box-shadow: 0 2px 6px rgba(92,111,145,0.3);
+         }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+         /* FOOTER */
+         footer {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px 48px;
+         border-top: 1px solid var(--border);
+         background: var(--white);
+         }
 
-    body {
-      font-family: var(--sans);
-      font-weight: 300;
-      background: var(--white);
-      color: var(--black);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
+         /* LEFT */
+         .footer-left {
+         display: flex;
+         align-items: center;
+         gap: 16px;
+         }
+         .contact-text {
+         font-weight: 500;
+         font-size: 14px;
+         color: var(--black);
+         }
+         .footer-left a {
+         font-size: 18px;
+         color: var(--black);
+         transition: color 0.2s;
+         }
+         .footer-left a:hover {
+         color: var(--blue);
+         }
 
-    a { text-decoration: none; color: inherit; }
+         /* CENTER */
+         .footer-center {
+         font-size: 13px;
+         color: var(--black);
+         text-align: center;
+         }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 64px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
+         /* RIGHT */
+         .footer-right {
+         display: flex;
+         align-items: center;
+         }
+         .back-to-top {
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--black);
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         transition: color 0.2s;
+         }
+         .back-to-top:hover {
+         color: var(--blue);
+         }
+         .back-to-top::before {
+         content: '↑';
+         font-size: 14px;
+         }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.1px;
-      font-family: var(--serif);
-      font-size: 22px;
-      letter-spacing: -0.3px;
-      color: var(--black);
-    }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div class="logo">
+            <img src="../../assets/img/logo_notext.png" alt="Logo">
+            <span>InnovaTech</span>
+         </div>
+         <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../about/about.html">About Us</a>
+            <a href="authors-home.html" class="active">Authors</a>
+            <a href="../article-home/article-home.html">Articles</a>
+            <a href="../resources/resources.html">Resources</a>
+         </nav>
+      </header>
+      <main>
+         <div class="profile-header">
+            <div class="profile-header-inner">
+               <div class="profile-avatar">
+                  <img src="../../assets/img/authors/Alab-ab/ALAB-AB.jpg" alt="Charlize Jane Alabab">
+               </div>
+               <div>
+                  <div class="profile-meta-tag">Author</div>
+                  <div class="profile-name">Charlize Jane A. Alab&#45;ab</div>
+                  <div class="profile-role">BS Computer Science</div>
+               </div>
+            </div>
+         </div>
+         <div class="profile-body">
+            <div class="profile-bio">
+               <p>
+                  As a computer science student, I have an unwavering love of computers and technology. I enjoy programming, building software programs and creating new technologies; however, I do not particularly enjoy doing math. Nonetheless, I am still very enthusiastic about learning and exploring new concepts in the area of computer science.
+               </p>
+               <p>
+                  In my role as contributor and developer for Innovatech's website, my goal is to share knowledge and ideas that inspire others. One of my contributions is a research project involving 10 subtopics that are related to the concept of study app use in education. These subtopics demonstrate how study apps can be a vital asset or 'weapon' in terms of achieving success within an academic setting. My goal for this contribution is to guide students through the use of technology as a means to develop more productive learning strategies and ultimately perform better academically.
+               </p>
+               <p>
+                  As I continue my journey, I strive to grow my skills, contribute meaningful content, and make technology more accessible and helpful for others.
+               </p>
+            </div>
+            <div class="section-label">Articles</div>
+            <ul class="articles-list">
+               <li>
+                  <span class="article-topic">Topic 1</span>
+                  <a href="../articles/topic_4/page1.html" class="article-link">Your Secret Weapon for Academic Success</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 2</span>
+                  <a href="../articles/topic_4/page2.html" class="article-link">Mastering Note&#45;Taking Apps</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 3</span>
+                  <a href="../articles/topic_4/page3.html" class="article-link">Staying on Track with Task Management Apps</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 4</span>
+                  <a href="../articles/topic_4/page4.html" class="article-link">Boosting Memory with Flashcard and Study Apps</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 5</span>
+                  <a href="../articles/topic_4/page5.html" class="article-link">Sharpening Skills with Coding Practice Applications</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 6</span>
+                  <a href="../articles/topic_4/page6.html" class="article-link">Enhancing Teamwork and Collaboration Apps</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 7</span>
+                  <a href="../articles/topic_4/page7.html" class="article-link">Managing Your Time with Scheduling and Calendar Apps</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 8</span>
+                  <a href="../articles/topic_4/page8.html" class="article-link">Organizing Your Files with Cloud Storage Apps</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 9</span>
+                  <a href="../articles/topic_4/page9.html" class="article-link">Expanding Knowledge with Learning and Resources Apps</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 10</span>
+                  <a href="../articles/topic_4/page10.html" class="article-link">Mastering Your Tech College Journey</a>
+               </li>
+            </ul>
+         </div>
+      </main>
 
-    .logo img { height: 80px; width: auto; display: block; }
-
-    nav { display: flex; gap: 36px; }
-
-    nav a {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--blue);
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--black);
-      border-radius: 4px;
-    }
-    
-    nav a.active { 
-      color: var(--black); 
-      border-bottom: 2px solid #5C6F91;
-      padding-bottom: 4px;
-    }
-
-    .profile-header {
-      background: var(--off-white);
-      border-bottom: 1px solid var(--border);
-      padding: 64px 48px;
-    }
-
-    .profile-header-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .profile-avatar {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .profile-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .profile-avatar:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px #D8C9A3;
-    }
-
-    .profile-meta-tag {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 10px;
-    }
-
-    .profile-name {
-      font-family: var(--serif);
-      font-size: clamp(32px, 4vw, 46px);
-      font-weight: 400;
-      letter-spacing: -0.4px;
-      color: var(--black);
-      margin-bottom: 8px;
-      border-bottom: 3px solid #D8C9A3;
-      display: inline-block;
-      padding-bottom: 6px;
-    }
-
-    .profile-role {
-      font-size: 15px;
-      color: var(--muted);
-    }
-
-    .profile-body {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 56px 48px;
-    }
-
-    .profile-bio {
-      font-size: 17px;
-      font-weight: 300;
-      color: var(--black);
-      line-height: 1.9;
-      margin-bottom: 56px;
-      padding-bottom: 48px;
-      border-bottom: 1px solid var(--border);
-      background: var(--off-white);
-      padding: 32px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 6px rgba (0,0,0,0.5);
-      text-align: justify;
-    }
-
-    .profile-bio p { margin-bottom: 20px; }
-    .profile-bio p:last-child { margin-bottom: 0; }
-
-    .section-label {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 28px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--beige);
-    }
-
-    .articles-list { list-style: none; }
-
-    .articles-list li {
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-    }
-
-    .article-list li:hover {
-      background: var(--off-white);
-    }
-
-    .article-topic {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue);
-      flex-shrink: 0;
-    }
-
-    .article-link {
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--black);
-      transition: color 0.2s ease;
-    }
-
-    .articles-list li:hover .article-link { color: var(--blue); }
-
-    /* FOOTER */
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 48px;
-      border-top: 1px solid var(--border);
-      background: var(--white);
-      flex-wrap: wrap;
-      position: relative;
-    }
-
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contact-text {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-    }
-
-    .footer-left a {
-      font-size: 18px;
-      color: var(--black);
-      transition: color 0.2s;
-    }
-
-    .footer-left a:hover {
-      color: var(--blue);
-    }
-
-    .footer-nav{
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .footer-nav a {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #6B7A8F;
-      border: 1px solid #6B7A8F;
-      padding: 10px 22px;
-      transition: all 0.2s;
-      border-radius: 4px;
-    }
-
-    .footer-nav a:hover {
-      color: var(--white);
-      border-color: var(--khaki);
-      background-color: var(--khaki);
-      box-shadow: 0 2px 6px rgba(92,111,145,0.3);
-    }
-
-    .footer-right .back-to-top {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-
-    .footer-right .back-to-top:hover {
-      color: var(--blue);
-    }
-
-    .footer-right .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
-
-    .copyright {
-      width: 100%;
-      text-align: center;
-      font-size: 13px;
-      color: var(--black);
-      background: var(--off-white);
-      padding: 6px 0;
-      margin-top: 0;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <div class="logo">
-      <img src="../../assets/img/logo_notext.png" alt="Logo">
-      <span>InnovaTech</span>
-    </div>
-    <nav>
-      <a href="../../index.html">Home</a>
-      <a href="../about/about.html">About Us</a>
-      <a href="authors-home.html" class="active">Authors</a>
-      <a href="../article-home/article-home.html">Articles</a>
-      <a href="../resources/resources.html">Resources</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <div class="profile-header">
-      <div class="profile-header-inner">
-        <div class="profile-avatar">
-          <img src="../../assets/img/authors/Alab-ab/ALAB-AB.jpg" alt="Charlize Jane Alabab">
-        </div>
-        <div>
-          <div class="profile-meta-tag">Author</div>
-          <div class="profile-name">Charlize Jane A. Alab&#45;ab</div>
-          <div class="profile-role">BS Computer Science</div>
-        </div>
+      <!-- FOOTER NAV -->
+      <div class="footer-nav">
+         <a href="../authors/authors-home.html">← Back to Authors</a>
       </div>
-    </div>
 
-    <div class="profile-body">
+      <!-- FOOTER -->
+      <footer>
+         <!-- LEFT -->
+         <div class="footer-left">
+            <span class="contact-text">Contact Us</span>
+            <a href="https://www.facebook.com/profile.php?id=61577461889890">
+            <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/InnovaTechG1">
+            <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com/innovatech.integ">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:innovatech.integ@gmail.com">
+            <i class="fa-regular fa-envelope"></i>
+            </a>
+         </div>
 
-      <div class="profile-bio">
-        <p>
-          As a computer science student, I have an unwavering love of computers and technology. I enjoy programming, building software programs and creating new technologies; however, I do not particularly enjoy doing math. Nonetheless, I am still very enthusiastic about learning and exploring new concepts in the area of computer science.
-        </p>
-        <p>
-          In my role as contributor and developer for Innovatech's website, my goal is to share knowledge and ideas that inspire others. One of my contributions is a research project involving 10 subtopics that are related to the concept of study app use in education. These subtopics demonstrate how study apps can be a vital asset or 'weapon' in terms of achieving success within an academic setting. My goal for this contribution is to guide students through the use of technology as a means to develop more productive learning strategies and ultimately perform better academically.
-        </p>
-        <p>
-          As I continue my journey, I strive to grow my skills, contribute meaningful content, and make technology more accessible and helpful for others.
-        </p>
-      </div>
+         <!-- CENTER -->
+         <div class="footer-center">
+            © 2026 InnovaTech. All rights reserved.
+         </div>
 
-      <div class="section-label">Articles</div>
-
-      <ul class="articles-list">
-
-        <li>
-          <span class="article-topic">Topic 1</span>
-          <a href="../articles/topic_4/page1.html" class="article-link">Your Secret Weapon for Academic Success</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 2</span>
-          <a href="../articles/topic_4/page2.html" class="article-link">Mastering Note&#45;Taking Apps</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 3</span>
-          <a href="../articles/topic_4/page3.html" class="article-link">Staying on Track with Task Management Apps</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 4</span>
-          <a href="../articles/topic_4/page4.html" class="article-link">Boosting Memory with Flashcard and Study Apps</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 5</span>
-          <a href="../articles/topic_4/page5.html" class="article-link">Sharpening Skills with Coding Practice Applications</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 6</span>
-          <a href="../articles/topic_4/page6.html" class="article-link">Enhancing Teamwork and Collaboration Apps</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 7</span>
-          <a href="../articles/topic_4/page7.html" class="article-link">Managing Your Time with Scheduling and Calendar Apps</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 8</span>
-          <a href="../articles/topic_4/page8.html" class="article-link">Organizing Your Files with Cloud Storage Apps</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 9</span>
-          <a href="../articles/topic_4/page9.html" class="article-link">Expanding Knowledge with Learning and Resources Apps</a>
-        </li>
-
-        <li>
-          <span class="article-topic">Topic 10</span>
-          <a href="../articles/topic_4/page10.html" class="article-link">Mastering Your Tech College Journey</a>
-        </li>
-
-      </ul>
-
-    </div>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <!-- Left: Contact + Icons -->
-    <div class="footer-left">
-      <span class="contact-text">Contact Us</span>
-
-      <a href="https://www.facebook.com/profile.php?id=61577461889890">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://x.com/InnovaTechG1">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com/innovatech.integ">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="mailto:innovatech.integ@gmail.com">
-        <i class="fa-regular fa-envelope"></i>
-      </a>
-    </div>
-
-    <!-- Center: Navigation -->
-    <div class="footer-nav">
-      <a href="../authors/authors-home.html">← Back to Authors</a>
-    </div>
-
-    <!-- Right: Back to Top -->
-    <div class="footer-right">
-      <a href="#" class="back-to-top">Back to Top</a>
-    </div>
-  </footer>
-
-  <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
-
-</body>
+         <!-- RIGHT -->
+         <div class="footer-right">
+            <a href="#" class="back-to-top">Back to Top</a>
+         </div>
+      </footer>
+   </body>
 </html>
