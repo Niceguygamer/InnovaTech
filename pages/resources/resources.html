@@ -1,566 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnovaTech - Resources</title>
-  
-  <!-- for icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>InnovaTech - Resources</title>
 
-  <!-- for font -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      <!-- for icon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
 
-  <!-- for footer -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --blue: #5C6F91;
-      --black: #33363A;
-      --white: #ffffff;
-      --off-white: #F3F4F6;
-      --muted: #6B7A8F;
-      --border: #e5e4e0;
-      --khaki: #D8C9A3;
-      --gray: #8C949C;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'DM Sans', sans-serif;
-    }
+      <!-- for font -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+      <!-- for footer -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      
+      <style>
+         :root {
+         --blue: #5C6F91;
+         --black: #33363A;
+         --white: #ffffff;
+         --off-white: #F3F4F6;
+         --muted: #6B7A8F;
+         --border: #e5e4e0;
+         --khaki: #D8C9A3;
+         --gray: #8C949C;
+         --serif: 'DM Serif Display', Georgia, serif;
+         --sans: 'DM Sans', sans-serif;
+         }
+         * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         }
+         body {
+         font-family: var(--sans);
+         background: var(--white);
+         color: var(--black);
+         line-height: 1.6;
+         }
+         a {
+         text-decoration: none;
+         color: inherit;
+         }
+         /* HEADER */
+         header {
+         position: sticky;
+         top: 0;
+         z-index: 100;
+         background: var(--white);
+         border-bottom: 1px solid var(--border);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 48px;
+         height: 64px;
+         }
+         .logo {
+         display: flex;
+         align-items: center;
+         gap: 0.1px;
+         font-family: var(--serif);
+         font-size: 22px;
+         letter-spacing: -0.3px;
+         color: var(--black);
+         }
+         .logo img {
+         height: 80px;
+         width: auto;
+         }
+         nav {
+         display: flex;
+         gap: 36px;
+         }
+         nav a {
+         font-size: 13px;
+         font-weight: 700;
+         letter-spacing: 0.06em;
+         text-transform: uppercase;
+         color: var(--blue);
+         transition: color 0.2s;
+         }
+         nav a:hover,
+         nav a.active {
+         color: var(--black);
+         }
+         /* RESOURCES PAGE LAYOUT  */
+         .hero-resources {
+         background: var(--off-white);
+         text-align: center;
+         padding: 100px 48px 80px;
+         border-bottom: 1px solid var(--border);
+         }
+         .hero-resources h1 {
+         font-family: var(--serif);
+         font-size: clamp(40px, 5vw, 64px);
+         font-style: italic;
+         margin-bottom: 12px;
+         color: var(--black);
+         line-height: 1;
+         }
+         .hero-resources p {
+         font-size: 16px;
+         color: var(--black);
+         }
+         .subtitle-label {
+         font-size: 14px;
+         color:var(--blue);
+         background: var(--off-white);
+         letter-spacing: 0.05em;
+         border: 1px solid var(--blue);
+         display: inline-block;
+         padding: 8px 20px;
+         transition: all 0.2s ease;
+         }
+         .subtitle-label:hover {
+         color:var(--white);
+         background: var(--khaki);
+         border-color: var(--khaki);
+         }
+         /*Section Divider*/
+         .section-container {
+         padding: 60px 48px;
+         scroll-margin-top: 80px;
+         }
+         /*Row label*/
+         .row-label {
+         font-size: 18px;
+         font-style: italic;
+         color: var(--black);
+         font-weight: 600;
+         margin-bottom: 32px;
+         }
+         :target .row-label {
+         font-weight: 600;
+         }
+         /* CATEGORY GRID  */
+         .categories-grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 30px;
+         }
+         /*Category Placeholder*/
+         .category-card {
+         border: 1px solid var(--border);
+         padding: 40px 20px;
+         text-align: center;
+         transition: all 0.3s ease;
+         background: var(--white);
+         cursor: pointer;
+         border-radius: 6px;
+         }
+         /*Category Hover Style*/
+         .category-card:hover {
+         background: var(--off-white);
+         border-color: #5C6F91;
+         transform: translateY(-2px);
+         box-shadow: 0 4px 12px rgba(92,111,145,0.2);
+         }
+         /*Category Label Style*/
+         .category-label {
+         font-size: 18px;
+         font-weight: 600;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--black);
+         border-bottom: 1px dashed var(--border);
+         padding-bottom: 8px;
+         display: inline-block;
+         }
+         /* RESOURCE ITEMS LIST */
+         .resource-list { /*Resources Item list layout*/
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         }
+         .resource-item {/*Resources Item list style*/
+         border: 1px solid var(--border);
+         border-left: 4px solid var(--blue);
+         padding: 24px 30px;
+         background: var(--white);
+         transition: all 0.2s ease;
+         border-radius: 6px;
+         }
+         .resource-item:hover {/*Resources Item list hover*/
+         background: var(--off-white);
+         border-color: var(--blue);
+         box-shadow: 0 4px 12px rgba(92,111,145,0.15);
+         }
+         .resource-title {/*Resources Item list title*/
+         font-family: var(--serif);
+         font-size: 22px;
+         font-weight: 500;
+         color: var(--black);
+         margin-bottom: 8px;
+         }
+         .resource-link-desc {/*Resources Item link style*/
+         font-size: 16px;
+         line-height: 1.6;
+         color: var(--muted);
+         margin-bottom: 8px;
+         }
+         .resource-link {
+         font-size: 14px;
+         color: var(--blue);
+         text-decoration: underline;
+         }
+         /* FOOTER NAV (NOW SEPARATE) */
+         .footer-nav {
+         display: flex;
+         justify-content: center;
+         padding: 16px 0;
+         background: var(--off-white);
+         border-top: 1px solid var(--border);
+         }
+         .footer-nav a {
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--muted);
+         border: 1px solid var(--muted);
+         padding: 10px 22px;
+         border-radius: 4px;
+         transition: all 0.2s;
+         }
+         .footer-nav a:hover {
+         color: var(--white);
+         border-color: var(--khaki);
+         background-color: var(--khaki);
+         box-shadow: 0 2px 6px rgba(92,111,145,0.3);
+         }
+         /* FOOTER */
+         footer {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px 48px;
+         border-top: 1px solid var(--border);
+         background: var(--white);
+         }
+         /* LEFT */
+         .footer-left {
+         display: flex;
+         align-items: center;
+         gap: 16px;
+         }
+         .contact-text {
+         font-weight: 500;
+         font-size: 14px;
+         color: var(--black);
+         }
+         .footer-left a {
+         font-size: 18px;
+         color: var(--black);
+         transition: color 0.2s;
+         }
+         .footer-left a:hover {
+         color: var(--blue);
+         }
+         /* CENTER */
+         .footer-center {
+         font-size: 13px;
+         color: var(--black);
+         text-align: center;
+         }
+         /* RIGHT */
+         .footer-right {
+         display: flex;
+         align-items: center;
+         }
+         .back-to-top {
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: var(--black);
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         transition: color 0.2s;
+         }
+         .back-to-top:hover {
+         color: var(--blue);
+         }
+         .back-to-top::before {
+         content: '↑';
+         font-size: 14px;
+         }
+          
+      </style>
+   </head>
+   <body>
+      <header>
+        
+         <div class="logo">
+            <img src="../../assets/img/logo_notext.png" alt="Logo">
+            <span>InnovaTech</span>
+         </div>
+         <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../about/about.html">About Us</a>
+            <a href="../authors/authors-home.html">Authors</a>
+            <a href="../article-home/article-home.html" >Articles</a>
+            <a href="resources.html" class="active">Resources</a>
+         </nav>
+      </header>
+      <main>
+         <!-- Hero Section -->
+         <section class="hero-resources">
+            <h1>Resources</h1>
+            <a href="#section" class="subtitle-label">Helpful Materials for Tech College Students</a>
+         </section>
 
-    body {
-      font-family: var(--sans);
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.6;
-    }
+         <!-- Categories Section-->
+         <section class="section-container" id="section">
+            <p class="row-label">Resource Categories</p>
+            <div class="categories-grid">
+               <a href="#web" class="category-card">
+                  <div class="category-label">Website Links</div>
+               </a>
+               <a href="#article" class="category-card">
+                  <div class="category-label">Article Links</div>
+               </a>
+               <a href="#books" class="category-card">
+                  <div class="category-label">E-Books / Textbooks</div>
+               </a>
+            </div>
+         </section>
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+         <!--Website Resources-->
+         <section class="section-container" id="web">
+            <p class="row-label">Website Links</p>
+            <div class="resource-list">
+            <a href="https://www.apa.org/topics/mental-health/seven-rest-types" class="resource-item">
+               <div class="resource-title">Seven Types of Rest</div>
+               <div class="resource-link-desc">Overview of seven distinct forms of rest, explaining how each supports mental health and well-being.
+               </div>
+               <span class="resource-link">https://www.apa.org/topics/mental-health/seven-rest-types</span>
+            </a>
+            <a href="https://www.apa.org/topics/sleep" class="resource-item">
+               <div class="resource-title">Sleep and Sleep Disorders</div>
+               <div class="resource-link-desc">Authoritative information on the science of sleep, common disorders, and strategies for better rest.</div>
+               <span class="resource-link">https://www.apa.org/topics/sleep</span>
+            </a>
+            <a href="https://www.apa.org/topics/mindfulness/meditation" class="resource-item">
+               <div class="resource-title">Mindfulness Meditation</div>
+               <div class="resource-link-desc">Research-based guidance on how mindfulness meditation reduces stress and improves resilience.</div>
+               <span class="resource-link">https://www.apa.org/topics/mindfulness/meditation</span>
+            </a>
+            <a href="https://www.apa.org/topics/anxiety" class="resource-item">
+               <div class="resource-title">Anxiety</div>
+               <div class="resource-link-desc">Trusted insights into anxiety symptoms, causes, and coping strategies.</div>
+               <span class="resource-link">https://www.apa.org/topics/anxiety</span>
+            </a>
+            <a href="https://www.apa.org/topics/resilience" class="resource-item">
+               <div class="resource-title">Resilience Guide</div>
+               <div class="resource-link-desc">Practical tips and evidence-based strategies to build resilience in everyday life.</div>
+               <span class="resource-link">https://www.apa.org/topics/resilience</span>
+            </a>
+            <a href="https://psychcentral.com/lib/what-is-resilience" class="resource-item">
+               <div class="resource-title">What is Resilience?</div>
+               <div class="resource-link-desc">Accessible explanation of resilience, its importance, and how to strengthen it.</div>
+               <span class="resource-link">https://psychcentral.com/lib/what-is-resilience</span>
+            </a>
+            <a href="https://www.coursera.org/articles/computer-science-specializations" class="resource-item">
+               <div class="resource-title">Choosing a CS Specialization</div>
+               <div class="resource-link-desc">A comprehensive guide exploring various CS career paths, job outlooks, and salary information to help students align their studies with professional goals.</div>
+               <span class="resource-link">https://www.coursera.org/articles/computer-science-specializations</span>
+            </a>
+            <a href="https://cse.umn.edu/cs/computer-science-bs-specializations" class="resource-item">
+               <div class="resource-title">Computer Science BS Tracks</div>
+               <div class="resource-link-desc">An overview of academic tracks including AI, Systems, and Software Engineering designed to help undergraduates build a focused portfolio for the job market.</div>
+               <span class="resource-link">https://cse.umn.edu/cs/computer-science-bs-specializations</span>
+            </a>
+            <a href="https://www.indeed.com/career-advice/career-development/how-to-choose-computer-science-specialization" class="resource-item">
+               <div class="resource-title">CS Careers & Specializations</div>
+               <div class="resource-link-desc">Career-focused advice on navigating the vast subfields of computer science, featuring practical steps to research and select a specialty based on industry demand.</div>
+               <span class="resource-link">https://www.indeed.com/career-advice/career-development/how-to-choose-computer-science-specialization</span>
+            </a>
+            <a href="https://www.codecademy.com/articles/what-is-computer-science" class="resource-item">
+               <div class="resource-title">What is Computer Science?</div>
+               <div class="resource-link-desc">An introductory overview of computer science, its significance, and the skills required to succeed in the field.</div>
+               <span class="resource-link">https://www.codecademy.com/articles/what-is-computer-science</span>
+            </a>
+         </section>
 
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 64px;
-    }
+         <!--Article Resources -->
+         <section class="section-container" id="article">
+            <p class="row-label">Article Links</p>
+            <div class="resource-list">
+               <a href="https://www.psycix.com/article/how-mindful-rest-can-improve-your-mental-health" class="resource-item">
+                  <div class="resource-title">Mindful Rest</div>
+                  <div class="resource-link-desc">Explores how mindful rest can boost mental health and reduce stress.</div>
+                  <span class="resource-link">https://www.psycix.com/article/how-mindful-rest-can-improve-your-mental-health</span>
+               </a>
+               <a href="https://www.saidhasyim.com/post/peak-lifes-work/the-relationship-between-rest-and-creativity" class="resource-item">
+                  <div class="resource-title">Rest and Creativity</div>
+                  <div class="resource-link-desc">Discusses the link between rest and creative performance.</div>
+                  <span class="resource-link">https://www.saidhasyim.com/post/peak-lifes-work/the-relationship-between-rest-and-creativity</span>
+               </a>
+               <a href="https://www.sciencenewstoday.org/what-happens-to-the-brain-during-stress-and-anxiety" class="resource-item">
+                  <div class="resource-title">Brain During Stress</div>
+                  <div class="resource-link-desc">Explains what happens in the brain when experiencing stress and anxiety.</div>
+                  <span class="resource-link">https://www.sciencenewstoday.org/what-happens-to-the-brain-during-stress-and-anxiety</span>
+               </a>
+               <a href="https://www.downtownpsychological.com/blog/2023/8/2/the-importance-of-rest-on-mental-health" class="resource-item">
+                  <div class="resource-title">Importance of Rest</div>
+                  <div class="resource-link-desc">Highlights why rest is essential for mental health and emotional balance.</div>
+                  <span class="resource-link">https://www.downtownpsychological.com/blog/2023/8/2/the-importance-of-rest-on-mental-health</span>
+               </a>
+               <a href="https://healthiness360.com/how-does-depression-effect-your-energy.html" class="resource-item">
+                  <div class="resource-title">Depression and Energy</div>
+                  <div class="resource-link-desc">Examines how depression impacts energy levels and daily functioning.</div>
+                  <span class="resource-link">https://healthiness360.com/how-does-depression-effect-your-energy.html</span>
+               </a>
+               <a href="https://www.arisecounselinggroup.org/blog/managing-depression-with-lifestyle-changes-the-role-of-movement-nutrition-and-sleep" class="resource-item">
+                  <div class="resource-title">Lifestyle Changes for Depression</div>
+                  <div class="resource-link-desc">Outlines how movement, nutrition, and sleep can support recovery from depression.</div>
+                  <span class="resource-link">https://www.arisecounselinggroup.org/blog/managing-depression-with-lifestyle-changes-the-role-of-movement-nutrition-and-sleep</span>
+               </a>
+               <a href="https://www.mindglopsychotherapy.com/post/understanding-the-importance-of-rest-in-the-four-pillars-of-resilience" class="resource-item">
+                  <div class="resource-title">Rest in Resilience</div>
+                  <div class="resource-link-desc">Connects rest to the four pillars of resilience, emphasizing its role in mental strength.</div>
+                  <span class="resource-link">https://www.mindglopsychotherapy.com/post/understanding-the-importance-of-rest-in-the-four-pillars-of-resilience</span>
+               </a>
+               <a href="https://www.startwithyou.co/blog/the-art-of-resting-and-the-7-types-of-rest/" class="resource-item">
+                  <div class="resource-title">The Art of Resting and the 7 Types of Rest</div>
+                  <div class="resource-link-desc">Practical insights into the art of resting, with a focus on seven types of rest and how to apply them in daily life.</div>
+                  <span class="resource-link">https://www.startwithyou.co/blog/the-art-of-resting-and-the-7-types-of-rest/</span>
+               </a>
+            </div>
+         </section>
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.1px;
-      font-family: var(--serif);
-      font-size: 22px;
-      letter-spacing: -0.3px;
-      color: var(--black);
-    }
-
-    .logo img {
-      height: 80px;
-      width: auto;
-    }
-
-    nav {
-      display: flex;
-      gap: 36px;
-    }
-
-    nav a {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--blue);
-      transition: color 0.2s;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--black);
-    }
-
-    /* RESOURCES PAGE LAYOUT  */
-    .hero-resources {
-      background: var(--off-white);
-      text-align: center;
-      padding: 100px 48px 80px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-resources h1 {
-      font-family: var(--serif);
-      font-size: clamp(40px, 5vw, 64px);
-      font-style: italic;
-      margin-bottom: 12px;
-      color: var(--black);
-      line-height: 1;
-    }
-
-    .hero-resources p {
-      font-size: 16px;
-      color: var(--black);
-    }
-
-    .subtitle-label {
-      font-size: 14px;
-      color:var(--blue);
-      background: var(--off-white);
-      letter-spacing: 0.05em;
-      border: 1px solid var(--blue);
-      display: inline-block;
-      padding: 8px 20px;
-      transition: all 0.2s ease;
-    }
-
-    .subtitle-label:hover {
-      color:var(--white);
-      background: var(--khaki);
-      border-color: var(--khaki);
-    }
-
-    /*Section Divider*/
-    .section-container {
-      padding: 60px 48px;
-      scroll-margin-top: 80px;
-    }
-
-    /*Row label*/
-    .row-label {
-      font-size: 18px;
-      font-style: italic;
-      color: var(--black);
-      font-weight: 600;
-      margin-bottom: 32px;
-    }
-
-    :target .row-label {
-      font-weight: 600;
-    }
-
-    /* CATEGORY GRID  */
-    .categories-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    /*Category Placeholder*/
-    .category-card {
-      border: 1px solid var(--border);
-      padding: 40px 20px;
-      text-align: center;
-      transition: all 0.3s ease;
-      background: var(--white);
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    /*Category Hover Style*/
-    .category-card:hover {
-      background: var(--off-white);
-      border-color: #5C6F91;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(92,111,145,0.2);
-    }
-
-    /*Category Label Style*/
-    .category-label {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-      border-bottom: 1px dashed var(--border);
-      padding-bottom: 8px;
-      display: inline-block;
-    }
-
-    /* RESOURCE ITEMS LIST */
-    .resource-list { /*Resources Item list layout*/
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .resource-item {/*Resources Item list style*/
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--blue);
-      padding: 24px 30px;
-      background: var(--white);
-      transition: all 0.2s ease;
-      border-radius: 6px;
-    }
-
-    .resource-item:hover {/*Resources Item list hover*/
-        background: var(--off-white);
-        border-color: var(--blue);
-        box-shadow: 0 4px 12px rgba(92,111,145,0.15);
-    }
-
-    .resource-title {/*Resources Item list title*/
-      font-family: var(--serif);
-      font-size: 22px;
-      font-weight: 500;
-      color: var(--black);
-      margin-bottom: 8px;
-    }
-
-    .resource-link-desc {/*Resources Item link style*/
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .resource-link {
-      font-size: 14px;
-      color: var(--blue);
-      text-decoration: underline;
-    }
-
-   /* FOOTER */
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 48px;
-      border-top: 1px solid var(--border);
-      background: var(--white);
-      flex-wrap: wrap;
-      position: relative;
-    }
-
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contact-text {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-    }
-
-    .footer-left a {
-      font-size: 18px;
-      color: var(--black);
-      transition: color 0.2s;
-    }
-
-    .footer-left a:hover {
-      color: var(--blue);
-    }
-
-    .footer-nav{
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .footer-nav a {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #6B7A8F;
-      border: 1px solid #6B7A8F;
-      padding: 10px 22px;
-      transition: all 0.2s;
-      border-radius: 4px;
-    }
-
-    .footer-nav a:hover {
-      color: var(--white);
-      border-color: var(--khaki);
-      background-color: var(--khaki);
-      box-shadow: 0 2px 6px rgba(92,111,145,0.3);
-    }
-
-    .footer-right .back-to-top {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-
-    .footer-right .back-to-top:hover {
-      color: var(--blue);
-    }
-
-    .footer-right .back-to-top::before {
-      content: '↑';
-      font-size: 14px;
-    }
-
-    .copyright {
-      width: 100%;
-      text-align: center;
-      font-size: 13px;
-      color: var(--black);
-      background: var(--off-white);
-      padding: 6px 0;
-      margin-top: 0;
-    }
-
-    /*@media (max-width: 900px) {
-      .categories-grid { grid-template-columns: 1fr; gap: 20px; }
-    }*/
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <div class="logo">
-      <img src="../../assets/img/logo_notext.png" alt="Logo">
-      <span>InnovaTech</span>
-    </div>
-    <nav>
-      <a href="../../index.html">Home</a>
-      <a href="../about/about.html">About Us</a>
-      <a href="../authors/authors-home.html">Authors</a>
-      <a href="../article-home/article-home.html" >Articles</a>
-      <a href="resources.html" class="active">Resources</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-resources">
-      <h1>Resources</h1>
-      <a href="#section" class="subtitle-label">Helpful Materials for Tech College Students</a>
-    </section>
-
-    <!-- Categories Section-->
-    <section class="section-container" id="section">
-      <p class="row-label">Resource Categories</p>
-      <div class="categories-grid">
-        <a href="#web" class="category-card">
-          <div class="category-label">Website Links</div>
-        </a>
-        <a href="#article" class="category-card">
-          <div class="category-label">Article Links</div>
-        </a>
-        <a href="#books" class="category-card">
-          <div class="category-label">E-Books / Textbooks</div>
-        </a>
+         <!-- Book Resources -->
+         <section class="section-container" id="books">
+            <p class="row-label">E-Books/Textbooks</p>
+            <div class="resource-list">
+               <a href="#" class="resource-item">
+                  <div class="resource-title">Add the resource title here</div>
+                  <div class="resource-link-desc">Add the Description</div>
+                  <span class="resource-link">Add link here</span>
+               </a>
+               <a href="#" class="resource-item">
+                  <div class="resource-title">Add the resource title here</div>
+                  <div class="resource-link-desc">Add the Description</div>
+                  <span class="resource-link">Add link here</span>
+               </a>
+               <a href="#" class="resource-item">
+                  <div class="resource-title">Add the resource title here</div>
+                  <div class="resource-link-desc">Add the Description</div>
+                  <span class="resource-link">Add link here</span>
+               </a>
+               <a href="#" class="resource-item">
+                  <div class="resource-title">Add the resource title here</div>
+                  <div class="resource-link-desc">Add the Description</div>
+                  <span class="resource-link">Add link here</span>
+               </a>
+               <a href="#" class="resource-item">
+                  <div class="resource-title">Add the resource title here</div>
+                  <div class="resource-link-desc">Add the Description</div>
+                  <span class="resource-link">Add link here</span>
+               </a>
+            </div>
+         </section>
+      </main>
+      <div class="footer-nav">
+         <a href="../../index.html">← Back to Home Page</a>
       </div>
-    </section>
 
-    <!--Website Resources-->
-    <section class="section-container" id="web">
-      <p class="row-label">Website Links</p>
-      <div class="resource-list">
-        <a href="https://www.apa.org/topics/mental-health/seven-rest-types" class="resource-item">
-          <div class="resource-title">Seven Types of Rest</div>
-          <div class="resource-link-desc">Overview of seven distinct forms of rest, explaining how each supports mental health and well-being.
-          </div>
-          <span class="resource-link">https://www.apa.org/topics/mental-health/seven-rest-types</span>
-        </a>
-        
-        <a href="https://www.apa.org/topics/sleep" class="resource-item">
-          <div class="resource-title">Sleep and Sleep Disorders</div>
-          <div class="resource-link-desc">Authoritative information on the science of sleep, common disorders, and strategies for better rest.</div>
-          <span class="resource-link">https://www.apa.org/topics/sleep</span>
-        </a>
+      <!-- FOOTER -->
+      <footer>
+         <!-- LEFT -->
+         <div class="footer-left">
+            <span class="contact-text">Contact Us</span>
+            <a href="https://www.facebook.com/profile.php?id=61577461889890">
+            <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/InnovaTechG1">
+            <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com/innovatech.integ">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:innovatech.integ@gmail.com">
+            <i class="fa-regular fa-envelope"></i>
+            </a>
+         </div>
 
-        <a href="https://www.apa.org/topics/mindfulness/meditation" class="resource-item">
-          <div class="resource-title">Mindfulness Meditation</div>
-          <div class="resource-link-desc">Research-based guidance on how mindfulness meditation reduces stress and improves resilience.</div>
-          <span class="resource-link">https://www.apa.org/topics/mindfulness/meditation</span>
-        </a>
+         <!-- CENTER -->
+         <div class="footer-center">
+            © 2026 InnovaTech. All rights reserved.
+         </div>
 
-        <a href="https://www.apa.org/topics/anxiety" class="resource-item">
-          <div class="resource-title">Anxiety</div>
-          <div class="resource-link-desc">Trusted insights into anxiety symptoms, causes, and coping strategies.</div>
-          <span class="resource-link">https://www.apa.org/topics/anxiety</span>
-        </a>
-
-        <a href="https://www.apa.org/topics/resilience" class="resource-item">
-          <div class="resource-title">Resilience Guide</div>
-          <div class="resource-link-desc">Practical tips and evidence-based strategies to build resilience in everyday life.</div>
-          <span class="resource-link">https://www.apa.org/topics/resilience</span>
-        </a>
-
-        <a href="https://psychcentral.com/lib/what-is-resilience" class="resource-item">
-          <div class="resource-title">What is Resilience?</div>
-          <div class="resource-link-desc">Accessible explanation of resilience, its importance, and how to strengthen it.</div>
-          <span class="resource-link">https://psychcentral.com/lib/what-is-resilience</span>
-        </a>
-        <a href="https://www.coursera.org/articles/computer-science-specializations" class="resource-item">
-          <div class="resource-title">Choosing a CS Specialization</div>
-          <div class="resource-link-desc">A comprehensive guide exploring various CS career paths, job outlooks, and salary information to help students align their studies with professional goals.</div>
-          <span class="resource-link">https://www.coursera.org/articles/computer-science-specializations</span>
-        </a>
-
-        <a href="https://cse.umn.edu/cs/computer-science-bs-specializations" class="resource-item">
-          <div class="resource-title">Computer Science BS Tracks</div>
-          <div class="resource-link-desc">An overview of academic tracks including AI, Systems, and Software Engineering designed to help undergraduates build a focused portfolio for the job market.</div>
-          <span class="resource-link">https://cse.umn.edu/cs/computer-science-bs-specializations</span>
-        </a>
-
-        <a href="https://www.indeed.com/career-advice/career-development/how-to-choose-computer-science-specialization" class="resource-item">
-          <div class="resource-title">CS Careers & Specializations</div>
-          <div class="resource-link-desc">Career-focused advice on navigating the vast subfields of computer science, featuring practical steps to research and select a specialty based on industry demand.</div>
-          <span class="resource-link">https://www.indeed.com/career-advice/career-development/how-to-choose-computer-science-specialization</span>
-        </a>
-        <a href="https://www.codecademy.com/articles/what-is-computer-science" class="resource-item">
-          <div class="resource-title">What is Computer Science?</div>
-          <div class="resource-link-desc">An introductory overview of computer science, its significance, and the skills required to succeed in the field.</div>
-          <span class="resource-link">https://www.codecademy.com/articles/what-is-computer-science</span>
-        </a>
-
-        
-    </section>
-
-    <!--Article Resources -->
-    <section class="section-container" id="article">
-      <p class="row-label">Article Links</p>
-      <div class="resource-list">
-        <a href="https://www.psycix.com/article/how-mindful-rest-can-improve-your-mental-health" class="resource-item">
-          <div class="resource-title">Mindful Rest</div>
-          <div class="resource-link-desc">Explores how mindful rest can boost mental health and reduce stress.</div>
-          <span class="resource-link">https://www.psycix.com/article/how-mindful-rest-can-improve-your-mental-health</span>
-        </a>
-        
-        <a href="https://www.saidhasyim.com/post/peak-lifes-work/the-relationship-between-rest-and-creativity" class="resource-item">
-          <div class="resource-title">Rest and Creativity</div>
-          <div class="resource-link-desc">Discusses the link between rest and creative performance.</div>
-          <span class="resource-link">https://www.saidhasyim.com/post/peak-lifes-work/the-relationship-between-rest-and-creativity</span>
-        </a>
-
-        <a href="https://www.sciencenewstoday.org/what-happens-to-the-brain-during-stress-and-anxiety" class="resource-item">
-          <div class="resource-title">Brain During Stress</div>
-          <div class="resource-link-desc">Explains what happens in the brain when experiencing stress and anxiety.</div>
-          <span class="resource-link">https://www.sciencenewstoday.org/what-happens-to-the-brain-during-stress-and-anxiety</span>
-        </a>
-
-        <a href="https://www.downtownpsychological.com/blog/2023/8/2/the-importance-of-rest-on-mental-health" class="resource-item">
-          <div class="resource-title">Importance of Rest</div>
-          <div class="resource-link-desc">Highlights why rest is essential for mental health and emotional balance.</div>
-          <span class="resource-link">https://www.downtownpsychological.com/blog/2023/8/2/the-importance-of-rest-on-mental-health</span>
-        </a>
-
-        <a href="https://healthiness360.com/how-does-depression-effect-your-energy.html" class="resource-item">
-          <div class="resource-title">Depression and Energy</div>
-          <div class="resource-link-desc">Examines how depression impacts energy levels and daily functioning.</div>
-          <span class="resource-link">https://healthiness360.com/how-does-depression-effect-your-energy.html</span>
-        </a>
-
-        <a href="https://www.arisecounselinggroup.org/blog/managing-depression-with-lifestyle-changes-the-role-of-movement-nutrition-and-sleep" class="resource-item">
-          <div class="resource-title">Lifestyle Changes for Depression</div>
-          <div class="resource-link-desc">Outlines how movement, nutrition, and sleep can support recovery from depression.</div>
-          <span class="resource-link">https://www.arisecounselinggroup.org/blog/managing-depression-with-lifestyle-changes-the-role-of-movement-nutrition-and-sleep</span>
-        </a>
-
-        <a href="https://www.mindglopsychotherapy.com/post/understanding-the-importance-of-rest-in-the-four-pillars-of-resilience" class="resource-item">
-          <div class="resource-title">Rest in Resilience</div>
-          <div class="resource-link-desc">Connects rest to the four pillars of resilience, emphasizing its role in mental strength.</div>
-          <span class="resource-link">https://www.mindglopsychotherapy.com/post/understanding-the-importance-of-rest-in-the-four-pillars-of-resilience</span>
-        </a>
-
-        <a href="https://www.startwithyou.co/blog/the-art-of-resting-and-the-7-types-of-rest/" class="resource-item">
-          <div class="resource-title">The Art of Resting and the 7 Types of Rest</div>
-          <div class="resource-link-desc">Practical insights into the art of resting, with a focus on seven types of rest and how to apply them in daily life.</div>
-          <span class="resource-link">https://www.startwithyou.co/blog/the-art-of-resting-and-the-7-types-of-rest/</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Book Resources -->
-    <section class="section-container" id="books">
-      <p class="row-label">E-Books/Textbooks</p>
-      <div class="resource-list">
-        <a href="#" class="resource-item">
-          <div class="resource-title">Add the resource title here</div>
-          <div class="resource-link-desc">Add the Description</div>
-          <span class="resource-link">Add link here</span>
-        </a>
-        
-        <a href="#" class="resource-item">
-          <div class="resource-title">Add the resource title here</div>
-          <div class="resource-link-desc">Add the Description</div>
-          <span class="resource-link">Add link here</span>
-        </a>
-
-        <a href="#" class="resource-item">
-          <div class="resource-title">Add the resource title here</div>
-          <div class="resource-link-desc">Add the Description</div>
-          <span class="resource-link">Add link here</span>
-        </a>
-
-        <a href="#" class="resource-item">
-          <div class="resource-title">Add the resource title here</div>
-          <div class="resource-link-desc">Add the Description</div>
-          <span class="resource-link">Add link here</span>
-        </a>
-
-        <a href="#" class="resource-item">
-          <div class="resource-title">Add the resource title here</div>
-          <div class="resource-link-desc">Add the Description</div>
-          <span class="resource-link">Add link here</span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <!-- Left: Contact + Icons -->
-    <div class="footer-left">
-      <span class="contact-text">Contact Us</span>
-
-      <a href="https://www.facebook.com/profile.php?id=61577461889890">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://x.com/InnovaTechG1">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com/innovatech.integ">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="mailto:innovatech.integ@gmail.com">
-        <i class="fa-regular fa-envelope"></i>
-      </a>
-    </div>
-
-    <!-- Center: Navigation -->
-    <div class="footer-nav">
-      <a href="../../index.html">← Back to Home Page</a>
-    </div>
-
-    <!-- Right: Back to Top -->
-    <div class="footer-right">
-      <a href="#" class="back-to-top">Back to Top</a>
-    </div>
-  </footer>
-
-  <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
-
-</body>
+         <!-- RIGHT -->
+         <div class="footer-right">
+            <a href="#" class="back-to-top">Back to Top</a>
+         </div>
+      </footer>
+   </body>
 </html>
