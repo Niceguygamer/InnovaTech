@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Apps</title>
+
   <!--for back-to-top-->
   <link rel="stylesheet" href ="../../../assets/css/back-to-top.css">
-
 
   <!-- for icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/apple-touch-icon.png">
@@ -178,10 +178,10 @@
     }
 
     .article-image {
-  width: 70%;
-  max-width: 500px;
-  margin: 0 auto 36px;
-}
+      width: 70%;
+      max-width: 500px;
+      margin: 0 auto 36px;
+    }
 
     .article-image img {
       width: 100%;
@@ -192,33 +192,33 @@
     }
 
     .article-image {
-  width: 75%;
-  max-width: 550px;
-  margin: 0 auto 36px;
-}
+      width: 75%;
+      max-width: 550px;
+      margin: 0 auto 36px;
+    }
 
-.article-image figure {
-  margin: 0;
-}
+    .article-image figure {
+      margin: 0;
+    }
 
-.article-image img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-  border-radius: 4px;
-}
+    .article-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
 
-.article-image figcaption {
-  font-size: 12px;
-  color: var(--muted);
-  text-align: center;
-  padding-top: 12px;
-  font-style: italic;
-  line-height: 1.5;
-  width: 100%;
-  word-wrap: break-word;
-}
+    .article-image figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      padding-top: 12px;
+      font-style: italic;
+      line-height: 1.5;
+      width: 100%;
+      word-wrap: break-word;
+    }
 
     .article-image figcaption a:hover {
       color: var(--blue);
@@ -305,21 +305,21 @@
     }
 
     .author-avatar {
-  width: 48px;
-  height: 48px;
-  background: var(--off-white);
-  border-radius: 50%;
-  flex-shrink: 0;
-  border: 1px solid var(--border);
-  overflow: hidden;
-}
+      width: 48px;
+      height: 48px;
+      background: var(--off-white);
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
 
-.author-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     .author-card-name {
       font-family: var(--serif);
@@ -386,10 +386,8 @@
     /* ── FOOTER ── */
     footer {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
       padding: 24px 48px;
-      border-top: 1px solid var(--border);
       background: var(--white);
     }
 
@@ -420,7 +418,9 @@
     /* CENTER */
     .footer-nav {
       display: flex;
+      justify-content: center;
       gap: 12px;
+      margin-bottom: 16px;
     }
 
     .footer-nav a {
@@ -442,13 +442,25 @@
       background-color: var(--khaki);
     }
 
+    .footer-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: var(--black);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
     /* RIGHT */
     .footer-right {
       display: flex;
       align-items: center;
     }
-
-    
   </style>
 </head>
 
