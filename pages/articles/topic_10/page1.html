@@ -454,33 +454,6 @@
       display: flex;
       align-items: center;
     }
-
-      nav.collapse.show {
-    display: flex !important;
-    flex-direction: column;
-    align-items: flex-start;
-      }
-      nav.collapse {
-        width: 100%;
-      }
-
-      @media (max-width: 992px) {
-        nav {
-          width: 100%;
-          flex-direction: column;
-          gap: 16px;
-          margin-top: 10px;
-        }
-      }
-
-      @media (min-width: 992px) {
-        nav.collapse {
-          display: flex !important;
-          width: auto;
-          flex-direction: row;
-        }
-      }
-
   </style>
 </head>
 
@@ -493,7 +466,7 @@
       <span>InnovaTech</span>
     </div>
       <!-- TOGGLE BUTTON (Bootstrap) -->
-  <button class="btn d-lg-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+  <button class="btn d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
   ☰
 </button>
     <nav id="mainNav" class="collapse d-lg-flex">
