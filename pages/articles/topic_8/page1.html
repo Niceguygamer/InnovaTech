@@ -374,70 +374,84 @@
       color: var(--blue);
     }
 
-    .button-row {
-      text-align: center;
-      margin: 30px 0 10px;
+    /* ── FOOTER ── */
+    footer {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 48px;
+      background: var(--white);
     }
 
-    .button-row .btn-outline {
-      display: inline-block;
-      border: 1px solid var(--blue);
+    /* LEFT SIDE */
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-text {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--black);
+      margin-right: 8px;
+    }
+
+    .footer-left a {
+      font-size: 18px;
+      color: var(--black);
+      transition: color 0.2s;
+    }
+
+    .footer-left a:hover {
       color: var(--blue);
-      padding: 12px 28px;
-      margin: 0 10px;
+    }
+
+    /* CENTER */
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .footer-nav a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      font-size: 13px;
-      transition: background 0.2s, color 0.2s;
+      padding: 10px 22px;
+      color: var(--muted);
+      border: 1px solid var(--muted);
+      background-color: transparent;
+      border-radius: 4px;
+      transition: all 0.2s;
     }
 
-    .button-row .btn-outline:hover {
-      background: var(--khaki);
-      color: var(--white);
+    .footer-nav a:hover {
+      color: var(--black);
       border-color: var(--khaki);
+      background-color: var(--khaki);
     }
 
-    /* FOOTER */
-         footer {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         padding: 24px 48px;
-         background: var(--white);
-         position: relative;
-         }
-         /* LEFT */
-         .footer-left {
-         display: flex;
-         align-items: center;
-         gap: 16px;
-         }
-         .contact-text {
-         font-weight: 500;
-         font-size: 14px;
-         color: var(--black);
-         }
-         .footer-left a {
-         font-size: 18px;
-         color: var(--black);
-         transition: color 0.2s;
-         }
-         .footer-left a:hover {
-         color: var(--blue);
-         }
-         /* CENTER */
-         .footer-center {
-         font-size: 13px;
-         color: var(--black);
-         text-align: center;
-         position: absolute;
-         left: 50%;
-         transform: translateX(-50%);
-         }
-         /* RIGHT */
-         .footer-right {
-         display: flex;
-         align-items: center;
-         }
+    .footer-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: var(--black);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    /* RIGHT */
+    .footer-right {
+      display: flex;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -592,37 +606,41 @@
     </div>
 
   </main>
-  <div class="button-row">
-         <a href="../../article-home/article-home.html" class="btn-outline">← Back to Articles</a>
-         <a href="../topic_8/page2.html" class="btn-outline">Next →</a>
-  </div>
+
 <button id="backToTop" title="Back to Top">↑</button>
+
   <!-- FOOTER -->
-      <footer>
-         <!-- LEFT -->
-         <div class="footer-left">
-            <span class="contact-text">Contact Us</span>
-            <a href="https://www.facebook.com/profile.php?id=61577461889890">
-            <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com/InnovaTechG1">
-            <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com/innovatech.integ">
-            <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="mailto:innovatech.integ@gmail.com">
-            <i class="fa-regular fa-envelope"></i>
-            </a>
-         </div>
-         <!-- CENTER -->
-         <div class="footer-center">
-            © 2026 InnovaTech. All rights reserved.
-         </div>
-         <!-- RIGHT -->
-         <div class="footer-right">
-         </div>
-      </footer>
+  <footer>
+    <!-- Center: Navigation -->
+    <div class="footer-nav">
+      <a href="../../article-home/article-home.html">← Back to Articles</a>
+      <a href="page3.html">Next →</a>
+    </div>
+
+    <!-- Left: Contact + Icons -->
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <span class="contact-text">Contact Us</span>
+
+        <a href="https://www.facebook.com/profile.php?id=61577461889890">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/InnovaTechG1">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/innovatech.integ">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="mailto:innovatech.integ@gmail.com">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Center: Copyright-->
+      <div class="footer-center">© 2026 InnovaTech. All rights reserved.</div>
+    </div>
+  </footer>
+
 <script src="../../../assets/js/back-to-top.js"></script>
 </body>
 </html>
