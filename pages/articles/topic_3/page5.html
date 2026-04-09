@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Building Competence Without Destroying Yourself — Topic 3</title>
+
   <!--for back-to-top-->
   <link rel="stylesheet" href ="../../../assets/css/back-to-top.css">
 
@@ -365,10 +366,8 @@
     /* ── FOOTER ── */
     footer {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
       padding: 24px 48px;
-      border-top: 1px solid var(--border);
       background: var(--white);
     }
 
@@ -399,7 +398,9 @@
     /* CENTER */
     .footer-nav {
       display: flex;
+      justify-content: center;
       gap: 12px;
+      margin-bottom: 16px;
     }
 
     .footer-nav a {
@@ -421,20 +422,24 @@
       background-color: var(--khaki);
     }
 
+    .footer-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: var(--black);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
     /* RIGHT */
     .footer-right {
       display: flex;
       align-items: center;
-    }
-
-    .copyright {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 13px;
-      color: var(--black);
-      background: var(--off-white);
-      padding: 6px 0;
-      width: 100%;
     }
   </style>
 </head>
@@ -631,9 +636,17 @@
 
   </main>
 <button id="backToTop" title="Back to Top">↑</button>
+
   <!-- FOOTER -->
-    <footer>
-      <!-- Left: Contact + Icons -->
+  <footer>
+    <!-- Center: Navigation -->
+    <div class="footer-nav">
+      <a href="page4.html">← Prev</a>
+      <a href="../../article-home/article-home.html">Back to Articles →</a>
+    </div>
+
+    <!-- Left: Contact + Icons -->
+    <div class="footer-bottom">
       <div class="footer-left">
         <span class="contact-text">Contact Us</span>
 
@@ -651,18 +664,10 @@
         </a>
       </div>
 
-      <!-- Center: Navigation -->
-      <div class="footer-nav">
-        <a href="page4.html">← Prev</a>
-        <a href="../topic_4/page1.html">Next Article →</a>
-      </div>
-
-      <!-- Right: Back to Top -->
-      <div class="footer-right">
-        
-      </div>
-    </footer>
-  <div class="copyright">© 2026 InnovaTech. All rights reserved.</div>
+      <!-- Center: Copyright-->
+      <div class="footer-center">© 2026 InnovaTech. All rights reserved.</div>
+    </div>
+  </footer>
 <script src="../../../assets/js/back-to-top.js"></script>
 
 </body>
