@@ -73,66 +73,48 @@
       z-index: 1050;
     }
 
+        /* Remove the absolute positioning that causes the overlap */
     .navbar-brand.logo {
-      position: absolute; /* Takes it out of the normal layout flow */
-      top: 5px;          /* Adjust vertical alignment */
-      left: 48px;        /* Matches your container padding */
+      position: static;     /* Changed from absolute */
       display: flex;
-      align-items: center;
-      gap: 10px;
-      z-index: 1100;     /* Ensure it stays above everything */
-      padding: 0;
+      align-items: center;  /* Centers logo and text vertically */
+      gap: 15px;            /* Space between image and InnovaTech text */
+      padding: 10px 0;      /* Adds breathing room */
     }
 
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--serif);
-      font-size: 22px;
-      color: var(--black) !important;
-    }
-
+    /* Adjust the image size */
     .logo img {
-      height: 120px;     /* Set your desired large size here */
+      height: 80px;         /* Adjust this value to your preferred "large" size */
       width: auto;
       transition: transform 0.3s ease;
+      display: block;
     }
+
+    /* Ensure the text is aligned properly */
     .logo span {
-    font-family: var(--serif);
-    font-size: 24px;
-    color: var(--black);
-  }
-
-
-    /* Style the links to match your design */
-    .navbar-nav .nav-link {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--blue) !important;
-      transition: color 0.2s;
+      font-family: var(--serif);
+      font-size: 26px;      /* Slightly larger to match the bigger logo */
+      color: var(--black);
+      line-height: 1;       /* Prevents text from shifting alignment */
     }
 
-    .navbar-nav .nav-link.active, 
-    .navbar-nav .nav-link:hover {
-      color: var(--black) !important;
+    /* Keep the nav links on the right */
+    .navbar-collapse {
+      flex-grow: 1;
     }
 
-    /* Mobile Fix: Ensure the menu doesn't overlap content */
+    /* Mobile Fix: Ensure it looks clean on smaller screens */
     @media (max-width: 991px) {
-  .navbar-brand.logo {
-    position: static; 
-  }
-  .logo img {
-    height: 60px; /* Smaller for mobile */
-  }
-  header.navbar {
-    height: auto;
-  }
-}
+      .logo img {
+        height: 50px;       /* Smaller logo for mobile view */
+      }
+      .logo span {
+        font-size: 20px;
+      }
+      header.navbar {
+        min-height: auto;
+      }
+    }
 
     .article-header {
       background: var(--blue);
@@ -481,18 +463,19 @@
 <body>
 
   <header class="navbar navbar-expand-lg border-bottom">
-  <div class="container-fluid px-md-5">
+  <div class="container-fluid px-md-5 d-flex align-items: center; justify-content: space-between;">
+    
     <a class="navbar-brand logo" href="#">
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
       <span>InnovaTech</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navMenu">
-      <div class="navbar-nav ms-auto gap-lg-4 mt-3 mt-lg-0">
+      <div class="navbar-nav ms-auto gap-lg-4">
         <a class="nav-link" href="../../../index.html">Home</a>
         <a class="nav-link" href="../../about/about.html">About Us</a>
         <a class="nav-link" href="../../authors/authors-home.html">Authors</a>
@@ -500,8 +483,9 @@
         <a class="nav-link" href="../../resources/resources.html">Resources</a>
       </div>
     </div>
+    
   </div>
-</header>
+  </header>
 
   <main>
 
