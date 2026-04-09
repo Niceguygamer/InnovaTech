@@ -387,8 +387,8 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      flex-wrap: wrap;
     }
-
     .contact-text {
       font-weight: 500;
       font-size: 14px;
@@ -404,6 +404,12 @@
 
     .footer-left a:hover {
       color: var(--blue);
+    }
+
+    .footer-center {
+      font-size: 13px;
+      color: var(--black);
+      text-align: center;
     }
 
     /* CENTER */
@@ -433,17 +439,10 @@
       background-color: var(--khaki);
     }
 
-    .footer-center {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 13px;
-      color: var(--black);
-    }
-
     .footer-bottom {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap; /* allows stacking on small screens */
+      gap: 16px;
       position: relative;
     }
 
@@ -451,6 +450,17 @@
     .footer-right {
       display: flex;
       align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-left {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -604,10 +614,10 @@
 <button id="backToTop" title="Back to Top">↑</button>
 
   <!-- FOOTER -->
-  <footer class="py-4 border-top">
+  <footer>
     <div class="container">
     <!-- Center: Navigation -->
-    <div class="footer-nav">
+    <div class="footer-nav ">
       <a href="../../article-home/article-home.html">← Back to Articles</a>
       <a href="page2.html">Next →</a>
     </div>
