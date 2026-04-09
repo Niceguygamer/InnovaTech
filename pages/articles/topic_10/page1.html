@@ -442,15 +442,21 @@
       align-items: center;
     }
 
+   /* Only affect mobile layout */
     @media (max-width: 768px) {
-    .footer-bottom {
-      text-align: center;
-    }
 
-    .footer-left {
-      justify-content: center;
+      .footer-left,
+      .footer-center,
+      .footer-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      .footer-left .d-flex {
+        justify-content: center !important;
+      }
     }
-  }
   </style>
 </head>
 
@@ -612,8 +618,8 @@
     </div>
 
     <!-- Left: Contact + Icons -->
-    <div class="row footer-bottom text-center text-md-start">
-      <div class="col-12 col-md-4 footer-left mb-3 mb-md-0">
+    <div class="row footer-bottom flex-column flex-md-row text-center text-md-start align-items-center">
+      <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">
         <div class="d-flex justify-content-center justify-content-md-start align-items-center gap-3 flex-wrap">
         <span class="contact-text">Contact Us</span>
 
