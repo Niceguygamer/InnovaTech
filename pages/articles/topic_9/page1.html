@@ -325,13 +325,11 @@
 
     .related-article:hover .related-title { color: var(--blue); }
 
-    /* ── FOOTER ── */
+     /* ── FOOTER ── */
     footer {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
       padding: 24px 48px;
-      border-top: 1px solid var(--border);
       background: var(--white);
     }
 
@@ -360,15 +358,12 @@
     }
 
     /* CENTER */
-    .footer-center {
-      font-size: 13px;
-      color: var(--black);
-      text-align: center;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
     }
-
 
     .footer-nav a {
       font-size: 12px;
@@ -389,12 +384,25 @@
       background-color: var(--khaki);
     }
 
+    .footer-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: var(--black);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
     /* RIGHT */
     .footer-right {
       display: flex;
       align-items: center;
     }
-
     .copyright {
       text-align: center;
       margin-top: 8px;
