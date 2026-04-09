@@ -73,6 +73,18 @@
       z-index: 1050;
     }
 
+    .navbar-brand.logo {
+      position: absolute; /* Takes it out of the normal layout flow */
+      top: 5px;          /* Adjust vertical alignment */
+      left: 48px;        /* Matches your container padding */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1100;     /* Ensure it stays above everything */
+      padding: 0;
+    }
+
+
     .logo {
       display: flex;
       align-items: center;
@@ -83,9 +95,16 @@
     }
 
     .logo img {
-      height: 100px; /* Reduced to fit better */
+      height: 120px;     /* Set your desired large size here */
       width: auto;
+      transition: transform 0.3s ease;
     }
+    .logo span {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--black);
+  }
+
 
     /* Style the links to match your design */
     .navbar-nav .nav-link {
@@ -104,12 +123,16 @@
 
     /* Mobile Fix: Ensure the menu doesn't overlap content */
     @media (max-width: 991px) {
-      .navbar-collapse {
-        background: white;
-        padding: 20px;
-        border-top: 1px solid var(--border);
-      }
-    }
+  .navbar-brand.logo {
+    position: static; 
+  }
+  .logo img {
+    height: 60px; /* Smaller for mobile */
+  }
+  header.navbar {
+    height: auto;
+  }
+}
 
     .article-header {
       background: var(--blue);
