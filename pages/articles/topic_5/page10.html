@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Build the System That is Actually Yours</title>
+
   <!--for back-to-top-->
   <link rel="stylesheet" href ="../../../assets/css/back-to-top.css">
 
@@ -365,10 +366,8 @@
     /* ── FOOTER ── */
     footer {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
       padding: 24px 48px;
-      border-top: 1px solid var(--border);
       background: var(--white);
     }
 
@@ -399,7 +398,9 @@
     /* CENTER */
     .footer-nav {
       display: flex;
+      justify-content: center;
       gap: 12px;
+      margin-bottom: 16px;
     }
 
     .footer-nav a {
@@ -419,6 +420,20 @@
       color: var(--black);
       border-color: var(--khaki);
       background-color: var(--khaki);
+    }
+
+    .footer-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: var(--black);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      position: relative;
     }
 
     /* RIGHT */
@@ -582,36 +597,40 @@
 
   </main>
 <button id="backToTop" title="Back to Top">↑</button>
+
   <!-- FOOTER -->
   <footer>
-    <!-- Left: Contact + Icons -->
-    <div class="footer-left">
-      <span class="contact-text">Contact Us</span>
-
-      <a href="https://www.facebook.com/profile.php?id=61577461889890">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://x.com/InnovaTechG1">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com/innovatech.integ">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="mailto:innovatech.integ@gmail.com">
-        <i class="fa-regular fa-envelope"></i>
-      </a>
-    </div>
-
     <!-- Center: Navigation -->
     <div class="footer-nav">
       <a href="page9.html">← Prev</a>
-      <a href="../topic_6/page1.html">Next Article →</a>
+      <a href="../../article-home/article-home.html">Back to Articles →</a>
     </div>
 
-    <!-- Right: Back to Top -->
-    <div class="footer-right">
+    <!-- Left: Contact + Icons -->
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <span class="contact-text">Contact Us</span>
+
+        <a href="https://www.facebook.com/profile.php?id=61577461889890">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/InnovaTechG1">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/innovatech.integ">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="mailto:innovatech.integ@gmail.com">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Center: Copyright-->
+      <div class="footer-center">© 2026 InnovaTech. All rights reserved.</div>
     </div>
   </footer>
-<script src="../../../assets/js/back-to-top.js"></script>
+
+  <script src="../../../assets/js/back-to-top.js"></script>
+
 </body>
 </html>
