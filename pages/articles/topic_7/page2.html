@@ -386,12 +386,11 @@
     /* ── FOOTER ── */
     footer {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
       padding: 24px 48px;
-      border-top: 1px solid var(--border);
       background: var(--white);
     }
+
 
     /* LEFT SIDE */
     .footer-left {
@@ -400,6 +399,7 @@
       gap: 16px;
     }
 
+
     .contact-text {
       font-weight: 500;
       font-size: 14px;
@@ -407,21 +407,27 @@
       margin-right: 8px;
     }
 
+
     .footer-left a {
       font-size: 18px;
       color: var(--black);
       transition: color 0.2s;
     }
 
+
     .footer-left a:hover {
       color: var(--blue);
     }
 
+
     /* CENTER */
     .footer-nav {
       display: flex;
+      justify-content: center;
       gap: 12px;
+      margin-bottom: 16px;
     }
+
 
     .footer-nav a {
       font-size: 12px;
@@ -436,11 +442,29 @@
       transition: all 0.2s;
     }
 
+
     .footer-nav a:hover {
       color: var(--black);
       border-color: var(--khaki);
       background-color: var(--khaki);
     }
+
+
+    .footer-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: var(--black);
+    }
+
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
 
     /* RIGHT */
     .footer-right {
@@ -618,6 +642,11 @@
 <button id="backToTop" title="Back to Top">↑</button>
   <!-- FOOTER -->
   <footer>
+    <!-- Center: Navigation -->
+    <div class="footer-nav">
+      <a href="page1.html">← Prev</a>
+      <a href="page3.html">Next →</a>
+    </div>
     <!-- Left: Contact + Icons -->
     <div class="footer-bottom">
       <div class="footer-left">
@@ -640,11 +669,7 @@
       <!-- Center: Copyright-->
       <div class="footer-center">© 2026 InnovaTech. All rights reserved.</div>
     </div>
-    <!-- Center: Navigation -->
-    <div class="footer-nav">
-      <a href="page1.html">← Prev</a>
-      <a href="page3.html">Next →</a>
-    </div>
+    
   </footer>
 <script src="../../../assets/js/back-to-top.js"></script>
 </body>
