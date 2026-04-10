@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Skills Nobody Puts on the Syllabus — Topic 3</title>
+  
+<!--BootstrapCCS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
   <!--for back-to-top-->
   <link rel="stylesheet" href ="../../../assets/css/back-to-top.css">
@@ -21,445 +24,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --blue: #5C6F91;
-      --black: #33363A;
-      --white: #ffffff;
-      --off-white: #F3F4F6;
-      --muted: #6B7A8F;
-      --border: #e5e4e0;
-      --khaki: #D8C9A3;
-      --gray: #8C949C;
-      --dark_gray: #2C2F33;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'DM Sans', sans-serif;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--sans);
-      font-weight: 300;
-      background: var(--white);
-      color: var(--black);
-      font-size: 15px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 64px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.1px;
-      font-family: var(--serif);
-      font-size: 22px;
-      letter-spacing: -0.3px;
-      color: var(--black);
-    }
-
-    .logo img {
-      height: 80px;
-      width: auto;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      gap: 36px;
-    }
-
-    nav a {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--blue);
-      transition: color 0.2s;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--black);
-      text-shadow: 0.06px 0 0
-    }
-
-    .article-header {
-      background: var(--blue);
-      border-bottom: 1px solid var(--border);
-      padding: 72px 0 64px;
-      box-shadow: inset 0 -1px 0 var(--border);
-    }
-
-    .article-header-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 48px;
-    }
-
-    .article-tag {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--white);
-      opacity: 0.8;
-      margin-bottom: 16px;
-    }
-
-    .article-header h1 {
-      font-family: var(--serif);
-      font-size: clamp(32px, 5vw, 52px);
-      font-weight: 400;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-      color: var(--white);
-      margin-bottom: 20px;
-    }
-
-    .article-meta {
-      font-size: 13px;
-      color: var(--white);
-      opacity: 0.7;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .article-meta .author-name {
-      color: var(--white);
-      font-weight: 500;
-    }
-
-    .article-meta .dot {
-      width: 3px;
-      height: 3px;
-      background: var(--white);
-      border-radius: 50%;
-    }
-
-    .article-layout {
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      max-width: 1100px;
-      margin: 0 auto;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .article-content {
-      padding: 56px 52px 56px 48px;
-      border-right: 1px solid var(--border);
-    }
-
-    .article-image {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto 36px;
-      display: block;
-    }
-
-    .article-image img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      display: block;
-      border-radius: 4px;
-    }
-
-    .article-image figcaption {
-      font-size: 12px;
-      color: var(--muted);
-      text-align: center;
-      padding: 12px 0;
-      font-style: italic;
-    }
-
-    .article-image figcaption a:hover {
-      color: var(--blue);
-    }
-
-    .lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 6px;
-    }
-
-    .lightbox:target {
-      display: flex;
-    }
-
-    .article-intro {
-      font-size: 18px;
-      font-weight: 300;
-      color: var(--black);
-      line-height: 1.7;
-      margin-bottom: 32px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--border);
-      text-align: justify;
-      text-justify: inter-word;
-    }
-
-    .article-content h2 {
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 400;
-      color: var(--black);
-      margin: 40px 0 16px;
-      letter-spacing: -0.3px;
-    }
-
-    .article-body p {
-      font-size: 15px;
-      font-weight: 300;
-      color: var(--black);
-      line-height: 1.85;
-      margin-bottom: 24px;
-      text-align: justify;
-      text-justify: inter-word;
-    }
-
-    .article-sidebar {
-      padding: 56px 32px;
-    }
-
-    .sidebar-section {
-      margin-bottom: 40px;
-    }
-
-    .sidebar-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .author-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 8px;
-    }
-
-    .author-avatar {
-      width: 48px;
-      height: 48px;
-      background: var(--off-white);
-      border-radius: 50%;
-      flex-shrink: 0;
-      border: 1px solid var(--border);
-      overflow: hidden;
-    }
-
-    .author-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .author-card-name {
-      font-family: var(--serif);
-      font-size: 16px;
-      color: var(--black);
-    }
-
-    .author-card-role {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .btn-outline {
-      display: inline-block;
-      border: 1px solid var(--dark_gray);
-      color: var(--dark_gray);
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 8px 18px;
-      margin-top: 14px;
-      transition: all 0.2s;
-      background-color: transparent;
-    }
-
-    .btn-outline:hover {
-      background-color: var(--blue);
-      color: var(--white);
-      border-color: var(--white);
-    }
-
-    .related-article {
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-      cursor: pointer;
-    }
-
-    .related-article:first-of-type {
-      padding-top: 0;
-    }
-
-    .related-tag {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 4px;
-    }
-
-    .related-title {
-      font-family: var(--serif);
-      font-size: 14px;
-      color: var(--black);
-      line-height: 1.4;
-      transition: color 0.2s;
-    }
-
-    .related-article:hover .related-title {
-      color: var(--blue);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      display: flex;
-      flex-direction: column;
-      padding: 24px 48px;
-      background: var(--white);
-    }
-
-    /* LEFT SIDE */
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contact-text {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-      margin-right: 8px;
-    }
-
-    .footer-left a {
-      font-size: 18px;
-      color: var(--black);
-      transition: color 0.2s;
-    }
-
-    .footer-left a:hover {
-      color: var(--blue);
-    }
-
-    /* CENTER */
-    .footer-nav {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .footer-nav a {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 10px 22px;
-      color: var(--muted);
-      border: 1px solid var(--muted);
-      background-color: transparent;
-      border-radius: 4px;
-      transition: all 0.2s;
-    }
-
-    .footer-nav a:hover {
-      color: var(--black);
-      border-color: var(--khaki);
-      background-color: var(--khaki);
-    }
-
-    .footer-center {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 13px;
-      color: var(--black);
-    }
-
-    .footer-bottom {
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
-
-    /* RIGHT */
-    .footer-right {
-      display: flex;
-      align-items: center;
-    }
-  </style>
+<!--Page style CSS-->
+  <link rel="stylesheet" href="../../../assets/css/page-style.css">
 </head>
 
 <body>
-
-  <header>
-    <div class="logo">
+  <!--HEADER NAV-->
+  <header class="navbar navbar-expand-lg border-bottom">
+  <div class="container-fluid px-4 px-md-5">
+    <a class="navbar-brand logo" href="#">
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
       <span>InnovaTech</span>
-    </div>
-    <nav>
-      <a href="../../../index.html">Home</a>
-      <a href="../../about/about.html">About Us</a>
-      <a href="../../authors/authors-home.html">Authors</a>
-      <a href="../../article-home/article-home.html" class="active">Articles</a>
-      <a href="../../resources/resources.html">Resources</a>
-    </nav>
-  </header>
+    </a>
 
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <div class="navbar-nav ms-auto gap-lg-4 mt-3 mt-lg-0 ps-lg-5">
+        <a class="nav-link" href="../../../index.html">Home</a>
+        <a class="nav-link" href="../../about/about.html">About Us</a>
+        <a class="nav-link" href="../../authors/authors-home.html">Authors</a>
+        <a class="nav-link active" href="../../article-home/article-home.html">Articles</a>
+        <a class="nav-link" href="../../resources/resources.html">Resources</a>
+      </div>
+    </div>
+  </div>
+</header>
   <main>
 
     <div class="article-header">
@@ -476,10 +70,12 @@
       </div>
     </div>
 
-    <div class="article-layout">
+     <!-- ARTICLE BODY + SIDEBAR -->
+    <div class="article-layout container">
+      <div class="row">
 
-      <div class="article-content">
-
+      <!-- MAIN CONTENT -->
+      <div class="col-12 col-lg-8 article-content">
         <div class="article-image">
           <figure>
             <a href="#img1">
@@ -601,7 +197,8 @@
 
         </div>
 
-        <div class="sidebar-section">
+        <!-- SIDEBAR -->
+        <div class="col-12 col-lg-4 article-sidebar">
           <div class="sidebar-label">Written by</div>
           <div class="author-card">
             <div class="author-avatar"><img src="../../../assets/img/authors/leongsun/Euwin.jpg" alt="LEONGSUN, EUWIN"></div>
@@ -614,7 +211,7 @@
         </div>
 
       </aside>
-
+      </div>
     </div>
 
   </main>
@@ -622,6 +219,7 @@
 
   <!-- FOOTER -->
   <footer>
+    <div class="container">
     <!-- Center: Navigation -->
     <div class="footer-nav">
       <a href="page3.html">← Prev</a>
@@ -653,6 +251,7 @@
   </footer>
 
   <script src="../../../assets/js/back-to-top.js"></script>
-
+  <!--BootstrapJS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
