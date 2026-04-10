@@ -275,18 +275,27 @@
 
          @media (max-width: 768px) {
           .authors-grid {
-            grid-template-columns
+            grid-template-columns: repeat(2, 1fr);
+          }
+         }
+
+         @media (max-width: 480px) {
+          .authors-grid {
+            grid-template-columns: 1fr;
           }
          }
       </style>
    </head>
+
    <body>
+
       <!-- HEADER -->
       <header>
          <div class="logo">
             <img src="../../assets/img/logo_notext.png" alt="">
             <span>InnovaTech</span>
          </div>
+         
          <nav>
             <a href="../../index.html">Home</a>
             <a href="../about/about.html">About Us</a>
@@ -295,12 +304,16 @@
             <a href="../resources/resources.html">Resources</a>
          </nav>
       </header>
+
       <main>
          <!-- HERO -->
-         <section class="hero">
-            <h1>Meet the Authors</h1>
+         <section class="hero text-center">
+          <div class="container">
+            <h1 class="mb-3">Meet the Authors</h1>
             <p>Meet the people behind InnovaTech, guiding fellow students through tech life.</p>
+          </div>
          </section>
+
          <!-- AUTHORS GRID -->
          <section class="authors-section">
             <div class="section-label">Our Authors</div>

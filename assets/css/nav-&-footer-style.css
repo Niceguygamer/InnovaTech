@@ -1,5 +1,21 @@
 /* Fix the header layout */
-        header.navbar {
+  .logo {
+         display: flex;
+         align-items: center;
+         gap: 0.1px;
+         font-family: var(--serif);
+         font-size: 22px;
+         letter-spacing: -0.3px;
+         color: var(--black);
+    }
+    
+    .logo img {
+         height: 80px;
+         width: auto;
+         display: block;
+     }
+    
+    header.navbar {
           min-height: 80px;
           background-color: var(--white) !important;
           position: sticky;
