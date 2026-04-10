@@ -23,7 +23,10 @@
       <!-- for footer -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-      
+
+      <!--NAV & FOOTER css -->
+      <link rel="stylesheet" href="../../assets/css/nav-&-footer-style.css">
+
       <style>
          :root {
           --blue: #5C6F91;
@@ -69,38 +72,6 @@
           padding: 0 16px;
           height: 64px;
           flex-wrap: wrap;
-         }
-
-         .logo {
-          display: flex;
-          align-items: center;
-          font-family: var(--serif);
-          font-size: 22px;
-          color: var(--black);
-         }
-
-         .logo img {
-          height: 60px;
-          width: auto;
-         }
-
-         nav {
-          display: flex;
-          gap: 24px;
-         }
-
-         nav a {
-          font-size: 13px;
-          font-weight: 700;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-          color: var(--blue);
-          transition: color 0.2s;
-         }
-
-         nav a:hover,
-         nav a.active {
-          color: var(--black);
          }
 
          /* RESOURCES PAGE LAYOUT  */
@@ -314,59 +285,6 @@
           background-color: var(--khaki);
           box-shadow: 0 2px 6px rgba(92,111,145,0.3);
          }
-
-         /* FOOTER */
-         footer {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-wrap: wrap;
-          padding: 20px;
-          border-top: 1px solid var(--border);
-          background: var(--white);
-         }
-
-         /* LEFT */
-         .footer-left {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          flex-wrap: wrap;
-         }
-
-         .contact-text {
-          font-weight: 500;
-          font-size: 14px;
-          color: var(--black);
-         }
-
-         .footer-left a {
-          font-size: 18px;
-          color: var(--black);
-          transition: color 0.2s;
-         }
-
-         .footer-left a:hover {
-          color: var(--blue);
-         }
-
-         /* CENTER */
-         .footer-center {
-         font-size: 13px;
-         color: var(--black);
-         text-align: center;
-         flex: 1 1 100%;
-         margin-top: 12px;
-         }
-
-         /* RIGHT */
-         .footer-right {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          flex-wrap: wrap;
-         }     
-
          @media (max-width: 767px) {
           
           #mainNav {
@@ -396,27 +314,30 @@
 
    <body>
 
-      <header>
-        <div class="logo">
-          <img src="../../assets/img/logo_notext.png" alt="Logo">
-          <span>InnovaTech</span>
-        </div>
+      <header class="navbar navbar-expand-lg border-bottom">
+  <div class="container-fluid px-4 px-md-5">
+    <a class="navbar-brand logo" href="#">
+      <img src="../../assets/img/logo_notext.png" alt="Logo">
+      <span>InnovaTech</span>
+    </a>
 
-        <!-- Hamburger Toggle -->
-        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle Navigation">
-          <i class="fa-solid fa-bars"></i>
-        </button>
 
-        <!-- Nav Links -->
-        <nav class="collapse d-md-flex" id="mainNav">
-          <a href="../../index.html">Home</a>
-          <a href="../about/about.html">About Us</a>
-          <a href="../authors/authors-home.html">Authors</a>
-          <a href="../article-home/article-home.html">Articles</a>
-          <a href="resources.html" class="active">Resources</a>
-        </nav>
-      </header>
-        
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <div class="navbar-nav ms-auto gap-lg-4 mt-3 mt-lg-0 ps-lg-5">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../about/about.html">About Us</a>
+        <a class="nav-link" href="../authors/authors-home.html">Authors</a>
+        <a class="nav-link active" href="../article-home/article-home.html">Articles</a>
+        <a class="nav-link" href="resources.html">Resources</a>
+      </div>
+    </div>
+  </div>
+</header>
       <main>
          <!-- Hero Section -->
          <section class="hero-resources text-center">
