@@ -22,6 +22,9 @@
       <!-- for footer -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+      <!--Nav & Footer CSS-->
+      <link rel
       
       <style>
          :root {
@@ -64,35 +67,7 @@
          padding: 0 48px;
          height: 64px;
          }
-         .logo {
-         display: flex;
-         align-items: center;
-         gap: 0.1px;
-         font-family: var(--serif);
-         font-size: 22px;
-         letter-spacing: -0.3px;
-         color: var(--black);
-         }
-         .logo img {
-         height: 80px;
-         width: auto;
-         }
-         nav {
-         display: flex;
-         gap: 36px;
-         }
-         nav a {
-         font-size: 13px;
-         font-weight: 700;
-         letter-spacing: 0.06em;
-         text-transform: uppercase;
-         color: var(--blue);
-         transition: color 0.2s;
-         }
-         nav a:hover,
-         nav a.active {
-         color: var(--black);
-         }
+         
          /* HERO */
          .hero {
          background: var(--off-white);
@@ -240,49 +215,24 @@
          color: var(--white);
          border-color: var(--khaki);
          }
-         /* FOOTER */
-         footer {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         padding: 24px 48px;
-         border-top: 1px solid var(--border);
-         background: var(--white);
-         position: relative;
-         }
-         /* LEFT */
-         .footer-left {
-         display: flex;
-         align-items: center;
-         gap: 16px;
-         }
-         .contact-text {
-         font-weight: 500;
-         font-size: 14px;
-         color: var(--black);
-         }
-         .footer-left a {
-         font-size: 18px;
-         color: var(--black);
-         transition: color 0.2s;
-         }
-         .footer-left a:hover {
-         color: var(--blue);
-         }
-         /* CENTER */
-         .footer-center {
-         font-size: 13px;
-         color: var(--black);
-         text-align: center;
-         position: absolute;
-         left: 50%;
-         transform: translateX(-50%);
-         }
-         /* RIGHT */
-         .footer-right {
-         display: flex;
-         align-items: center;
-         }
+         @media (max-width: 768px) {
+          .hero {
+            padding: 60px 20px;
+          }
+          .hero h1 {
+            font-size: 32px;
+          }
+          .hero p {
+            font-size: 14px;
+          }
+        }
+        @media (max-width: 768px) {
+          .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+          }
+        }
+
       </style>
    </head>
    <body>
@@ -300,6 +250,7 @@
             <a href="../resources/resources.html">Resources</a>
          </nav>
       </header>
+      <main class="container-fluid px-0">
       <!-- HERO -->
       <section class="hero">
          <h1>About InnovaTech</h1>
@@ -376,6 +327,6 @@
       <script src="../../assets/js/back-to-top.js"></script>
        <!--BootstrapJS-->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+      </main>
    </body>
 </html>
