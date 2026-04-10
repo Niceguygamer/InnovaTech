@@ -36,21 +36,25 @@
          --serif: 'DM Serif Display', Georgia, serif;
          --sans: 'DM Sans', sans-serif;
          }
+
          * {
          box-sizing: border-box;
          margin: 0;
          padding: 0;
          }
+
          body {
          font-family: var(--sans);
          background: var(--white);
          color: var(--black);
          line-height: 1.6;
          }
+
          a {
          text-decoration: none;
          color: inherit;
          }
+
          /* HEADER */
          header {
          position: sticky;
@@ -64,6 +68,7 @@
          padding: 0 48px;
          height: 64px;
          }
+
          .logo {
          display: flex;
          align-items: center;
@@ -73,14 +78,17 @@
          letter-spacing: -0.3px;
          color: var(--black);
          }
+
          .logo img {
          height: 80px;
          width: auto;
          }
+
          nav {
          display: flex;
          gap: 36px;
          }
+
          nav a {
          font-size: 13px;
          font-weight: 700;
@@ -89,10 +97,12 @@
          color: var(--blue);
          transition: color 0.2s;
          }
+
          nav a:hover,
          nav a.active {
          color: var(--black);
          }
+
          /* RESOURCES PAGE LAYOUT  */
          .hero-resources {
          background: var(--off-white);
@@ -100,6 +110,7 @@
          padding: 100px 48px 80px;
          border-bottom: 1px solid var(--border);
          }
+
          .hero-resources h1 {
          font-family: var(--serif);
          font-size: clamp(40px, 5vw, 64px);
@@ -108,10 +119,12 @@
          color: var(--black);
          line-height: 1;
          }
+
          .hero-resources p {
          font-size: 16px;
          color: var(--black);
          }
+
          .subtitle-label {
          font-size: 14px;
          color:var(--blue);
@@ -122,16 +135,19 @@
          padding: 8px 20px;
          transition: all 0.2s ease;
          }
+
          .subtitle-label:hover {
          color:var(--white);
          background: var(--khaki);
          border-color: var(--khaki);
          }
+
          /*Section Divider*/
          .section-container {
          padding: 60px 48px;
          scroll-margin-top: 80px;
          }
+
          /*Row label*/
          .row-label {
          font-size: 18px;
@@ -140,16 +156,19 @@
          font-weight: 600;
          margin-bottom: 32px;
          }
+
          :target .row-label {
          font-weight: 600;
          }
-         /* CATEGORY GRID  */
+
+         /* CATEGORY GRID  
          .categories-grid {
          display: grid;
          grid-template-columns: repeat(3, 1fr);
          gap: 30px;
-         }
-         /*Category Placeholder*/
+         } */
+
+         /*Category Placeholder
          .category-card {
          border: 1px solid var(--border);
          padding: 40px 20px;
@@ -158,7 +177,8 @@
          background: var(--white);
          cursor: pointer;
          border-radius: 6px;
-         }
+         }*/
+         
          /*Category Hover Style*/
          .category-card:hover {
          background: var(--off-white);
