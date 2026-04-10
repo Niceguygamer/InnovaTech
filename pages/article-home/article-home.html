@@ -203,6 +203,8 @@
         .article-card {
           border: 1px solid var(--border);
           transition: 0.3s;
+          border-radius: 5px; 
+          overflow: hidden;   
         }
 
         .article-card:hover {
@@ -214,8 +216,9 @@
 
         .card-image img {
           width: 100%;
-          height: 180px;       /* force same height */
-          object-fit: cover;   /* crop nicely */
+          height: 180px;       
+          object-fit: cover;
+          display: block;
         }
 
         @media (min-width: 768px) {
