@@ -365,7 +365,31 @@
           align-items: center;
           gap: 12px;
           flex-wrap: wrap;
-         }      
+         }     
+
+         @media (max-width: 767px){
+          #mainNav {
+            flex-direction: column;
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 100%;
+            padding: 12px 20px;
+            z-index: 99;
+          }
+
+          #mainNav a {
+            padding: 10px 0;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+          }
+
+          #mainNav a:last-child {
+            border-bottom: none;
+          }
+         } 
       </style>
    </head>
 

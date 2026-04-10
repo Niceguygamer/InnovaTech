@@ -4,9 +4,10 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>InnovaTech</title>
-      
+     
       <!--for back-to-top-->
       <link rel="stylesheet" href ="assets/css/back-to-top.css">
+
 
       <!-- for icon -->
       <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
@@ -18,6 +19,7 @@
       <!-- for footer -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
 
       <!--Bootstrap-->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -86,22 +88,59 @@
          width: auto;
          display: block;
          }
-         nav {
-         display: flex;
-         gap: 36px;
-         }
-         nav a {
-         font-size: 13px;
-         font-weight: 700;
-         letter-spacing: 0.06em;
-         text-transform: uppercase;
-         color: var(--blue);
-         transition: color 0.2s;
-         }
-         nav a:hover,
-         nav a.active {
-         color: var(--black);
-         }
+          /* Fix the header layout */
+        header.navbar {
+          min-height: 80px;
+          background-color: var(--white) !important;
+          position: sticky;
+          top: 0;
+          z-index: 1050;
+        }
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--black) !important;
+    }
+
+
+    .logo img {
+      height: 40px;
+      transform: scale(1.8); /* adjust: 1.3 – 1.8 */
+      transform-origin: left center;
+    }
+
+
+    /* Style the links to match your design */
+    .navbar-nav .nav-link {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--blue) !important;
+      transition: color 0.2s;
+    }
+
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+      color: var(--black) !important;
+      gap: 28px;
+    }
+
+
+    /* Mobile Fix: Ensure the menu doesn't overlap content */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: white;
+        padding: 20px;
+        border-top: 1px solid var(--border);
+      }
+    }
          /* ── HERO ── */
          .hero {
          background: var(--off-white);
@@ -153,7 +192,7 @@
          grid-template-columns: 1fr 1fr;
          border-bottom: 1px solid var(--border);
          }
-        
+       
           #about-authors {
             scroll-margin-top: 80px;
           }
@@ -375,19 +414,31 @@
    </head>
    <body>
       <!-- HEADER -->
-      <header>
-         <div class="logo">
-            <img src="assets/img/logo_notext.png" alt="Logo">
-            <span>InnovaTech</span>
-         </div>
-         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="pages/about/about.html">About Us</a>
-            <a href="pages/authors/authors-home.html">Authors</a>
-            <a href="pages/article-home/article-home.html">Articles</a>
-            <a href="pages/resources/resources.html">Resources</a>
-         </nav>
-      </header>
+      
+  <header class="navbar navbar-expand-lg border-bottom">
+  <div class="container-fluid px-4 px-md-5">
+    <a class="navbar-brand logo" href="#">
+      <img src="../../../assets/img/logo_notext.png" alt="Logo">
+      <span>InnovaTech</span>
+    </a>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <div class="navbar-nav ms-auto gap-lg-4 mt-3 mt-lg-0 ps-lg-5">
+        <a class="nav-link" href="../../../index.html">Home</a>
+        <a class="nav-link" href="../../about/about.html">About Us</a>
+        <a class="nav-link" href="../../authors/authors-home.html">Authors</a>
+        <a class="nav-link active" href="../../article-home/article-home.html">Articles</a>
+        <a class="nav-link" href="../../resources/resources.html">Resources</a>
+      </div>
+    </div>
+  </div>
+</header>
       <main>
          <!-- HERO -->
          <section class="hero">
@@ -406,8 +457,8 @@
             <div class="authors-preview">
                <h2>Meet the Authors</h2>
                <p>
-                  Our writers are fellow tech students who provide genuine stories, insights, and guidance 
-                  drawn from their personal experiences. Every article is crafted to assist others in learning, developing, 
+                  Our writers are fellow tech students who provide genuine stories, insights, and guidance
+                  drawn from their personal experiences. Every article is crafted to assist others in learning, developing,
                   and thriving because we believe that the most effective advice comes from shared experience. To learn more about our authors, click <i><b>Read More</b></i>.
                </p>
                <a href="pages/authors/authors-home.html" class="btn-outline">Read More</a>
@@ -502,3 +553,12 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
    </body>
 </html>
+
+
+
+
+
+
+
+
+
