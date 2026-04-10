@@ -174,15 +174,9 @@
           background: var(--blue);
         }
 
-         @media (max-width: 576px) {
-          .section-label {
-            white-space: normal;
-          }
-
-          .section-label::after {
-            display: none; /* hide line on small screens */
-          }
-        }
+        .section-label::after {
+  background: red; /* TEMP TEST */
+}
          /* ARTICLES GRID */
          .articles-grid {
          gap: 24px;
@@ -306,7 +300,9 @@
         
          <!-- ACADEMIC SECTION -->
          <section class="container py-5" id="academic">
-            <div class="section-label">Academic & Professional Career</div>
+            <div class="section-label">
+              <span>Academic & Professional Career</span>
+            </div>
             <div class="articles-grid">
               <!--Card-->
                <a href="../articles/topic_1/page1.html" class="article-card">
@@ -362,7 +358,9 @@
          </section>
         
         <section class="container py-5" id="lifestyle">
-          <div class="section-label">Lifestyle and Self-development</div>
+          <div class="section-label">
+            <span>Lifestyle and Self-development</span>
+            </div>
           <div class="articles-grid">
               <a href="../articles/topic_6/page1.html" class="article-card">
                 <div class="card-image">
