@@ -57,6 +57,9 @@
       color: var(--black) !important;
       gap: 28px;
     }
+    .navbar-collapse {
+    background: var(--white);
+    }
 
 
    @media (max-width: 991px) {
