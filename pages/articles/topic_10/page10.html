@@ -33,28 +33,30 @@
 
   <!-- HEADER -->
   <header class="navbar navbar-expand-lg border-bottom">
-    <div class="container-fluid px-4 px-md-5">
+  <div class="container-fluid px-4 px-md-5">
     <a class="navbar-brand logo" href="#">
       <img src="../../../assets/img/logo_notext.png" alt="Logo">
       <span>InnovaTech</span>
     </a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
 
-
-    <nav>
-      <a href="../../../index.html">Home</a>
-      <a href="../../about/about.html">About Us</a>
-      <a href="../../authors/authors-home.html">Authors</a>
-      <a href="../../article-home/article-home.html" class="active">Articles</a>
-      <a href="../../resources/resources.html">Resources</a>
-    </nav>
-  </header>
-
+    <div class="collapse navbar-collapse" id="navMenu">
+      <div class="navbar-nav ms-auto gap-lg-4 mt-3 mt-lg-0 ps-lg-5">
+        <a class="nav-link" href="../../../index.html">Home</a>
+        <a class="nav-link" href="../../about/about.html">About Us</a>
+        <a class="nav-link" href="../../authors/authors-home.html">Authors</a>
+        <a class="nav-link active" href="../../article-home/article-home.html">Articles</a>
+        <a class="nav-link" href="../../resources/resources.html">Resources</a>
+      </div>
+    </div>
+  </div>
+</header>
   <main>
-
     <!-- ARTICLE HEADER -->
     <div class="article-header">
       <div class="article-header-inner">
@@ -71,10 +73,10 @@
     </div>
 
     <!-- ARTICLE BODY + SIDEBAR -->
-    <div class="article-layout">
-
+    <div class="article-layout container">
+     <div class="row">
       <!-- MAIN CONTENT -->
-      <div class="article-content">
+      <div class="col-12 col-lg-8 article-content">
         <div class="article-image">
           <figure>
             <a href="#img1">
@@ -123,7 +125,7 @@
       </div>
 
       <!-- SIDEBAR -->
-      <aside class="article-sidebar">
+      <aside class="col-12 col-lg-4 article-sidebar">
 
         <div class="sidebar-section">
           <div class="sidebar-label">Related Articles</div>
@@ -166,7 +168,7 @@
         </div>
 
       </aside>
-
+     </div>
     </div>
 
   </main>
@@ -174,8 +176,9 @@
 
   <!-- FOOTER -->
   <footer>
+    <div class="container">
     <!-- Center: Navigation -->
-    <div class="footer-nav">
+    <div class="footer-nav d-flex flex-wrap justify-content-center gap-2">
       <a href="page9.html">← Prev</a>
       <a href="../../article-home/article-home.html">Back to Articles →</a>
     </div>
