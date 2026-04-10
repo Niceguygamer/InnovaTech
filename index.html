@@ -198,12 +198,18 @@
          align-items: center;
          gap: 12px;
          }
-         .section-label::after {
-         content: '';
-         flex: 1;
-         height: 1px;
-         background: var(--border);
-         }
+         .section-label span {
+          white-space: nowrap;
+          margin-right: 20px;
+        }
+
+        .section-label::after {
+          content: "";
+          flex: 1;
+          height: 2px;
+          background: var(--blue);
+          
+        }
          .articles-grid {
          display: grid;
          grid-template-columns: repeat(4, 1fr);
@@ -404,7 +410,7 @@
          
          <!-- FEATURED ARTICLES -->
          <section class="featured-articles">
-            <div class="section-label">Featured Articles  </div>
+            <div class="section-label"><span>Featured Articles</span></div>
             <div class="articles-grid">
                <!-- interaction -->
                <a href="pages/articles/topic_6/page1.html" class="article-card">
