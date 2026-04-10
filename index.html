@@ -22,6 +22,10 @@
 
       <!--Bootstrap-->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+       <!--nav-style-->
+       <link rel="stylesheet" href="assets/css/nav-style.css">
+       
       <style>
          :root {
          --blue: #5C6F91;
@@ -354,106 +358,10 @@
       }
 
       @media (max-width: 768px) {
-      .resources-banner {
-        padding: 32px 20px;
+        .resources-banner {
+          padding: 32px 20px;
+        }
       }
-    }
-
-     /* ── FOOTER ── */
-    footer {
-      display: flex;
-      flex-direction: column;
-      padding: 24px 48px;
-      background: var(--white);
-    }
-
-
-    /* LEFT SIDE */
-    .footer-left {
-      align-items: center;
-      gap: 16px;
-    }
-    .contact-text {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-      margin-right: 8px;
-    }
-
-
-    .footer-left a {
-      font-size: 18px;
-      color: var(--black);
-      transition: color 0.2s;
-    }
-
-
-    .footer-left a:hover {
-      color: var(--blue);
-    }
-
-
-    .footer-center {
-      font-size: 13px;
-      color: var(--black);
-      text-align: center;
-    }
-
-
-    /* CENTER */
-    .footer-nav {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 50px;
-    }
-
-
-    .footer-nav a {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 10px 22px;
-      color: var(--muted);
-      border: 1px solid var(--muted);
-      background-color: transparent;
-      border-radius: 4px;
-      transition: all 0.2s;
-    }
-
-
-    .footer-nav a:hover {
-      color: var(--black);
-      border-color: var(--khaki);
-      background-color: var(--khaki);
-    }
-
-
-    /* RIGHT */
-    .footer-right {
-      display: flex;
-      align-items: center;
-    }
-
-
-   /* Only affect mobile layout */
-    @media (max-width: 768px) {
-
-
-      .footer-left,
-      .footer-center,
-      .footer-right {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 12px;
-      }
-
-
-      .footer-left .d-flex {
-        justify-content: center !important;
-      }
-    }
       </style>
    </head>
    <body>
