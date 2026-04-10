@@ -123,6 +123,17 @@
          border-radius: 16px;
          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
          }
+
+         @media (max-width: 768px) {
+          .one-section {
+            padding: 32px 16px;
+            margin: 24px auto;
+          }
+
+          .one-section p {
+            padding: 0;
+          }
+        }
          .one-section h2 {
          font-family: var(--serif);
          font-size: 28px;
@@ -139,7 +150,6 @@
          }
          /* TWO-COLUMN CONTENT */
          .two-col-preview {
-         display: grid;
          grid-template-columns: 1fr 1fr;
          border-bottom: 1px solid var(--white);
          }
@@ -166,6 +176,18 @@
          line-height: 1.7;
          text-align: justify;
          }
+
+         @media (max-width: 768px) {
+          .about-preview,
+          .authors-preview {
+            padding: 32px 16px;
+          }
+
+          .about-preview {
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+          }
+        }
          /* IMAGE PLACEHOLDER */
          .authors-preview img {
          width: 100%;
@@ -292,15 +314,16 @@
          </p>
       </section>
       <!-- TWO-COLUMN CONTENT -->
-      <section class="two-col-preview">
-         <div class="about-preview">
+      <section class="two-col-preview container">
+         <div class="row">
+         <div class="col-12 col-md-6 about-preview">
             <h2>What This Site Is About</h2>
             <p>
                Through the sharing of real-life experiences, lessons learned, and ideas from other students, this website provides a helpful resource for students enrolled in tech-related programs. It offers relatable scenarios and typical difficulties, like relationships, career concerns, and academic pressure, while transforming these experiences into practical guidance that can make college life simpler to handle. The platform is intended for tech students, particularly first-years and those who want to develop intellectually and personally. Readers who like to reflect on their own experiences and benefit from others' travels are also welcome.<br><br>
                InnovaTech seeks to establish a safe environment where students may share knowledge with one another by fusing personal tales with useful guidance. The platform offers advice and insights that support students' academic and personal development, whether they are managing homework, taking on a difficult project, or adjusting to college life.
             </p>
          </div>
-         <div class="authors-preview">
+         <div class="col-12 col-md-6 authors-preview">
             <a href="#img1">
               <img src="../../assets/img/group-pic.png" class="img-fluid rounded w-100" alt="group pic">
             </a>
@@ -311,7 +334,7 @@
          </div>
       </section>
       <!-- WHY WE MADE THIS -->
-      <section class="one-section">
+      <section class="one-section container">
          <h2>Why We Made This</h2>
          <p>
             We founded InnovaTech after seeing how difficult tech-related courses can be, particularly for first-year college students. Many of us had similar challenges such as, balancing schoolwork, comprehending difficult ideas, handling personal obligations, and determining how to pursue a career in technology. In order to assist students avoid needless frustration and develop confidence in their educational journey, we set out to create a resource that transforms such difficulties into useful advice.<br><br>
