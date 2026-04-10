@@ -157,11 +157,16 @@
 
           display: flex;
           align-items: center;
-          gap: 20px;
           width: 100%;
-          white-space: nowrap; 
         }
 
+        /* Wrap text in a span */
+        .section-label span {
+          white-space: nowrap;
+          margin-right: 20px;
+        }
+
+        /* The line */
         .section-label::after {
           content: "";
           flex: 1;
