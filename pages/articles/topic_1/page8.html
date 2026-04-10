@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Apps</title>
+  <title>The Global Mirror</title>
   <!--BootstrapCCS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -76,7 +76,7 @@
     <div class="article-layout container">
        <div class="row">
       <!-- MAIN CONTENT -->
-      <div class="article-content">
+      <div class="col-12 col-lg-8 article-content">
         <div class="article-image">
           <figure>
             <a href="#img1">
@@ -123,7 +123,7 @@
       </div>
 
       <!-- SIDEBAR -->
-      <aside class="article-sidebar">
+      <aside class="col-12 col-lg-4 article-sidebar">
 
         <div class="sidebar-section">
           <div class="sidebar-label">Related Articles</div>
@@ -160,7 +160,7 @@
         </div>
 
       </aside>
-
+       </div>
     </div>
 
   </main>
@@ -168,15 +168,17 @@
 
   <!-- FOOTER -->
   <footer>
+     <div class="container">
     <!-- Center: Navigation -->
-    <div class="footer-nav">
+    <div class="footer-nav d-flex flex-wrap justify-content-center gap-2">
       <a href="page7.html">← Prev</a>
       <a href="page9.html">Next →</a>
     </div>
 
     <!-- Left: Contact + Icons -->
-    <div class="footer-bottom">
-      <div class="footer-left">
+    <div class="row footer-bottom flex-column flex-md-row text-center text-md-start align-items-center">
+    <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">
+      <div class="d-flex justify-content-center justify-content-md-start align-items-center gap-3 flex-wrap">
         <span class="contact-text">Contact Us</span>
 
         <a href="https://www.facebook.com/profile.php?id=61577461889890">
@@ -192,9 +194,11 @@
           <i class="fa-regular fa-envelope"></i>
         </a>
       </div>
-
+    </div>
       <!-- Center: Copyright-->
-      <div class="footer-center">© 2026 InnovaTech. All rights reserved.</div>
+      <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">© 2026 InnovaTech. All rights reserved.</div>
+       <div class="col-12 col-md-4 footer-right"></div>
+    </div>
     </div>
   </footer>
 
