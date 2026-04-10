@@ -69,10 +69,9 @@
     }*/
 
      @media (max-width: 767px) {
-          
           .navbar-collapse{
             flex-direction: column;
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.75);
             border-top: 1px solid var(--border);
             position: absolute;
             top: 64px;
@@ -82,13 +81,12 @@
             z-index: 99;
           }
 
-          #mainNav a {
+          .navbar-collapse a {
             padding: 10px 0;
             font-size: 14px;
-            border-bottom: 1px solid var(--border);
           }
 
-          #mainNav a:last-child {
+          .navbar-collapse a:last-child {
             border-bottom: none;
           }
          }
