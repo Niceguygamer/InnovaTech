@@ -4,7 +4,8 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Authors — InnovaTech</title>
-      <!--BootstrapCCS-->
+
+      <!--Bootstrap CSS-->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
       <!--for back-to-top-->
@@ -25,62 +26,69 @@
       
       <style>
          :root {
-         --blue: #5C6F91;
-         --black: #33363A;
-         --white: #ffffff;
-         --off-white: #F3F4F6;
-         --muted: #6B7A8F;
-         --border: #e5e4e0;
-         --khaki: #D8C9A3;
-         --gray: #8C949C;
-         --serif: 'DM Serif Display', Georgia, serif;
-         --sans: 'DM Sans', sans-serif;
+          --blue: #5C6F91;
+          --black: #33363A;
+          --white: #ffffff;
+          --off-white: #F3F4F6;
+          --muted: #6B7A8F;
+          --border: #e5e4e0;
+          --khaki: #D8C9A3;
+          --gray: #8C949C;
+          --serif: 'DM Serif Display', Georgia, serif;
+          --sans: 'DM Sans', sans-serif;
          }
+
          * {
-         box-sizing: border-box;
-         margin: 0;
-         padding: 0;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
          }
+
          body {
-         font-family: var(--sans);
-         background: var(--white);
-         color: var(--black);
-         line-height: 1.6;
+          font-family: var(--sans);
+          background: var(--white);
+          color: var(--black);
+          line-height: 1.6;
          }
+
          a {
-         text-decoration: none;
-         color: inherit;
+          text-decoration: none;
+          color: inherit;
          }
+
          /* HEADER */
          header {
-         position: sticky;
-         top: 0;
-         z-index: 100;
-         background: var(--white);
-         border-bottom: 1px solid var(--border);
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         padding: 0 48px;
-         height: 64px;
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          background: var(--white);
+          border-bottom: 1px solid var(--border);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 16px;
+          height: 64px;
+          flex-wrap: wrap;
          }
+
          .logo {
-         display: flex;
-         align-items: center;
-         gap: 0.1px;
-         font-family: var(--serif);
-         font-size: 22px;
-         letter-spacing: -0.3px;
-         color: var(--black);
+          display: flex;
+          align-items: center;
+          font-family: var(--serif);
+          font-size: 22px;
+          color: var(--black);
          }
+
          .logo img {
-         height: 80px;
-         width: auto;
+          height: 60px;
+          width: auto;
          }
+
          nav {
-         display: flex;
-         gap: 36px;
+          display: flex;
+          gap: 24px;
          }
+
          nav a {
          font-size: 13px;
          font-weight: 700;
