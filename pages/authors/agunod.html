@@ -190,6 +190,13 @@
           margin-top: 12px;
         }
 
+        .profile-contacts .contact-label {
+          font-size: 13px;
+          font-weight: 500;
+          color: var(--muted);
+          margin-right: 8px;
+        }
+
         .profile-contacts a {
           font-size: 18px;
           color: var(--black);
@@ -208,6 +215,13 @@
 
           .profile-contacts {
             justify-content: center;
+            flex-wrap: wrap;
+          }
+
+          .profile-contacts .contact-label {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 6px;
           }
         }
          
@@ -401,6 +415,7 @@
                   <div class="profile-role">BS Computer Science</div>
 
                   <div class="profile-contacts">
+                    <span class="contact-label">Contacts:</span>
                     <a href="https://facebook.com/yourprofile"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://github.com/yourprofile"><i class="fa-brands fa-github"></i></a>
                     <a href="mailto:youremail@example.com"><i class="fa-regular fa-envelope"></i></a>
