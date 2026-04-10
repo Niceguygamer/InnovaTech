@@ -231,44 +231,53 @@
          }
 
          .profile-bio p:last-child { 
-          margin-bottom: 0; }
+          margin-bottom: 0; 
+         }
+
+         /* ARTICLES SECTION */
          .section-label {
-         font-size: 13px;
-         font-weight: 500;
-         letter-spacing: 0.14em;
-         text-transform: uppercase;
-         color: var(--muted);
-         margin-bottom: 28px;
-         padding-bottom: 12px;
-         border-bottom: 2px solid var(--beige);
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--blue);
+          margin-bottom: 20px;
+          padding-bottom: 6px;
+          border-bottom: 2px solid var(--border);
          }
-         .articles-list { list-style: none; }
+
+         .articles-list { 
+          list-style: none; 
+          padding: 0;
+         }
+
          .articles-list li {
-         padding: 16px 0;
-         border-bottom: 1px solid var(--border);
-         display: flex;
-         align-items: baseline;
-         gap: 16px;
+          padding: 16px 0;
+          border-bottom: 1px solid var(--border);
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
          }
-         .article-list li:hover {
-         background: var(--off-white);
-         }
+
          .article-topic {
-         font-size: 10px;
-         font-weight: 500;
-         letter-spacing: 0.1em;
-         text-transform: uppercase;
-         color: var(--blue);
-         flex-shrink: 0;
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--blue);
          }
+
          .article-link {
          font-family: var(--serif);
          font-size: 18px;
-         font-weight: 400;
          color: var(--black);
-         transition: color 0.2s ease;
+         transition: color 0.2s ease, text-decoration 0.2s ease;
          }
-         .articles-list li:hover .article-link { color: var(--blue); }
+
+         .articles-list li:hover .article-link { 
+          color: var(--blue); 
+          text-decoration: underline;
+         }
 
          /* FOOTER NAV
          .footer-nav {
