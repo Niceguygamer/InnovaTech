@@ -247,11 +247,15 @@
          }
          /* IMAGE */
          .card-image img {
-         width: 100%;
-         height: 180px;
-         object-fit: cover;
-         display: block;
-         }
+            width: 100%;
+            height: auto;
+          }
+          @media (min-width: 768px) {
+            .card-image img {
+              height: 180px;
+              object-fit: cover;
+            }
+          }
          /* CONTENT */
          .card-content {
          padding: 16px;
@@ -295,6 +299,7 @@
          <section class="section-container" id="academic">
             <div class="section-label">Academic & Professional Career</div>
             <div class="row g-4">
+               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                <a href="../articles/topic_1/page1.html" class="article-card">
                   <div class="card-image">
                      <img src="../../assets/img/topic 1/load.jpg" alt="Article image">
@@ -304,6 +309,7 @@
                      <div class="card-meta">How academic workload affects student performance and mental wellbeing.</div>
                   </div>
                </a>
+               </div>
                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                <a href="../articles/topic_2/page1.html" class="article-card">
                   <div class="card-image">
@@ -349,7 +355,6 @@
                </a>
                </div>
             </div>
-           
             <!-- MORE BUTTON -->
             <div class="text-center mt-4">
                <a href="#lifestyle" class="browse-label">More</a>
