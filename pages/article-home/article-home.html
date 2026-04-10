@@ -147,31 +147,37 @@
          line-height: 1.4;
          }
          /* SECTION - LABEL */
-        .section-label {
+          .section-label {
           font-size: 12px;
           font-weight: 500;
           letter-spacing: 0.14em;
           text-transform: uppercase;
           color: var(--blue);
           margin-bottom: 36px;
-          
-          /* The Fix */
-          display: flex !important;
+
+          display: flex;
           align-items: center;
+          gap: 20px;
           width: 100%;
-          white-space: nowrap;
+          white-space: nowrap; 
         }
 
         .section-label::after {
           content: "";
-          display: block;
-          flex-grow: 1;    /* Force the line to grow */
-          flex-shrink: 0;  /* Prevent the line from collapsing */
+          flex: 1;
           height: 1px;
           background: var(--blue);
-          margin-left: 20px;
         }
-              
+
+         @media (max-width: 576px) {
+          .section-label {
+            white-space: normal;
+          }
+
+          .section-label::after {
+            display: none; /* hide line on small screens */
+          }
+        }
          /* ARTICLES GRID */
          .articles-grid {
          gap: 24px;
