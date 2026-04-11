@@ -185,10 +185,12 @@
 
     .article-image img {
       width: 100%;
+      max-width: 800px;
       height: 300px;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
       border-radius: 4px;
+      margin: 0 auto 36px;
     }
 
     .article-image figcaption {
@@ -219,7 +221,7 @@
     .lightbox img {
       width: 800px;
       height: 450px;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 6px;
       display: block;
       margin: auto;
