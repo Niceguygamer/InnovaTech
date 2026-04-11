@@ -108,24 +108,58 @@
 
          /* HERO */
          .hero {
-          background: var(--off-white);
+          position: relative;
+          height: 50vh;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-align: center;
-          padding: 80px 20px;
-          border-bottom: 1px solid var(--border);
-         }
+          color: white;
+        }
+
+
+        /* VIDEO BACKGROUND */
+        .bg-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+
+
+        /* DARK OVERLAY (so text is readable) */
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 0;
+        }
+
+
+        /* CONTENT ON TOP */
+        .hero-content {
+          position: relative;
+          z-index: 1;
+          max-width: 800px;
+        }
 
          .hero h1 {
           font-family: var(--serif);
           font-size: clamp(32px, 5vw, 64px);
           font-style: italic;
           margin-bottom: 8px;
-          color: var(--black);
+          color: white;
           line-height: 1.3;
          }
 
          .hero p {
           font-size: 16px;
-          color: var(--black);
+          color: white;
          }
 
          /* AUTHORS GRID */
@@ -363,12 +397,17 @@
 </header>
       <main>
          <!-- HERO -->
-         <section class="hero text-center">
-          <div class="container">
+         <section class="hero">
+          <video autoplay muted loop playsinline class="bg-video">
+            <source src="../../assets/mp4/blue_plate.mp4" type="video/mp4">
+          </video>
+
+
+          <div class="hero-content">
             <h1 class="mb-3">Meet the Authors</h1>
             <p>Meet the people behind InnovaTech, guiding fellow students through tech life.</p>
           </div>
-         </section>
+        </section>
 
          <!-- AUTHORS GRID -->
          <section class="authors-section">
