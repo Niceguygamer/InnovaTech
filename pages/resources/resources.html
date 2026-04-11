@@ -164,13 +164,7 @@
           border-radius: 6px;
           transition: all 0.3s ease;
         }
-
-      .card-body:hover .btn-outline-primary {
-          background-color: var(--khaki);
-          border-color: var(--khaki);
-          color: var(--white);
-        }
-
+        
         .card-btn {
           font-family: var(--sans);
           letter-spacing: 00.14em;
@@ -192,6 +186,8 @@
           margin-bottom: 12px;
         }
 
+        .card-body
+
         /* Reference Notes */
         .resource-reference {
           font-size: 13px;
@@ -205,12 +201,6 @@
           font-weight: 600;
         }
 
-        /* ── SYNC HOVER: CARD BODY TRIGGERS BUTTON ── */
-        .card:hover .btn-outline-primary {
-          background-color: var(--khaki);
-          border-color: var(--khaki);
-          color: var(--white);
-        }
          /* FOOTER NAV (NOW SEPARATE) */
          .footer-nav {
           display: flex;
@@ -220,6 +210,16 @@
           margin: 0px 0px 40px;
           flex-wrap: wrap;
          }
+
+        /* Sync hover from card */
+        .card:hover .btn-outline-primary {
+          background-color: var(--khaki);
+          border-color: var(--khaki);
+          color: var(--white);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 14px rgba(92, 111, 145, 0.25);
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
          .footer-nav a {
          font-size: 12px;
