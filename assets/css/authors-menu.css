@@ -31,6 +31,7 @@
   flex: 0 0 auto;
   width: clamp(60px, 7vw, 80px); /* responsive sizing */
   text-align: center;
+  
 }
 
 /* CIRCLE FIX (IMPORTANT) */
@@ -46,6 +47,8 @@
 
   cursor: pointer;
   transition: 0.3s ease;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
 }
 
 /* IMAGE FIX (prevents overflow issue) */
