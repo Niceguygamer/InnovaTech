@@ -70,11 +70,42 @@
          }
         /* HERO */
         .hero {
-          background: var(--off-white);
+          position: relative;
+          height: 50vh;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-align: center;
-          padding: 100px 20px 80px;
-          border-bottom: 1px solid var(--border);
-          margin-bottom: 40px;
+          color: white;
+          margin-bottom: 45px;
+        }
+
+        /* VIDEO BACKGROUND */
+        .bg-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+
+        /* DARK OVERLAY (so text is readable) */
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 0;
+        }
+
+        /* CONTENT ON TOP */
+        .hero-content {
+          position: relative;
+          z-index: 1;
+          max-width: 800px;
         }
 
         .hero h1 {
@@ -82,7 +113,7 @@
           font-size: clamp(32px, 5vw, 64px);
           font-style: italic;
           margin-bottom: 12px;
-          color: var(--black);
+          color: white;
           line-height: 1;
         }
         .hero p {
@@ -269,12 +300,18 @@
 </header>
       <main>
          <!-- HERO -->
-         <section class="hero text-center">
-          <div class="container">
+          <section class="hero">
+          <video autoplay muted loop playsinline class="bg-video">
+            <source src="../../assets/mp4/blue_plate.mp4" type="video/mp4">
+          </video>
+
+
+          <div class="hero-content">
             <h1>Articles</h1>
             <a href="#academic" class="browse-label">Browse Articles</a>
           </div>
-         </section>
+        </section>
+
         
          <!-- ACADEMIC SECTION -->
          <section class="container py-3" id="academic">
