@@ -157,99 +157,6 @@
           align-items: center;
           margin-bottom: 36px;
          }
-         
-
-
-        /*
-         :target .row-label {
-         font-weight: 600;
-         }*/
-
-         /* CATEGORY GRID  
-         .categories-grid {
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         gap: 30px;
-         } */
-
-         /*Category Placeholder
-         .category-card {
-         border: 1px solid var(--border);
-         padding: 40px 20px;
-         text-align: center;
-         transition: all 0.3s ease;
-         background: var(--white);
-         cursor: pointer;
-         border-radius: 6px;
-         }*/
-
-         /*Category Hover Style
-         .category-card:hover {
-         background: var(--off-white);
-         border-color: #5C6F91;
-         transform: translateY(-2px);
-         box-shadow: 0 4px 12px rgba(92,111,145,0.2);
-         }*/
-
-         /*Category Label Style
-         .category-label {
-         font-size: 18px;
-         font-weight: 600;
-         letter-spacing: 0.08em;
-         text-transform: uppercase;
-         color: var(--black);
-         border-bottom: 1px dashed var(--border);
-         padding-bottom: 8px;
-         display: inline-block;
-         }*/
-         
-         /* RESOURCE ITEMS LIST
-         .resource-list {
-         display: flex;
-         flex-direction: column;
-         gap: 20px;
-         }*/
-
-        /*
-         .resource-item {Resources Item list style
-         border: 1px solid var(--border);
-         border-left: 4px solid var(--blue);
-         padding: 24px 30px;
-         background: var(--white);
-         transition: all 0.2s ease;
-         border-radius: 6px;
-         }*/
-
-        /*
-         .resource-item:hover {
-         background: var(--off-white);
-         border-color: var(--blue);
-         box-shadow: 0 4px 12px rgba(92,111,145,0.15);
-         }*/
-
-        /*
-         .resource-title {
-         font-family: var(--serif);
-         font-size: 22px;
-         font-weight: 500;
-         color: var(--black);
-         margin-bottom: 8px;
-         }*/
-
-        /*
-         .resource-link-desc {
-         font-size: 16px;
-         line-height: 1.6;
-         color: var(--muted);
-         margin-bottom: 8px;
-         }*/
-
-        /*
-         .resource-link {
-         font-size: 14px;
-         color: var(--blue);
-         text-decoration: underline;
-         }*/
 
         /* BOOTSTRAP CARD */
         .card {
@@ -297,13 +204,32 @@
           font-weight: 600;
         }
 
-        /* BUTTONS */
+        /* ── GLOBAL BUTTON TRANSITION ── */
+        .btn,
+        .btn-outline-primary {
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ── BASE OUTLINE BUTTON ── */
         .btn-outline-primary {
           border-color: var(--blue);
           color: var(--blue);
+          background-color: transparent;
         }
 
-        .btn-outline-primary:hover {
+        /* ── HOVER / ACTIVE STATE ── */
+        .btn:hover,
+        .btn-outline-primary:hover,
+        .btn-outline-primary:focus,
+        .btn-outline-primary:active {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 14px rgba(92, 111, 145, 0.25);
+        }
+
+        /* ── OUTLINE HOVER COLOR ── */
+        .btn-outline-primary:hover,
+        .btn-outline-primary:focus,
+        .btn-outline-primary:active {
           background-color: var(--khaki);
           border-color: var(--khaki);
           color: var(--white);
@@ -404,140 +330,6 @@
             <p>Helpful Materials for Tech College Students</p>
           </div>
         </section>
-
-
-         <!-- Categories Section
-         <section class="section-container" id="section">
-            <p class="row-label">Resource Categories</p>
-            <div class="categories-grid">
-               <a href="#web" class="category-card">
-                  <div class="category-label">Website Links</div>
-               </a>
-               <a href="#article" class="category-card">
-                  <div class="category-label">Article Links</div>
-               </a>
-               <a href="#books" class="category-card">
-                  <div class="category-label">E-Books / Textbooks</div>
-               </a>
-            </div>
-         </section> -->
-
-         <!--Website Resources
-         <section class="section-container" id="web">
-            <p class="row-label">Website Links</p>
-            <div class="resource-list">
-            <a href="https://www.apa.org/topics/mental-health/seven-rest-types" class="resource-item">
-               <div class="resource-title">Seven Types of Rest</div>
-               <div class="resource-link-desc">Overview of seven distinct forms of rest, explaining how each supports mental health and well-being.
-               </div>
-               <span class="resource-link">https://www.apa.org/topics/mental-health/seven-rest-types</span>
-            </a>
-            <a href="https://www.apa.org/topics/sleep" class="resource-item">
-               <div class="resource-title">Sleep and Sleep Disorders</div>
-               <div class="resource-link-desc">Authoritative information on the science of sleep, common disorders, and strategies for better rest.</div>
-               <span class="resource-link">https://www.apa.org/topics/sleep</span>
-            </a>
-            <a href="https://www.apa.org/topics/mindfulness/meditation" class="resource-item">
-               <div class="resource-title">Mindfulness Meditation</div>
-               <div class="resource-link-desc">Research-based guidance on how mindfulness meditation reduces stress and improves resilience.</div>
-               <span class="resource-link">https://www.apa.org/topics/mindfulness/meditation</span>
-            </a>
-            <a href="https://www.apa.org/topics/anxiety" class="resource-item">
-               <div class="resource-title">Anxiety</div>
-               <div class="resource-link-desc">Trusted insights into anxiety symptoms, causes, and coping strategies.</div>
-               <span class="resource-link">https://www.apa.org/topics/anxiety</span>
-            </a>
-            <a href="https://www.apa.org/topics/resilience" class="resource-item">
-               <div class="resource-title">Resilience Guide</div>
-               <div class="resource-link-desc">Practical tips and evidence-based strategies to build resilience in everyday life.</div>
-               <span class="resource-link">https://www.apa.org/topics/resilience</span>
-            </a>
-            <a href="https://psychcentral.com/lib/what-is-resilience" class="resource-item">
-               <div class="resource-title">What is Resilience?</div>
-               <div class="resource-link-desc">Accessible explanation of resilience, its importance, and how to strengthen it.</div>
-               <span class="resource-link">https://psychcentral.com/lib/what-is-resilience</span>
-            </a>
-            <a href="https://www.coursera.org/articles/computer-science-specializations" class="resource-item">
-               <div class="resource-title">Choosing a CS Specialization</div>
-               <div class="resource-link-desc">A comprehensive guide exploring various CS career paths, job outlooks, and salary information to help students align their studies with professional goals.</div>
-               <span class="resource-link">https://www.coursera.org/articles/computer-science-specializations</span>
-            </a>
-            <a href="https://cse.umn.edu/cs/computer-science-bs-specializations" class="resource-item">
-               <div class="resource-title">Computer Science BS Tracks</div>
-               <div class="resource-link-desc">An overview of academic tracks including AI, Systems, and Software Engineering designed to help undergraduates build a focused portfolio for the job market.</div>
-               <span class="resource-link">https://cse.umn.edu/cs/computer-science-bs-specializations</span>
-            </a>
-            <a href="https://www.indeed.com/career-advice/career-development/how-to-choose-computer-science-specialization" class="resource-item">
-               <div class="resource-title">CS Careers & Specializations</div>
-               <div class="resource-link-desc">Career-focused advice on navigating the vast subfields of computer science, featuring practical steps to research and select a specialty based on industry demand.</div>
-               <span class="resource-link">https://www.indeed.com/career-advice/career-development/how-to-choose-computer-science-specialization</span>
-            </a>
-            <a href="https://www.codecademy.com/articles/what-is-computer-science" class="resource-item">
-               <div class="resource-title">What is Computer Science?</div>
-               <div class="resource-link-desc">An introductory overview of computer science, its significance, and the skills required to succeed in the field.</div>
-               <span class="resource-link">https://www.codecademy.com/articles/what-is-computer-science</span>
-            </a>
-
-            <a href="https://educationaldatamining.org/edm2024/proceedings/2024.EDM-long-papers.5/" class="resource-item">
-               <div class="resource-title">Programming Learning Curves (EDM 2024)</div>
-               <div class="resource-link-desc">Research-based conference paper on how developers learn programming paradigms.</div>
-               <span class="resource-link">https://educationaldatamining.org/edm2024/proceedings/2024.EDM-long-papers.5/</span>
-            </a>
-
-            <a href="https://educationaldatamining.org/edm2024/proceedings/2024.EDM-long-papers.5/" class="resource-item">
-               <div class="resource-title">How to Learn Programming for Beginners (Telkom University)</div>
-               <div class="resource-link-desc">Educational institution guide for beginner programmers.</div>
-               <span class="resource-link">https://bif.telkomuniversity.ac.id/en/how-to-learn-programming-for-beginners/</span>
-            </a>
-
-         </section> -->
-
-         <!--Article Resources
-         <section class="section-container" id="article">
-            <p class="row-label">Article Links</p>
-            <div class="resource-list">
-               <a href="https://www.psycix.com/article/how-mindful-rest-can-improve-your-mental-health" class="resource-item">
-                  <div class="resource-title">Mindful Rest</div>
-                  <div class="resource-link-desc">Explores how mindful rest can boost mental health and reduce stress.</div>
-                  <span class="resource-link">https://www.psycix.com/article/how-mindful-rest-can-improve-your-mental-health</span>
-               </a>
-               <a href="https://www.saidhasyim.com/post/peak-lifes-work/the-relationship-between-rest-and-creativity" class="resource-item">
-                  <div class="resource-title">Rest and Creativity</div>
-                  <div class="resource-link-desc">Discusses the link between rest and creative performance.</div>
-                  <span class="resource-link">https://www.saidhasyim.com/post/peak-lifes-work/the-relationship-between-rest-and-creativity</span>
-               </a>
-               <a href="https://www.sciencenewstoday.org/what-happens-to-the-brain-during-stress-and-anxiety" class="resource-item">
-                  <div class="resource-title">Brain During Stress</div>
-                  <div class="resource-link-desc">Explains what happens in the brain when experiencing stress and anxiety.</div>
-                  <span class="resource-link">https://www.sciencenewstoday.org/what-happens-to-the-brain-during-stress-and-anxiety</span>
-               </a>
-               <a href="https://www.downtownpsychological.com/blog/2023/8/2/the-importance-of-rest-on-mental-health" class="resource-item">
-                  <div class="resource-title">Importance of Rest</div>
-                  <div class="resource-link-desc">Highlights why rest is essential for mental health and emotional balance.</div>
-                  <span class="resource-link">https://www.downtownpsychological.com/blog/2023/8/2/the-importance-of-rest-on-mental-health</span>
-               </a>
-               <a href="https://healthiness360.com/how-does-depression-effect-your-energy.html" class="resource-item">
-                  <div class="resource-title">Depression and Energy</div>
-                  <div class="resource-link-desc">Examines how depression impacts energy levels and daily functioning.</div>
-                  <span class="resource-link">https://healthiness360.com/how-does-depression-effect-your-energy.html</span>
-               </a>
-               <a href="https://www.arisecounselinggroup.org/blog/managing-depression-with-lifestyle-changes-the-role-of-movement-nutrition-and-sleep" class="resource-item">
-                  <div class="resource-title">Lifestyle Changes for Depression</div>
-                  <div class="resource-link-desc">Outlines how movement, nutrition, and sleep can support recovery from depression.</div>
-                  <span class="resource-link">https://www.arisecounselinggroup.org/blog/managing-depression-with-lifestyle-changes-the-role-of-movement-nutrition-and-sleep</span>
-               </a>
-               <a href="https://www.mindglopsychotherapy.com/post/understanding-the-importance-of-rest-in-the-four-pillars-of-resilience" class="resource-item">
-                  <div class="resource-title">Rest in Resilience</div>
-                  <div class="resource-link-desc">Connects rest to the four pillars of resilience, emphasizing its role in mental strength.</div>
-                  <span class="resource-link">https://www.mindglopsychotherapy.com/post/understanding-the-importance-of-rest-in-the-four-pillars-of-resilience</span>
-               </a>
-               <a href="https://www.startwithyou.co/blog/the-art-of-resting-and-the-7-types-of-rest/" class="resource-item">
-                  <div class="resource-title">The Art of Resting and the 7 Types of Rest</div>
-                  <div class="resource-link-desc">Practical insights into the art of resting, with a focus on seven types of rest and how to apply them in daily life.</div>
-                  <span class="resource-link">https://www.startwithyou.co/blog/the-art-of-resting-and-the-7-types-of-rest/</span>
-               </a>
-            </div>
-         </section> -->
 
         <!-- New Categories Section -->
         <section class="section-container" id="section">
