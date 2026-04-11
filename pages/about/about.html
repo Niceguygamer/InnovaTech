@@ -191,10 +191,10 @@
                 object-fit: contain;
                 border-radius: 6px;
                 
-                /* Removes any browser-default scroll alignment movement 
-                user-select: none;
-                pointer-events: none; 
-              } */
+                /* Removes any browser-default scroll alignment movement */
+                user-select: none; 
+                cursor: pointer;
+              }
 
               /* Show without jump */
               .lightbox:target {
@@ -322,8 +322,9 @@
             </a>
            
            <div id="img1" class="lightbox">
-             <a href="#!" class="close">&times</a>
+             <a href="#">
              <img src="../../assets/img/group-pic.png">
+             </a>
            </div>
          </div>
       </section>
