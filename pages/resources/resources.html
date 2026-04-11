@@ -75,24 +75,58 @@
          }
 
          /* RESOURCES PAGE LAYOUT  */
-         .hero-resources {
-          background: var(--off-white);
+         .hero {
+          position: relative;
+          height: 50vh;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-align: center;
-          padding: 80px 20px;
-          border-bottom: 1px solid var(--border);
-         }
+          color: white;
+        }
+
+
+        /* VIDEO BACKGROUND */
+        .bg-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+
+
+        /* DARK OVERLAY (so text is readable) */
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 0;
+        }
+
+
+        /* CONTENT ON TOP */
+        .hero-content {
+          position: relative;
+          z-index: 1;
+          max-width: 800px;
+        }
 
          .hero-resources h1 {
           font-family: var(--serif);
           font-size: clamp(32px, 5vw, 64px);
           font-style: italic;
           margin-bottom: 12px;
-          color: var(--black);
+          color: white;
          }
 
-         .hero-resources p {
+         .hero-content p {
           font-size: 16px;
-          color: var(--black);
+          color: white;
          }
 
          .subtitle-label {
@@ -342,10 +376,21 @@
          <!-- Hero Section -->
          <section class="hero-resources text-center">
           <div class="container">
-            <h1 class="mb-3">Resources</h1>
-            <p class="subtitle-label">Helpful Materials for Tech College Students</p>
+            
           </div>
          </section>
+          <section class="hero">
+          <video autoplay muted loop playsinline class="bg-video">
+            <source src="../../assets/mp4/blue_plate.mp4" type="video/mp4">
+          </video>
+
+
+          <div class="hero-content">
+          <h1>About InnovaTech</h1>
+          <p>InnovaTech. For Tech students, by Tech students.</p>
+          </div>
+        </section>
+
 
          <!-- Categories Section
          <section class="section-container" id="section">
