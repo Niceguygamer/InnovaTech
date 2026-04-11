@@ -40,23 +40,28 @@
           --serif: 'DM Serif Display', Georgia, serif;
           --sans: 'DM Sans', sans-serif;
          }
-
-         * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
+         *,
+         *::before,
+         *::after {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
          }
-
+         html {
+         scroll-behavior: smooth;
+         }
          body {
-          font-family: var(--sans);
-          background: var(--white);
-          color: var(--black);
-          line-height: 1.6;
+         font-family: var(--sans);
+         font-weight: 300;
+         background: var(--white);
+         color: var(--black);
+         font-size: 15px;
+         line-height: 1.6;
+         -webkit-font-smoothing: antialiased;
          }
-
          a {
-          text-decoration: none;
-          color: inherit;
+         text-decoration: none;
+         color: inherit;
          }
 
          /* HEADER */
@@ -142,12 +147,15 @@
 
          /*Row label*/
          .row-label {
-          font-size: 20px;
-          font-style: italic;
-          color: var(--black);
-          font-weight: 600;
-          margin-bottom: 24px;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--blue);
+          margin-bottom: 36px;
+
          }
+         
 
         /*
          :target .row-label {
@@ -381,7 +389,7 @@
 
 
           <div class="hero-content">
-            <h1 class="mb-3">Resources</h1>
+            <h1>Resources</h1>
             <p>Helpful Materials for Tech College Students</p>
           </div>
         </section>
