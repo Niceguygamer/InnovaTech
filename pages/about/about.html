@@ -40,18 +40,25 @@
           --sans: 'DM Sans', sans-serif;
         }
 
-        /* RESET */
-        * {
+        /* RESET & BASE */
+        *, *::before, *::after {
           box-sizing: border-box;
           margin: 0;
           padding: 0;
         }
 
+        html {
+          scroll-behavior: smooth;
+        }
+
         body {
           font-family: var(--sans);
+          font-weight: 300;
           background: var(--white);
           color: var(--black);
+          font-size: 15px;
           line-height: 1.6;
+          -webkit-font-smoothing: antialiased;
         }
 
         a {
@@ -73,7 +80,7 @@
           height: 64px;
         }
 
-        /* HERO */
+        /* HERO SECTION */
         .hero {
           position: relative;
           height: 50vh;
@@ -119,96 +126,67 @@
           color: white;
         }
 
-        /* ONE SECTION */
-        .one-section {
-          max-width: 900px;
-          margin: 50px auto;
-          padding: 20px;
+        /* EQUAL SECTION LAYOUT */
+        .one-section, 
+        .two-col-preview {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 80px 20px; /* Equal vertical spacing */
           text-align: justify;
         }
 
-        .one-section h2 {
+        /* Vertical dividers between sections */
+        section:not(:last-of-type) {
+          border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
           font-family: var(--serif);
-          font-size: 28px;
-          margin-bottom: 16px;
+          font-size: 32px;
+          margin-bottom: 24px;
         }
 
-        .one-section p {
-          font-size: 14px;
-          line-height: 1.7;
-          padding: 0 16px;
+        p {
+          font-size: 15px;
+          line-height: 1.8;
         }
 
-       /*TWO COLUMN LAYOUT*/
-        .two-col-preview {
-          border-bottom: 1px solid var(--white);
-        }
-
+        /* TWO COLUMN SPECIFICS */
         .two-col-preview .row {
           display: flex;
-          align-items: stretch;
+          align-items: center; /* Vertical alignment for text vs image */
         }
 
-        .two-col-preview .col-md-6 {
-          display: flex;
-        }
-
-        /* TEXT SIDE */
         .about-preview {
-          padding: 56px 52px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          border-right: 1px solid var(--white);
+          padding-right: 40px;
         }
 
-        /* IMAGE SIDE */
-        .authors-preview {
-          padding: 0; /* IMPORTANT */
-          display: flex;
-        }
-
-        /* Make link fill container */
-        .authors-preview a {
-          width: 100%;
-          height: 100%;
-          display: block;
-        }
-
-        /* FORCE IMAGE TO MATCH HEIGHT */
         .authors-preview img {
           width: 100%;
-          height: 100%;
+          height: auto;
           object-fit: cover;
           display: block;
+          border-radius: 4px;
+          transition: transform 0.3s ease;
         }
 
-        /* TEXT STYLING */
-        .about-preview h2 {
-          font-family: var(--serif);
-          font-size: 28px;
-          margin-bottom: 16px;
+        .authors-preview img:hover {
+          transform: scale(1.02);
         }
 
-        .about-preview p {
-          font-size: 14px;
-          line-height: 1.7;
-          text-align: justify;
-        }
-        /*LIGHTBOX*/
-        /* 1. Base state: Hidden */
+        /* LIGHTBOX SYSTEM */
         .lightbox {
           position: fixed;
           inset: 0;
-          background: rgba(0, 0, 0, 0.9);
-          display: none; /* Keep this as none by default */
+          background: rgba(0, 0, 0, 0.95);
+          display: none; /* Hidden by default */
           z-index: 2000;
           padding: 40px;
         }
 
-        /* 2. Active state: Only show when the ID is in the URL (#img1) */
+        /* Center image when lightbox is triggered via URL ID */
         .lightbox:target {
-          display: flex !important; /* This is where the flex centering happens */
+          display: flex !important;
           align-items: center;
           justify-content: center;
         }
@@ -220,7 +198,7 @@
           height: auto;
           object-fit: contain;
           border-radius: 4px;
-          box-shadow: 0 0 20px rgba(0,0,0,0.5);
+          box-shadow: 0 0 30px rgba(0,0,0,0.5);
         }
 
         .lightbox .close {
@@ -232,12 +210,17 @@
           font-weight: 200;
           text-decoration: none;
           z-index: 2001;
+          transition: color 0.2s;
+        }
+
+        .lightbox .close:hover {
+          color: var(--khaki);
         }
 
         /* BUTTONS */
         .button-row {
           text-align: center;
-          margin: 60px 0;
+          margin-bottom: 80px;
         }
 
         .button-row .btn-outline {
@@ -248,7 +231,8 @@
           margin: 0 10px;
           text-transform: uppercase;
           font-size: 13px;
-          transition: 0.2s;
+          letter-spacing: 1px;
+          transition: 0.3s;
         }
 
         .button-row .btn-outline:hover {
@@ -257,48 +241,28 @@
           border-color: var(--khaki);
         }
 
+        /* RESPONSIVE STYLES */
         @media (max-width: 768px) {
-
-          .one-section {
-            padding: 32px 16px;
-            margin: 24px auto;
-          }
-
-          .one-section p {
-            padding: 0;
-          }
-
-          .about-preview,
-          .authors-preview {
-            padding: 32px 16px;
+          .one-section, 
+          .two-col-preview {
+            padding: 50px 20px;
           }
 
           .about-preview {
-            border-right: none;
-            border-bottom: 1px solid var(--border);
+            padding-right: 0;
+            margin-bottom: 30px;
           }
 
-          /* Stack layout */
           .two-col-preview .row {
             flex-direction: column;
-          }
-
-          /* Reset image height on mobile */
-          .authors-preview img {
-            height: auto;
           }
 
           .hero h1 {
             font-size: 32px;
           }
 
-          .hero p {
-            font-size: 14px;
-          }
-
-          .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
+          .lightbox {
+            padding: 10px;
           }
         }
       </style>
