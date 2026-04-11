@@ -1,11 +1,12 @@
-/* Use a wrapper to center the inline-flex container */
+/* CENTER WRAPPER */
 .label-wrapper {
-  text-align: center; /* Centers the whole block */
+  text-align: center;
   margin-top: 40px;
 }
 
+/* LABEL */
 .section-label {
-  display: inline-block; /* Only as wide as the text */
+  display: inline-block;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -14,17 +15,68 @@
   margin-bottom: 15px;
 }
 
+/* ROW CONTAINER (FULLY RESPONSIVE) */
 .circle-row-container {
-  display: inline-flex; /* 🔥 This makes the container shrink to the images' width */
-  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;               /* allows wrapping on small screens */
   justify-content: center;
-  gap: 10px;
-  padding-bottom: 15px; /* Space between images and border */
-  border-bottom: 2px solid var(--border); /* 🔥 The border now matches the row length */
+  gap: 12px;                     /* clean spacing */
+  padding-bottom: 15px;
+  max-width: 100%;
 }
 
+/* EACH ITEM */
 .circle-item {
   flex: 0 0 auto;
-  width: clamp(60px, 8vw, 80px);
+  width: clamp(60px, 7vw, 80px); /* responsive sizing */
   text-align: center;
+}
+
+/* CIRCLE FIX (IMPORTANT) */
+.circle-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;  /* keeps perfect circle */
+  border-radius: 50%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* IMAGE FIX (prevents overflow issue) */
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* HOVER + ACTIVE EFFECT */
+.circle-img:hover {
+  transform: scale(1.1);
+}
+
+.circle-img:active {
+  transform: scale(0.95);
+}
+
+/* NAME TEXT */
+.circle-item p {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 480px) {
+  .circle-item {
+    width: 60px;
+  }
+
+  .circle-row-container {
+    gap: 8px;
+  }
 }
