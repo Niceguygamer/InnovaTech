@@ -1,13 +1,24 @@
-.circle-img {
-  width: 70px;   /* 🔥 reduced size */
-  height: 70px;
+.circle-row-container {
+  display: flex;
+  flex-wrap: wrap;       /* Allows wrapping on small screens */
+  justify-content: center;
+  gap: 10px;             /* 🔥 Controls the exact distance between images */
+  text-align: center;
+}
 
-  margin: 0 auto;
+.circle-item {
+  flex: 0 0 auto;        /* Prevents the container from stretching */
+  width: clamp(60px, 8vw, 80px); /* Responsive size: min 60px, max 80px */
+}
+
+.circle-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* Keeps it a perfect square/circle */
   border-radius: 50%;
   overflow: hidden;
-
   cursor: pointer;
   transition: 0.3s ease;
+  border: 1px solid var(--border);
 }
 
 .circle-img img {
@@ -16,22 +27,14 @@
   object-fit: cover;
 }
 
-/* hover + active effect */
 .circle-img:hover {
   transform: scale(1.1);
 }
 
-.circle-img:active {
-  transform: scale(0.95);
-}
-
-.circle-row .col {
-  padding-left: 4px;
-  padding-right: 4px; /* reduces horizontal spacing */
-}
-
-/* tighten spacing between image + text */
-.circle-row p {
-  font-size: 12px;
-  margin-top: 4px;
+/* Tighten the Name text */
+.circle-item p {
+  font-size: 11px;
+  margin-top: 5px;
+  white-space: nowrap;   /* Prevents name from wrapping awkwardly */
+  color: var(--black);
 }
