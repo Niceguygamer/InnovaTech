@@ -210,16 +210,19 @@
       inset: 0;
       background: rgba(0, 0, 0, 0.8);
       display: none;
-      display: flex;
       align-items: center;
       justify-content: center;
       z-index: 999;
     }
 
     .lightbox img {
-      width: 800px;
+      max-width: 70%;
+      max-height: 70%;
+      display: block;
+      margin: auto;
+      /*width: 800px;
       height: 450px;
-      object-fit: contain;
+      object-fit: contain;*/
       border-radius: 6px;
     }
 
