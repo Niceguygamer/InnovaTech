@@ -185,7 +185,7 @@
 
     .article-image img {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: 300px;
       object-fit: cover;
       display: block;
       border-radius: 4px;
@@ -217,8 +217,9 @@
     }
 
     .lightbox img {
-      max-width: 70%;
-      max-height: 70%;
+      width: 800px;
+      height: 450px;
+      object-fit: cover;
       border-radius: 6px;
       display: block;
       margin: auto;
