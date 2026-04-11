@@ -1,15 +1,13 @@
 .circle-img {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto;
+  width: 70px;   /* 🔥 reduced size */
+  height: 70px;
 
+  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
 
-  position: relative;
   cursor: pointer;
-
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .circle-img img {
@@ -18,25 +16,17 @@
   object-fit: cover;
 }
 
+/* hover + active effect */
 .circle-img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: scale(1.1);
 }
 
 .circle-img:active {
   transform: scale(0.95);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-.circle-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  transition: 0.3s;
+/* keep names compact */
+.circle-row p {
+  font-size: 12px;
+  margin-top: 6px;
 }
-
-.circle-img:hover::after {
-  border-color: #5C6F91; 
-  
