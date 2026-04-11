@@ -40,32 +40,30 @@
           --sans: 'DM Sans', sans-serif;
         }
 
-        /* RESET & BASE */
-        *, *::before, *::after {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-
-        html {
-          scroll-behavior: smooth;
-        }
-
-        body {
-          font-family: var(--sans);
-          font-weight: 300;
-          background: var(--white);
-          color: var(--black);
-          font-size: 15px;
-          line-height: 1.6;
-          -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
-
+        /* RESET */
+        *,
+         *::before,
+         *::after {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         }
+         html {
+         scroll-behavior: smooth;
+         }
+         body {
+         font-family: var(--sans);
+         font-weight: 300;
+         background: var(--white);
+         color: var(--black);
+         font-size: 15px;
+         line-height: 1.6;
+         -webkit-font-smoothing: antialiased;
+         }
+         a {
+         text-decoration: none;
+         color: inherit;
+         }
         /* HEADER */
         header {
           position: sticky;
@@ -80,7 +78,7 @@
           height: 64px;
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
           position: relative;
           height: 50vh;
@@ -126,101 +124,122 @@
           color: white;
         }
 
-        /* EQUAL SECTION LAYOUT */
-        .one-section, 
-        .two-col-preview {
-          max-width: 1100px;
-          margin: 0 auto;
-          padding: 80px 20px; /* Equal vertical spacing */
+        /* ONE SECTION */
+        .one-section {
+          max-width: 900px;
+          margin: 50px auto;
+          padding: 20px;
           text-align: justify;
+          gap: 15;
         }
 
-        /* Vertical dividers between sections */
-        section:not(:last-of-type) {
-          border-bottom: 1px solid var(--border);
-        }
-
-        h2 {
+        .one-section h2 {
           font-family: var(--serif);
-          font-size: 32px;
-          margin-bottom: 24px;
+          font-size: 28px;
+          margin-bottom: 16px;
         }
 
-        p {
-          font-size: 15px;
-          line-height: 1.8;
+        .one-section p {
+          font-size: 14px;
+          line-height: 1.7;
+          padding: 0 16px;
         }
 
-        /* TWO COLUMN SPECIFICS */
+       /*TWO COLUMN LAYOUT*/
+        .two-col-preview {
+          border-bottom: 1px solid var(--white);
+        }
+
         .two-col-preview .row {
           display: flex;
-          align-items: center; /* Vertical alignment for text vs image */
+          align-items: stretch;
         }
 
+        .two-col-preview .col-md-6 {
+          display: flex;
+        }
+
+        /* TEXT SIDE */
         .about-preview {
-          padding-right: 40px;
+          padding: 56px 52px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-right: 1px solid var(--white);
         }
 
+        /* IMAGE SIDE */
+        .authors-preview {
+          padding: 0; /* IMPORTANT */
+          display: flex;
+        }
+
+        /* Make link fill container */
+        .authors-preview a {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+
+        /* FORCE IMAGE TO MATCH HEIGHT */
         .authors-preview img {
           width: 100%;
-          height: auto;
+          height: 100%;
           object-fit: cover;
           display: block;
-          border-radius: 4px;
-          transition: transform 0.3s ease;
         }
 
-        .authors-preview img:hover {
-          transform: scale(1.02);
+        /* TEXT STYLING */
+        .about-preview h2 {
+          font-family: var(--serif);
+          font-size: 28px;
+          margin-bottom: 16px;
         }
 
-        /* LIGHTBOX SYSTEM */
-        .lightbox {
-          position: fixed;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.95);
-          display: none; /* Hidden by default */
-          z-index: 2000;
-          padding: 40px;
+        .about-preview p {
+          font-size: 14px;
+          line-height: 1.7;
+          text-align: justify;
         }
+        /*LIGHTBOX*/
+                  
+          .lightbox {
+            position: fixed; /* Keeps it relative to the screen, not the document */
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: none; /* Stays hidden until targeted */
+            
+            /* Centering Logic */
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+          }
 
-        /* Center image when lightbox is triggered via URL ID */
-        .lightbox:target {
-          display: flex !important;
-          align-items: center;
-          justify-content: center;
-        }
+          .lightbox img {
+            /* Using max-width/height ensures it stays centered and doesn't distort on smaller screens */
+            max-width: 800px;
+            max-height: 450px;
+            width: 100%; 
+            height: auto;
+            object-fit: contain;
+            border-radius: 6px;
+          }
 
-        .lightbox img {
-          max-width: 100%;
-          max-height: 100%;
-          width: auto;
-          height: auto;
-          object-fit: contain;
-          border-radius: 4px;
-          box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        }
+          /* When the ID is in the URL (#img1), show the flexbox */
+          .lightbox:target {
+            display: flex;
+          }
 
-        .lightbox .close {
-          position: absolute;
-          top: 20px;
-          right: 30px;
-          color: white;
-          font-size: 50px;
-          font-weight: 200;
-          text-decoration: none;
-          z-index: 2001;
-          transition: color 0.2s;
-        }
-
-        .lightbox .close:hover {
-          color: var(--khaki);
-        }
+          /* Prevents the background page from scrolling while the image is open */
+          html:has(.lightbox:target),
+          body:has(.lightbox:target) {
+            overflow: hidden;
+          }
 
         /* BUTTONS */
         .button-row {
           text-align: center;
-          margin-bottom: 80px;
+          margin: 60px 0;
         }
 
         .button-row .btn-outline {
@@ -231,8 +250,7 @@
           margin: 0 10px;
           text-transform: uppercase;
           font-size: 13px;
-          letter-spacing: 1px;
-          transition: 0.3s;
+          transition: 0.2s;
         }
 
         .button-row .btn-outline:hover {
@@ -241,28 +259,48 @@
           border-color: var(--khaki);
         }
 
-        /* RESPONSIVE STYLES */
         @media (max-width: 768px) {
-          .one-section, 
-          .two-col-preview {
-            padding: 50px 20px;
+
+          .one-section {
+            padding: 32px 16px;
+            margin: 24px auto;
+          }
+
+          .one-section p {
+            padding: 0;
+          }
+
+          .about-preview,
+          .authors-preview {
+            padding: 32px 16px;
           }
 
           .about-preview {
-            padding-right: 0;
-            margin-bottom: 30px;
+            border-right: none;
+            border-bottom: 1px solid var(--border);
           }
 
+          /* Stack layout */
           .two-col-preview .row {
             flex-direction: column;
+          }
+
+          /* Reset image height on mobile */
+          .authors-preview img {
+            height: auto;
           }
 
           .hero h1 {
             font-size: 32px;
           }
 
-          .lightbox {
-            padding: 10px;
+          .hero p {
+            font-size: 14px;
+          }
+
+          .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
           }
         }
       </style>
