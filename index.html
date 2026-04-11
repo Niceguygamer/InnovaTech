@@ -174,10 +174,21 @@
         #about-authors {
             scroll-margin-top: 80px;
           }
-         .about-preview,
-         .authors-preview {
-         padding: 56px 52px;
-         }
+         /* 1. Make the columns Flex containers */
+          .about-preview,
+          .authors-preview {
+              padding: 56px 52px;
+              display: flex;
+              flex-direction: column;
+              height: 100%; /* Ensures both columns are the same height */
+          }
+
+          /* 2. Push the buttons to the bottom */
+          .about-preview .btn-outline,
+          .authors-preview .btn-outline {
+              margin-top: auto;
+              align-self: flex-start; /* Keeps the button from stretching wide */
+          }
 
          .about-preview h2,
          .authors-preview h2 {
@@ -440,7 +451,7 @@
                   drawn from their personal experiences. Every article is crafted to assist others in learning, developing,
                   and thriving because we believe that the most effective advice comes from shared experience.
                </p>
-               <a href="pages/authors/authors-home.html" class="btn-outline mt-3">Read More</a>
+               <a href="pages/authors/authors-home.html" class="btn-outline">Read More</a>
             </div>
          </section>
          
