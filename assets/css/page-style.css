@@ -275,12 +275,13 @@
     .sidebar-section {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      align-items: flex-start;
     }
 
     .sidebar-section .btn-outline {
-      display: block;
+      display: inline-block;
       text-align: center;
+      margin-top: 10px;
     }
 
     .sidebar-label {
