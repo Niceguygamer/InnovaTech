@@ -219,16 +219,20 @@
     }
 
     .lightbox img {
-      width: 800px;
-      height: 450px;
+      width: 80%;
+      height: 80%;
       object-fit: contain;
       border-radius: 6px;
       display: block;
-      margin: auto;
     }
 
     .lightbox:target {
       display: flex;
+    }
+
+    html:has(.lightbox:target),
+    body:has(.lightbox:target) {
+      overflow: hidden;
     }
 
     .article-intro {
