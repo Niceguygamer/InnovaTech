@@ -398,7 +398,17 @@
         display: flex;
       }
 
-      
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+
+      html:has(.lightbox:target),
+      body:has(.lightbox:target) {
+        overflow: hidden;
+      }
       </style>
    </head>
    <body>
@@ -406,11 +416,16 @@
       
   <header class="navbar navbar-expand-lg border-bottom">
   <div class="container-fluid px-4 px-md-5">
-    <a class="navbar-brand logo" href="#">
+    <a class="navbar-brand logo" href="logo-lightbox">
       <img src="assets/img/logo_notext.png" alt="Logo">
       <span>InnovaTech</span>
     </a>
 
+    <div id="logo-lightbox" class="lightbox">
+      <a href="#" class="close">&times;
+        <img src="assets/img/logo_notext.png" alt="Full Logo">
+      </a>
+    </div> 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
