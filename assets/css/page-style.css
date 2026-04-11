@@ -273,7 +273,14 @@
     }
 
     .sidebar-section {
-      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar-section .btn-outline {
+      display: block;
+      text-align: center;
     }
 
     .sidebar-label {
