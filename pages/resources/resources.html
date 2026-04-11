@@ -186,7 +186,9 @@
           margin-bottom: 12px;
         }
 
-        .card-body
+        .card-body:hover{
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
         /* Reference Notes */
         .resource-reference {
@@ -338,12 +340,14 @@
 
               <div class="col-md-6 mb-4">
                 <div class="card h-100 shadow-sm">
-                  <div class="card-body">
+                  <a href="https://www.apa.org/topics/anxiety">
+                   <div class="card-body">
                     <h5 class="card-title">Anxiety</h5>
                     <p class="card-text">Trusted insights into anxiety symptoms, causes, and coping strategies.</p>
                     <p class="resource-reference">Referenced in: <em>Mental Health and Rest</em></p>
-                    <a href="https://www.apa.org/topics/anxiety" class="btn btn-outline-primary btn-sm" target="">Visit Resource</a>
+                    <div class="btn btn-outline-primary btn-sm" target="">Visit Resource</div>
                   </div>
+                  </a>
                 </div>
               </div>
 
