@@ -290,9 +290,8 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-top: 5px;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
+      margin: 12px 0;
+      padding: 4px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -367,7 +366,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--blue);
-      margin-top: 15px;
+      margin-top: 5px;
       margin-bottom: 4px;
     }
 
