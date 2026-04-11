@@ -143,15 +143,17 @@
       <button id="backToTop" title="Back to Top">↑</button>
       <!-- FOOTER -->
       <footer>
-         <footer>
+    <div class="container">
     <!-- Center: Navigation -->
-    <div class="footer-nav">
+    <div class="footer-nav d-flex flex-wrap justify-content-center gap-2">
       <a href="../../article-home/article-home.html">← Back to Articles</a>
       <a href="page2.html">Next →</a>
     </div>
-            <!-- Left: Contact + Icons -->
-            <div class="footer-bottom">
-      <div class="footer-left">
+      <!-- Left: Contact + Icons -->
+      <div class="row footer-bottom flex-column flex-md-row text-center text-md-start align-items-center">
+      <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">
+        <div class="d-flex justify-content-center justify-content-md-start align-items-center gap-3 flex-wrap">
+
         <span class="contact-text">Contact Us</span>
 
         <a href="https://www.facebook.com/profile.php?id=61577461889890">
@@ -167,9 +169,12 @@
           <i class="fa-regular fa-envelope"></i>
         </a>
       </div>
+      </div>
       
                <!-- Center: Copyright-->
-      <div class="footer-center">© 2026 InnovaTech. All rights reserved.</div>
+      <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">© 2026 InnovaTech. All rights reserved.</div>
+       <div class="col-12 col-md-4 footer-right"></div>
+    </div>
     </div>
   </footer>
       <script src="../../../assets/js/back-to-top.js"></script>
