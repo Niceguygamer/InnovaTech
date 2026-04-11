@@ -165,9 +165,10 @@
           transition: all 0.3s ease;
         }
 
-        .card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 6px 16px rgba(92,111,145,0.2);
+      .card-body:hover .btn-outline-primary {
+          background-color: var(--khaki);
+          border-color: var(--khaki);
+          color: var(--white);
         }
 
         .card-btn {
@@ -204,37 +205,12 @@
           font-weight: 600;
         }
 
-        /* ── GLOBAL BUTTON TRANSITION ── */
-        .btn,
-        .btn-outline-primary {
-          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* ── BASE OUTLINE BUTTON ── */
-        .btn-outline-primary {
-          border-color: var(--blue);
-          color: var(--blue);
-          background-color: transparent;
-        }
-
-        /* ── HOVER / ACTIVE STATE ── */
-        .btn:hover,
-        .btn-outline-primary:hover,
-        .btn-outline-primary:focus,
-        .btn-outline-primary:active {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 14px rgba(92, 111, 145, 0.25);
-        }
-
-        /* ── OUTLINE HOVER COLOR ── */
-        .btn-outline-primary:hover,
-        .btn-outline-primary:focus,
-        .btn-outline-primary:active {
+        /* ── SYNC HOVER: CARD BODY TRIGGERS BUTTON ── */
+        .card:hover .btn-outline-primary {
           background-color: var(--khaki);
           border-color: var(--khaki);
           color: var(--white);
         }
-
          /* FOOTER NAV (NOW SEPARATE) */
          .footer-nav {
           display: flex;
