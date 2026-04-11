@@ -167,55 +167,50 @@
                 object-fit: cover;
                 display: block;
                 border-radius: 4px;
-                transition: transform 0.3s ease;
-              }
-
-              .authors-preview img:hover {
-                transform: scale(1.02);
               }
 
               /* LIGHTBOX SYSTEM */
               
-.lightbox {
-  position: fixed; 
-  top: 0;         /* Fix to top */
-  left: 0;        /* Fix to left */
-  width: 100vw;   /* Force full viewport width */
-  height: 100vh;  /* Force full viewport height */
-  background: rgba(0, 0, 0, 0.8);
-  display: none; 
-  
-  /* Static Centering */
-  align-items: center;
-  justify-content: center;
-  z-index: 2000; /* Increased to stay above everything */
-}
+              .lightbox {
+                position: fixed; 
+                top: 0;         /* Fix to top */
+                left: 0;        /* Fix to left */
+                width: 100vw;   /* Force full viewport width */
+                height: 100vh;  /* Force full viewport height */
+                background: rgba(0, 0, 0, 0.8);
+                display: none; 
+                
+                /* Static Centering */
+                align-items: center;
+                justify-content: center;
+                z-index: 2000; /* Increased to stay above everything */
+              }
 
-.lightbox img {
-  /* Static sizing */
-  max-width: 800px;
-  max-height: 450px;
-  width: auto; 
-  height: auto;
-  object-fit: contain;
-  border-radius: 6px;
-  
-  /* Removes any browser-default scroll alignment movement */
-  user-select: none;
-  pointer-events: none; 
-}
+              .lightbox img {
+                /* Static sizing */
+                max-width: 800px;
+                max-height: 450px;
+                width: auto; 
+                height: auto;
+                object-fit: contain;
+                border-radius: 6px;
+                
+                /* Removes any browser-default scroll alignment movement */
+                user-select: none;
+                pointer-events: none; 
+              }
 
-/* Show without jump */
-.lightbox:target {
-  display: flex;
-}
+              /* Show without jump */
+              .lightbox:target {
+                display: flex;
+              }
 
-/* Prevents background jump/scroll */
-html:has(.lightbox:target),
-body:has(.lightbox:target) {
-  overflow: hidden;
-  height: 100%; /* Keeps the body static */
-}
+              /* Prevents background jump/scroll */
+              html:has(.lightbox:target),
+              body:has(.lightbox:target) {
+                overflow: hidden;
+                height: 100%; /* Keeps the body static */
+              }
 
               /* BUTTONS */
               .button-row {
