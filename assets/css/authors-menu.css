@@ -48,7 +48,6 @@
   cursor: pointer;
   transition: 0.3s ease;
   border: 1px solid var(--border);
-  background: linear-gradient(135deg, #e8e5de 0%, #d4cfc6 100%);
 }
 
 /* IMAGE FIX (prevents overflow issue) */
@@ -62,6 +61,8 @@
 /* HOVER + ACTIVE EFFECT */
 .circle-img:hover {
   transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--blue);
 }
 
 .circle-img:active {
@@ -70,8 +71,12 @@
 
 /* NAME TEXT */
 .circle-item p {
+  font-family: var(--sans);
+  text-transform: uppercase;
   font-size: 12px;
   margin-top: 6px;
+  color: var(--blue);
+  font-weight: bold;
 }
 
 /* 📱 MOBILE OPTIMIZATION */
