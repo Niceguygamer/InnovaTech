@@ -157,7 +157,9 @@
          }
          .about-preview,
          .authors-preview {
-         padding: 56px 52px;
+          padding: 56px 52px;
+          display: flex;
+          align-items: stretch;
          }
          .about-preview {
          border-right: 1px solid var(--white);
@@ -192,12 +194,12 @@
         }
          /* IMAGE PLACEHOLDER */
          .authors-preview img {
-         width: 100%;
-         height: auto;
-         object-fit: cover;
-         border-radius: 4px;
-         }
-        
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* fills the whole column */
+          border-radius: 4px;
+        }
+                
         .lightbox {
           position: fixed;
           top: 0;
@@ -258,6 +260,10 @@
             max-width: 90%;
             max-height: 90%;
           }
+        }
+        .two-col-preview .row {
+          display: flex;
+          align-items: stretch;
         }
 
       </style>
