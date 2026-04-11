@@ -216,13 +216,9 @@
     }
 
     .lightbox img {
-      max-width: 70%;
-      max-height: 70%;
-      display: block;
-      margin: auto;
-      /*width: 800px;
+      width: 800px;
       height: 450px;
-      object-fit: contain;*/
+      object-fit: contain;
       border-radius: 6px;
     }
 
