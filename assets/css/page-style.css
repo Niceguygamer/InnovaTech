@@ -402,6 +402,9 @@
       color: var(--black);
       margin-right: 8px;
     }
+    .contact-text:hover {
+      color: var(--blue);
+    }
 
     .footer-left a {
       font-size: 18px;
