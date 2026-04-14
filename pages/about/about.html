@@ -132,7 +132,7 @@
               .two-col-preview {
                 max-width: 1100px;
                 margin: 0 auto;
-                padding: 30px 20px; /* Equal vertical spacing */
+                padding: 30px 20px;
                 text-align: justify;
               }
 
@@ -150,7 +150,7 @@
               /* TWO COLUMN SPECIFICS */
               .two-col-preview .row {
                 display: flex;
-                align-items: center; /* Vertical alignment for text vs image */
+                align-items: center; 
               }
 
               .about-preview {
@@ -169,10 +169,10 @@
               
               .lightbox {
                 position: fixed; 
-                top: 0;         /* Fix to top */
-                left: 0;        /* Fix to left */
-                width: 100vw;   /* Force full viewport width */
-                height: 100vh;  /* Force full viewport height */
+                top: 0;         
+                left: 0;        
+                width: 100vw;   
+                height: 100vh;  
                 background: rgba(0, 0, 0, 0.8);
                 display: none; 
                 inset: 0;
@@ -181,7 +181,7 @@
                 /* Static Centering */
                 align-items: center;
                 justify-content: center;
-                z-index: 2000; /* Increased to stay above everything */
+                z-index: 2000; 
               }
 
               .lightbox img {
@@ -193,7 +193,6 @@
                 object-fit: contain;
                 border-radius: 6px;
                 
-                /* Removes any browser-default scroll alignment movement */
                 user-select: none; 
                 cursor: pointer;
               }
@@ -207,7 +206,7 @@
               html:has(.lightbox:target),
               body:has(.lightbox:target) {
                 overflow: hidden;
-                height: 100%; /* Keeps the body static */
+                height: 100%; 
               }
 
               /* BUTTONS */

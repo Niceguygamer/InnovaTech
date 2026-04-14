@@ -74,38 +74,7 @@
           flex-wrap: wrap;
          }
 
-         /*.logo {            //Mayroon na ito sa css link attached sa NAV & Footer css.
-          display: flex;
-          align-items: center;
-          font-family: var(--serif);
-          font-size: 22px;
-          color: var(--black);
-         }
-
-         .logo img {
-          height: 60px;
-          width: auto;
-         }
-
-         nav {
-          display: flex;
-          gap: 24px;
-         }
-
-         nav a {
-          font-size: 13px;
-          font-weight: 700;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-          color: var(--blue);
-          transition: color 0.2s;
-         }
-
-         nav a:hover,
-         nav a.active {
-          color: var(--black);
-         } */
-
+        
          /* HERO */
          .hero {
           position: relative;
@@ -131,7 +100,7 @@
         }
 
 
-        /* DARK OVERLAY (so text is readable) */
+        /* DARK OVERLAY */
         .hero::before {
           content: "";
           position: absolute;
@@ -253,58 +222,6 @@
           letter-spacing: 0.04em;
          }
 
-         /* FOOTER */                     //Mayroon na ito sa css link attached below.
-         /*footer {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-wrap: wrap;
-          padding: 20px;
-          border-top: 1px solid var(--border);
-          background: var(--white);
-         }*/
-
-         /* LEFT */
-         /*.footer-left {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          flex-wrap: wrap;
-         }
-
-         .contact-text {
-          font-weight: 500;
-          font-size: 14px;
-          color: var(--black);
-         }
-
-         .footer-left a {
-          font-size: 18px;
-          color: var(--black);
-          transition: color 0.2s;
-         }
-
-         .footer-left a:hover {
-          color: var(--blue);
-         }*/
-
-         /* CENTER */
-         /*.footer-center {
-          font-size: 13px;
-          color: var(--black);
-          text-align: center;
-          flex: 1 1 100%;
-          margin-top: 12px;
-         }*/
-
-         /* RIGHT */
-         /*.footer-right {
-         display: flex;
-         align-items: center;
-         gap: 12px;
-         flex-wrap: wrap;
-         }*/
-
          @media (max-width: 1200px) {
           .authors-grid {
             grid-template-columns: repeat(3, 1fr);
@@ -351,27 +268,6 @@
    </head>
 
    <body>
-
-    <!-- HEADER -->
-    <!-- <header>                             //I didn't remove anything. I only placed the template here para uniform lahat.
-      <div class="logo">
-        <img src="../../assets/img/logo_notext.png" alt="">
-        <span>InnovaTech</span>
-      </div> -->
-        
-      <!-- Nav Toggle -->
-      <!--<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav class="collapse d-md-flex" id="mainNav">
-        <a href="../../index.html">Home</a>
-        <a href="../about/about.html">About Us</a>
-        <a href="authors-home.html" class="active">Authors</a>
-        <a href="../article-home/article-home.html">Articles</a>
-        <a href="../resources/resources.html">Resources</a>
-      </nav>
-    </header> -->
     <header class="navbar navbar-expand-lg border-bottom">
   <div class="container-fluid px-4 px-md-5">
     <a class="navbar-brand logo" href="#">
@@ -487,31 +383,6 @@
 
       <!-- Back to Top Button -->
       <button id="backToTop" title="Back to Top">↑</button>
-      
-      <!-- FOOTER -->
-      <!--<footer> -->
-         <!-- LEFT --> 
-         <!--<div class="footer-left">
-            <span class="contact-text">Contact Us</span>
-            <a href="https://www.facebook.com/profile.php?id=61577461889890">
-            <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com/InnovaTechG1">
-            <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com/innovatech.integ">
-            <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="mailto:innovatech.integ@gmail.com">
-            <i class="fa-regular fa-envelope"></i>
-            </a>
-         </div> -->
-
-         <!-- CENTER -->
-         <!--<div class="footer-center">
-            © 2026 InnovaTech. All rights reserved.
-         </div>
-      </footer> -->
 
       <!-- FOOTER -->
       <footer>
