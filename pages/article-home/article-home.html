@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>InnovaTech - Articles</title>
+      <!--BootstrapCCS-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+      <!--for back-to-top-->
+      <link rel="stylesheet" href ="../../assets/css/back-to-top.css">
+      <!-- for icon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <!-- for font -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      <!-- for footer -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+      <!--NAV & Footer CSS-->
+      <link rel="stylesheet" href="../../assets/css/nav-&-footer-style.css">
+      <style>
+         :root {
+          --blue: #5C6F91;
+          --black: #33363A;
+          --white: #ffffff;
+          --off-white: #F3F4F6;
+          --muted: #6B7A8F;
+          --border: #e5e4e0;
+          --khaki: #D8C9A3;
+          --serif: 'DM Serif Display', Georgia, serif;
+          --sans: 'DM Sans', sans-serif;
+        }
+        *,
+         *::before,
+         *::after {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         }
+         html {
+         scroll-behavior: smooth;
+         }
+         body {
+         font-family: var(--sans);
+         font-weight: 300;
+         background: var(--white);
+         color: var(--black);
+         font-size: 15px;
+         line-height: 1.6;
+         -webkit-font-smoothing: antialiased;
+         }
+         a {
+         text-decoration: none;
+         color: inherit;
+         }
+         /* ── HEADER ── */
+         header {
+         position: sticky;
+         top: 0;
+         z-index: 100;
+         background: var(--white);
+         border-bottom: 1px solid var(--border);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 48px;
+         height: 64px;
+         }
+        /* HERO */
+        .hero {
+          position: relative;
+          height: 50vh;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: white;
+          margin-bottom: 40px;
+        }
+
+        /* VIDEO BACKGROUND */
+        .bg-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+
+        /* DARK OVERLAY (so text is readable) */
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 0;
+        }
+
+        /* CONTENT ON TOP */
+        .hero-content {
+          position: relative;
+          z-index: 1;
+          max-width: 800px;
+        }
+
+        .hero h1 {
+          font-family: var(--serif);
+          font-size: clamp(32px, 5vw, 64px);
+          font-style: italic;
+          margin-bottom: 12px;
+          color: white;
+          line-height: 1;
+        }
+        .hero p {
+         font-size: 16px;
+         color: white;
+         }
+
+        /* BUTTON */
+        .browse-label {
+         font-size: 14px;
+         color: white;
+         background: var(--blue);
+         letter-spacing: 0.05em;
+         border: 1px solid transparent;
+         display: inline-block;
+         padding: 8px 20px;
+         transition: all 0.2s ease;
+         border-radius: 8px;
+        }
+
+        .browse-label:hover {
+          color:var(--white);
+         background: transparent;
+         border-color: var(--blue);
+        }
+
+        /* SECTION */
+         .section-container {
+         padding: 60px 48px;
+         }
+
+
+         @media (max-width: 768px) {
+            .section-container {
+              padding: 40px 0;
+            }
+          }
+         .topics-grid {
+         grid-template-columns: repeat(5, 1fr);
+         gap: 20px;
+         }
+         .topic-card {
+         border: 1px solid var(--border);
+         padding: 30px 15px;
+         text-align: center;
+         transition: all 0.3s ease;
+         background: var(--white);
+         }
+         .topic-card:hover {
+         background: var(--off-white);
+         border-color: var(--black);
+         }
+         .topic-title {
+         font-family: var(--serif);
+         font-size: 18px;
+         margin-bottom: 10px;
+         border-bottom: 1px dashed var(--border);
+         padding-bottom: 10px;
+         display: inline-block;
+         width: 80%;
+         color: var(--black);
+         }
+         .topic-description {
+         font-size: 13px;
+         color: var(--muted);
+         line-height: 1.4;
+         }
+
+        /* SECTION LABEL */
+        .section-label {
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          margin-bottom: 36px;
+        }
+
+        .section-label span {
+          white-space: nowrap;
+          margin-right: 20px;
+        }
+
+        .section-label::after {
+          content: "";
+          flex: 1;
+          height: 1px;
+          background: var(--blue);
+          opacity: 0.6;
+        }
+
+        /* GRID */
+        .articles-grid {
+          display: grid;
+          gap: 24px;
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media (max-width: 1200px) {
+          .articles-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        @media (max-width: 992px) {
+          .articles-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+          .articles-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 576px) {
+          .articles-grid { grid-template-columns: 1fr; }
+        }
+
+        /* CARD */
+        .article-card {
+          border: 1px solid var(--border);
+          transition: 0.3s;
+          border-radius: 5px; 
+          overflow: hidden;   
+        }
+
+        .article-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+          border-color: var(--blue);
+
+        }
+
+        .card-image img {
+          width: 100%;
+          height: 180px;       
+          object-fit: cover;
+          display: block;
+        }
+
+        @media (min-width: 768px) {
+          .card-image img {
+            height: 180px;
+            object-fit: cover;
+          }
+        }
+
+        .card-content {
+          padding: 16px;
+        }
+
+        .card-title {
+          font-family: var(--serif);
+        }
+
+        .card-meta {
+          font-size: 12px;
+          color: var(--muted);
+        }
+      </style>
+   </head>
+   <body>
+       <header class="navbar navbar-expand-lg border-bottom">
+  <div class="container-fluid px-4 px-md-5">
+    <a class="navbar-brand logo" href="#">
+      <img src="../../assets/img/logo_notext.png" alt="Logo">
+      <span>InnovaTech</span>
+    </a>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <div class="navbar-nav ms-auto gap-lg-4 mt-3 mt-lg-0 ps-lg-5">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../about/about.html">About Us</a>
+        <a class="nav-link" href="../authors/authors-home.html">Authors</a>
+        <a class="nav-link active" href="article-home.html">Articles</a>
+        <a class="nav-link" href="../resources/resources.html">Resources</a>
+      </div>
+    </div>
+  </div>
+</header>
+      <main>
+         <!-- HERO -->
+          <section class="hero">
+          <video autoplay muted loop playsinline class="bg-video">
+            <source src="../../assets/mp4/blue_plate.mp4" type="video/mp4">
+          </video>
+
+
+          <div class="hero-content">
+            <h1>Articles</h1>
+            <p>A collection of personal experiences, guides, and tips to help you thrive in tech programs.</p>
+          </div>
+        </section>
+
+        
+         <!-- ACADEMIC SECTION -->
+         <section class="container py-4" id="academic">
+            <div class="section-label">
+              <span>Academic & Professional Career</span>
+            </div>
+            <div class="articles-grid">
+              <!--Card-->
+               <a href="../articles/topic_1/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="../../assets/img/topic 1/load.jpg" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-title">School loads and Class standing</div>
+                     <div class="card-meta">How academic workload affects student performance and mental wellbeing.</div>
+                  </div>
+               </a>
+               <!--Card-->
+               <a href="../articles/topic_2/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="https://images.unsplash.com/photo-1674156423391-a65ab2a435de?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-title">Career Anxiety</div>
+                     <div class="card-meta">Understanding and overcoming anxiety around future career paths.</div>
+                  </div>
+               </a>
+               <!--CARD-->
+               <a href="../articles/topic_3/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-title">Skills Development</div>
+                     <div class="card-meta">Building essential skills to stay competitive and grow in your field.</div>
+                  </div>
+               </a>
+               <!--CARD-->
+               <a href="../articles/topic_4/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="../../assets/img/topic 4/pg1.jpeg" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-title">Study Apps</div>
+                     <div class="card-meta">The best digital tools to help you study smarter, not harder.</div>
+                  </div>
+               </a>
+               <!--CARD-->
+               <a href="../articles/topic_5/page1.html" class="article-card">
+                  <div class="card-image">
+                     <img src="../../assets/img/topic 5/groupings.jpg" alt="Article image">
+                  </div>
+                  <div class="card-content">
+                     <div class="card-title">Study Habits</div>
+                     <div class="card-meta">Developing consistent study routines that actually stick and deliver results.</div>
+                  </div>
+               </a>
+            </div>
+         </section>
+        
+        <section class="container py-4" id="lifestyle">
+          <div class="section-label">
+            <span>Lifestyle and Self-development</span>
+            </div>
+          <div class="articles-grid">
+              <a href="../articles/topic_6/page1.html" class="article-card">
+                <div class="card-image">
+                    <img src="../../assets/img/topic 6/walking.jpg" alt="Article image">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Relationships That Matter</div>
+                    <div class="card-meta">Navigating friendships, group dynamics, and social connections in college.</div>
+                </div>
+              </a>
+              <a href="../articles/topic_7/page1.html" class="article-card">
+                <div class="card-image">
+                    <img src="../../assets/img/topic 7/environment.jpg" alt="Article image">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Understanding Self-Identity</div>
+                    <div class="card-meta">Exploring who you are and how identity shapes your college experience.</div>
+                </div>
+              </a>
+              <a href="../articles/topic_8/page1.html" class="article-card">
+                <div class="card-image">
+                    <img src="../../assets/img/topic 8/munda-page1.jpg" alt="Article image">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Mental Health and Rest</div>
+                    <div class="card-meta">Why rest is essential for your academic performance and mental health.</div>
+                </div>
+              </a>
+              <a href="../articles/topic_9/page1.html" class="article-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1541199249251-f713e6145474?w=800&q=80" alt="Article image">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Burnout</div>
+                    <div class="card-meta">Recognizing, recovering from, and preventing burnout as a student.</div>
+                </div>
+              </a>
+              <a href="../articles/topic_10/page1.html" class="article-card">
+                <div class="card-image">
+                    <img src="../../assets/img/topic 10/collab.jpg" alt="Article image">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Team Collaboration</div>
+                    <div class="card-meta">Working effectively with others to achieve shared academic and professional goals.</div>
+                </div>
+              </a>
+          </div>
+        </section>
+      </main>
+
+      <button id="backToTop" title="Back to Top">↑</button>
+      <!-- FOOTER -->
+      <footer>
+      <div class="container pt-5">
+      <!-- Left: Contact + Icons -->
+      <div class="row footer-bottom flex-column flex-md-row text-center text-md-start align-items-center">
+        <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">
+          <div class="d-flex justify-content-center justify-content-md-start align-items-center gap-3 flex-wrap">
+          <span class="contact-text">Contact Us</span>
+
+
+          <a href="https://www.facebook.com/profile.php?id=61577461889890">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/InnovaTechG1">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/innovatech.integ">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:innovatech.integ@gmail.com">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          </div>
+        </div>
+        <!-- Center: Copyright-->
+        <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">© 2026 InnovaTech. All rights reserved.</div>
+        <div class="col-12 col-md-4 footer-right"></div>
+      </div>
+      </div>
+    </footer>
+      <script src="../../assets/js/back-to-top.js"></script>
+      <!--BootstrapJS-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   </body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cyril Libuton — InnovaTech</title>
+
+      <!--Bootstrap CSS-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+      
+      <!--for back-to-top-->
+      <link rel="stylesheet" href ="../../assets/css/back-to-top.css">
+      
+      <!-- for icon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+
+      <!-- for font -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+      <!-- for footer -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+      <!--Nav & Footer CSS-->
+      <link rel="stylesheet" href="../../assets/css/nav-&-footer-style.css">
+
+      <!--Authors Menu-->
+      <link rel="stylesheet" href="../../assets/css/authors-menu.css">
+
+      <style>
+        :root {
+          --blue: #5C6F91;
+          --black: #33363A;
+          --white: #ffffff;
+          --off-white: #F3F4F6;
+          --muted: #6B7A8F;
+          --border: #e5e4e0;
+          --khaki: #D8C9A3;
+          --serif: 'DM Serif Display', Georgia, serif;
+          --sans: 'DM Sans', sans-serif;
+        }
+
+        *, *::before, *::after { 
+          box-sizing: border-box; margin: 0; 
+          padding: 0; 
+        }
+
+        html { 
+          scroll-behavior: smooth; 
+        }
+
+        body {
+          font-family: var(--sans);
+          font-weight: 300;
+          background: var(--white);
+          color: var(--black);
+          font-size: 16px;
+          line-height: 1.7;
+          -webkit-font-smoothing: antialiased;
+        }
+         
+        a { 
+          text-decoration: none; color: inherit; 
+        }
+
+        /* HEADER */
+        header {
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          background: var(--white);
+          border-bottom: 1px solid var(--border);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 48px;
+          height: 64px;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+         
+        /* PROFILE */
+        .profile-header {
+          background: var(--off-white);
+          border-bottom: 1px solid var(--border);
+          padding: 48px 20px;
+        }
+
+        .profile-header-inner {
+          max-width: 900px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          flex-wrap: wrap;
+        }
+
+        .profile-avatar {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          border: 2px solid var(--border);
+          overflow: hidden;
+          flex-shrink: 0;
+          transition: transform 0.3s ease, box-shadow o.3s ease;
+        }
+
+        .profile-avatar img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .profile-avatar:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 12px rgba(92,111,145,0.4);
+        }
+
+        .profile-meta-tag { 
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--blue);
+          margin-bottom: 8px;
+        }
+
+        .profile-name {
+          font-family: var(--serif);
+          font-size: clamp(24px, 4vw, 42px);
+          font-weight: 400;
+          color: var(--black);
+          margin-bottom: 6px;
+          border-bottom: 3px solid var(--khaki);
+          display: inline-block;
+          padding-bottom: 4px;
+        }
+
+        .profile-role {
+          font-size: 15px;
+          color: var(--muted);
+        }
+
+        /* CONTACT LINKS */
+        .profile-contacts {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-top: 12px;
+        }
+
+        .profile-contacts a {
+          font-size: 18px;
+          color: var(--black);
+          transition: color 0.2s;
+        }
+
+        .profile-contacts a:hover {
+          color: var(--blue);
+        }
+
+        @media (max-width: 768px) {
+          .profile-header-inner {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .profile-contacts {
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+        }
+         
+        .profile-body {
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 40px 20px;
+        }
+
+        .profile-bio {
+          font-size: 16px;
+          line-height: 1.8;
+          color: var(--black);
+          margin-bottom: 40px;
+          background: var(--off-white);
+          padding: 24px;
+          border-radius: 8px;
+          border: 1px solid var(--border);
+          box-shadow: 0 2px 6px rgba (0,0,0,0.5);
+          text-align: justify;
+        }
+
+        .profile-bio p {         
+          margin-bottom: 16px; 
+        }
+
+        .profile-bio p:last-child { 
+          margin-bottom: 0; 
+        }
+
+        /* ARTICLES SECTION */
+        .section-label {
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--blue);
+          margin-bottom: 20px;
+          padding-bottom: 6px;
+          border-bottom: 2px solid var(--border);
+        }
+
+        .articles-list { 
+          list-style: none; 
+          padding: 0;
+        }
+
+        .articles-list li {
+          padding: 16px 0;
+          border-bottom: 1px solid var(--border);
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .article-topic {
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--blue);
+        }
+
+        .article-link {
+         font-family: var(--serif);
+         font-size: 18px;
+         color: var(--black);
+         transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+
+        .articles-list li:hover .article-link { 
+          color: var(--blue);
+        }
+      </style>
+   </head>
+
+   <body>
+
+    <header class="navbar navbar-expand-lg border-bottom">
+      <div class="container-fluid px-4 px-md-5">
+        <a class="navbar-brand logo" href="#">
+          <img src="../../assets/img/logo_notext.png" alt="Logo">
+          <span>InnovaTech</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <div class="navbar-nav ms-auto gap-lg-4 mt-3 mt-lg-0 ps-lg-5">
+            <a class="nav-link" href="../../index.html">Home</a>
+            <a class="nav-link" href="../about/about.html">About Us</a>
+            <a class="nav-link active" href="authors-home.html">Authors</a>
+            <a class="nav-link" href="../article-home/article-home.html">Articles</a>
+            <a class="nav-link" href="../resources/resources.html">Resources</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+      <main>
+        <div class="profile-header">
+          <div class="profile-header-inner">
+            <div class="profile-avatar">
+              <img src="../../assets/img/authors/Libuton/libuton.jpg" alt="Cyril Libuton" title="Libuton">
+            </div>
+
+            <div>
+              <div class="profile-meta-tag">Author</div>
+              <div class="profile-name">Cyril Mae S. Libuton</div>
+              <div class="profile-role">BS Computer Science</div>
+
+              <div class="profile-contacts">
+                <a href="https://www.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:libuton.cyrilmae@ue.edu.ph"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://libutoncyrilmae-a11y.github.io/my-website/"><i class="fa-solid fa-globe"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+         <div class="profile-body">
+            <div class="profile-bio">
+               <p>
+                  I am a BS Computer Science student who discovered a liking for computing in seventh grade. What began as basic curiosity quickly became a true fascination, particularly in HTML, where I enjoyed building and designing my own web pages.
+               </p>
+               <p>
+                  I spent a lot of my time experimenting, making random websites and applying what I learnt on platforms like Roblox. These experiences not only helped me enhance my knowledge of technology, but also linked me with others who shared my interests. As a result, I became a member of a creative and supportive group where I worked on projects, created games, and learned by creating.
+               </p>
+               <p>
+                  These early experiences influenced my approach to technology now. I remain curious and open to new experiences, always looking for ways to better my knowledge and expand on what I currently know. Continuous practice, and a willingness to learn at my own speed are what drive my technological advancement.
+               </p>
+               <p>
+                  I wrote articles for InnovaTech about interpersonal relationships and self-identity. In composing them, I used the knowledge and perspectives I gained from both my academic and personal experiences. I addressed these issues with the goal of providing practical knowledge that others could relate to and learn from.
+               </p>
+            </div>
+            <div class="section-label">Articles</div>
+            <ul class="articles-list">
+               <li>
+                  <span class="article-topic">Topic 1</span>
+                  <a href="../articles/topic_6/page1.html" class="article-link">Relationships That Matter</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 2</span>
+                  <a href="../articles/topic_6/page2.html" class="article-link">Communication in Everyday College Life</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 3</span>
+                  <a href="../articles/topic_6/page3.html" class="article-link">Working Together, Achieving More</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 4</span>
+                  <a href="../articles/topic_6/page4.html" class="article-link">Tackling Problems as One</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 5</span>
+                  <a href="../articles/topic_6/page5.html" class="article-link">Promoting Positive Relationships</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 6</span>
+                  <a href="../articles/topic_7/page1.html" class="article-link">Understanding Self-Identity</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 7</span>
+                  <a href="../articles/topic_7/page2.html" class="article-link">Discovering Strengths, Overcoming Challenges</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 8</span>
+                  <a href="../articles/topic_7/page3.html" class="article-link">Building Self-Confidence</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 9</span>
+                  <a href="../articles/topic_7/page4.html" class="article-link">Mastering Your Emotions</a>
+               </li>
+               <li>
+                  <span class="article-topic">Topic 10</span>
+                  <a href="../articles/topic_7/page5.html" class="article-link">Setting Personal Goals</a>
+               </li>
+            </ul>
+         </div>
+
+          <!--AUTHORS-->
+        <div class="label-wrapper">
+        <div class="section-label">EXPLORE OTHER AUTHORS</div>
+
+
+        <div class="circle-row-container">
+
+
+          <div class="circle-item">
+            <div class="circle-img">
+               <a href="agunod.html" title="Agunod"><img src="../../assets/img/authors/Agunod/AGUNOD.png" alt=""></a>
+            </div>
+            <p>Agunod</p>
+          </div>
+
+
+          <div class="circle-item">
+            <div class="circle-img">
+               <a href="alabab.html" title="Alab-ab"><img src="../../assets/img/authors/Alab-ab/ALAB-AB.jpg" alt=""></a>
+            </div>
+            <p>Alab-ab</p>
+          </div>
+
+
+          <div class="circle-item">
+            <div class="circle-img">
+              <a href="albarico.html" title="Albarico"><img src="../../assets/img/authors/albarico/id.jpg" alt=""></a>
+            </div>
+            <p>Albarico</p>
+          </div>
+
+
+          <div class="circle-item">
+            <div class="circle-img">
+              <a href="esico.html" title="Esico"><img src="../../assets/img/authors/Esico/DSC_0211.JPG" alt=""></a>
+            </div>
+            <p>Esico</p>
+          </div>
+
+
+          <div class="circle-item">
+            <div class="circle-img">
+               <a href="leongsun.html" title="Leongsun"><img src="../../assets/img/authors/leongsun/Euwin.jpg" alt=""></a>
+            </div>
+            <p>Leongsun</p>
+          </div>
+
+          <div class="circle-item">
+            <div class="circle-img">
+              <a href="munda.html" title="Munda"><img src="../../assets/img/authors/munda/munda-image.jpg" alt=""></a>
+            </div>
+            <p>Munda</p>
+          </div>
+
+
+          <div class="circle-item">
+            <div class="circle-img">
+              <a href="obillo.html" title="Obillo"><img src="../../assets/img/authors/obillo/obillo-img.jpg" alt=""></a>
+            </div>
+            <p>Obillo</p>
+          </div>
+
+
+          <!-- repeat... -->
+
+
+        </div>
+      </div>
+      </main>
+
+<!-- Back to Top Button -->     
+<button id="backToTop" title="Back to Top">↑</button>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+    <!-- Left: Contact + Icons -->
+      <div class="row footer-bottom flex-column flex-md-row text-center text-md-start align-items-center">
+        <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">
+          <div class="d-flex justify-content-center justify-content-md-start align-items-center gap-3 flex-wrap">
+            <span class="contact-text">Contact Us</span>
+              <a href="https://www.facebook.com/profile.php?id=61577461889890">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://x.com/InnovaTechG1">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com/innovatech.integ">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="mailto:innovatech.integ@gmail.com">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+          </div>
+        </div>
+
+        <!-- Center: Copyright-->
+        <div class="col-12 col-md-4 footer-center mb-3 mb-md-0">© 2026 InnovaTech. All rights reserved.</div>
+        <div class="col-12 col-md-4 footer-right"></div>
+      </div>
+    </div>
+  </footer>
+
+      <!-- Back to Top Script -->
+      <script src="../../assets/js/back-to-top.js"></script>
+
+      <!--BootstrapJS-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      
+   </body>
+</html>
